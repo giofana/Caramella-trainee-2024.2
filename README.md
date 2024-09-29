@@ -1,6 +1,6 @@
 # **Trainee 2024.2**
 
-# **Nome do seu blog**
+# **Caramella**
 
 ## **Projeto Trainee, Code Jr, Grupo 000, 2024.2**
 
@@ -13,20 +13,19 @@
 
 #### Desenvolvedores:
 
-* Trainee 1
-* Trainee 2
-* Trainee 3
-* Trainee 4
-* Trainee 5
+* Bruno Cesario Menezes
+* Guilherme Antonio
+* João Gabriel Souza
+* Luíza Machado
 
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github, se quiser).
+* [Giovana Maieli](https://github.com/giofana).
 
 #### Links Úteis:
 
-* [Trello]()
+* [Trello](https://trello.com/invite/b/66f81175521ed08d8d4c8dec/ATTI5077a71918129f55cf3305f085c7774dC949776E/caramella)
 
 * [Drive com ID Visual]()
 
