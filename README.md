@@ -21,7 +21,7 @@
 
 #### Scrum Master:
 
-* [Giovana Maieli](https://github.com/giofana).
+* [Giovana Maieli](https://github.com/giofana)
 
 #### Links Úteis:
 
