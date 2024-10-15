@@ -25,10 +25,22 @@ body{
 #post-row{
     border: 1px solid yellow;
     display: flex;
-    flex-wrap: wrap;
+    gap:48px;
 }
 
 .posts > img{
+    align-self: center;
     height: 100px;
     width: 100px;
+}
+
+.posts > h3{
+    align-self: center;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid purple;
+    max-width: 20%;
 }
