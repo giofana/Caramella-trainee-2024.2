@@ -1,5 +1,7 @@
+
 body{
     background-color: #f5f5f5;
+    margin:0;
 }
 
 #navbar{
@@ -13,6 +15,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 420px;
+    gap: 20px;
+    background: url(/public/assets/banner-landing-page.jpg) no-repeat center/cover;
+}
+
+
+#banner > button{
+    margin-top: 52px;
 }
 
 #classificacao-posts{
