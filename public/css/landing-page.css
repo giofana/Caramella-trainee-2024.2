@@ -149,11 +149,13 @@ a > img{
         align-items: center;
         gap: 60px;
         padding: 60px 0px;
+        background: linear-gradient(#5c4236e1, #30231c);
     }
 
     .posts{
         flex-direction: row;
         max-width: 400px;
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.534);
 
     }
 
