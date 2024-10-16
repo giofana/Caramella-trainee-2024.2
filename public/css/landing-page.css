@@ -129,7 +129,7 @@ a > img{
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.411);
 }
 
-@media (max-width: 320px){
+@media (max-width: 320px), (orientation:landscape){
 
     #banner{
         width: fit-content;
