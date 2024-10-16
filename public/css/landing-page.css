@@ -4,14 +4,24 @@ body{
     margin:0;
 }
 
+body::-webkit-scrollbar{
+    width: 0.1px;
+}
+
 .kurale-regular {
     font-family: "Kurale", serif;
     font-weight: 400;
     font-style: normal;
   }
 
+
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 #banner{
-    border: 1px solid blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +71,6 @@ button:hover{
 
 #classificacao-posts{
     padding-top: 40px;
-    border: 1px solid green;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -75,7 +84,6 @@ button:hover{
 }
 
 #post-row{
-    border: 1px solid yellow;
     display: flex;
     margin-top: 40px;
     background: linear-gradient(#64473be1, #47332a);
@@ -92,8 +100,12 @@ a{
 }
 
 a>h3:hover{
-    transform: scale(1.15);
+    transform: scale(1.12);
     transition-duration: 0.2s;
+}
+
+a:-webkit-any-link{
+    color:#bb856e;
 }
 
 img{
@@ -102,14 +114,10 @@ img{
     height: 100px;
 }
 
-.posts > h3{
-    align-self: center;
-}
-
 .posts{
+    font-family: 'Josefin Sans', sans-serif;
     display: flex;
     flex-direction: column;
-    border: 1px solid purple;
     margin-left: 28px;
     margin-right: 28px;
     padding: 12px;
