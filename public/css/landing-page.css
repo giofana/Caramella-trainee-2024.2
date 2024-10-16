@@ -73,6 +73,7 @@ button:hover{
     padding-top: 40px;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -108,7 +109,9 @@ a:-webkit-any-link{
     color:#bb856e;
 }
 
-img{
+a > img{
+    border: 2px dashed #bb856e;
+    padding: 4px;
     align-self: center;
     width: 120px;
     height: 100px;
@@ -124,4 +127,50 @@ img{
     background-color: #f5f5f5;
     border-bottom-right-radius: 28px;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.411);
+}
+
+@media (max-width: 320px){
+
+    #banner{
+        width: fit-content;
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+
+    
+    #classificacao-posts{
+        width: 680px;
+    }
+
+
+    #post-row{
+        flex-direction: column;
+        width: 680px;
+        align-items: center;
+        gap: 60px;
+        padding: 60px 0px;
+    }
+
+    .posts{
+        flex-direction: row;
+        max-width: 400px;
+
+    }
+
+    a>h3{
+        font-size: small;
+    }
+
+    a > img{
+        border: 4px dashed #bb856e;
+        transform: scale(0.8);
+    }
+
+    .posts > p{
+        display: flex;
+        contain: content;
+        text-overflow: clip;
+    }
+
+    
 }
