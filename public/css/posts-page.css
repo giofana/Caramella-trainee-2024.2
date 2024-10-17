@@ -60,132 +60,6 @@ header {
   box-shadow: #64473b 0px 0px 10px; /* Adiciona uma sombra ao passar o mouse */
 }
 
-/* --------------- search-bar----------------*/
-.search-bar {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.txt-search {
-  width: 40%;
-  height: 36px;
-  border: #64473b 1px solid;
-  border-radius: 20px;
-  padding: 0 20px 0 40px;
-  font-size: 16px;
-  font-weight: 500;
-  background-color: #e7baa760;
-
-  /* Colocando a imagem de lupa */
-  background-image: url("../assets/search-icon.png");
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  transition: transform 0.3s ease; /* Adiciona transição suave para o efeito de aumento */
-}
-
-.txt-search::placeholder {
-  color: #64473b;
-}
-
-.txt-search:hover {
-  transform: scale(1.05); /* aumenta o tamanho do input ao passar o mouse */
-  outline: none; /* Remove o efeito de seleção original */
-  outline-offset: 0; /* Remove o efeito de seleção original */
-  mask-border-outset: 0; /* Remove o efeito de seleção original */
-}
-
-.txt-search:focus {
-  outline: none; /* Remove a borda preta ao clicar */
-}
-
-/* ---------------- posts ------------------ */
-
-.post-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5%;
-  margin-left: 1%;
-  margin-right: 1%;
-}
-
-.post-box {
-  width: 25%;
-  height: auto;
-  margin: 2%;
-  padding: 2%;
-  border-radius: 20px;
-  box-shadow: #64473b1a 0px 0px 10px; /* add sombra ao passar o mouse */
-  transition: transform 0.3s ease; /* add transição para o efeito de aumento */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; /* acerta espaço entre itens */
-}
-
-.post-img {
-  width: 80%;
-  height: auto;
-  border-radius: 20px 20px 20px 20px;
-}
-
-/* TODO: verificar se é melhor link ou titulo h */
-.post-title {
-  font-size: 24px;
-  font-weight: 500;
-  color: #13142a;
-  margin: 5% 5%;
-  text-decoration: none;
-  text-align: center;
-}
-
-.post-description {
-  font-size: 16px;
-  color: #13142a;
-  margin: 5% 5%;
-  text-align: center;
-}
-
-.post-description p {
-  text-align: center;
-  margin: 0;
-}
-
-.author {
-  display: flex;
-  align-items: center;
-  margin: 0 5%;
-  align-self: flex-start; /* o autor alinhado à esquerda */
-}
-
-.author img {
-  margin-right: 16px;
-}
-
-/* --------------- paginacao ---------------*/
-.pagination {
-  display: flex;
-  justify-content: center;
-  padding: 2% 0;
-}
-
-.pagination a {
-  color: #64473b;
-  padding: 0.7% 1.2%;
-  text-decoration: none;
-  transition: background-color 0.3s;
-  margin: 0 0.5%;
-  border: 1px solid #64473b;
-  border-radius: 4px;
-}
-
-.pagination a:hover {
-  background-color: #e7baa7;
-  color: #fff;
-}
-
 /* -------------- responsividade -------------- */
 
 @media (max-width: 768px) {
@@ -213,7 +87,7 @@ header {
   }
 
   .nav-links li {
-    margin: 0 20px; /* Espaçamento horizontal reduzido entre os links */
+    margin: 0 2%; /* Espaçamento horizontal reduzido entre os links */
     position: relative;
   }
 
@@ -228,49 +102,13 @@ header {
     color: #13142a; /* Altera a cor do texto ao passar o mouse */
     box-shadow: none; /* Remove a sombra ao passar o mouse */
   }
-
-  .search-bar {
-    margin-top: 20px; /* Espaçamento superior reduzido */
-    margin-bottom: 20px; /* Espaçamento inferior reduzido */
-  }
-
-  .txt-search {
-    width: 60%;
-  }
-
-  .post-box {
-    width: 40%; /* Ajusta a largura dos posts para telas menores */
-    margin: 2%; /* Ajusta a margem dos posts para telas menores */
-  }
-
-  .pagination a {
-    padding: 2% 2.5%;
-  }
 }
 
 /* ------------- telas pequenas ---------------- */
 
 @media (max-width: 480px) {
-  .navbar-container {
-    padding: 0 10px; /* Reduz o padding para telas menores */
-  }
-
-  .nav-links li {
-    margin: 0 2px; /* Espaçamento horizontal mínimo para telas muito pequenas */
-  }
-
   .nav-links li a {
     font-size: 16px; /* Tamanho da fonte ainda menor para telas muito pequenas */
     padding: 8px 0; /* Espaçamento interno ainda mais reduzido */
-  }
-
-  .search-bar {
-    width: 100%;
-    padding: 0 10px;
-  }
-
-  .post-box {
-    width: 90%; /* Ajusta a largura dos posts para telas muito pequenas */
-    margin: 1%; /* Ajusta a margem dos posts para telas muito pequenas */
   }
 }
