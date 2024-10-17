@@ -19,7 +19,7 @@
    .navbar {
        display: flex;
        justify-content: center;
-       background-image: url(navbar.jpg);
+       background-image: url(../../public/assets/navbar.jpg);
        background-repeat: no-repeat;
        background-color: #E7BAA7;
        width:100vw;
@@ -122,7 +122,7 @@
    .footer{
        display: flex;
        justify-content: space-between;
-       background-image: url(footer.jpg);
+       background-image: url(../../public/assets/footer.jpg);
        background-repeat: no-repeat;
        background-color: #E7BAA7;
        background-size: cover;
