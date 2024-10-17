@@ -125,6 +125,11 @@ header {
   justify-content: space-between; /* acerta espaço entre itens */
 }
 
+.post-box:hover {
+  transform: scale(1.05); /* aumenta o tamanho do post ao passar o mouse */
+  box-shadow: #64473b1a 0px 0px 20px; /* add sombra ao passar o mouse */
+}
+
 .post-img {
   width: 80%;
   height: auto;
@@ -193,6 +198,8 @@ header {
     height: 150px;
   }
 
+  /* -----------  navbar - tirar ------------- */
+
   .navbar-container {
     flex-direction: column;
     align-items: center;
@@ -213,7 +220,7 @@ header {
   }
 
   .nav-links li {
-    margin: 0 20px; /* Espaçamento horizontal reduzido entre os links */
+    margin: 0 2%; /* Espaçamento horizontal reduzido entre os links */
     position: relative;
   }
 
@@ -228,6 +235,8 @@ header {
     color: #13142a; /* Altera a cor do texto ao passar o mouse */
     box-shadow: none; /* Remove a sombra ao passar o mouse */
   }
+
+  /* -----------  navbar - tirar ------------- */
 
   .search-bar {
     margin-top: 20px; /* Espaçamento superior reduzido */
@@ -251,18 +260,12 @@ header {
 /* ------------- telas pequenas ---------------- */
 
 @media (max-width: 480px) {
-  .navbar-container {
-    padding: 0 10px; /* Reduz o padding para telas menores */
-  }
-
-  .nav-links li {
-    margin: 0 2px; /* Espaçamento horizontal mínimo para telas muito pequenas */
-  }
-
+  /* -----------  navbar - tirar ------------- */
   .nav-links li a {
     font-size: 16px; /* Tamanho da fonte ainda menor para telas muito pequenas */
     padding: 8px 0; /* Espaçamento interno ainda mais reduzido */
   }
+  /* -----------  navbar - tirar ------------- */
 
   .search-bar {
     width: 100%;
@@ -274,3 +277,49 @@ header {
     margin: 1%; /* Ajusta a margem dos posts para telas muito pequenas */
   }
 }
+
+/* -------------- responsividade -------------- */
+
+@media (max-width: 768px) {
+  header {
+    height: 150px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  .navbar-container img {
+    margin-left: 0; /* Remove a margem à esquerda em telas menores */
+    height: 100px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .nav-links li {
+    margin: 0 2%; /* Espaçamento horizontal reduzido entre os links */
+    position: relative;
+  }
+
+  .login-nav {
+    padding: 0; /* Combina padding em uma linha */
+    border-radius: 20px;
+    transition: color 0.3s ease, border-color 0.3s ease; /* Adiciona transição suave para a cor e a borda */
+    border: none; /* Remove a borda */
+  }
+
+  .login-nav:hover {
+    color: #13142a; /* Altera a cor do texto ao passar o mouse */
+    box-shadow: none; /* Remove a sombra ao passar o mouse */
+  }
+}
+
+/* ------------- telas pequenas ---------------- */
