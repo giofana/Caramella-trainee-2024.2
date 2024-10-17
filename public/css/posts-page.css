@@ -22,18 +22,20 @@ header {
 
 .navbar-container img {
   height: 72px;
-  margin-left: 44px;
+  margin-left: 5%;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  margin-right: 100px;
+  margin-right: 5%;
+  width: 50%;
 }
 
 .nav-links li {
   list-style-type: none;
-  margin: 0 100px; /* Espaçamento horizontal entre os links */
+  margin: 0 10%; /* Espaçamento horizontal entre os links */
+  /* flex: 1; Permite que os links cresçam igualmente */
 }
 
 .nav-links li a {
@@ -68,7 +70,7 @@ header {
 }
 
 .txt-search {
-  width: 600px;
+  width: 40%;
   height: 36px;
   border: #64473b 1px solid;
   border-radius: 20px;
@@ -87,7 +89,7 @@ header {
 }
 
 .txt-search:hover {
-  transform: scale(1.05); /* Aumenta o tamanho do input ao passar o mouse */
+  transform: scale(1.05); /* aumenta o tamanho do input ao passar o mouse */
   outline: none; /* Remove o efeito de seleção original */
   outline-offset: 0; /* Remove o efeito de seleção original */
   mask-border-outset: 0; /* Remove o efeito de seleção original */
@@ -103,21 +105,22 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 32px; /* Adiciona espaçamento entre os posts */
+  gap: 32px;
 }
 
+/* TODO: verificar se tamanhos fixos são pertinentes */
 .post-box {
   width: 400px;
   height: 480px;
   margin: 20px;
   padding: 16px;
   border-radius: 20px;
-  box-shadow: #64473b1a 0px 0px 10px; /* Adiciona uma sombra ao passar o mouse */
-  transition: transform 0.3s ease; /* Adiciona transição suave para o efeito de aumento */
+  box-shadow: #64473b1a 0px 0px 10px; /* add sombra ao passar o mouse */
+  transition: transform 0.3s ease; /* add transição para o efeito de aumento */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza todos os itens */
-  justify-content: space-between; /* Distribui o espaço entre os itens */
+  align-items: center;
+  justify-content: space-between; /* acerta espaço entre itens */
 }
 
 .post-img {
@@ -132,7 +135,7 @@ header {
   color: #13142a;
   margin: 24px 32px;
   text-decoration: none;
-  text-align: center; /* Centraliza o texto */
+  text-align: center;
 }
 
 .post-description {
@@ -140,7 +143,7 @@ header {
   color: #13142a;
   margin: 0 32px;
   margin-bottom: 16px;
-  text-align: center; /* Centraliza o texto */
+  text-align: center;
 }
 
 .post-description p {
@@ -152,9 +155,80 @@ header {
   display: flex;
   align-items: center;
   margin: 0 32px;
-  align-self: flex-start; /* Mantém o autor alinhado à esquerda */
+  align-self: flex-start; /* o autor alinhado à esquerda */
 }
 
 .author img {
   margin-right: 16px;
+}
+
+/* --------------- paginacao ---------------*/
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.pagination a {
+  color: #64473b;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin: 0 4px;
+  border: 1px solid #64473b;
+  border-radius: 4px;
+}
+
+.pagination a:hover {
+  background-color: #e7baa7;
+  color: #fff;
+}
+
+/* -------------- responsividade -------------- */
+
+@media (max-width: 768px) {
+  header {
+    height: 150px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  .navbar-container img {
+    margin-left: 0; /* Remove a margem à esquerda em telas menores */
+    height: 100px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .nav-links li {
+    margin: 0 10px; /* Espaçamento horizontal reduzido entre os links */
+    position: relative;
+  }
+
+  .login-nav {
+    padding: 0; /* Combina padding em uma linha */
+    border-radius: 20px;
+    transition: color 0.3s ease, border-color 0.3s ease; /* Adiciona transição suave para a cor e a borda */
+    border: none; /* Remove a borda */
+  }
+
+  .login-nav:hover {
+    color: #13142a; /* Altera a cor do texto ao passar o mouse */
+    box-shadow: none; /* Remove a sombra ao passar o mouse */
+  }
+
+  .search-bar {
+    margin-top: 20px; /* Espaçamento superior reduzido */
+    margin-bottom: 10px; /* Espaçamento inferior reduzido */
+  }
 }
