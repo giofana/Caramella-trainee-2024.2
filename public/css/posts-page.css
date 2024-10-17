@@ -35,7 +35,6 @@ header {
 .nav-links li {
   list-style-type: none;
   margin: 0 10%; /* Espaçamento horizontal entre os links */
-  /* flex: 1; Permite que os links cresçam igualmente */
 }
 
 .nav-links li a {
@@ -51,7 +50,7 @@ header {
 
 .login-nav {
   border: #64473b 2px solid;
-  padding: 4px 24px; /* Combina padding em uma linha */
+  padding: 4px 24px;
   border-radius: 20px;
   transition: color 0.3s ease, border-color 0.3s ease; /* Adiciona transição suave para a cor e a borda */
 }
@@ -78,6 +77,8 @@ header {
   font-size: 16px;
   font-weight: 500;
   background-color: #e7baa760;
+
+  /* Colocando a imagem de lupa */
   background-image: url("../assets/search-icon.png");
   background-position: 10px center;
   background-repeat: no-repeat;
@@ -129,6 +130,7 @@ header {
   border-radius: 20px 20px 20px 20px;
 }
 
+/* TODO: verificar se é melhor link ou titulo h */
 .post-title {
   font-size: 24px;
   font-weight: 500;
@@ -211,7 +213,7 @@ header {
   }
 
   .nav-links li {
-    margin: 0 10px; /* Espaçamento horizontal reduzido entre os links */
+    margin: 0 20px; /* Espaçamento horizontal reduzido entre os links */
     position: relative;
   }
 
