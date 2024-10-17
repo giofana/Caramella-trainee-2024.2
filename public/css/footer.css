@@ -18,7 +18,7 @@
    .footer{
     display: flex;
     justify-content: space-between;
-    background-image: url(footer.jpg);
+    background-image: url(../assets/footer.jpg);
     background-repeat: no-repeat;
     background-color: #E7BAA7;
     background-size: cover;
