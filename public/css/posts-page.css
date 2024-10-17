@@ -106,15 +106,16 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 32px;
+  gap: 0.5%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
-/* TODO: verificar se tamanhos fixos são pertinentes */
 .post-box {
-  width: 400px;
-  height: 480px;
-  margin: 20px;
-  padding: 16px;
+  width: 25%;
+  height: auto;
+  margin: 2%;
+  padding: 2%;
   border-radius: 20px;
   box-shadow: #64473b1a 0px 0px 10px; /* add sombra ao passar o mouse */
   transition: transform 0.3s ease; /* add transição para o efeito de aumento */
@@ -125,8 +126,8 @@ header {
 }
 
 .post-img {
-  width: 300px;
-  height: 200px;
+  width: 80%;
+  height: auto;
   border-radius: 20px 20px 20px 20px;
 }
 
@@ -135,7 +136,7 @@ header {
   font-size: 24px;
   font-weight: 500;
   color: #13142a;
-  margin: 24px 32px;
+  margin: 5% 5%;
   text-decoration: none;
   text-align: center;
 }
@@ -143,8 +144,7 @@ header {
 .post-description {
   font-size: 16px;
   color: #13142a;
-  margin: 0 32px;
-  margin-bottom: 16px;
+  margin: 5% 5%;
   text-align: center;
 }
 
@@ -156,7 +156,7 @@ header {
 .author {
   display: flex;
   align-items: center;
-  margin: 0 32px;
+  margin: 0 5%;
   align-self: flex-start; /* o autor alinhado à esquerda */
 }
 
@@ -168,15 +168,15 @@ header {
 .pagination {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 2% 0;
 }
 
 .pagination a {
   color: #64473b;
-  padding: 8px 16px;
+  padding: 0.7% 1.2%;
   text-decoration: none;
   transition: background-color 0.3s;
-  margin: 0 4px;
+  margin: 0 0.5%;
   border: 1px solid #64473b;
   border-radius: 4px;
 }
@@ -231,6 +231,46 @@ header {
 
   .search-bar {
     margin-top: 20px; /* Espaçamento superior reduzido */
-    margin-bottom: 10px; /* Espaçamento inferior reduzido */
+    margin-bottom: 20px; /* Espaçamento inferior reduzido */
+  }
+
+  .txt-search {
+    width: 60%;
+  }
+
+  .post-box {
+    width: 70%; /* Ajusta a largura dos posts para telas menores */
+    margin: 0.5%; /* Ajusta a margem dos posts para telas menores */
+  }
+
+  .pagination a {
+    padding: 2% 2.5%;
+  }
+}
+
+/* ------------- telas pequenas ---------------- */
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 10px; /* Reduz o padding para telas menores */
+  }
+
+  .nav-links li {
+    margin: 0 2px; /* Espaçamento horizontal mínimo para telas muito pequenas */
+  }
+
+  .nav-links li a {
+    font-size: 16px; /* Tamanho da fonte ainda menor para telas muito pequenas */
+    padding: 8px 0; /* Espaçamento interno ainda mais reduzido */
+  }
+
+  .search-bar {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .post-box {
+    width: 90%; /* Ajusta a largura dos posts para telas muito pequenas */
+    margin: 1%; /* Ajusta a margem dos posts para telas muito pequenas */
   }
 }
