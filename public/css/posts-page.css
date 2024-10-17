@@ -239,8 +239,8 @@ header {
   }
 
   .post-box {
-    width: 70%; /* Ajusta a largura dos posts para telas menores */
-    margin: 0.5%; /* Ajusta a margem dos posts para telas menores */
+    width: 40%; /* Ajusta a largura dos posts para telas menores */
+    margin: 2%; /* Ajusta a margem dos posts para telas menores */
   }
 
   .pagination a {
