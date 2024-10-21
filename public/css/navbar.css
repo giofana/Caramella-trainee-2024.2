@@ -10,8 +10,11 @@ header {
   height: 72px;
 }
 
-/* --------------------- navbar ------------------- */
+* {
+  box-sizing: border-box;
+}
 
+/* --------------------- navbar ------------------- */
 .navbar-container {
   display: flex;
   align-items: center;
@@ -30,6 +33,7 @@ header {
   align-items: center;
   margin-right: 5%;
   width: 50%;
+  padding: 0%;
 }
 
 .nav-links li {
@@ -59,7 +63,6 @@ header {
   color: #13142a; /* Altera a cor do texto ao passar o mouse */
   box-shadow: #64473b 0px 0px 10px; /* Adiciona uma sombra ao passar o mouse */
 }
-
 /* -------------- responsividade -------------- */
 
 @media (max-width: 768px) {
