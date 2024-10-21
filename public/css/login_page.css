@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
+/* Reset padrão de navegadores */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,17 +11,30 @@
 html, body {
     height: 100%;
     font-family: 'Libre Baskerville', serif;
+    overflow: hidden;
 }
 
-.img-background {
+/* Definindo a posição e o tamanho das imagens */
+.img-background, .img-background2, .img-background3, .img-background4,
+.img-background5, .img-background6, .img-background7, .img-background8,
+.img-background9, .img-background10, .img-background11, .img-background12 {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 300px;
+    height: auto;
+    object-fit: contain;
     z-index: -1;
 }
+
+/* Posições específicas para as imagens */
+.img-background { bottom: 6%; left: 0%; }
+.img-background2 { top: 0%; left: 0%; }
+.img-background3 { top: 36%; right: 12%; }
+.img-background4 { bottom: 0%; right: 0%; }
+.img-background5 { top: 20%; left: 25%; }
+.img-background6 { bottom: 9%; left: 40%; }
+.img-background7 { top: 7%; right: 27%; }
+.img-background8 { bottom: 36%; left: 8%; }
+.img-background9 { top: 0%; right: 2%; }
 
 .body {
     width: 100vw;
@@ -68,7 +83,7 @@ html, body {
     height: 56px; 
     padding: 0 24px;
     border-radius: 12px;
-    border: 2px solid white;
+    border: 1px solid white;
     background-color: rgba(100, 71, 59, 0.2); 
     font-weight: bold; 
     font-size: 16px;
@@ -80,7 +95,7 @@ html, body {
     max-width: 200px;
     height: 48px;
     background-color: rgba(100, 71, 59, 0.2);
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 12px;
     cursor: pointer;
     font-weight: bold;
@@ -91,6 +106,73 @@ html, body {
 .button-group button:hover {
     background-color: rgba(100, 71, 59, 0.4);
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form {
+        width: 80vw;
+        max-width: 480px;
+    }
+
+    .email-group input, .senha-group input {
+        width: 80%;
+        max-width: 360px;
+    }
+
+    .button-group button {
+        width: 60%;
+    }
+
+    .img-background, .img-background2, .img-background3, .img-background4,
+    .img-background5, .img-background6, .img-background7, .img-background8,
+    .img-background9 {
+        width: 200px;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .form {
+        width: 80vw;
+        max-width: 340px;
+        padding-top: 16px;
+        padding-bottom: 8px;
+    }
+
+    .email-group input, .senha-group input {
+        width: 80%;
+        max-width: 300px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .button-group button {
+        width: 60%;
+        max-width: 160px;
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .img-background, .img-background2, .img-background3, .img-background4,
+    .img-background5, .img-background6, .img-background7, .img-background8,
+    .img-background9 {
+        width: 150px;
+    }
+
+    .img-background { bottom: 6%; left: 0%; }
+    .img-background2 { top: 0%; left: 0%; }
+    .img-background3 { top: 36%; right: 12%; }
+    .img-background4 { bottom: 0%; right: 0%; }
+    .img-background5 { top: 20%; left: 0%; }
+    .img-background6 { bottom: 9%; left: 40%; }
+    .img-background7 { top: 16%; right: 0%; }
+    .img-background8 { bottom: 30%; left: 8%; }
+    .img-background9 { top: 0%; right: 2%; }
+}
+
+
+
+
 
 
 
