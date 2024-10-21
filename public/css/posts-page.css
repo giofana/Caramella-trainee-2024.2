@@ -14,57 +14,6 @@ header {
   height: 72px;
 }
 
-/* --------------------- navbar ------------------- */
-
-.navbar-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #e7baa7;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra embaixo */
-}
-
-.navbar-container img {
-  height: 72px;
-  margin-left: 5%;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  margin-right: 5%;
-  width: 50%;
-  padding: 0%;
-}
-
-.nav-links li {
-  list-style-type: none;
-  margin: 0 10%; /* Espaçamento horizontal entre os links */
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #64473b;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.nav-links li a:hover {
-  color: #13142a; /* Altera a cor ao passar o mouse */
-}
-
-.login-nav {
-  border: #64473b 2px solid;
-  padding: 4px 24px;
-  border-radius: 20px;
-  transition: color 0.3s ease, border-color 0.3s ease; /* Adiciona transição suave para a cor e a borda */
-}
-
-.login-nav:hover {
-  color: #13142a; /* Altera a cor do texto ao passar o mouse */
-  box-shadow: #64473b 0px 0px 10px; /* Adiciona uma sombra ao passar o mouse */
-}
-
 /* --------------- search-bar----------------*/
 .search-bar {
   display: flex;
@@ -141,7 +90,6 @@ header {
   border-radius: 20px 20px 20px 20px;
 }
 
-/* TODO: verificar se é melhor link ou titulo h */
 .post-title {
   font-size: 24px;
   font-weight: 500;
@@ -189,11 +137,11 @@ header {
   margin: 0 0.5%;
   border: 1px solid #64473b;
   border-radius: 4px;
+  background-color: #e7baa760;
 }
 
 .pagination a:hover {
-  background-color: #e7baa7;
-  color: #fff;
+  background-color: #e5caec;
 }
 
 /* -------------- responsividade -------------- */
@@ -202,46 +150,6 @@ header {
   header {
     height: 150px;
   }
-
-  /* -----------  navbar - tirar ------------- */
-
-  .navbar-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    box-shadow: none;
-  }
-
-  .navbar-container img {
-    margin-left: 0; /* Remove a margem à esquerda em telas menores */
-    height: 100px;
-  }
-
-  .nav-links {
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    margin: 0;
-  }
-
-  .nav-links li {
-    margin: 0 2%; /* Espaçamento horizontal reduzido entre os links */
-    position: relative;
-  }
-
-  .login-nav {
-    padding: 0; /* Combina padding em uma linha */
-    border-radius: 20px;
-    transition: color 0.3s ease, border-color 0.3s ease; /* Adiciona transição suave para a cor e a borda */
-    border: none; /* Remove a borda */
-  }
-
-  .login-nav:hover {
-    color: #13142a; /* Altera a cor do texto ao passar o mouse */
-    box-shadow: none; /* Remove a sombra ao passar o mouse */
-  }
-
-  /* -----------  navbar - tirar ------------- */
 
   .search-bar {
     margin-top: 20px; /* Espaçamento superior reduzido */
@@ -265,13 +173,6 @@ header {
 /* ------------- telas pequenas ---------------- */
 
 @media (max-width: 480px) {
-  /* -----------  navbar - tirar ------------- */
-  .nav-links li a {
-    font-size: 16px; /* Tamanho da fonte ainda menor para telas muito pequenas */
-    padding: 8px 0; /* Espaçamento interno ainda mais reduzido */
-  }
-  /* -----------  navbar - tirar ------------- */
-
   .search-bar {
     width: 100%;
     padding: 0 10px;
@@ -280,50 +181,6 @@ header {
   .post-box {
     width: 90%; /* Ajusta a largura dos posts para telas muito pequenas */
     margin: 1%; /* Ajusta a margem dos posts para telas muito pequenas */
-  }
-}
-
-/* -------------- responsividade -------------- */
-
-@media (max-width: 768px) {
-  header {
-    height: 150px;
-  }
-
-  .navbar-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    box-shadow: none;
-  }
-
-  .navbar-container img {
-    margin-left: 0; /* Remove a margem à esquerda em telas menores */
-    height: 100px;
-  }
-
-  .nav-links {
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    margin: 0;
-  }
-
-  .nav-links li {
-    margin: 0 2%; /* Espaçamento horizontal reduzido entre os links */
-    position: relative;
-  }
-
-  .login-nav {
-    padding: 0; /* Combina padding em uma linha */
-    border-radius: 20px;
-    transition: color 0.3s ease, border-color 0.3s ease; /* Adiciona transição suave para a cor e a borda */
-    border: none; /* Remove a borda */
-  }
-
-  .login-nav:hover {
-    color: #13142a; /* Altera a cor do texto ao passar o mouse */
-    box-shadow: none; /* Remove a sombra ao passar o mouse */
   }
 }
 
