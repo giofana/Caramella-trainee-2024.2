@@ -53,6 +53,7 @@ body::-webkit-scrollbar{
 
 #banner > button{
     font-family: 'kurale', sans-serif;
+    font-size: large;
     font-weight: bold;
     letter-spacing: 0.5vh;
     border-radius: 4px;
@@ -135,6 +136,10 @@ a > img{
         width: fit-content;
         padding-left: 36px;
         padding-right: 36px;
+    }
+
+    #banner > button{
+        font-size: larger;
     }
 
     
