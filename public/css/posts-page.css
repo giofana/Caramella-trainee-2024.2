@@ -1,0 +1,139 @@
+/* --------------- Reset Padrão --------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* --------------- Card e Card Header --------------- */
+.card {
+    background-color: #F5F5F5;
+    margin: 5%;
+    border-radius: 16px;
+    padding-top: 2%;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top h2 {
+    color: #13142A;
+}
+
+/* --------------- Tabela --------------- */
+.tabela {
+    background-color: #13142A;
+    color: #E5CAEC;
+    width: 80vw;
+    border-collapse: collapse; /* Remove espaçamento entre as células */
+    margin: 20px auto; /* Espaço ao redor da tabela */
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.tabela th, .tabela td {
+    padding: 12px;
+    text-align: center;
+}
+
+.tabela td {
+    border: 1px solid #ddd; /* Borda entre as células */
+}
+
+.tabela th {
+    background-color: #13142A; /* Cor de fundo do cabeçalho */
+    color: #D0F4D4; /* Cor do texto do cabeçalho */
+}
+
+.tabela td:nth-last-child(-n+3) {
+    color: #D0F4D4;
+    fill: #D0F4D4;
+    cursor: pointer;
+}
+
+/* --------------- Paginação ---------------*/
+.bottom {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2% 0;
+    margin-right: 2%;
+}
+
+.pagination a {
+    background-color: #13142A;
+    color: #D0F4D4;
+    padding: 0.7% 1.2%;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin: 0 2%;
+    border: 1px solid #13142A;
+    border-radius: 4px;
+    min-width: 40px; 
+    height: 36px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.pagination a:hover {
+    background-color: #E5CAEC;
+    color: #13142A;
+}
+
+/* --------------- Botão --------------- */
+.button-group {
+    display: flex;
+    align-items: center; 
+    margin-left: 2%;
+}
+
+.button-group button {
+    background-color: #13142A;
+    color: #E5CAEC;
+    width: 15vw;
+    max-width: 160px; 
+    height: 4vh; 
+    transition: background-color 0.3s;
+    border-radius: 16px; 
+    border: none; 
+    font-size: 14px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    padding: 0 15px;
+}
+
+.button-group button:hover {
+    background-color: #D0F4D4;
+    color: #13142A;
+}
+
+/* --------------- 3 últimas colunas --------------- */
+.view, .edit, .delete {
+    text-align: center; /* Alinha todo o conteúdo horizontalmente ao centro */
+    position: relative;
+}
+
+.view svg, .edit svg, .delete svg {
+    display: block; /* Faz o SVG ocupar toda a largura da célula */
+    margin: 0 auto 0.2rem; /* Centraliza o SVG e adiciona o espaçamento abaixo */
+}
+
+.view span, .edit span, .delete span {
+    display: block;
+    text-align: center;
+}
+
