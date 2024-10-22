@@ -138,6 +138,10 @@ a > img{
         padding-right: 36px;
     }
 
+    #banner > h2{
+        line-height: 2.0;
+    }
+
     #banner > button{
         font-size: larger;
     }
