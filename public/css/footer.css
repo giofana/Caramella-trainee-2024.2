@@ -4,66 +4,209 @@
     box-sizing:border-box;
     font-family: Josefin Sans;
    }
-   
+
    body {
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       flex-direction: column;
-       width: 100vw;
-       height: 100%;
-       overflow-x: hidden;
-   }
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 32vh;
+}
 
-   .footer{
+
+.footer {
+    font-size: 110%;
     display: flex;
     justify-content: space-between;
-    background-image: url(../assets/footer.jpg);
-    background-repeat: no-repeat;
+    align-items: end;
+    flex-direction: row;
     background-color: #E7BAA7;
-    background-size: cover;
-    width:100%;
-    height: 300px;
-} 
-
-.footer .footer1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 175px;
-    margin-left: 200px;
-    font-size: 25px;
+    box-shadow: inset 0 2px 20px 0 #575454;
+    width: 100%;
+    height: 100%;
 }
 
-.footer .footer1 div{
+.logo {
     display: flex;
-    justify-content: space-between;
-    margin: 0 90px;
-}
-
-.footer .footer1 img{
-    width: 30px;
-   margin-top: 10px;
-}
-
-.footer .footer2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 175px;
-    margin-left: 200px;
-    font-size: 25px;
-}
-
-.footer .footer2 div{
-    display: flex;
-    justify-content: left;
     align-items: center;
-    margin: 0 300px;
-    margin-top: 10px;
-    gap: 20px;
+    justify-content: center; 
+    flex-direction: column;
+    height: 100%; 
 }
 
-.footer .footer2 img{
-    width: 30px;
+.infos22{
+    margin-top: 4%;
+}
+
+
+.infos1,.infos2{
+    display: flex;
+    justify-content: end;
+    height: 100%;
+    flex-direction: column;
+
+}
+
+.infos2-box{
+    width: 100%;
+}
+
+.infos1 .text, .infos2-box{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    white-space: nowrap;
+    
+}
+
+.infos21,.infos22{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+}
+.infos1 .infos1l{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4%;
+}
+
+.nuvem2{
+    
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.nuvem1{
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    
+    
+}
+
+@media screen and (min-width: 0px) and (max-width: 950px) {
+
+    .nuvem2 {
+        display: none;
+    }
+
+    .nuvem1 {
+        display: none;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #E7BAA7;
+        height: 120%;
+        padding: 1rem;
+        gap: 5px;
+        justify-content: center;
+    }
+
+    .infos2,.infos1{
+        width: 100%;
+    }
+
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        flex-direction: column;
+        width: 100%; 
+        height: auto; 
+    }
+
+    .logo p{
+         display: none;
+       
+    }
+
+    .logo img {
+        max-width: 80%; 
+        height: auto; 
+        margin-bottom:0%;
+    }
+
+    .infos1,.infos2,.text,.infos2-box{
+        justify-content: center;
+    } 
+
+    
+    
+
+    .infos2 .infos22{
+        margin-top: 0%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2%;
+    }
+
+    
+
+    .infos2,.infos1{
+        display: flex;
+        height: 40%;
+    }
+
+    .infos1{
+        align-items: center;
+        margin-top: 0%;
+        gap:0%;
+    }
+
+    .infos2 {
+        margin-top: 0%; 
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0%;
+       
+    }
+
+    .infos2 .infos21, .infos2 .infos22 {
+        margin-top: 6%; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2%;
+    }
+    
+
+
+}
+
+@media screen and (min-width: 950px) and (max-width: 1440px){
+    
+    .footer {
+        font-size: 110%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        background-color: #E7BAA7;
+        width: 200%;
+        height: 200px;
+    }
+
+  
+
+    .infos1{
+        gap:0%;
+    }
+
+
+
+    .infos2 .infos21, .infos2 .infos22 {
+        margin-top: 6%; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2%;
+    }
+
 }
