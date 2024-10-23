@@ -130,58 +130,137 @@ a > img{
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.411);
 }
 
-@media (max-width: 425px), (orientation:landscape) and (max-height: 425px){
+@media (max-width: 768px){
 
     #banner{
-        width: fit-content;
-        padding-left: 36px;
-        padding-right: 36px;
+        width: 100vw;
+        background-position:right;
     }
 
     #banner > h2{
+        display: flex;
+        max-width: fit-content;
+        padding-left: 30px;
+        padding-right: 30px;
         line-height: 2.0;
+        font-size: large;
+        letter-spacing: 8px;
+    }
+    #banner > p{
+        font-size: small;
+        padding-left: 30px;
+        padding-right: 30px;
+        display: flex;
+        max-width: fit-content;
+        letter-spacing: 2px;
     }
 
     #banner > button{
-        font-size: larger;
+        padding: 2px 6px;
+        font-size: 12px;
     }
 
-    
     #classificacao-posts{
-        width: 680px;
+        padding: 0;
+        margin-top: 12vh;
+        width: 100vw;
     }
-
 
     #post-row{
-        flex-direction: column;
-        width: 680px;
-        align-items: center;
-        gap: 60px;
-        padding: 60px 0px;
+        margin-top: 12vh;
+        padding: 60px 20px 60px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12vh;
         background: linear-gradient(#5c4236e1, #30231c);
     }
 
     .posts{
-        flex-direction: row;
-        max-width: 400px;
         box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.534);
 
     }
 
     a>h3{
-        font-size: small;
+        font-size: medium;
     }
 
     a > img{
         border: 4px dashed #bb856e;
-        transform: scale(0.8);
+        max-width: fit-content;
     }
 
     .posts > p{
         display: flex;
+        font-size: small;
+        max-width: 200px;
         contain: content;
         text-overflow: clip;
     }
 
     
+}
+
+@media (min-width:769px){
+
+    #banner{
+        width: 100vw;
+        background-position:right;
+    }
+
+    #banner > h2{
+        display: flex;
+        max-width: fit-content;
+        padding-left: 30px;
+        padding-right: 30px;
+        line-height: 2.0;
+    }
+    #banner > p{
+        padding-left: 30px;
+        padding-right: 30px;
+        display: flex;
+        max-width: fit-content;
+    }
+
+    #banner > button{
+        font-size: 14px;
+    }
+
+    #classificacao-posts{
+        width:100vw;
+        margin-top: 12vh;
+    }
+
+    #post-row{
+        padding: 60px 0px 60px 0px;
+        flex-wrap: wrap;
+        row-gap: 12vh;
+        justify-content: space-evenly;
+        align-self: stretch;
+        margin-top: 12vh;
+        background: linear-gradient(#5c4236e1, #30231c);
+    }
+
+    .posts{
+        margin: 0;
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.534);
+
+    }
+
+    a>h3{
+        font-size: medium;
+    }
+
+    a > img{
+        border: 4px dashed #bb856e;
+        max-width: fit-content;
+    }
+
+    .posts > p{
+        display: flex;
+        font-size: small;
+        max-width: 200px;
+        contain: content;
+        text-overflow: clip;
+    }
+
 }
