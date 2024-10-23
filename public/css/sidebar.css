@@ -21,58 +21,105 @@ body {
   backdrop-filter: blur(10px);
 }
 
+/* TODO: achar uma transição boa */
 #sidebar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 16px;
-  background-color: #64473a5e;
-  width: 17%;
+  background-color: #64473a3f;
+  width: 16%;
+  height: max-content;
   font-size: 20px;
   position: relative;
+  /* transition: ; */
 }
 
-/* mudar a cor */
+#sidebar.close {
+  width: 6%; /* Ajusta a largura da sidebar quando fechada */
+}
+
+/* Adiciona separação entre logo e links */
+.logo-container {
+  margin: 0 10% 0 10%;
+  border-bottom: 1px solid #64473a5e;
+}
+
 #sidebar-logo {
-  display: block;
+  display: block; /* Centralizando a logo */
   justify-content: center;
-  width: 50%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* ---------- alteracoes da lista de paginas do sidebar ------------- */
+#sidebar.close #sidebar-logo {
+  width: 100%;
+}
+
+/* ---------- alteracoes da lista de páginas do sidebar ------------- */
 
 #sidebar ul {
   display: flex;
   flex-direction: column;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .side-item {
   display: flex;
-  border-radius: 8px;
+  align-items: center;
+  border-radius: 32px;
   padding: 5%;
   cursor: pointer;
   position: relative; /* Para posicionar botão de fechar */
+  margin: 10% 0 0 0; /* Adiciona um pouco de margem para melhorar distância entre links*/
+}
+
+#sidebar.close .side-item {
+  padding: 30% 0 30% 0;
 }
 
 .side-item a {
   display: flex;
-  gap: 12%;
-  margin: 2%;
   align-items: center;
   text-decoration: none;
   color: #64473b;
+  gap: 10%; /* Espaçamento entre o ícone e o texto */
+}
+
+/* Retirando gap após a imagem na sidebar fechada */
+#sidebar.close a {
+  gap: 0;
 }
 
 /* Sombra para destacar os textos da sidebar */
 .side-item p {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Adiciona uma pequena sombra ao texto */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* olhar o marcador */
+#sidebar.close p {
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#sidebar.close .side-item a {
+  justify-content: center;
+  width: 100%;
+}
+
+#sidebar.close .side-item a i,
+#open-button i {
+  margin: 0; /* Remove a margem do ícone */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Centraliza o ícone */
+}
+
+/* Adiciona marcador para link ativo */
 .side-item.active::before {
   content: "";
   position: absolute;
@@ -85,13 +132,18 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
+/* Distanciando o efeito da borda  */
+.side-item:not(.active) {
+  margin: 5%;
+}
+
 .side-item:hover:not(.active) {
   background-color: #fad2a43f;
 }
 
-.side-item a i {
-  width: 20px;
-  height: 20px;
+#sidebar.close .side-item:hover:not(.active) {
+  background-color: #fad2a43f;
+  border-radius: 50px;
 }
 
 /* ----------- buttons ---------------- */
@@ -99,8 +151,8 @@ body {
 #open-button {
   position: absolute;
   top: 10px;
-  right: 10px;
-  background-color: #64473b;
+  right: -20px; /* Posiciona o botão fora da barra lateral */
+  background-color: #64473be5;
   color: #fff;
   border: none; /* Remove a borda do botão */
   border-radius: 50%; /* Torna o botão circular */
@@ -110,14 +162,15 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: right 0.3s ease; /* Adiciona uma transição suave para a posição */
 }
 
 #open-button i {
   font-size: 20px; /* Tamanho do ícone */
 }
 
-#open-button:hover {
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao botão */
+#sidebar.close #open-button {
+  right: -20px; /* Mantém o botão fora da barra lateral quando fechada */
 }
 
 #logout-button {
@@ -126,15 +179,15 @@ body {
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
   margin-left: auto;
   margin-right: auto;
-  background-color: #64473b;
+  background-color: #64473be5;
   color: #fff;
   border: none;
   border-radius: 16px;
-  width: 70%;
+  width: 55%;
   height: 40px;
   cursor: pointer;
-  margin-bottom: 10%;
-  margin-top: 10%;
+  margin-bottom: 20%;
+  margin-top: 20%;
 }
 
 #logout-button p {
@@ -146,6 +199,9 @@ body {
   margin-right: 8%; /* Espaçamento entre o ícone e o texto */
 }
 
-#logout-button:hover {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao botão */
+/* Transição para buttons */
+#logout-button:hover,
+#open-button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
