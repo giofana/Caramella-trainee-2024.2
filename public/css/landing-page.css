@@ -166,6 +166,10 @@ a > img{
         width: 100vw;
     }
 
+    #classificacao-posts > h2{
+        font-size: medium;
+    }
+
     #post-row{
         margin-top: 12vh;
         padding: 60px 20px 60px 20px;
