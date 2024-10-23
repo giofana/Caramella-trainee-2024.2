@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 /* Reset padrão de navegadores */
 
@@ -10,7 +10,7 @@
 
 html, body {
     height: 100%;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Josefins Sans', serif;
     overflow: hidden;
 }
 
@@ -74,6 +74,8 @@ html, body {
 }
 
 .email-group h3, .senha-group h3 {
+    margin-left: 11.5%;
+    text-align: left;
     margin-bottom: 12px;
 }
 
