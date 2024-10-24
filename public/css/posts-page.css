@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 /* --------------- Reset Padrão --------------- */
 * {
     margin: 0;
@@ -8,14 +10,23 @@
 html, body {
     height: 100%;
     overflow: hidden;
+    font-family: 'Josefin Sans';
 }
 
 /* --------------- Card e Card Header --------------- */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #E7BAA7;
+}
+
 .card {
-    background-color: #F5F5F5;
-    margin: 5%;
+    background-color: rgba(100, 71, 59, 0.42);
     border-radius: 16px;
     padding-top: 2%;
+    width: 80%;
 }
 
 .top {
@@ -25,38 +36,91 @@ html, body {
 }
 
 .top h2 {
-    color: #13142A;
+    color: #F5F5F5;
+    font-size: 52px;
 }
 
 /* --------------- Tabela --------------- */
 .tabela {
-    background-color: #13142A;
-    color: #E5CAEC;
-    width: 80vw;
-    border-collapse: collapse; /* Remove espaçamento entre as células */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin: 20px auto; /* Espaço ao redor da tabela */
-    border-radius: 16px;
-    overflow: hidden;
+    gap: 1.2rem;
 }
 
-.tabela th, .tabela td {
-    padding: 12px;
+
+.linha-header, .linha-comum {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60vw;
+    height: 6vh;
+    border-radius: 40px;
+}
+
+.linha-header {
+    background-color: #D0F4D4;
+    color: #13142A;
+}
+
+.linha-comum {
+    background-color: rgba(250, 210, 164, 0.65);
+    color: #13142A;
+}
+
+.cedula-id, .cedula-titulo, .cedula-autor, .cedula-data, .cedula-acoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    height: 100%;
 }
 
-.tabela td {
-    border: 1px solid #ddd; /* Borda entre as células */
+.cedula-id {
+    flex-basis: 10%; /* 10% da largura total */
 }
 
-.tabela th {
-    background-color: #13142A; /* Cor de fundo do cabeçalho */
-    color: #D0F4D4; /* Cor do texto do cabeçalho */
+.cedula-titulo {
+    flex-basis: 20%;
 }
 
-.tabela td:nth-last-child(-n+3) {
-    color: #D0F4D4;
-    fill: #D0F4D4;
-    cursor: pointer;
+.cedula-autor {
+    flex-basis: 20%;
+}
+
+.cedula-data {
+    flex-basis: 20%;
+}
+
+.cedula-acoes {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.square {
+    border: #D0F4D4;
+    background-color: #FAD2A4;
+    border: 2px solid #64473B;
+    border-radius: 20px;
+    width: 4.2vw;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view {
+    width: 2.2vw;
+    height: auto;
+}
+
+.edit, .delete {
+    width: 2vw;
+    height: auto;
 }
 
 /* --------------- Paginação ---------------*/
@@ -74,8 +138,8 @@ html, body {
 }
 
 .pagination a {
-    background-color: #13142A;
-    color: #D0F4D4;
+    background-color: rgba(250, 210, 164, 0.65);
+    color: #13142A;
     padding: 0.7% 1.2%;
     text-decoration: none;
     transition: background-color 0.3s;
@@ -89,11 +153,6 @@ html, body {
     justify-content: center;
 }
 
-.pagination a:hover {
-    background-color: #E5CAEC;
-    color: #13142A;
-}
-
 /* --------------- Botão --------------- */
 .button-group {
     display: flex;
@@ -102,8 +161,8 @@ html, body {
 }
 
 .button-group button {
-    background-color: #13142A;
-    color: #E5CAEC;
+    background-color: #FAD2A4;
+    color: #13142A;
     width: 15vw;
     max-width: 160px; 
     height: 4vh; 
@@ -114,26 +173,6 @@ html, body {
     font-weight: bold; 
     cursor: pointer; 
     padding: 0 15px;
-}
-
-.button-group button:hover {
-    background-color: #D0F4D4;
-    color: #13142A;
-}
-
-/* --------------- 3 últimas colunas --------------- */
-.view, .edit, .delete {
-    text-align: center; /* Alinha todo o conteúdo horizontalmente ao centro */
-    position: relative;
-}
-
-.view svg, .edit svg, .delete svg {
-    display: block; /* Faz o SVG ocupar toda a largura da célula */
-    margin: 0 auto 0.2rem; /* Centraliza o SVG e adiciona o espaçamento abaixo */
-}
-
-.view span, .edit span, .delete span {
-    display: block;
-    text-align: center;
+    font-family: 'Josefin Sans';
 }
 
