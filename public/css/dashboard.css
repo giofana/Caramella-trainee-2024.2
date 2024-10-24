@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin:0;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #e9f7caa4 50%, #fac0cfad 100%), url(/public/assets/cupcake.svg);
+    background-size: 8%;
+    background-repeat: round;
+}
+
+
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+  
+
+#dashboard{
+    display: flex;
+    column-gap: 4vw;
+}
+
+
+.botoes > a{
+    display: flex;
+    background: linear-gradient(to top, #FAC0CF 50%, #fac0cf98 100%);
+    justify-content: center;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px #FAC0CF;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 8px;
+    padding: 1vw;
+    padding-top: 2vw;
+    text-align: center;
+}
+
+.botoes > a:hover{
+    transition-duration: 0.4s;
+    scale: 1.05;
+    cursor: pointer;
+    box-shadow: #CA1551 2px 2px 16px;
+}
+
+a > p{
+    color: black;
+    font-family: "Josefin Sans";
+    font-size: clamp(14px,1vw,16px);
+    max-width: 9vw;
+    contain: contain;
+}
+
+a > img{
+    display: flex;
+    width: 50%;
+}
+
+@media only screen and (max-width: 450px){
+    body{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        margin:0;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, #e9f7caa4 50%, #fac0cfad 100%), url(/public/assets/cupcake.svg);
+        background-size: 20%;
+        background-repeat: round;
+    }
+    
+    #dashboard{
+        display: flex;
+        column-gap: 4vw;
+    }
+    
+    
+    .botoes > a{
+        display: flex;
+        background: linear-gradient(to top, #FAC0CF 50%, #fac0cf98 100%);
+        justify-content: center;
+        text-decoration: none;
+        flex-direction: column;
+        align-items: center;
+        width: 20vw;
+        height: 20vw;
+        border: none;
+        border-radius: 8px;
+        padding: 1vw;
+        padding-top: 2vw;
+        text-align: center;
+        border: solid 1px #FAC0CF;
+    }
+    
+    a > p{
+        color: black;
+        font-family: "Josefin Sans";
+        font-size: clamp(10px,1vw,14px);
+        max-width: 16vw;
+        contain: contain;
+    }
+    
+    a > img{
+        display: flex;
+        width: 50%;
+    }
+}
