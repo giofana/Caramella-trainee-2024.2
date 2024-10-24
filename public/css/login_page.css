@@ -10,7 +10,7 @@
 
 html, body {
     height: 100%;
-    font-family: 'Josefins Sans', serif;
+    font-family: 'Josefin Sans';
     overflow: hidden;
 }
 
@@ -66,6 +66,7 @@ html, body {
     padding-bottom: 16px;
     width: 100%;
     text-align: center;
+    color: #13142A;
 }
 
 .email-group, .senha-group, .button-group {
@@ -74,9 +75,10 @@ html, body {
 }
 
 .email-group h3, .senha-group h3 {
-    margin-left: 11.5%;
+    margin-left: 12.5%;
     text-align: left;
     margin-bottom: 12px;
+    color: #13142A;
 }
 
 .email-group input, .senha-group input {
@@ -92,6 +94,11 @@ html, body {
     outline: 0;
 }
 
+.email-group input::placeholder, .senha-group input::placeholder {
+    color: #13142A;
+    font-family: 'Josefin Sans';
+}
+
 .button-group button {
     width: 40%;
     max-width: 200px;
@@ -103,6 +110,8 @@ html, body {
     font-weight: bold;
     font-size: 16px;
     transition: background-color 0.2s ease-in;
+    color: #13142A;
+    font-family: 'Josefin Sans';
 }
 
 .button-group button:hover {
