@@ -66,6 +66,7 @@ body::-webkit-scrollbar{
 }
 
 button:hover{
+    cursor: pointer;
     transition-duration: 0.2s;
     transform: scale(1.1);
 }
