@@ -14,28 +14,6 @@ html, body {
     overflow: hidden;
 }
 
-/* Definindo a posição e o tamanho das imagens */
-.img-background, .img-background2, .img-background3, .img-background4,
-.img-background5, .img-background6, .img-background7, .img-background8,
-.img-background9, .img-background10, .img-background11, .img-background12 {
-    position: fixed;
-    width: 300px;
-    height: auto;
-    object-fit: contain;
-    z-index: -1;
-}
-
-/* Posições específicas para as imagens */
-.img-background { bottom: 6%; left: 0%; }
-.img-background2 { top: 0%; left: 0%; }
-.img-background3 { top: 36%; right: 12%; }
-.img-background4 { bottom: 0%; right: 0%; }
-.img-background5 { top: 20%; left: 25%; }
-.img-background6 { bottom: 9%; left: 40%; }
-.img-background7 { top: 7%; right: 27%; }
-.img-background8 { bottom: 36%; left: 8%; }
-.img-background9 { top: 0%; right: 2%; }
-
 .body {
     width: 100vw;
     height: 100vh;
@@ -44,7 +22,7 @@ html, body {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom, #e9f7caa4 50%, #fac0cfad 100%), url(/public/assets/cupcake.svg);
+    background: linear-gradient(to bottom, hsla(32, 90%, 81%, 0.4) 0%, hsla(18, 57%, 78%, 0.6) 50%, hsla(344, 85%, 87%, 0.8) 100%), url(/public/assets/cupcake.svg);
     background-size: 8%;
     background-repeat: round;
 }
