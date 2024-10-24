@@ -44,7 +44,9 @@ html, body {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background-color: rgba(231, 186, 167, 0.45);
+    background: linear-gradient(to bottom, #e9f7caa4 50%, #fac0cfad 100%), url(/public/assets/cupcake.svg);
+    background-size: 8%;
+    background-repeat: round;
 }
 
 .form {
