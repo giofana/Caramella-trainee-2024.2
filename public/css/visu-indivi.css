@@ -62,7 +62,18 @@
     margin-bottom: 5%;
     width: 80%;
     padding: 2%;
-    
+}
+
+.mp{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cb{
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .ingredientes .mp{
@@ -205,6 +216,11 @@ ol li{
 }
 
 @media (max-width: 480px) {
+
+    .mp input {
+        width: auto;
+        height: auto;
+    }
 
     .receitas{
         margin-left: 0%; 
