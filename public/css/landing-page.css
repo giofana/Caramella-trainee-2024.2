@@ -272,3 +272,9 @@ a > img{
     }
 
 }
+
+@media (min-width:1440px){
+    .posts{
+        scale: 1.15;
+    }
+}
