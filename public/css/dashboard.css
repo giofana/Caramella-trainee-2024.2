@@ -5,7 +5,7 @@ body{
     margin:0;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #e9f7caa4 50%, #fac0cfad 100%), url(/public/assets/cupcake.svg);
+    background: linear-gradient(to bottom, #fad2a4a9 0%, #e7baa7b6 50%, #fac0cf79 100%), url(/public/assets/cupcake.svg);
     background-size: 8%;
     background-repeat: round;
 }
@@ -26,12 +26,11 @@ body{
 
 .botoes > a{
     display: flex;
-    background: linear-gradient(to top, #FAC0CF 50%, #fac0cf98 100%);
+    background: #E7BAA7;
     justify-content: center;
     text-decoration: none;
     flex-direction: column;
     align-items: center;
-    border: solid 1px #FAC0CF;
     width: 10vw;
     height: 10vw;
     border-radius: 8px;
@@ -44,7 +43,7 @@ body{
     transition-duration: 0.4s;
     scale: 1.05;
     cursor: pointer;
-    box-shadow: #CA1551 2px 2px 16px;
+    box-shadow: #64473b 2px 2px 20px;
 }
 
 a > p{
@@ -68,7 +67,7 @@ a > img{
         margin:0;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(to bottom, #e9f7caa4 50%, #fac0cfad 100%), url(/public/assets/cupcake.svg);
+        background: linear-gradient(to bottom, #fad2a4a9 0%, #e7baa7b6 50%, #fac0cf79 100%), url(/public/assets/cupcake.svg);
         background-size: 20%;
         background-repeat: round;
     }
@@ -76,12 +75,14 @@ a > img{
     #dashboard{
         display: flex;
         column-gap: 4vw;
+        flex-direction: column;
+        row-gap: 36px;
     }
     
     
     .botoes > a{
         display: flex;
-        background: linear-gradient(to top, #FAC0CF 50%, #fac0cf98 100%);
+        background: #E7BAA7;
         justify-content: center;
         text-decoration: none;
         flex-direction: column;
@@ -94,6 +95,14 @@ a > img{
         padding-top: 2vw;
         text-align: center;
         border: solid 1px #FAC0CF;
+        scale: 1.2;
+    }
+
+    .botoes > a:hover{
+        transition-duration: 0.4s;
+        scale: 1.25;
+        cursor: pointer;
+        box-shadow: #64473b 2px 2px 20px;
     }
     
     a > p{
