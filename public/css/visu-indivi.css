@@ -251,7 +251,7 @@ ol li{
     }
 
     .ingredientes{
-        margin-top: 7%;
+        margin-top: 16%;
         width: 80%;
     }
 
@@ -265,7 +265,12 @@ ol li{
         font-size: 1%; 
     }
 
+    .modoprepa{
+        margin-top: 12%;
+    }
+
     .hist{
+        margin-top: 13%;
         padding: 5%;
         font-size: 80%;
         line-height: 180%;
@@ -274,4 +279,10 @@ ol li{
     .VMR{
         font-size: 1800px;
     }
+
+    .ingredientes .mp{
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+
 }
