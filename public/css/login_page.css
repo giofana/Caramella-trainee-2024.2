@@ -22,7 +22,7 @@ html, body {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom, hsla(32, 90%, 81%, 0.4) 0%, hsla(18, 57%, 78%, 0.6) 50%, hsla(344, 85%, 87%, 0.8) 100%), url(/public/assets/cupcake.svg);
+    background: linear-gradient(to bottom, #fad2a4a9 0%, #e7baa7b6 50%, #fac0cf79 100%), url(/public/assets/cupcake.svg);
     background-size: 8%;
     background-repeat: round;
 }
