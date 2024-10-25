@@ -70,6 +70,14 @@
     gap: 20px;
 }
 
+
+.mp input {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
 .cb{
     display: flex;
     align-items: center;
@@ -217,9 +225,13 @@ ol li{
 
 @media (max-width: 480px) {
 
-    .mp input {
-        width: auto;
-        height: auto;
+    .cb {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .mp  imput{
+        padding: 100px 1000px 0 0;
     }
 
     .receitas{
