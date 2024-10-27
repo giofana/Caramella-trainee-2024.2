@@ -190,4 +190,38 @@ body {
     box-shadow: #64473b 0px 0px 10px;
 }
 
+.bottom {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.pagination a:hover {
+    color: #13142a; 
+    box-shadow: #64473b 0px 0px 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2% 0;
+    margin-right: 6%;
+}
+
+.pagination a {
+    background-color: rgba(250, 210, 164, 0.65);
+    color: #13142A;
+    padding: 0.7% 1.2%;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin: 0 0.5%;
+    border: 1px solid #13142A;
+    border-radius: 4px;
+    min-width: 40px; 
+    height: 36px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
 
