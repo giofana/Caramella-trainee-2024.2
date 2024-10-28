@@ -23,8 +23,8 @@ header {
 }
 
 .txt-search {
-  width: 40%;
-  height: 36px;
+  width: 50%;
+  height: 44px;
   border: #64473b 1px solid;
   border-radius: 20px;
   padding: 0 20px 0 40px;
@@ -68,7 +68,7 @@ header {
 .post-box {
   width: 25%;
   height: auto;
-  margin: 2%;
+  margin: 3%;
   padding: 2%;
   border-radius: 20px;
   box-shadow: #64473b1a 0px 0px 10px; /* add sombra ao passar o mouse */
@@ -164,7 +164,7 @@ header {
 
   .post-box {
     width: 40%; /* Ajusta a largura dos posts para telas menores */
-    margin: 2%; /* Ajusta a margem dos posts para telas menores */
+    margin: 4%; /* Ajusta a margem dos posts para telas menores */
   }
 
   .pagination a {
@@ -180,9 +180,14 @@ header {
     padding: 0 10px;
   }
 
+  .txt-search {
+    width: 70%;
+    height: 40px;
+  }
+
   .post-box {
     width: 90%; /* Ajusta a largura dos posts para telas muito pequenas */
-    margin: 1%; /* Ajusta a margem dos posts para telas muito pequenas */
+    margin: 6%; /* Ajusta a margem dos posts para telas muito pequenas */
   }
 }
 
