@@ -34,7 +34,7 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #E7BAA7;
+    background: linear-gradient(to bottom, #FAD2A4 0%, #E7BAA7 50%, #FAC0CF 100%);
 }
 
 .card {
