@@ -37,7 +37,6 @@
     margin-top: 4%;
 }
 
-
 .infos1,.infos2{
     display: flex;
     justify-content: end;
@@ -64,6 +63,7 @@
     align-items: center;
     width: 100%;
     flex-direction: row;
+    gap: 4%;
 }
 .infos1 .infos1l{
     display: flex;
@@ -86,7 +86,22 @@
     
 }
 
-@media screen and (min-width: 0px) and (max-width: 950px) {
+.logo button{
+    border: #64473b 2px solid;
+    padding: 4px 24px;
+    border-radius: 20px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    background-color: #E7BAA7;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.logo button:hover{
+    color: #13142a; 
+    box-shadow: #64473b 0px 0px 10px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
 
     .nuvem2 {
         display: none;
@@ -168,15 +183,28 @@
     }
 
     .infos2 .infos21, .infos2 .infos22 {
-        margin-top: 6%; 
+        margin-top: 4%; 
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 2%;
     }
-    
+   
 
+}
+
+@media screen and (min-width: 768px) and (max-width: 950px){
+
+ 
+    .infos2 .infos21, .infos2 .infos22{
+        margin-top: 2%;
+    }
+
+    .logo button{
+        margin-top: 6%;
+        
+    }
 
 }
 
