@@ -31,14 +31,15 @@ header {
 .nav-links {
   display: flex;
   align-items: center;
-  margin-right: 5%;
-  width: 50%;
+  justify-content: end;
+  margin-right: 0;
+  width: 100%;
   padding: 0%;
 }
 
 .nav-links li {
   list-style-type: none;
-  margin: 0 10%; /* Espaçamento horizontal entre os links */
+  margin: 0 7%;
 }
 
 .nav-links li a {
@@ -46,6 +47,10 @@ header {
   color: #64473b;
   font-size: 20px;
   font-weight: 500;
+}
+
+.nav-links li:last-child {
+  margin-right: 3%;
 }
 
 .nav-links li a:hover {
