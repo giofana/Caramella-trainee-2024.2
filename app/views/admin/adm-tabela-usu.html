@@ -33,8 +33,8 @@
             <div class = "nomeb"><p>Tim Mayers</p></div>
             <div class = "emailb"><p>paulinjoderson@gmail.com</p></div>
             <div class = "barra2b">
-            <button class = "button"><img src= "../../../public/assets/visu.png"></button>
-            <button class = "button2"><img src= "../../../public/assets/edit.png"><img</button>
+            <button class = "button" id="openModalView" onclick="openModal('modalView')"><img src= "../../../public/assets/visu.png"></button>
+            <button class = "button2" id="openModalEdit" onclick="openModal('modalEdit')"><img src= "../../../public/assets/edit.png"><img</button>
             <button class = "button3"><img src= "../../../public/assets/lixo.png"></button>
             </div>
         </div>
@@ -89,8 +89,28 @@
         <a href="#">5</a>
         <a href="#">&raquo;</a>
     </div>
-    
+    <div class="modal modal-view" id="modalView">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalView')">&times;</span>
+            <h2>Detalhes de ...</h2>
+            <label for="">Nome: Teste</label>
+            <label for="">E-mail: Teste</label>
+            <label for="">Senha: Teste</label>
+        </div>
+    </div>
+
+    <div class="modal modal-edit" id="modalEdit">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalEdit')">&times;</span>
+            <h2>Detalhes de Edição</h2>
+            <label for="">Nome: <input type="text" value="Teste"></label>
+            <label for="">E-mail: <input type="email" value="teste@example.com"></label>
+            <label for="">Senha: <input type="password" value="Teste"></label>
+        </div>
     </div>
     
+    
+    </div>
+    <script src="/public/js/adm-tabela-usu.js"></script>
 </body>
 </html>
