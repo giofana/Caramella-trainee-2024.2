@@ -59,12 +59,8 @@ html, body {
 
 /* --------------- Tabela --------------- */
 .tabela {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: table;
     margin: 20px auto; /* Espaço ao redor da tabela */
-    gap: 1rem;
     min-width: 600px;
 }
 
@@ -82,11 +78,13 @@ html, body {
 .linha-header {
     background-color: #D0F4D4;
     color: #13142A;
+    margin-bottom: 1rem;
 }
 
 .linha-comum {
     background-color: rgba(250, 210, 164, 0.65);
     color: #13142A;
+    margin-bottom: 1rem;
 }
 
 .celula-id, .celula-titulo, .celula-autor, .celula-data, .celula-acoes {
@@ -202,7 +200,27 @@ html, body {
     font-family: 'Josefin Sans';
 }
 
+@media (max-width: 768px) {
+
+    .card {
+        overflow: hidden;
+    }
+
+    .tabela {
+        margin-left: 5%;
+    }
+}
+
 @media (max-width: 600px) {
+
+    .card {
+        width: 600px;
+        overflow-x: auto;
+    }
+
+    .tabela {
+        width: 100%;
+    }
 
     .linha-comum, .linha-header {
         width: 100%;
@@ -241,6 +259,18 @@ html, body {
     .button-group button {
         width: 30vw;
         font-size: 18px;
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .top h2 {
+        padding-left: 20px;
     }
 }
 

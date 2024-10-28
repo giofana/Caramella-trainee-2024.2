@@ -13,156 +13,74 @@
                 <h2>Lista de posts</h2>
             </div>
             <div class="center">
-                <div class="tabela">
-                    <div class="linha-header">
-                        <div class="celula-id">
-                            <label for="">ID</label>
-                        </div>
-                        <div class="celula-titulo">
-                            <label for="">TÍTULO</label>
-                        </div>
-                        <div class="celula-autor">
-                            <label for="">AUTOR</label>
-                        </div>
-                        <div class="celula-data">
-                            <label for="">DATA</label>
-                        </div>
-                        <div class="celula-acoes">
-                            <label for="">AÇÕES</label>
-                        </div>    
-                    </div>
-
-                    <div class="linha-comum">
-                        <div class="celula-id">
-                            <label for="">1</label>
-                        </div>
-                        <div class="celula-titulo">
-                            <label for="">Cupcake</label>
-                        </div>
-                        <div class="celula-autor">
-                            <label for="">Harry</label>
-                        </div>
-                        <div class="celula-data">
-                            <label for="">34/25/0000</label>
-                        </div>
-                        <div class="celula-acoes">
-                            <div class="square">
-                                <img class="view" src="/public/assets/view.svg" alt="">
-                            </div>
-                            <div class="square">
-                                <img class="edit" src="/public/assets/edit.svg" alt="">
-                            </div>
-                            <div class="square">
-                                <img class="delete" src="/public/assets/delete.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="linha-comum">
-                        <div class="celula-id">
-                            <label for="">2</label>
-                        </div>
-                        <div class="celula-titulo">
-                            <label for="">Cupcake</label>
-                        </div>
-                        <div class="celula-autor">
-                            <label for="">Harry</label>
-                        </div>
-                        <div class="celula-data">
-                            <label for="">34/25/0000</label>
-                        </div>
-                        <div class="celula-acoes">
-                            <div class="square">
-                                <img class="view" src="/public/assets/view.svg" alt="">
-                            </div>
-                            <div class="square">
-                                <img class="edit" src="/public/assets/edit.svg" alt="">
-                            </div>
-                            <div class="square">
-                                <img class="delete" src="/public/assets/delete.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="linha-comum">
-                        <div class="celula-id">
-                            <label for="">3</label>
-                        </div>
-                        <div class="celula-titulo">
-                            <label for="">Cupcake</label>
-                        </div>
-                        <div class="celula-autor">
-                            <label for="">Harry</label>
-                        </div>
-                        <div class="celula-data">
-                            <label for="">34/25/0000</label>
-                        </div>
-                        <div class="celula-acoes">
-                            <div class="square">
-                                <img class="view" src="/public/assets/view.svg" alt="">
-                            </div>
-                            <div class="square">
-                                <img class="edit" src="/public/assets/edit.svg" alt="">
-                            </div>
-                            <div class="square">
-                                <img class="delete" src="/public/assets/delete.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="linha-comum">
-                        <div class="celula-id">
-                            <label for="">4</label>
-                        </div>
-                        <div class="celula-titulo">
-                            <label for="">Cupcake</label>
-                        </div>
-                        <div class="celula-autor">
-                            <label for="">Harry</label>
-                        </div>
-                        <div class="celula-data">
-                            <label for="">34/25/0000</label>
-                        </div>
-                        <div class="celula-acoes">
-                            <div class="square">
-                                <img class="view" src="/public/assets/view.svg" alt="">
-                            </div>
-                            <div class="square">
-                                <img class="edit" src="/public/assets/edit.svg" alt="">
-                            </div>
-                            <div class="square">
-                                <img class="delete" src="/public/assets/delete.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="linha-comum">
-                        <div class="celula-id">
-                            <label for="">5</label>
-                        </div>
-                        <div class="celula-titulo">
-                            <label for="">Cupcake</label>
-                        </div>
-                        <div class="celula-autor">
-                            <label for="">Harry</label>
-                        </div>
-                        <div class="celula-data">
-                            <label for="">34/25/0000</label>
-                        </div>
-                        <div class="celula-acoes">
-                            <div class="square">
-                                <img class="view" src="/public/assets/view.svg" alt="">
-                            </div>
-                            <div class="square">
-                                <img class="edit" src="/public/assets/edit.svg" alt="">
-                            </div>
-                            <div class="square">
-                                <img class="delete" src="/public/assets/delete.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
+                <table class="tabela">
+                    <thead>
+                        <tr class="linha-header">
+                            <th class="celula-id">ID</th>
+                            <th class="celula-titulo">TÍTULO</th>
+                            <th class="celula-autor">AUTOR</th>
+                            <th class="celula-data">DATA</th>
+                            <th class="celula-acoes">AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="linha-comum">
+                            <td class="celula-id">1</td>
+                            <td class="celula-titulo">Cupcake</td>
+                            <td class="celula-autor">Harry</td>
+                            <td class="celula-data">34/25/0000</td>
+                            <td class="celula-acoes">
+                                <div class="square"><img class="view" src="/public/assets/view.svg" alt=""></div>
+                                <div class="square"><img class="edit" src="/public/assets/edit.svg" alt=""></div>
+                                <div class="square"><img class="delete" src="/public/assets/delete.svg" alt=""></div>
+                            </td>
+                        </tr>
+                        <tr class="linha-comum">
+                            <td class="celula-id">2</td>
+                            <td class="celula-titulo">Cupcake</td>
+                            <td class="celula-autor">Harry Potter</td>
+                            <td class="celula-data">34/25/0000</td>
+                            <td class="celula-acoes">
+                                <div class="square"><img class="view" src="/public/assets/view.svg" alt=""></div>
+                                <div class="square"><img class="edit" src="/public/assets/edit.svg" alt=""></div>
+                                <div class="square"><img class="delete" src="/public/assets/delete.svg" alt=""></div>
+                            </td>
+                        </tr>
+                        <tr class="linha-comum">
+                            <td class="celula-id">3</td>
+                            <td class="celula-titulo">Cupcake</td>
+                            <td class="celula-autor">Harry</td>
+                            <td class="celula-data">34/25/0000</td>
+                            <td class="celula-acoes">
+                                <div class="square"><img class="view" src="/public/assets/view.svg" alt=""></div>
+                                <div class="square"><img class="edit" src="/public/assets/edit.svg" alt=""></div>
+                                <div class="square"><img class="delete" src="/public/assets/delete.svg" alt=""></div>
+                            </td>
+                        </tr>
+                        <tr class="linha-comum">
+                            <td class="celula-id">4</td>
+                            <td class="celula-titulo">Cupcake</td>
+                            <td class="celula-autor">Harry</td>
+                            <td class="celula-data">34/25/0000</td>
+                            <td class="celula-acoes">
+                                <div class="square"><img class="view" src="/public/assets/view.svg" alt=""></div>
+                                <div class="square"><img class="edit" src="/public/assets/edit.svg" alt=""></div>
+                                <div class="square"><img class="delete" src="/public/assets/delete.svg" alt=""></div>
+                            </td>
+                        </tr>
+                        <tr class="linha-comum">
+                            <td class="celula-id">5</td>
+                            <td class="celula-titulo">Cupcake</td>
+                            <td class="celula-autor">Harry</td>
+                            <td class="celula-data">34/25/0000</td>
+                            <td class="celula-acoes">
+                                <div class="square"><img class="view" src="/public/assets/view.svg" alt=""></div>
+                                <div class="square"><img class="edit" src="/public/assets/edit.svg" alt=""></div>
+                                <div class="square"><img class="delete" src="/public/assets/delete.svg" alt=""></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <div class="bottom">
@@ -184,3 +102,4 @@
     </div>
 </body>
 </html>
+
