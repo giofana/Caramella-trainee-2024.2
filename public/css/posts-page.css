@@ -233,22 +233,26 @@ html, body {
     color: #ffffff;
 }
 
+
 .inputModal input {
     font-family: 'Josefin Sans';
-    font-size: larger;
+    font-size: large;
     width: 80%;
     border-radius: 4px;
-    padding: 2px;
+    padding: 4px;
     background-color: #ffffff9f;
     border: none;
 }
 
 .inputModal textarea{
+    font-family: 'Josefin Sans';
+    font-size: medium;
     overflow-y: auto;
     width: 80%;
-    resize: vertical;
+    resize: both;
     background-color: #ffffff9f;
     border: none;
+    padding: 4px;
 }
 
 #btCC{
