@@ -323,6 +323,7 @@ body {
     1.05
   ); /* Aumenta o tamanho do botão em 5% ao passar o mouse */
   box-shadow: #64473b 0px 0px 10px; /* Adiciona uma sombra ao passar o mouse */
+  cursor: pointer;
 }
 
 #cancel-button:hover {
