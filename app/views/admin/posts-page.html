@@ -10,15 +10,15 @@
     <div class="container">
         <div id="modalCriar">
             <form method="post">
-                <h2>Preencha todos os campos abaixo para criar:</h2>
-                <div class="inputModal"><label>Título da receita</label><input type="text"></div>
-                <div class="inputModal"><label>Autor</label><input type="text"></div>
-                <div class="inputModal"><label>Tempo</label><input type="text"></div>
-                <div class="inputModal"><label>Custo</label><input type="text"></div>
-                <div class="inputModal"><label>Dificuldade</label><input type="range" min="0" max="2" step="1"></div>
-                <div class="inputModal"><label>Ingredientes</label><textarea rows="3"></textarea></div>
-                <div class="inputModal"><label>Modo de preparo</label><textarea rows="3"></textarea></div>
-                <div class="inputModal"><label>História</label><textarea rows="3"></textarea></div>
+                <h2>Preencha todos os campos abaixo para criar post:</h2>
+                <div class="inputModal"><label for="Título">Título da receita</label><input id="Título" type="text"></div>
+                <div class="inputModal"><label for="Autor">Autor</label><input id="Autor" type="text"></div>
+                <div class="inputModal"><label for="Tempo">Tempo</label><input id="Tempo" type="text"></div>
+                <div class="inputModal"><label for="Custo">Custo</label><input id="Custo" type="text"></div>
+                <div class="inputModal"><label for="Dificuldade">Dificuldade</label><input id="Dificuldade" type="range" min="0" max="2" step="1"></div>
+                <div class="inputModal"><label for="Ingredientes">Ingredientes</label><textarea id="Ingredientes" rows="3"></textarea></div>
+                <div class="inputModal"><label for="Modo">Modo de preparo</label><textarea id="Modo" rows="3"></textarea></div>
+                <div class="inputModal"><label for="História">História</label><textarea id="História" rows="3"></textarea></div>
                 <div id="btCC">
                     <button>Criar</button>
                     <button onclick="closeModal('modalCriar')">Cancelar</button>
