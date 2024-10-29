@@ -270,8 +270,20 @@ html, body {
     background: linear-gradient(to bottom, rgb(236, 100, 100) 50%, rgb(233, 62, 62) 100%);
 }
 
+#btCC button:hover{
+    transition-duration: 0.2s;
+    scale: 1.2;
+    box-shadow: 1px 1px 12px red;
+}
+
 #btCC button:first-child{
     background: linear-gradient(to bottom, rgb(100, 236, 100) 50%, rgb(62, 233, 62) 100%);
+}
+
+#btCC button:first-child:hover{
+    transition-duration: 0.2s;
+    scale: 1.2;
+    box-shadow: 2px 2px 12px rgb(8, 192, 8);
 }
 
 /*------------------------------------ Fim Modal de Criar Post ---------------------------------------*/
