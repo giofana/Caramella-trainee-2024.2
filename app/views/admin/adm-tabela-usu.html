@@ -45,14 +45,29 @@
               id="openModalView"
               onclick="openModal('modalView')"
             >
-              <img src="../../../public/assets/visu.png" />
+              <img src="../../../public/assets/visu.png"/>
             </button>
-            <button
+            <button 
               class="button2"
               id="openModalEdit"
-              onclick="openModal('modalEdit')"
-            >
-              <img src="../../../public/assets/edit.png" /><img
+              onclick="openModal('modalEdit')">
+              <img src="../../../public/assets/edit.png"/>
+            </button>
+            <button class="button3">
+              <img src="../../../public/assets/lixo.png"/>
+            </button>
+          </div>
+        </div>
+        <div class="barra2">
+          <div class="idb"><p>1</p></div>
+          <div class="nomeb"><p>Tim Mayers</p></div>
+          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
+          <div class="barra2b">
+            <button class="button">
+              <img src="../../../public/assets/visu.png" />
+            </button>
+            <button class="button2">
+              <img src="../../../public/assets/edit.png" />
             </button>
             <button class="button3">
               <img src="../../../public/assets/lixo.png" />
@@ -68,7 +83,7 @@
               <img src="../../../public/assets/visu.png" />
             </button>
             <button class="button2">
-              <img src="../../../public/assets/edit.png" /><img
+              <img src="../../../public/assets/edit.png" />
             </button>
             <button class="button3">
               <img src="../../../public/assets/lixo.png" />
@@ -84,7 +99,7 @@
               <img src="../../../public/assets/visu.png" />
             </button>
             <button class="button2">
-              <img src="../../../public/assets/edit.png" /><img
+              <img src="../../../public/assets/edit.png" />
             </button>
             <button class="button3">
               <img src="../../../public/assets/lixo.png" />
@@ -100,23 +115,7 @@
               <img src="../../../public/assets/visu.png" />
             </button>
             <button class="button2">
-              <img src="../../../public/assets/edit.png" /><img
-            </button>
-            <button class="button3">
-              <img src="../../../public/assets/lixo.png" />
-            </button>
-          </div>
-        </div>
-        <div class="barra2">
-          <div class="idb"><p>1</p></div>
-          <div class="nomeb"><p>Tim Mayers</p></div>
-          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
-          <div class="barra2b">
-            <button class="button">
-              <img src="../../../public/assets/visu.png" />
-            </button>
-            <button class="button2">
-              <img src="../../../public/assets/edit.png" /><img
+              <img src="../../../public/assets/edit.png" />
             </button>
             <button class="button3">
               <img src="../../../public/assets/lixo.png" />
@@ -137,11 +136,13 @@
       
       <div class="modal modal-view" id="modalView">
         <div class="modal-content">
-          <span class="close" onclick="closeModal('modalView')">&times;</span>
+          <div class="close-container">
+            <span class="close" onclick="closeModal('modalView')">&times;</span>
+          </div>
           <h2>Detalhes de ...</h2>
-          <label for="">Nome: Teste</label>
-          <label for="">E-mail: Teste</label>
-          <label for="">Senha: Teste</label>
+          <label for="">ID: 1</label>
+          <label for="">Nome: Tim Mayers</label>
+          <label for="">Email: paulinjoderson@gmail.com</label>
         </div>
       </div>
 

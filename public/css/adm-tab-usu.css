@@ -210,12 +210,11 @@ body {
   background-repeat: round;
   margin: 15% auto;
   padding: 20px;
-  width: 80%;
+  width: 60%;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   background-blend-mode: hard-light;
-  display: flex;
 }
 
 /* TODO: alterar-> tem que utilizar botao de salvar e cancelar */
@@ -225,7 +224,6 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
   cursor: pointer;
-  align-self: flex-end;
 }
 
 .close:hover,
@@ -242,15 +240,12 @@ body {
 }
 
 .modal-content label {
+  margin-left: 30%;
   margin-bottom: 10px;
   font-size: 30px;
 }
 
 /* ------------ estilo da tela de editar ----------------- */
-
-.modal-content-edit {
-  width: 60%;
-}
 
 .modal-content-edit h2 {
   color: #13142a;
@@ -332,4 +327,30 @@ body {
 
 #save-button:hover {
   background-color: rgb(65, 163, 65);
+}
+
+
+
+@media (max-width: 768px) {
+  .modal-content label {
+    margin-left: 12%;
+  }
+}
+
+@media (max-width: 425px) {
+
+  .modal-content {
+    overflow-x: auto;
+  }
+
+  .modal-content label {
+    margin-left: 0;
+  }
+
+  .close-container {
+    width: 100%;
+    min-width: 400px;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
