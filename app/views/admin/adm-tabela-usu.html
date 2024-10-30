@@ -138,14 +138,22 @@
       </div>
       
       <div class="modal modal-view" id="modalView">
-        <div class="modal-content">
-          <div class="close-container">
-            <span class="close" onclick="closeModal('modalView')">&times;</span>
+        <div class="modal-content modal-content-view">
+          <form class="form-view" action="">
+            <div class="modal-view-titulo">
+              <h2>Detalhes de ...</h2>
+            </div>
+            <div class="modal-view-infos">
+              <label for="">ID: 1</label>
+              <label for="">Nome: Tim Mayers</label>
+              <label for="">Email: paulinjoderson@gmail.com</label>
+            </div>
+          <div class="button-box">
+            <button class="cancel-button" onclick="closeModal('modalView')">
+              Cancelar
+            </button>
           </div>
-          <h2>Detalhes de ...</h2>
-          <label for="">ID: 1</label>
-          <label for="">Nome: Tim Mayers</label>
-          <label for="">Email: paulinjoderson@gmail.com</label>
+          </form>
         </div>
       </div>
 
@@ -177,7 +185,7 @@
               <!-- fim inputs do modal -->
              <!-- div de botão -->
             <div class="button-box">
-              <button id="cancel-button" onclick="closeModal('modalEdit')">
+              <button class="cancel-button" onclick="closeModal('modalEdit')">
                 Cancelar
               </button>
               <button id="save-button">Salvar</button>

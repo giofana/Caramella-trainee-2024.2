@@ -63,6 +63,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: hidden; /* Esconde barra vertical da tabela */
 }
 
 .barra1 {
@@ -219,6 +220,26 @@ body {
   background-blend-mode: hard-light;
 }
 
+.modal-content-view {
+  width: 40%;
+}
+
+.modal-view-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-view-infos {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 2%;
+  margin-bottom: 5%;
+}
+
 /* TODO: alterar-> tem que utilizar botao de salvar e cancelar */
 .close {
   color: #13142a;
@@ -242,8 +263,6 @@ body {
 }
 
 .modal-content label {
-  margin-left: 30%;
-  margin-bottom: 10px;
   font-size: 30px;
 }
 
@@ -323,7 +342,7 @@ body {
   cursor: pointer;
 }
 
-#cancel-button:hover {
+.cancel-button:hover {
   background-color: rgb(219, 60, 60);
 }
 
@@ -385,27 +404,24 @@ body {
 
 
 @media (max-width: 768px) {
-  .modal-content label {
-    margin-left: 12%;
+
+  .modal-content-view {
+    width: 70%;
   }
+
 }
 
 @media (max-width: 425px) {
 
-  .modal-content {
-    overflow-x: auto;
+  .modal-content-view {
+    width: 95%;
   }
 
-  .modal-content label {
-    margin-left: 0;
+  body {
+    margin: 0;
+    padding: 16px;
   }
 
-  .close-container {
-    width: 100%;
-    min-width: 400px;
-    display: flex;
-    justify-content: flex-end;
-  }
 }
 
 @media (max-width: 1024px) {
