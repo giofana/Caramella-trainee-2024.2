@@ -1,12 +1,22 @@
 function openModal(modalId) {
-  const modal = document.getElementById(modalId);
-  modal.style.display = "block";
-}
-
-function closeModal(modalId) {
-  const modal = document.getElementById(modalId);
-  modal.style.display = "none";
-}
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = "block";
+      console.log('achei o id')
+    } else {
+      console.log(`Modal with ID '${modalId}' not found.`);
+    }
+  }
+  
+  function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = "none";
+    } else {
+      console.warn(`Modal with ID '${modalId}' not found.`);
+    }
+  }
+  
 
 // Adiciona um evento de teclado para fechar o modal com a tecla ESC
 document.addEventListener("keydown", function (event) {
