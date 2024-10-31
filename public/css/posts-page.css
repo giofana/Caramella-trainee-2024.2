@@ -214,7 +214,7 @@ html, body {
     opacity: 40%;
 }
 
-#modalCriar{
+.modal{
     display: none;
     position: fixed;
     top: 50%;
@@ -233,6 +233,8 @@ html, body {
     border-radius: 8px;
     box-shadow: black 4px 4px 40px;
 }
+
+
 
 #subForm{
     display: flex;
@@ -310,6 +312,29 @@ html, body {
     transition-duration: 0.2s;
     scale: 1.1;
     box-shadow: 2px 2px 12px #38ff4f;
+}
+
+.btnf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btnfechar{
+        font-family: 'Josefin Sans';
+        font-size: medium;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px rgba(0, 0, 0, 0.37) solid;
+        background: rgb(255, 89, 89);
+        cursor: pointer;
+}
+
+.btnf button:hover{
+    transition-duration: 0.2s;
+    scale: 1.1;
+    box-shadow: 2px 2px 12px rgb(255, 55, 55);
 }
 
 /*------------------------------------ Fim Modal de Criar Post ---------------------------------------*/

@@ -8,8 +8,8 @@
 </head>
 <body>
     <div id="tela"></div>
-    <div id="modalCriar">
-        <form method="post">
+    <div class ="modal" id="modalCriar">
+        <form>
             <h2>Preencha todos os campos abaixo para criar post:</h2>
             <div class="inputModal"><label for="Título">Título da receita</label><input id="Título" type="text"></div>
             <div id="subForm">
@@ -33,6 +33,58 @@
             </div>
         </form>
     </div>
+
+    <div class = "modal" id="modalEditar">
+        <form>
+            <h2>Preencha todos os campos abaixo para criar post:</h2>
+            <div class="inputModal"><label for="Título">Título da receita</label><input id="Título" type="text"></div>
+            <div id="subForm">
+                <div class="inputModal" id="autor"><label for="Autor">Autor</label><input id="Autor" type="text"></div>
+                <div class="inputModal" id="tempo"><label for="Tempo">Tempo</label><input id="Tempo" type="text"></div>
+                <div class="inputModal" id="custo"><label for="Custo">Custo</label><input id="Custo" type="text"></div>
+                <div class="inputModal" id="dificuldade"><label for="Dificuldade">Dificuldade</label><select id="Dificuldade">
+                    <option value="#" selected></option>
+                    <option value="0">Fácil</option>
+                    <option value="1">Médio</option>
+                    <option value="2">Difícil</option>
+                </select></div>
+            </div>
+            <div class="inputModal"><label for="Ingredientes">Ingredientes</label><textarea id="Ingredientes" rows="3"></textarea></div>
+            <div class="inputModal"><label for="Modo">Modo de preparo</label><textarea id="Modo" rows="3"></textarea></div>
+            <div class="inputModal"><label for="História">História</label><textarea id="História" rows="3"></textarea></div>
+            <div class="inputModal"><label for="Imagem">Imagem</label><input type="file"></div>
+            <div id="btCC">
+                <button>Editar</button>
+                <button onclick="closeModal('modalCriar')">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class = "modal" id="modalVisu">
+        <form>
+            <h2>Preencha todos os campos abaixo para criar post:</h2>
+            <div class="inputModal"><label for="Título">Título da receita</label><input id="Título" type="text"></div>
+            <div id="subForm">
+                <div class="inputModal" id="autor"><label for="Autor">Autor</label><input id="Autor" type="text"></div>
+                <div class="inputModal" id="tempo"><label for="Tempo">Tempo</label><input id="Tempo" type="text"></div>
+                <div class="inputModal" id="custo"><label for="Custo">Custo</label><input id="Custo" type="text"></div>
+                <div class="inputModal" id="dificuldade"><label for="Dificuldade">Dificuldade</label><select id="Dificuldade">
+                    <option value="#" selected></option>
+                    <option value="0">Fácil</option>
+                    <option value="1">Médio</option>
+                    <option value="2">Difícil</option>
+                </select></div>
+            </div>
+            <div class="inputModal"><label for="Ingredientes">Ingredientes</label><textarea id="Ingredientes" rows="3"></textarea></div>
+            <div class="inputModal"><label for="Modo">Modo de preparo</label><textarea id="Modo" rows="3"></textarea></div>
+            <div class="inputModal"><label for="História">História</label><textarea id="História" rows="3"></textarea></div>
+            <div class="inputModal"><label for="Imagem">Imagem</label><input type="file"></div>
+            <div class = "btnf">
+                <button class = "btnfechar"onclick="closeModal('modalCriar')">Fechar</button>
+            </div>
+        </form>
+    </div>
+
     <div class="container">
         <div class="card">
             <div class="top">
@@ -56,8 +108,8 @@
                             <td class="celula-autor">Harry</td>
                             <td class="celula-data">34/25/0000</td>
                             <td class="celula-acoes">
-                                <div class="square"><img class="view" src="/public/assets/view.svg" alt=""></div>
-                                <div class="square"><img class="edit" src="/public/assets/edit.svg" alt=""></div>
+                                <div class="square" onclick="openModal('modalVisu')"><img class="view" src="/public/assets/view.svg" alt=""></div>
+                                <div class="square" onclick="openModal('modalEditar')"><img class="edit" src="/public/assets/edit.svg" alt=""></div>
                                 <div class="square"><img class="delete" src="/public/assets/delete.svg" alt=""></div>
                             </td>
                         </tr>
