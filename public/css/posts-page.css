@@ -223,7 +223,8 @@ html, body {
     min-width: min-content;
     max-width: 70vw;
     min-height: 20vh;
-    height: fit-content;
+    height: 600px;
+    overflow: auto;
     padding: 20px;
     background: linear-gradient(to bottom, #FAD2A4 0%, #E7BAA7 50%, #FAC0CF 100%), url(/public/assets/cupcake.svg);
     background-size: 1%;
@@ -286,7 +287,7 @@ html, body {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 #btCC > button{
@@ -453,7 +454,7 @@ html, body {
     }
 
     #btCC{
-        margin-top: 5vh;
+        margin-top: 6vh;
         margin-bottom: 2vh;
     }
 
