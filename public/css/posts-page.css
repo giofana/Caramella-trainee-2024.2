@@ -205,23 +205,45 @@ html, body {
 /*----------------------------------- Modal de Criar Post ---------------------------------------------*/
 /* Bruno */
 
+#tela{
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 40%;
+}
 
 #modalCriar{
     display: none;
     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     min-width: min-content;
-    max-width: 60vw;
+    max-width: 70vw;
     min-height: 20vh;
     height: fit-content;
     padding: 20px;
-    background: linear-gradient(to bottom, #ffbc70 0%, #ff9669 50%, #ff6b93 100%), url(/public/assets/cupcake.svg);
-    background-size: 12%;
+    background: linear-gradient(to bottom, #FAD2A4 0%, #E7BAA7 50%, #FAC0CF 100%), url(/public/assets/cupcake.svg);
+    background-size: 1%;
     background-repeat: round;
-    background-blend-mode: color-burn;
-    color: #F5F5F5;
-    text-shadow: #000000 2px 2px 20px;
+    background-blend-mode: hard-light;
+    color: black;
     border-radius: 8px;
     box-shadow: black 4px 4px 40px;
+}
+
+#subForm{
+    display: flex;
+    height: fit-content;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#autor, #tempo, #custo, #dificuldade{
+    width: 21%;
 }
 
 .inputModal{
@@ -229,26 +251,29 @@ html, body {
     flex-direction: column;
     row-gap: 4px;
     margin-top: 8px;
-    text-shadow: #000000 2px 2px 4px;
-    color: #ffffff;
+    color: black;
 }
 
+.inputModal label{
+    word-wrap: break-word;
+}
 
-.inputModal input {
+.inputModal input, select {
     font-family: 'Josefin Sans';
     font-size: large;
-    width: 80%;
+    width: 100%;
     border-radius: 4px;
     padding: 4px;
     background-color: #ffffff9f;
     border: none;
+    color: #000000;
 }
 
 .inputModal textarea{
     font-family: 'Josefin Sans';
     font-size: medium;
     overflow-y: auto;
-    width: 80%;
+    width: 100%;
     resize: both;
     background-color: #ffffff9f;
     border: none;
@@ -257,36 +282,80 @@ html, body {
 
 #btCC{
     display: flex;
-    justify-content: flex-end;
-    gap: 4px;
-    margin-top: 12px;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
 }
 
 #btCC > button{
     font-family: 'Josefin Sans';
-    padding: 4px;
+    font-size: medium;
+    padding: 10px;
     border-radius: 4px;
     border: 1px rgba(0, 0, 0, 0.37) solid;
-    background: linear-gradient(to bottom, rgb(236, 100, 100) 50%, rgb(233, 62, 62) 100%);
+    background: rgb(255, 89, 89);
 }
 
 #btCC button:hover{
     transition-duration: 0.2s;
-    scale: 1.2;
-    box-shadow: 1px 1px 12px red;
+    scale: 1.1;
+    box-shadow: 2px 2px 12px rgb(255, 55, 55);
 }
 
 #btCC button:first-child{
-    background: linear-gradient(to bottom, rgb(100, 236, 100) 50%, rgb(62, 233, 62) 100%);
+    background-color: #95fda1;
 }
 
 #btCC button:first-child:hover{
     transition-duration: 0.2s;
-    scale: 1.2;
-    box-shadow: 2px 2px 12px rgb(8, 192, 8);
+    scale: 1.1;
+    box-shadow: 2px 2px 12px #38ff4f;
 }
 
 /*------------------------------------ Fim Modal de Criar Post ---------------------------------------*/
+
+@media (min-width:600px) and (max-width:1020px){
+
+        /*----------------------------------- Modal de Criar Post ---------------------------------------------*/
+    /* Bruno */
+
+
+    #modalCriar{
+        display: none;
+        width: 98vw;
+        height: 90vh;
+        overflow: auto;
+        padding-top: 5vh;
+    }
+
+    #subForm{
+        width: 70vw;
+    }
+
+    .inputModal{
+        margin-top: 4vh;
+    }
+
+    .inputModal label{
+        font-size: 20px;
+    }
+
+    .inputModal input, .inputModal textarea, .inputModal select{
+        font-size: 20px;
+    }
+
+    #btCC{
+        margin-top: 5vh;
+        margin-bottom: 2vh;
+    }
+
+    #btCC > button{
+        font-size: 24px;
+    }
+
+
+    /*------------------------------------ Fim Modal de Criar Post ---------------------------------------*/
+}
 
 @media (max-width: 768px) {
 
@@ -350,10 +419,37 @@ html, body {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     .container {
         padding: 0 20px;
     }
+
+    /*----------------------------------- Modal de Criar Post ---------------------------------------------*/
+    /* Bruno */
+
+
+    #modalCriar{
+        display: none;
+        width: 98vw;
+        height: 98vh;
+        overflow: auto;
+        padding-top: 5vh;
+    }
+
+    #subForm{
+        width: 85vw;
+    }
+
+    .inputModal{
+        margin-top: 5vh;
+    }
+
+    #btCC{
+        margin-top: 5vh;
+    }
+
+
+    /*------------------------------------ Fim Modal de Criar Post ---------------------------------------*/
 }
 
 @media (max-width: 375px) {
