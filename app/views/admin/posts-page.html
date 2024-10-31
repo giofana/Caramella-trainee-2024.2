@@ -7,24 +7,33 @@
     <title>Admin | Posts Page</title>
 </head>
 <body>
+    <div id="tela"></div>
+    <div id="modalCriar">
+        <form method="post">
+            <h2>Preencha todos os campos abaixo para criar post:</h2>
+            <div class="inputModal"><label for="Título">Título da receita</label><input id="Título" type="text"></div>
+            <div id="subForm">
+                <div class="inputModal" id="autor"><label for="Autor">Autor</label><input id="Autor" type="text"></div>
+                <div class="inputModal" id="tempo"><label for="Tempo">Tempo</label><input id="Tempo" type="text"></div>
+                <div class="inputModal" id="custo"><label for="Custo">Custo</label><input id="Custo" type="text"></div>
+                <div class="inputModal" id="dificuldade"><label for="Dificuldade">Dificuldade</label><select id="Dificuldade">
+                    <option value="#" selected></option>
+                    <option value="0">Fácil</option>
+                    <option value="1">Médio</option>
+                    <option value="2">Difícil</option>
+                </select></div>
+            </div>
+            <div class="inputModal"><label for="Ingredientes">Ingredientes</label><textarea id="Ingredientes" rows="3"></textarea></div>
+            <div class="inputModal"><label for="Modo">Modo de preparo</label><textarea id="Modo" rows="3"></textarea></div>
+            <div class="inputModal"><label for="História">História</label><textarea id="História" rows="3"></textarea></div>
+            <div class="inputModal"><label for="Imagem">Imagem</label><input type="file"></div>
+            <div id="btCC">
+                <button>Criar</button>
+                <button onclick="closeModal('modalCriar')">Cancelar</button>
+            </div>
+        </form>
+    </div>
     <div class="container">
-        <div id="modalCriar">
-            <form method="post">
-                <h2>Preencha todos os campos abaixo para criar post:</h2>
-                <div class="inputModal"><label for="Título">Título da receita</label><input id="Título" type="text"></div>
-                <div class="inputModal"><label for="Autor">Autor</label><input id="Autor" type="file"></div>
-                <div class="inputModal"><label for="Tempo">Tempo</label><input id="Tempo" type="text"></div>
-                <div class="inputModal"><label for="Custo">Custo</label><input id="Custo" type="text"></div>
-                <div class="inputModal"><label for="Dificuldade">Dificuldade</label><input id="Dificuldade" type="range" min="0" max="2" step="1"></div>
-                <div class="inputModal"><label for="Ingredientes">Ingredientes</label><textarea id="Ingredientes" rows="3"></textarea></div>
-                <div class="inputModal"><label for="Modo">Modo de preparo</label><textarea id="Modo" rows="3"></textarea></div>
-                <div class="inputModal"><label for="História">História</label><textarea id="História" rows="3"></textarea></div>
-                <div id="btCC">
-                    <button>Criar</button>
-                    <button onclick="closeModal('modalCriar')">Cancelar</button>
-                </div>
-            </form>
-        </div>
         <div class="card">
             <div class="top">
                 <h2>Lista de posts</h2>
