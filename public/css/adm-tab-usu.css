@@ -10,7 +10,7 @@ body {
   height: 100vh;
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
   padding: 5% 0 0 0;
-  z-index: 2;
+  z-index: 1;
   overflow: hidden;
 }
 
@@ -35,7 +35,7 @@ body {
   color: white;
 }
 
-.botaoc button img {
+.botao-criar button img {
   margin-left: 25%;
   display: flex;
   align-items: center;
@@ -43,7 +43,7 @@ body {
   width: 50%;
 }
 
-.botaoc button {
+.botao-criar button {
   width: 5vw;
   height: 6vh;
   border: #d0f4d4;
@@ -54,7 +54,7 @@ body {
   cursor: pointer;
 }
 
-.botaoc button:hover {
+.botao-criar button:hover {
   color: #13142a;
   box-shadow: #64473b 0px 0px 10px;
 }
@@ -197,7 +197,7 @@ body {
 .modal {
   display: none; /* Ocultar o modal por padrão */
   position: fixed;
-  z-index: 3;
+  z-index: 2;
   left: 0;
   top: 0;
   width: 100%;
@@ -206,7 +206,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content, .modal-content-edit {
+.modal-content {
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%),
     url(/public/assets/cupcake.svg);
   background-size: 8%;
@@ -214,6 +214,7 @@ body {
   margin: 15% auto;
   padding: 20px;
   width: 60%;
+  height: max-content;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -268,6 +269,149 @@ body {
 
 /* ------------ estilo da tela de editar ----------------- */
 
+.modal-content-edit {
+  width: 50%;
+  height: auto;
+}
+
+.modal-content-edit h2 {
+  color: #13142a;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 5%;
+}
+
+.input-box-edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.input-box-edit label {
+  display: flex;
+  width: 100%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  color: #13142a;
+  justify-content: center;
+}
+
+.input-box-edit input {
+  width: 80%; /* Ajusta a largura do input */
+  height: 40px; /* Ajusta a altura do input */
+  border-radius: 20px;
+  border: none;
+  margin: 1.5%;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.input-box-edit input:hover {
+  transition: all 0.3s ease; /* Adiciona uma transição suave */
+  transform: scale(1.02);
+}
+
+.input-box-edit input[type="text"]:focus,
+.input-box-edit input[type="email"]:focus,
+.input-box-edit input[type="password"]:focus {
+  border-radius: 20px; /* Torna as bordas arredondadas */
+  outline: none;
+}
+
+.button-box {
+  display: flex;
+  justify-content: center; /* Centraliza os botões */
+  gap: 10px; /* Adiciona espaço entre os botões */
+  margin-bottom: 2%;
+}
+
+.button-box button {
+  flex: 0 1;
+  padding: 15px 20px; /* Ajusta o padding dos botões */
+  margin: 2%;
+  background-color: #64473b;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  font-size: 16px;
+}
+
+.button-box button:hover {
+  transform: scale(
+    1.05
+  ); /* Aumenta o tamanho do botão em 5% ao passar o mouse */
+  box-shadow: #64473b 0px 0px 10px; /* Adiciona uma sombra ao passar o mouse */
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: rgb(219, 60, 60);
+}
+
+#save-button:hover {
+  background-color: rgb(65, 163, 65);
+}
+
+/* Inicio modal excluir*/
+
+.excluir {
+  width: 25%;
+  height: fit-content;
+  display: block;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  flex-direction: column;
+  position: absolute;
+  left: 35%;
+  text-align: center;
+  background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
+}
+
+.excluir img {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  width: 50%;
+}
+
+.botm {
+  margin-bottom: 5%;
+  margin-top: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.botm button {
+  width: 7vw;
+  height: 3vh;
+  border: #d0f4d4;
+  border: 1.5px solid #64473b;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.exc {
+  background-color: rgb(226, 77, 77);
+  color: white;
+}
+
+.botm button:hover {
+  color: #13142a;
+  box-shadow: #64473b 0px 0px 10px;
+}
+
+/* Fim modal excluir*/
+
+/* ------------ inicio modal criar ---------------*/
+
 .modal-content-edit h2 {
   color: #13142a;
   text-align: center;
@@ -285,12 +429,12 @@ body {
 
 .input-box-edit label {
   display: flex;
-  flex-direction: column;
   width: 100%;
   font-size: 24px;
   display: flex;
   align-items: center;
   color: #13142a;
+  justify-content: center;
 }
 
 .input-box-edit input {
@@ -350,73 +494,29 @@ body {
   background-color: rgb(65, 163, 65);
 }
 
-
-/* Inicio modal excluir*/
-
-.excluir{
-    width: 25%;
-    height: fit-content;
-    display: block;
-    align-items: center;
-    border-radius: 10px;
-    padding: 10px;
-    flex-direction: column;
-    position: absolute;
-    left: 35%;
-    text-align: center;
-    background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
-}
-
-.excluir img{
-    margin-top: 5%;
-    margin-bottom: 10%;
-    width: 50%;
-}
-
-.botm{
-    margin-bottom: 5%;
-    margin-top: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-
-
-.botm button{
-    width: 7vw;
-    height: 3vh;
-    border: #D0F4D4;
-    border: 1.5px solid #64473B;
-    border-radius: 5px; 
-    font-size: 18px;
-    cursor: pointer;
-}
-
-
-
-.exc{
-    background-color: rgb(226, 77, 77);
-    color :white;
-}
-
-.botm button:hover{
-    color: #13142a; 
-    box-shadow: #64473b 0px 0px 10px;
-}
-
-/* Fim modal excluir*/
+/* fim modal criar */
 
 @media (max-width: 768px) {
-
   .modal-content-view {
     width: 70%;
   }
 
+  .input-box-edit label {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+  }
+
+  .input-box-edit input {
+    margin: 3%;
+  }
+
+  .modal-content-edit {
+    width: 80%;
+  }
 }
 
 @media (max-width: 425px) {
-
   .modal-content-view {
     width: 95%;
   }
@@ -425,139 +525,139 @@ body {
     margin: 0;
     padding: 16px;
   }
-
 }
 
 @media (max-width: 1024px) {
-    .corpo {
-        width: 93vw;
-        height: 93vh;
-    }
+  .corpo {
+    width: 93vw;
+    height: 93vh;
+  }
 
-    .barras {
-        width: 100%; 
-        overflow-x: auto; 
-    }
+  .barras {
+    width: 100%;
+    overflow-x: auto;
+  }
 
-    .barra1, .barra2 {
-        min-width: 90vw; 
-    }
+  .barra1,
+  .barra2 {
+    min-width: 90vw;
+  }
 
-    .topo {
-        flex-direction: column;
-    }
+  .topo {
+    flex-direction: column;
+  }
 
-    .botaoc button {
-        margin-top: -20%;
-        width: 10vw;
-    }
+  .botao-criar button {
+    margin-top: -20%;
+    width: 10vw;
+  }
 
-    .barra2b button {
-        display: flex;
-        align-items: center;
-    }
+  .barra2b button {
+    display: flex;
+    align-items: center;
+  }
 
-    .barra2 button img {
-        margin-right: 50%;
-        width: 2.5vw;
-    }
+  .barra2 button img {
+    margin-right: 50%;
+    width: 2.5vw;
+  }
 
-    .excluir{
-        top: 10%;
-        width: 50%;
-        left: 25%;
-    }
+  .excluir {
+    top: 10%;
+    width: 50%;
+    left: 25%;
+  }
 
-    .botm{
-        margin-top: 10%;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    
-    .botm button{
-        width: 15vw;
-        height: 3vh;
-        border: #D0F4D4;
-        border: 1.5px solid #64473B;
-        border-radius: 5px; 
-        font-size: 18px;
-        cursor: pointer;
-    }
-    
-    
+  .botm {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .botm button {
+    width: 15vw;
+    height: 3vh;
+    border: #d0f4d4;
+    border: 1.5px solid #64473b;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 425px) {
-    .corpo {
-        width: 100%;
-        overflow-x: auto; 
-    }
+  .input-box-edit label {
+    display: flex;
+    align-items: row;
+  }
 
-    .barras{
-        display: block;
-    }
+  .corpo {
+    width: 100%;
+    overflow-x: auto;
+  }
 
-    .barra1{
-        margin-bottom: 2%;
-    }
+  .barras {
+    display: block;
+  }
 
-    .barra2{
-        margin-bottom: 1%;   
-    }
+  .barra1 {
+    margin-bottom: 2%;
+  }
 
-    .barra1, .barra2 {
-        min-width: 600px;
-    }
+  .barra2 {
+    margin-bottom: 1%;
+  }
 
-    .topo {
-        flex-direction: column;
-        text-align: center;
-    }
+  .barra1,
+  .barra2 {
+    min-width: 600px;
+  }
 
-    .botaoc button {
-        margin-top: 10px;
-        width: 15vw;
-    }
+  .topo {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .barra2b button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        width: 10vw;
-        height: 4vh;
-    }
+  .botao-criar button {
+    margin-top: 10px;
+    width: 15vw;
+  }
 
-    .barra2 button img {
-        margin-right: 1%;
-        width: 6vw; 
-    }
+  .barra2b button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 10vw;
+    height: 4vh;
+  }
 
-    .excluir{
-        top: 20%;
-        width: 80%;
-        left: 10%;
-    }
+  .barra2 button img {
+    margin-right: 1%;
+    width: 6vw;
+  }
 
-    .botm{
-        margin-top: 10%;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    
-    .botm button{
-        width: 30vw;
-        height: 3vh;
-        border: #D0F4D4;
-        border: 1.5px solid #64473B;
-        border-radius: 5px; 
-        font-size: 18px;
-        cursor: pointer;
-    }
-    
-    
+  .excluir {
+    top: 20%;
+    width: 80%;
+    left: 10%;
+  }
+
+  .botm {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .botm button {
+    width: 30vw;
+    height: 3vh;
+    border: #d0f4d4;
+    border: 1.5px solid #64473b;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
 }

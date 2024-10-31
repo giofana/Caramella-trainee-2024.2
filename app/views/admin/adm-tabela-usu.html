@@ -22,7 +22,7 @@
     <div class="corpo">
       <div class="topo">
         <p style="font-family: Abril Fatface">Tabela de Usuarios</p>
-        <div class="botaoc">
+        <div class="botao-criar">
           <button class="button">
             <img src="../../../public/assets/add.png" />
           </button>
@@ -174,16 +174,16 @@
 
       <!-------------- Tela de editar usário ------------------>
       <div class="modal modal-edit" id="modalEdit">
-        <div class="modal-content-edit">
+        <div class="modal-content modal-content-edit">
           <form>
             <h2>Editar usuário</h2>
             <!-- inputs do modal -->
              <div class="input-box-edit">
-              <label for="">Nome: <input type="text" value="" /></label>
+              <label for="">Nome: <input type="text" value="fulano" /></label>
               <label for=""
-                  >E-mail: <input type="email" value=""
+                  >E-mail: <input type="email" value="fulano@gmail.com"
               /></label>
-              <label for="">Senha: <input type="password" value="" /></label>
+              <label for="">Senha: <input type="password" value="muitodificil " /></label>
               </div>
               <!-- fim inputs do modal -->
              <!-- div de botão -->
@@ -195,6 +195,31 @@
           </form>
         </div>
         </div>
+
+        <div class="modal modal-create" id="modalCreate">
+          <div class=" modal-content modal-content-create">
+            <form>
+              <h2>Criar usuário</h2>
+              <!-- inputs do modal -->
+               <div class="input-box-create">
+                <label for="">Nome: <input type="text"/></label>
+                <label for=""
+                    >E-mail: <input type="email"
+                /></label>
+                <label for="">Senha: <input type="password" /></label>
+                </div>
+                <!-- fim inputs do modal -->
+               <!-- div de botão -->
+              <div class="button-box">
+                <button class="cancel-button" onclick="closeModal('modalCreate')">
+                  Cancelar
+                </button>
+                <button id="create-button">Criar</button>
+            </form>
+          </div>
+          </div>
+
+
     
       </div>
     <script src="/public/js/adm-tabela-usu.js"></script>
