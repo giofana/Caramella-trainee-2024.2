@@ -85,6 +85,21 @@
         </form>
     </div>
 
+    <!-------------- Modal Excluir ------------------>
+
+    <div class="modall modal-del" id="modalDel">
+        <div class="modal-content excluir">
+            <img src = "../../../public/assets/trash.png">
+            <h2>Excluir Usuario</h2>
+            <p>Tem certeza que deseja excluir este usuario?</p>
+            <div class = "botm">
+            <button class = "canc" onclick="closeModal('modalDel')">Cancelar</button>
+            <button class = "exc">Excluir</button>
+            </div>
+        </div>
+     </div>
+      <!-------------- Fim Modal Excluir ------------------>
+
     <div class="container">
         <div class="card">
             <div class="top">
@@ -110,7 +125,7 @@
                             <td class="celula-acoes">
                                 <div class="square" onclick="openModal('modalVisu')"><img class="view" src="/public/assets/view.svg" alt=""></div>
                                 <div class="square" onclick="openModal('modalEditar')"><img class="edit" src="/public/assets/edit.svg" alt=""></div>
-                                <div class="square"><img class="delete" src="/public/assets/delete.svg" alt=""></div>
+                                <div class="square" onclick="openModal('modalDel')"><img class="delete" src="/public/assets/delete.svg" alt=""></div>
                             </td>
                         </tr>
                         <tr class="linha-comum">

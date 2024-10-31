@@ -339,6 +339,63 @@ html, body {
 
 /*------------------------------------ Fim Modal de Criar Post ---------------------------------------*/
 
+
+/* Inicio modal excluir*/
+
+.excluir{
+    width: 25%;
+    height: fit-content;
+    display: block;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    flex-direction: column;
+    position: absolute;
+    left: 35%;
+    text-align: center;
+    background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
+}
+
+.excluir img{
+    margin-top: 5%;
+    margin-bottom: 10%;
+    width: 50%;
+}
+
+.botm{
+    margin-bottom: 5%;
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.botm button{
+    width: 7vw;
+    height: 3vh;
+    border: #D0F4D4;
+    border: 1.5px solid #64473B;
+    border-radius: 5px; 
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
+.exc{
+    background-color: rgb(226, 77, 77);
+    color :white;
+}
+
+.botm button:hover{
+    color: #13142a; 
+    box-shadow: #64473b 0px 0px 10px;
+}
+
+/* Fim modal excluir*/
+
 @media (min-width:600px) and (max-width:1020px){
 
         /*----------------------------------- Modal de Criar Post ---------------------------------------------*/
