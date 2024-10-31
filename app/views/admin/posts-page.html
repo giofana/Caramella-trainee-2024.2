@@ -12,9 +12,11 @@
         <form>
             <h2>Preencha todos os campos abaixo para criar post:</h2>
             <div class="inputModal"><label for="Título">Título da receita</label><input id="Título" type="text"></div>
-            <div id="subForm">
+            <div class="subForm">
                 <div class="inputModal" id="autor"><label for="Autor">Autor</label><input id="Autor" type="text"></div>
                 <div class="inputModal" id="tempo"><label for="Tempo">Tempo</label><input id="Tempo" type="text"></div>
+            </div>
+            <div class="subForm">
                 <div class="inputModal" id="custo"><label for="Custo">Custo</label><input id="Custo" type="text"></div>
                 <div class="inputModal" id="dificuldade"><label for="Dificuldade">Dificuldade</label><select id="Dificuldade">
                     <option value="#" selected></option>
@@ -26,7 +28,7 @@
             <div class="inputModal"><label for="Ingredientes">Ingredientes</label><textarea id="Ingredientes" rows="3"></textarea></div>
             <div class="inputModal"><label for="Modo">Modo de preparo</label><textarea id="Modo" rows="3"></textarea></div>
             <div class="inputModal"><label for="História">História</label><textarea id="História" rows="3"></textarea></div>
-            <div class="inputModal"><label for="Imagem">Imagem</label><input type="file"></div>
+            <div class="inputModal"><label for="Imagem">Imagem</label><input id="Imagem" type="file"></div>
             <div id="btCC">
                 <button>Criar</button>
                 <button onclick="closeModal('modalCriar')">Cancelar</button>
@@ -36,23 +38,25 @@
 
     <div class = "modal" id="modalEditar">
         <form>
-            <h2>Edite seu post:</h2>
-            <div class="inputModal"><label for="Título">Título da receita</label><input id="Título" type="text"></div>
-            <div id="subForm">
-                <div class="inputModal" id="autor"><label for="Autor">Autor</label><input id="Autor" type="text"></div>
-                <div class="inputModal" id="tempo"><label for="Tempo">Tempo</label><input id="Tempo" type="text"></div>
-                <div class="inputModal" id="custo"><label for="Custo">Custo</label><input id="Custo" type="text"></div>
-                <div class="inputModal" id="dificuldade"><label for="Dificuldade">Dificuldade</label><select id="Dificuldade">
+            <h2>Preencha todos os campos abaixo para criar post:</h2>
+            <div class="inputModal"><label for="Título1">Título da receita</label><input id="Título1" type="text"></div>
+            <div class="subForm">
+                <div class="inputModal" id="autor1"><label for="Autor1">Autor</label><input id="Autor1" type="text"></div>
+                <div class="inputModal" id="tempo1"><label for="Tempo1">Tempo</label><input id="Tempo1" type="text"></div>
+            </div>
+            <div class="subForm">
+                <div class="inputModal" id="custo1"><label for="Custo1">Custo</label><input id="Custo1" type="text"></div>
+                <div class="inputModal" id="dificuldade1"><label for="Dificuldade1">Dificuldade</label><select id="Dificuldade1">
                     <option value="#" selected></option>
                     <option value="0">Fácil</option>
                     <option value="1">Médio</option>
                     <option value="2">Difícil</option>
                 </select></div>
             </div>
-            <div class="inputModal"><label for="Ingredientes">Ingredientes</label><textarea id="Ingredientes" rows="3"></textarea></div>
-            <div class="inputModal"><label for="Modo">Modo de preparo</label><textarea id="Modo" rows="3"></textarea></div>
-            <div class="inputModal"><label for="História">História</label><textarea id="História" rows="3"></textarea></div>
-            <div class="inputModal"><label for="Imagem">Imagem</label><input type="file"></div>
+            <div class="inputModal"><label for="Ingredientes1">Ingredientes</label><textarea id="Ingredientes1" rows="3"></textarea></div>
+            <div class="inputModal"><label for="Modo1">Modo de preparo</label><textarea id="Modo1" rows="3"></textarea></div>
+            <div class="inputModal"><label for="História1">História</label><textarea id="História1" rows="3"></textarea></div>
+            <div class="inputModal"><label for="Imagem1">Imagem</label><input id="Imagem1" type="file"></div>
             <div id="btCC">
                 <button>Editar</button>
                 <button onclick="closeModal('modalCriar')">Cancelar</button>
@@ -62,23 +66,25 @@
     
     <div class = "modal" id="modalVisu">
         <form>
-            <h2>Visualização de Post</h2>
-            <div class="inputModal"><label for="Título">Título da receita</label><input id="Título" type="text"></div>
-            <div id="subForm">
-                <div class="inputModal" id="autor"><label for="Autor">Autor</label><input id="Autor" type="text"></div>
-                <div class="inputModal" id="tempo"><label for="Tempo">Tempo</label><input id="Tempo" type="text"></div>
-                <div class="inputModal" id="custo"><label for="Custo">Custo</label><input id="Custo" type="text"></div>
-                <div class="inputModal" id="dificuldade"><label for="Dificuldade">Dificuldade</label><select id="Dificuldade">
+            <h2>Preencha todos os campos abaixo para criar post:</h2>
+            <div class="inputModal"><label for="Título2">Título da receita</label><input id="Título2" type="text"></div>
+            <div class="subForm">
+                <div class="inputModal" id="autor2"><label for="Autor2">Autor</label><input id="Autor2" type="text"></div>
+                <div class="inputModal" id="tempo2"><label for="Tempo2">Tempo</label><input id="Tempo2" type="text"></div>
+            </div>
+            <div class="subForm">
+                <div class="inputModal" id="custo2"><label for="Custo2">Custo</label><input id="Custo2" type="text"></div>
+                <div class="inputModal" id="dificuldade2"><label for="Dificuldade2">Dificuldade</label><select id="Dificuldade2">
                     <option value="#" selected></option>
                     <option value="0">Fácil</option>
                     <option value="1">Médio</option>
                     <option value="2">Difícil</option>
                 </select></div>
             </div>
-            <div class="inputModal"><label for="Ingredientes">Ingredientes</label><textarea id="Ingredientes" rows="3"></textarea></div>
-            <div class="inputModal"><label for="Modo">Modo de preparo</label><textarea id="Modo" rows="3"></textarea></div>
-            <div class="inputModal"><label for="História">História</label><textarea id="História" rows="3"></textarea></div>
-            <div class="inputModal"><label for="Imagem">Imagem</label><img class = "pudin" src = "../../../public/assets/cake.png"></div>
+            <div class="inputModal"><label for="Ingredientes2">Ingredientes</label><textarea id="Ingredientes2" rows="3"></textarea></div>
+            <div class="inputModal"><label for="Modo2">Modo de preparo</label><textarea id="Modo2" rows="3"></textarea></div>
+            <div class="inputModal"><label for="História2">História</label><textarea id="História2" rows="3"></textarea></div>
+            <div class="inputModal" id="imgEnviada"><label for="Imagem">Imagem</label><img src="/public/assets/cake.png"></div>
             <div class = "btnf">
                 <button class = "btnfechar"onclick="closeModal('modalCriar')">Fechar</button>
             </div>
