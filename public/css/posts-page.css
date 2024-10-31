@@ -342,6 +342,32 @@ html, body {
 
 /* Inicio modal excluir*/
 
+.modall {
+    display: none; /* Ocultar o modal por padrão */
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Habilitar rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content, .modal-content-edit {
+    background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%),
+      url(/public/assets/cupcake.svg);
+    background-size: 8%;
+    background-repeat: round;
+    margin: 15% auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-blend-mode: hard-light;
+  }
+
 .excluir{
     width: 25%;
     height: fit-content;
