@@ -8,6 +8,7 @@ body::-webkit-scrollbar{
     width: 0.1px;
 }
 
+/*--------------- FONTE -------------------- */
 .kurale-regular {
     font-family: "Kurale", serif;
     font-weight: 400;
@@ -20,7 +21,10 @@ body::-webkit-scrollbar{
   font-optical-sizing: auto;
   font-style: normal;
 }
+/*--------------- FONTE -------------------- */
 
+
+/*--------------- INICIO BANNER -------------------- */
 #banner{
     display: flex;
     flex-direction: column;
@@ -72,6 +76,12 @@ button:hover{
     transform: scale(1.1);
 }
 
+/*--------------- FIM BANNER -------------------- */
+
+
+
+/*--------------- INICIO POSTS-ROWS  -------------------- */
+
 #classificacao-posts{
     padding-top: 40px;
     display: flex;
@@ -94,6 +104,12 @@ button:hover{
     padding: 24px;
     box-shadow: black 1px 1px 8px;
 }
+
+/*--------------- FIM POSTS-ROWS  -------------------- */
+
+
+
+/*--------------- INICIO CARD DE POST  -------------------- */
 
 a{
     display: flex;
@@ -134,7 +150,14 @@ a > img{
     scale: 1.05;
 }
 
+/*--------------- FIM CARD DE POST  -------------------- */
+
+
+
 @media (max-width: 768px){
+
+
+    /*--------------- INICIO BANNER  -------------------- */
 
     #banner{
         width: 100vw;
@@ -164,6 +187,12 @@ a > img{
         font-size: 12px;
     }
 
+    /*--------------- FIM BANNER  -------------------- */
+
+
+
+    /*--------------- INICIO POST-ROWS  -------------------- */
+
     #classificacao-posts{
         padding: 0;
         margin-top: 12vh;
@@ -182,6 +211,12 @@ a > img{
         gap: 12vh;
         background: linear-gradient(#5c4236e1, #30231c);
     }
+
+    /*--------------- FIM POST-ROWS  -------------------- */
+
+
+
+    /*--------------- INICIO CARD DE POST  -------------------- */
 
     .posts{
         box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.534);
@@ -205,10 +240,14 @@ a > img{
         text-overflow: clip;
     }
 
+    /*--------------- FIM CARD DE POST  -------------------- */
+
     
 }
 
 @media (min-width:769px){
+
+    /*--------------- INICIO BANNER  -------------------- */
 
     #banner{
         width: 100vw;
@@ -233,6 +272,12 @@ a > img{
         font-size: 14px;
     }
 
+    /*--------------- FIM BANNER  -------------------- */
+
+
+
+    /*--------------- INICIO POST-ROW  -------------------- */
+
     #classificacao-posts{
         width:100vw;
         margin-top: 12vh;
@@ -247,6 +292,12 @@ a > img{
         margin-top: 12vh;
         background: linear-gradient(#5c4236e1, #30231c);
     }
+    
+    /*--------------- FIM POST-ROW  -------------------- */
+
+
+
+    /*--------------- INICIO CARD DE POST  -------------------- */
 
     .posts{
         margin: 0;
@@ -270,6 +321,8 @@ a > img{
         contain: content;
         text-overflow: clip;
     }
+
+    /*--------------- FIM CARD DE POST  -------------------- */
 
 }
 
