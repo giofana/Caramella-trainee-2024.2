@@ -214,6 +214,11 @@ html, body {
     opacity: 40%;
 }
 
+form > h2{
+    padding-top: 5px;
+    padding-bottom: 7px;
+}
+
 .modal{
     display: none;
     position: fixed;
@@ -235,15 +240,18 @@ html, body {
     box-shadow: black 4px 4px 40px;
 }
 
-
+.auxSubForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 .subForm{
     display: flex;
     height: fit-content;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: left;
-    column-gap: 24px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 48%;
 }
 
 
@@ -255,19 +263,24 @@ html, body {
     color: black;
 }
 
-#Título,#Título1,#Título2{
+#Título,#Título1,#Título2,
+#Imagem,#Imagem1,#Imagem2{
     width: 100%;
 }
 
-.inputModal input, select {
+.inputModal input, .inputModal select {
     font-family: 'Josefin Sans';
     font-size: large;
-    width: 120px;
+    width: 100%;
     border-radius: 4px;
     padding: 4px;
     background-color: #ffffff9f;
     border: none;
     color: #000000;
+}
+
+.inputModal select{
+    width: 100%;
 }
 
 .inputModal textarea{
@@ -287,7 +300,9 @@ html, body {
 }
 
 #imgEnviada > img{
-    width: 400px;
+    border-radius: 6px;
+    width: 250px;
+    box-shadow: black 1px 1px 6px;
 }
 
 #btCC{
@@ -438,18 +453,14 @@ html, body {
 
     .modal{
         display: none;
-        width: 98vw;
-        height: 90vh;
+        width: 95vw;
+        height: 70vh;
         overflow: auto;
-        padding-top: 5vh;
-    }
-
-    .subForm{
-        width: 70vw;
+        padding-top: 2vh;
     }
 
     .inputModal{
-        margin-top: 4vh;
+        margin-top: 2vh;
     }
 
     .inputModal label{
@@ -461,11 +472,11 @@ html, body {
     }
 
     #imgEnviada > img{
-        width: 350px;
+        width: 240px;
     }
 
     #btCC{
-        margin-top: 6vh;
+        margin-top: 8vh;
         margin-bottom: 2vh;
     }
 
@@ -550,22 +561,20 @@ html, body {
 
     .modal{
         display: none;
-        width: 98vw;
-        height: 98vh;
+        width: 95vw;
+        height: 70vh;
         overflow: auto;
-        padding-top: 5vh;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
     }
 
-    .subForm{
-        width: 85vw;
-    }
 
     .inputModal{
-        margin-top: 5vh;
+        margin-top: 2vh;
     }
 
     #imgEnviada > img{
-        width: 280px;
+        width: 150px;
     }
 
     #btCC{
