@@ -5,24 +5,29 @@
     font-family: Josefin Sans;
    }
 
-   body {
+ body{
     margin: 0;
-    padding: 0;
+    padding: 0 ;
     width: 100%;
-    height: 32vh;
+    height: 16vh;
 }
 
 
-.footer {
-    font-size: 110%;
+.footer{
     display: flex;
-    justify-content: space-between;
-    align-items: end;
+    align-items: center;
     flex-direction: row;
-    background-color: #E7BAA7;
-    box-shadow: inset 0 2px 20px 0 #575454;
-    width: 100%;
+    justify-content: space-between;
+    background-image: url(../../public/assets/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 12%;
     height: 100%;
+    width: 100%;
+}
+
+.infos1, .infos2{
+    margin-top: 10%;
 }
 
 .logo {
@@ -37,16 +42,8 @@
     margin-top: 4%;
 }
 
-.infos1,.infos2{
-    display: flex;
-    justify-content: end;
-    height: 100%;
-    flex-direction: column;
-
-}
-
-.infos2-box{
-    width: 100%;
+.logo img{
+    width: 80%;
 }
 
 .infos1 .text, .infos2-box{
@@ -71,28 +68,13 @@
     margin-top: 4%;
 }
 
-.nuvem2{
-    
-    display: flex;
-    justify-content: flex-end;
-    height: 100%;
-}
-
-.nuvem1{
-    display: flex;
-    justify-content: flex-start;
-    height: 100%;
-    
-    
-}
-
 .logo button{
     border: #64473b 2px solid;
     padding: 4px 24px;
     border-radius: 20px;
     transition: color 0.3s ease, border-color 0.3s ease;
     background-color: #E7BAA7;
-    margin-top: 10%;
+    margin-top: 5%;
     cursor: pointer;
 }
 
@@ -101,9 +83,29 @@
     box-shadow: #64473b 0px 0px 10px;
 }
 
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .footer{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        background-image: url(../../public/assets/fundo.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 0 12%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .infos1, .infos2{
+        margin-top: 3%;
+    }
+}
+
 @media screen and (min-width: 0px) and (max-width: 768px) {
 
-    .body{
+    body{
         height: fit-content;
     }
 
@@ -113,6 +115,7 @@
         border-radius: 20px;
         transition: color 0.3s ease, border-color 0.3s ease;
         background-color: #E7BAA7;
+        background-size: contain;
         margin-top: 5%;
         cursor: pointer;
     }
@@ -129,6 +132,7 @@
     .footer {
         display: flex;
         flex-direction: column;
+        background-image: none;
         background-color: #E7BAA7;
         height: fit-content;
         padding: 1rem;
@@ -209,47 +213,6 @@
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 950px){
-
- 
-    .infos2 .infos21, .infos2 .infos22{
-        margin-top: 2%;
-    }
-
-    .logo button{
-        margin-top: 6%;
-        
-    }
-
-}
-
-@media screen and (min-width: 950px) and (max-width: 1440px){
-    
-    .footer {
-        font-size: 110%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        background-color: #E7BAA7;
-        width: 200%;
-        height: 200px;
-    }
-
-  
-
-    .infos1{
-        gap:0%;
-    }
 
 
 
-    .infos2 .infos21, .infos2 .infos22 {
-        margin-top: 6%; 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 2%;
-    }
-
-}
