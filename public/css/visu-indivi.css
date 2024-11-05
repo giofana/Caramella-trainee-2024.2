@@ -1,0 +1,288 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Josefin Sans;
+   }
+
+   body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #FAD2A4 0%, #E7BAA7 50%, #FAC0CF 100%);
+}
+
+.receitas{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5%;
+    margin-left: 10%;
+    margin-top: 5%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1.5%;
+    width: 80%;
+    line-height: 120%;
+}
+
+.receitas img{
+    border-radius: 10%;
+}
+
+.inf_post{
+    line-height: 120%;
+    margin-top: 3%;
+    font-size: 140%;
+    
+}
+
+.inf_post .t1{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.ingredientes{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 130%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    width: 80%;
+    padding: 2%;
+}
+
+.mp{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.mp input {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.cb{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ingredientes .mp{
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.modoprepa{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 2%;
+    width: 80%;
+    font-size: 130%;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-bottom: 4%;
+    line-height: 130%;
+}
+
+.modoprepa .mop{
+    margin-top: 2%;
+    margin-left: 5%;
+    gap: 10%;
+}
+
+ul li{
+    margin: 2%;
+}
+
+ol li{
+    margin: 2%;
+}
+
+.VMR{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+    
+}
+
+.VMR button{
+    border: #64473b 2px solid;
+    padding: 4px 24px;
+    border-radius: 20px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.VMR button:hover{
+    color: #13142a; 
+    box-shadow: #64473b 0px 0px 10px;
+}
+
+.hist{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5%;
+    margin-left: 10%;
+    margin-top: 5%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1.5%;
+    width: 80%;
+    line-height: 300%;
+}
+
+.hist .histp{
+    margin-top: 2%;
+    margin-left: 6%;
+    font-size: 130%;
+}
+
+@media (max-width: 768px) {
+
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+.inf_receitas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .receitas img{
+       
+        display: flex;
+        align-items: center;
+    }
+
+    .receitas {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .inf_post {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .ingredientes{
+        margin-top: 7%;
+    }
+
+    .ingredientes,
+    .modoprepa {
+        margin-left: 0;
+        padding: 3%;
+    }
+
+    .VMR {
+        
+        margin-top: 5%;
+    }
+
+    .hist{
+        margin-left: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .cb {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .mp  imput{
+        padding: 100px 1000px 0 0;
+    }
+
+    .receitas{
+        margin-left: 0%; 
+        width: 80%;       
+    }
+
+    .receitas img {
+        padding: 5%;
+        margin-left: 9%;
+        max-width: 80%; 
+    }
+
+
+    .inf_post {
+        font-size: 100%; 
+    }
+
+    .ingredientes{
+        margin-top: 16%;
+        width: 80%;
+    }
+
+    .ingredientes,
+    .modoprepa {
+        padding: 5%;
+        font-size: 100%; 
+    }
+
+    .VMR button {
+        font-size: 1%; 
+    }
+
+    .modoprepa{
+        margin-top: 12%;
+    }
+
+    .hist{
+        margin-top: 13%;
+        padding: 5%;
+        font-size: 80%;
+        line-height: 180%;
+    }
+
+    .VMR{
+        font-size: 1800px;
+    }
+
+    .ingredientes .mp{
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+
+}

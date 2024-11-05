@@ -2,7 +2,7 @@
 
 # **Caramella**
 
-## **Projeto Trainee, Code Jr, Grupo 000, 2024.2**
+## **Projeto Trainee, Code Jr, Grupo 2, 2024.2**
 
 | **Sumário** |
 |-------------|
@@ -21,13 +21,12 @@
 
 #### Scrum Master:
 
-* [Giovana Maieli](https://github.com/giofana).
+* [Giovana Maieli](https://github.com/giofana)
 
 #### Links Úteis:
 
 * [Trello](https://trello.com/invite/b/66f81175521ed08d8d4c8dec/ATTI5077a71918129f55cf3305f085c7774dC949776E/caramella)
 
-* [Drive com ID Visual]()
 
 
 
