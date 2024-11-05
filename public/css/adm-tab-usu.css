@@ -234,16 +234,6 @@ body {
   justify-content: center;
 }
 
-.modal-view-infos {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  margin-left: 2%;
-  margin-bottom: 5%;
-}
-
 /* TODO: alterar-> tem que utilizar botao de salvar e cancelar */
 .close {
   color: #13142a;
@@ -270,14 +260,39 @@ body {
   font-size: 30px;
 }
 
+.row-view-info {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-left: 2%;
+  margin-bottom: 5%;
+  gap: 20px;
+}
+
+.bg-view {
+  width: 70%;
+  background-color: white;
+  color: #13142a;
+  padding-left: 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bg-view label {
+  font-size: 16px;
+}
+
 /* ------------ estilo da tela de editar ----------------- */
 
-.modal-content-edit {
+.modal-content-edit, .modal-content-criar {
   width: 50%;
   height: auto;
 }
 
-.modal-content-edit h2 {
+.modal-content-edit h2, .modal-content-criar h2 {
   color: #13142a;
   text-align: center;
   font-size: 40px;
@@ -415,7 +430,7 @@ body {
 
 /* ------------ inicio modal criar ---------------*/
 
-.modal-content-edit h2 {
+.modal-content-edit h2, .modal-content-criar h2 {
   color: #13142a;
   text-align: center;
   font-size: 40px;
@@ -514,7 +529,7 @@ body {
     margin: 3%;
   }
 
-  .modal-content-edit {
+  .modal-content-edit, .modal-content-criar {
     width: 80%;
   }
 }
