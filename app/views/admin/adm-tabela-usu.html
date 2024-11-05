@@ -23,9 +23,11 @@
       <div class="topo">
         <p style="font-family: Abril Fatface" class = "texto-sombra">Tabela de Usuarios</p>
         <div class="botao-criar">
-          <button class="button"
-          onclick="openModal('modalCriar')"
-          id="openModalCriar">
+          <button
+            class="button"
+            onclick="openModal('modalCriar')"
+            id="openModalCriar"
+          >
             <img src="../../../public/assets/add.png" />
           </button>
         </div>
@@ -47,19 +49,21 @@
               id="openModalView"
               onclick="openModal('modalView')"
             >
-              <img src="../../../public/assets/visu.png"/>
-            </button>
-            <button 
-              class="button2"
-              id="openModalEdit"
-              onclick="openModal('modalEdit')">
-              <img src="../../../public/assets/edit.png"/>
+              <img src="../../../public/assets/visu.png" />
             </button>
             <button
-            class="button3"
-            id="openModalDel"
-            onclick="openModal('modalDel')">
-              <img src="../../../public/assets/lixo.png"/>
+              class="button2"
+              id="openModalEdit"
+              onclick="openModal('modalEdit')"
+            >
+              <img src="../../../public/assets/edit.png" />
+            </button>
+            <button
+              class="button3"
+              id="openModalDel"
+              onclick="openModal('modalDel')"
+            >
+              <img src="../../../public/assets/lixo.png" />
             </button>
           </div>
         </div>
@@ -139,51 +143,53 @@
         <a href="#">&raquo;</a>
       </div>
 
-      <div class ="modal modal-criar" id="modalCriar">
+      <div class="modal modal-criar" id="modalCriar">
         <div class="modal-content modal-content-criar">
           <form>
             <h2>Criar usuário</h2>
             <!-- inputs do modal -->
-             <div class="input-box-edit">
+            <div class="input-box-create">
               <label for="">Nome: <input type="text" value="fulano" /></label>
               <label for=""
-                  >E-mail: <input type="email" value="fulano@gmail.com"
+                >E-mail: <input type="email" value="fulano@gmail.com"
               /></label>
-              <label for="">Senha: <input type="password" value="muitodificil " /></label>
-              </div>
+              <label for=""
+                >Senha: <input type="password" value="muitodificil "
+              /></label>
+            </div>
             <div class="button-box">
               <button class="cancel-button" onclick="closeModal('modalCriar')">
                 Cancelar
               </button>
-              <button id="save-button">Salvar</button>
-              </div>
-        </form>
+              <button id="criar-button">Criar</button>
+            </div>
+          </form>
         </div>
-    </div>
-      
+      </div>
+
       <div class="modal modal-view" id="modalView">
         <div class="modal-content modal-content-view">
           <form class="form-view" action="">
             <div class="modal-view-titulo">
               <h2>Detalhes de ...</h2>
             </div>
-              <div class="row-view-info">
-                <label for="">Nome</label>
-                <div class="bg-view"><label for="">fulano</label></div>
-              </div>
-              <div class="row-view-info">
-                <label for="">E-mail</label>
-                <div class="bg-view"><label for="">fulano@gmail.com</label></div>
-              </div>
-              <div class="row-view-info">
-                <label for="">Senha</label>
-                <div class="bg-view"><label for="">adminadmin</label></div>
-              </div>
-          <div class="button-box">
-            <button class="cancel-button" onclick="closeModal('modalView')">
-              Cancelar
-            </button>
-          </div>
+            <div class="row-view-info">
+              <label for="">Nome:</label>
+              <div class="bg-view"><label for="">fulano</label></div>
+            </div>
+            <div class="row-view-info">
+              <label for="">E-mail:</label>
+              <div class="bg-view"><label for="">fulano@gmail.com</label></div>
+            </div>
+            <div class="row-view-info">
+              <label for="">Senha:</label>
+              <div class="bg-view"><label for="">adminadmin</label></div>
+            </div>
+            <div class="button-box">
+              <button class="cancel-button" onclick="closeModal('modalView')">
+                Cancelar
+              </button>
+            </div>
           </form>
         </div>
       </div>
@@ -192,17 +198,17 @@
 
       <div class="modal modal-del" id="modalDel">
         <div class="modal-content excluir">
-            <img src = "../../../public/assets/trash.png">
-            <h2>Excluir Usuario</h2>
-            <p>Tem certeza que deseja excluir este usuario?</p>
-            <div class="button-box">
-              <button class="cancel-button" onclick="closeModal('modalDel')">
-                Cancelar
-              </button>
-              <button id="save-button">Excluir</button>
-              </div>
+          <img src="../../../public/assets/trash.png" />
+          <h2>Excluir Usuario</h2>
+          <p>Tem certeza que deseja excluir este usuario?</p>
+          <div class="button-box">
+            <button class="cancel-button" onclick="closeModal('modalDel')">
+              Cancelar
+            </button>
+            <button id="save-button">Excluir</button>
+          </div>
         </div>
-     </div>
+      </div>
       <!-------------- Fim Modal Excluir ------------------>
 
       <!-------------- Tela de editar usário ------------------>
@@ -211,51 +217,26 @@
           <form>
             <h2>Editar usuário</h2>
             <!-- inputs do modal -->
-             <div class="input-box-edit">
-              <label for="">Nome: <input type="text" value="fulano" /></label>
-              <label for=""
-                  >E-mail: <input type="email" value="fulano@gmail.com"
-              /></label>
-              <label for="">Senha: <input type="password" value="muitodificil " /></label>
-              </div>
-              <!-- fim inputs do modal -->
-             <!-- div de botão -->
+            <div class="input-box-edit">
+              <label for="edit-name">Nome:</label>
+              <input type="text" id="edit-name" value="Fulano" />
+              <label for="edit-email">Email:</label>
+              <input type="email" id="edit-email" value="fulano@gmail.com" />
+              <label for="edit-password">Senha:</label>
+              <input type="password" id="edit-password" value="muitodificil" />
+            </div>
+            <!-- fim inputs do modal -->
+            <!-- div de botão -->
             <div class="button-box">
               <button class="cancel-button" onclick="closeModal('modalEdit')">
                 Cancelar
               </button>
               <button id="save-button">Salvar</button>
-              </div>
+            </div>
           </form>
         </div>
-        </div>
-
-        <div class="modal modal-create" id="modalCreate">
-          <div class=" modal-content modal-content-create">
-            <form>
-              <h2>Criar usuário</h2>
-              <!-- inputs do modal -->
-               <div class="input-box-create">
-                <label for="">Nome: <input type="text"/></label>
-                <label for=""
-                    >E-mail: <input type="email"
-                /></label>
-                <label for="">Senha: <input type="password" /></label>
-                </div>
-                <!-- fim inputs do modal -->
-               <!-- div de botão -->
-              <div class="button-box">
-                <button class="cancel-button" onclick="closeModal('modalCreate')">
-                  Cancelar
-                </button>
-                <button id="create-button">Criar</button>
-            </form>
-          </div>
-          </div>
-
-
-    
       </div>
+    </div>
     <script src="/public/js/adm-tabela-usu.js"></script>
   </body>
 </html>
