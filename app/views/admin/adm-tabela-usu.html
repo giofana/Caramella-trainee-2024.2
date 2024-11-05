@@ -23,7 +23,9 @@
       <div class="topo">
         <p style="font-family: Abril Fatface">Tabela de Usuarios</p>
         <div class="botao-criar">
-          <button class="button">
+          <button class="button"
+          onclick="openModal('modalCriar')"
+          id="openModalCriar">
             <img src="../../../public/assets/add.png" />
           </button>
         </div>
@@ -136,6 +138,28 @@
         <a href="#">5</a>
         <a href="#">&raquo;</a>
       </div>
+
+      <div class ="modal modal-criar" id="modalCriar">
+        <div class="modal-content modal-content-criar">
+          <form>
+            <h2>Criar usuário</h2>
+            <!-- inputs do modal -->
+             <div class="input-box-edit">
+              <label for="">Nome: <input type="text" value="fulano" /></label>
+              <label for=""
+                  >E-mail: <input type="email" value="fulano@gmail.com"
+              /></label>
+              <label for="">Senha: <input type="password" value="muitodificil " /></label>
+              </div>
+            <div class="button-box">
+              <button class="cancel-button" onclick="closeModal('modalCriar')">
+                Cancelar
+              </button>
+              <button id="save-button">Salvar</button>
+              </div>
+        </form>
+        </div>
+    </div>
       
       <div class="modal modal-view" id="modalView">
         <div class="modal-content modal-content-view">
@@ -143,11 +167,18 @@
             <div class="modal-view-titulo">
               <h2>Detalhes de ...</h2>
             </div>
-            <div class="modal-view-infos">
-              <label for="">ID: 1</label>
-              <label for="">Nome: Tim Mayers</label>
-              <label for="">Email: paulinjoderson@gmail.com</label>
-            </div>
+              <div class="row-view-info">
+                <label for="">Nome</label>
+                <div class="bg-view"><label for="">fulano</label></div>
+              </div>
+              <div class="row-view-info">
+                <label for="">E-mail</label>
+                <div class="bg-view"><label for="">fulano@gmail.com</label></div>
+              </div>
+              <div class="row-view-info">
+                <label for="">Senha</label>
+                <div class="bg-view"><label for="">adminadmin</label></div>
+              </div>
           <div class="button-box">
             <button class="cancel-button" onclick="closeModal('modalView')">
               Cancelar
@@ -164,10 +195,12 @@
             <img src = "../../../public/assets/trash.png">
             <h2>Excluir Usuario</h2>
             <p>Tem certeza que deseja excluir este usuario?</p>
-            <div class = "botm">
-            <button class = "canc" onclick="closeModal('modalDel')">Cancelar</button>
-            <button class = "exc">Excluir</button>
-            </div>
+            <div class="button-box">
+              <button class="cancel-button" onclick="closeModal('modalDel')">
+                Cancelar
+              </button>
+              <button id="save-button">Excluir</button>
+              </div>
         </div>
      </div>
       <!-------------- Fim Modal Excluir ------------------>
@@ -192,6 +225,7 @@
                 Cancelar
               </button>
               <button id="save-button">Salvar</button>
+              </div>
           </form>
         </div>
         </div>
