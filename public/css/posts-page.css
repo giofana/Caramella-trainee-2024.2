@@ -314,27 +314,27 @@ form > h2{
 
 #btCC > button{
     font-family: 'Josefin Sans';
-    font-size: medium;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px rgba(0, 0, 0, 0.37) solid;
-    background: rgb(255, 89, 89);
+    flex: 0 1;
+    padding: 15px 20px;
+    margin: 2%;
+    background-color: #64473b;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    color: #f5f5f5;
+    font-size: 16px;
 }
 
 #btCC button:hover{
-    transition-duration: 0.2s;
-    scale: 1.1;
-    box-shadow: 2px 2px 12px rgb(255, 55, 55);
-}
-
-#btCC button:first-child{
-    background-color: #95fda1;
+    transform: scale(1.05);
+    box-shadow: #64473b 0px 0px 10px;
+    cursor: pointer;
+    background-color: rgb(219, 60, 60);
 }
 
 #btCC button:first-child:hover{
-    transition-duration: 0.2s;
-    scale: 1.1;
-    box-shadow: 2px 2px 12px #38ff4f;
+    background-color: rgb(65, 163, 65);
 }
 
 .btnf{
@@ -345,19 +345,24 @@ form > h2{
 }
 
 .btnfechar{
-        font-family: 'Josefin Sans';
-        font-size: medium;
-        padding: 10px;
-        border-radius: 4px;
-        border: 1px rgba(0, 0, 0, 0.37) solid;
-        background: rgb(255, 89, 89);
-        cursor: pointer;
+    font-family: 'Josefin Sans';
+    flex: 0 1;
+    padding: 15px 20px;
+    margin: 2%;
+    background-color: #64473b;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    color: #f5f5f5;
+    font-size: 16px;
 }
 
 .btnf button:hover{
-    transition-duration: 0.2s;
-    scale: 1.1;
-    box-shadow: 2px 2px 12px rgb(255, 55, 55);
+    transform: scale(1.05);
+    box-shadow: #64473b 0px 0px 10px;
+    cursor: pointer;
+    background-color: rgb(219, 60, 60);
 }
 
 /*------------------------------------ Fim Modal de Criar Post ---------------------------------------*/
@@ -478,6 +483,7 @@ form > h2{
     #btCC{
         margin-top: 8vh;
         margin-bottom: 2vh;
+        scale: 0.9;
     }
 
     #btCC > button{
@@ -578,6 +584,7 @@ form > h2{
     }
 
     #btCC{
+        scale:0.9;
         margin-top: 5vh;
     }
 
