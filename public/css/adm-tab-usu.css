@@ -234,16 +234,6 @@ body {
   justify-content: center;
 }
 
-.modal-view-infos {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  margin-left: 2%;
-  margin-bottom: 5%;
-}
-
 /* TODO: alterar-> tem que utilizar botao de salvar e cancelar */
 .close {
   color: #13142a;
@@ -261,30 +251,60 @@ body {
 
 .modal-content h2 {
   margin: 0;
-  margin-bottom: 20px;
+  margin: 3% 0 3% 0;
   text-align: center;
-  font-size: 50px;
+  font-size: 36px;
 }
 
 .modal-content label {
-  font-size: 30px;
+  font-size: 24px;
+}
+
+.row-view-info {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-left: 2%;
+  margin-bottom: 5%;
+  gap: 20px;
+  align-items: center;
+}
+
+.bg-view {
+  width: 70%;
+  height: 40px;
+  background-color: white;
+  color: #13142a;
+  padding-left: 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bg-view label {
+  font-size: 20px;
 }
 
 /* ------------ estilo da tela de editar ----------------- */
 
-.modal-content-edit {
+.modal-content-edit,
+.modal-content-criar {
   width: 50%;
   height: auto;
 }
 
-.modal-content-edit h2 {
+.modal-content-edit h2,
+.modal-content-criar h2 {
   color: #13142a;
   text-align: center;
   font-size: 40px;
   margin-top: 5%;
 }
 
-.input-box-edit {
+.input-box-edit,
+.input-box-create {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -293,19 +313,21 @@ body {
   height: 100%;
 }
 
-.input-box-edit label {
+.input-box-edit label,
+.input-box-create label {
   display: flex;
   width: 100%;
   font-size: 24px;
-  display: flex;
-  align-items: center;
   color: #13142a;
-  justify-content: center;
+  justify-content: start;
+  padding-left: 10%;
+  margin: 1%;
 }
 
-.input-box-edit input {
+.input-box-edit input,
+.input-box-create input {
   width: 80%; /* Ajusta a largura do input */
-  height: 40px; /* Ajusta a altura do input */
+  height: 44px; /* Ajusta a altura do input */
   border-radius: 20px;
   border: none;
   margin: 1.5%;
@@ -329,7 +351,7 @@ body {
   display: flex;
   justify-content: center; /* Centraliza os botões */
   gap: 10px; /* Adiciona espaço entre os botões */
-  margin-bottom: 2%;
+  margin: 2%;
 }
 
 .button-box button {
@@ -357,7 +379,8 @@ body {
   background-color: rgb(219, 60, 60);
 }
 
-#save-button:hover {
+#save-button:hover,
+#criar-button:hover {
   background-color: rgb(65, 163, 65);
 }
 
@@ -413,92 +436,6 @@ body {
 
 /* Fim modal excluir*/
 
-/* ------------ inicio modal criar ---------------*/
-
-.modal-content-edit h2 {
-  color: #13142a;
-  text-align: center;
-  font-size: 40px;
-}
-
-.input-box-edit {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.input-box-edit label {
-  display: flex;
-  width: 100%;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  color: #13142a;
-  justify-content: center;
-}
-
-.input-box-edit input {
-  width: 80%; /* Ajusta a largura do input */
-  height: 40px; /* Ajusta a altura do input */
-  border-radius: 20px;
-  border: none;
-  margin: 1.5%;
-  padding-left: 10px;
-  font-size: 20px;
-}
-
-.input-box-edit input:hover {
-  transition: all 0.3s ease; /* Adiciona uma transição suave */
-  transform: scale(1.02);
-}
-
-.input-box-edit input[type="text"]:focus,
-.input-box-edit input[type="email"]:focus,
-.input-box-edit input[type="password"]:focus {
-  border-radius: 20px; /* Torna as bordas arredondadas */
-  outline: none;
-}
-
-.button-box {
-  display: flex;
-  justify-content: center; /* Centraliza os botões */
-  gap: 10px; /* Adiciona espaço entre os botões */
-}
-
-.button-box button {
-  flex: 0 1;
-  padding: 15px 20px; /* Ajusta o padding dos botões */
-  margin: 2%;
-  background-color: #64473b;
-  border: none;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  color: #f5f5f5;
-  font-size: 16px;
-}
-
-.button-box button:hover {
-  transform: scale(
-    1.05
-  ); /* Aumenta o tamanho do botão em 5% ao passar o mouse */
-  box-shadow: #64473b 0px 0px 10px; /* Adiciona uma sombra ao passar o mouse */
-  cursor: pointer;
-}
-
-.cancel-button:hover {
-  background-color: rgb(219, 60, 60);
-}
-
-#save-button:hover {
-  background-color: rgb(65, 163, 65);
-}
-
-/* fim modal criar */
-
 @media (max-width: 768px) {
   .modal-content-view {
     width: 70%;
@@ -514,7 +451,8 @@ body {
     margin: 3%;
   }
 
-  .modal-content-edit {
+  .modal-content-edit,
+  .modal-content-criar {
     width: 80%;
   }
 }
