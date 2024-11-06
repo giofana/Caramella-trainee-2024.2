@@ -61,6 +61,10 @@ body {
   font-size: 52px;
 }
 
+.texto-sombra {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.582);
+  }
+
 /* --------------- Tabela --------------- */
 .tabela {
   display: table;
