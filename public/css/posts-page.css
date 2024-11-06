@@ -84,13 +84,13 @@ body {
 .linha-header {
   background-color: #d0f4d4;
   color: #13142a;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
 }
 
 .linha-comum {
   background-color: rgba(250, 210, 164, 0.65);
   color: #13142a;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
 }
 
 .celula-id,
