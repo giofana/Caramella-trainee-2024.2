@@ -552,6 +552,11 @@ body {
     width: 10vw;
   }
 
+  .botao-criar button img {
+    margin-left: 32%;
+    width: 35%;
+    }
+
   .barra2b button {
     display: flex;
     align-items: center;
