@@ -71,7 +71,7 @@ body {
 }
 
 .barra1 {
-  background-color: #d0f4d4;
+  background-color: #64473B;
   display: flex;
   align-items: center;
   width: 70vw;
@@ -176,9 +176,8 @@ body {
 
 .pagina {
   display: flex;
-  justify-content: flex-end;
+  justify-content:center;
   padding: 2% 0;
-  margin-right: 6%;
 }
 
 .pagina a {
@@ -414,15 +413,6 @@ input:focus {
   cursor: pointer;
 }
 
-.exc {
-  background-color: rgb(226, 77, 77);
-  color: white;
-}
-
-.botm button:hover {
-  color: #13142a;
-  box-shadow: #64473b 0px 0px 10px;
-}
 
 /* Fim modal excluir*/
 
