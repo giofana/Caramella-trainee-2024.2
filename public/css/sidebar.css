@@ -163,6 +163,7 @@ body {
   align-items: center;
   cursor: pointer;
   transition: right 0.3s ease; /* Adiciona uma transição suave para a posição */
+  transform: rotate(180deg);
 }
 
 #open-button i {
