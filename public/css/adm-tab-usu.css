@@ -548,7 +548,7 @@ body {
   }
 
   .barras {
-    display: block;
+    display: flex;
   }
 
   .barra1 {
@@ -556,7 +556,7 @@ body {
   }
 
   .barra2 {
-    margin-bottom: 1%;
+    margin-bottom: 0.5%;
   }
 
   .barra1,
