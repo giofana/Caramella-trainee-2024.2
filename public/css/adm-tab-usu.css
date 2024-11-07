@@ -436,6 +436,10 @@ input:focus {
   .modal-content label {
     margin: 0 0 3% 0;
   }
+
+  .pagina{
+    margin-top: 3%;
+  }
 }
 
 @media (max-width: 425px) {
@@ -518,6 +522,7 @@ input:focus {
 
   .pagina {
     padding: 0.5%;
+    margin-top: 3%;
   }
 }
 
@@ -556,7 +561,8 @@ input:focus {
   }
 
   .topo p {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
+    margin-top: 10%;
   }
 
   .botao-criar button {
@@ -605,6 +611,7 @@ input:focus {
     display: flex;
     justify-content: center;
     margin-right: 0%;
+    margin-top: 5%;
   }
 
   .pagina a {
