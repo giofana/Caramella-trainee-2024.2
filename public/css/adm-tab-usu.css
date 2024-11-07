@@ -36,7 +36,7 @@ body {
 }
 
 .texto-sombra {
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.582);
 }
 
 .botao-criar button img {
@@ -153,7 +153,7 @@ body {
 
 .barra2 button {
   border: rgba(250, 210, 164, 0.65);
-  background-color:rgba(250, 210, 164, 0.65);
+  background-color: rgba(250, 210, 164, 0.65);
   border-radius: 15px;
   width: 4.2vw;
   height: 4vh;
@@ -250,10 +250,10 @@ body {
 }
 
 .modal-content h2 {
-  margin: 0;
-  margin: 3% 0 3% 0;
+  color: #13142a;
   text-align: center;
-  font-size: 36px;
+  font-size: 40px;
+  margin-top: 5%;
 }
 
 .modal-content label {
@@ -295,14 +295,6 @@ body {
   height: auto;
 }
 
-.modal-content-edit h2,
-.modal-content-criar h2 {
-  color: #13142a;
-  text-align: center;
-  font-size: 40px;
-  margin-top: 5%;
-}
-
 .input-box-edit,
 .input-box-create {
   display: flex;
@@ -316,12 +308,10 @@ body {
 .input-box-edit label,
 .input-box-create label {
   display: flex;
-  width: 100%;
+  width: 80%;
   font-size: 24px;
   color: #13142a;
-  justify-content: start;
-  padding-left: 10%;
-  margin: 1%;
+  text-align: left;
 }
 
 .input-box-edit input,
@@ -330,20 +320,18 @@ body {
   height: 44px; /* Ajusta a altura do input */
   border-radius: 20px;
   border: none;
-  margin: 1.5%;
+  margin: 1% 0 3% 0;
   padding-left: 10px;
   font-size: 20px;
 }
 
-.input-box-edit input:hover {
+.input-box-edit input:hover,
+.input-box-create input:hover {
   transition: all 0.3s ease; /* Adiciona uma transição suave */
   transform: scale(1.02);
 }
 
-.input-box-edit input[type="text"]:focus,
-.input-box-edit input[type="email"]:focus,
-.input-box-edit input[type="password"]:focus {
-  border-radius: 20px; /* Torna as bordas arredondadas */
+input:focus {
   outline: none;
 }
 
@@ -375,12 +363,14 @@ body {
   cursor: pointer;
 }
 
-.cancel-button:hover {
+.cancel-button:hover,
+.close-button:hover {
   background-color: rgb(219, 60, 60);
 }
 
 #save-button:hover,
-#criar-button:hover {
+#criar-button:hover,
+#excluir-button:hover {
   background-color: rgb(65, 163, 65);
 }
 
@@ -437,23 +427,14 @@ body {
 /* Fim modal excluir*/
 
 @media (max-width: 768px) {
-  .modal-content-view {
-    width: 70%;
+  .modal-content {
+    width: 90%;
   }
-
-  .input-box-edit label {
-    display: flex;
-    flex-direction: column;
-    margin: 2%;
+  .modal-content input {
+    margin: 0 0 4% 0;
   }
-
-  .input-box-edit input {
-    margin: 3%;
-  }
-
-  .modal-content-edit,
-  .modal-content-criar {
-    width: 80%;
+  .modal-content label {
+    margin: 0 0 3% 0;
   }
 }
 
@@ -465,6 +446,10 @@ body {
   body {
     margin: 0;
     padding: 16px;
+  }
+
+  .button-box {
+    margin: 5% 0 5% 0;
   }
 }
 
@@ -493,7 +478,7 @@ body {
     width: 10vw;
   }
 
-  .botao-criar button img{
+  .botao-criar button img {
     margin-left: 32%;
     width: 35%;
   }
@@ -531,8 +516,8 @@ body {
     cursor: pointer;
   }
 
-  .pagina{
-   padding: 0.5%;
+  .pagina {
+    padding: 0.5%;
   }
 }
 
@@ -570,7 +555,7 @@ body {
     padding: 0 0;
   }
 
-  .topo p{
+  .topo p {
     margin-bottom: 10%;
   }
 
@@ -625,24 +610,26 @@ body {
   .pagina a {
     min-width: 35px;
     height: 36px;
-
   }
 
-  .botao-criar{
+  .botao-criar {
     margin-bottom: 8%;
   }
 
-  .email, .emailb, .id, .idb{
+  .email,
+  .emailb,
+  .id,
+  .idb {
     display: none;
   }
 
-  .barra1, .barra2{
+  .barra1,
+  .barra2 {
     justify-content: space-around;
   }
 
-  .barra2b, .acoes{
+  .barra2b,
+  .acoes {
     width: 50%;
   }
-
-
 }

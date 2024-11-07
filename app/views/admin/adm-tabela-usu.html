@@ -21,7 +21,9 @@
   <body>
     <div class="corpo">
       <div class="topo">
-        <p style="font-family: Abril Fatface" class = "texto-sombra">Tabela de Usuarios</p>
+        <p style="font-family: Abril Fatface" class="texto-sombra">
+          Tabela de Usuarios
+        </p>
         <div class="botao-criar">
           <button
             class="button"
@@ -149,13 +151,12 @@
             <h2>Criar usuário</h2>
             <!-- inputs do modal -->
             <div class="input-box-create">
-              <label for="">Nome: <input type="text" value="fulano" /></label>
-              <label for=""
-                >E-mail: <input type="email" value="fulano@gmail.com"
-              /></label>
-              <label for=""
-                >Senha: <input type="password" value="muitodificil "
-              /></label>
+              <label for="create-user-name">Nome:</label>
+              <input type="text" name="" id="name-create-user" />
+              <label for="email-create-user">Email:</label>
+              <input type="email" id="email-create-user" />
+              <label for="password-create-user">Senha:</label>
+              <input type="password" name="" id="password-create-user" />
             </div>
             <div class="button-box">
               <button class="cancel-button" onclick="closeModal('modalCriar')">
@@ -170,9 +171,7 @@
       <div class="modal modal-view" id="modalView">
         <div class="modal-content modal-content-view">
           <form class="form-view" action="">
-            <div class="modal-view-titulo">
-              <h2>Detalhes de ...</h2>
-            </div>
+            <h2>Detalhes do Usuário</h2>
             <div class="row-view-info">
               <label for="">Nome:</label>
               <div class="bg-view"><label for="">fulano</label></div>
@@ -186,8 +185,8 @@
               <div class="bg-view"><label for="">adminadmin</label></div>
             </div>
             <div class="button-box">
-              <button class="cancel-button" onclick="closeModal('modalView')">
-                Cancelar
+              <button class="close-button" onclick="closeModal('modalView')">
+                Fechar
               </button>
             </div>
           </form>
@@ -205,7 +204,7 @@
             <button class="cancel-button" onclick="closeModal('modalDel')">
               Cancelar
             </button>
-            <button id="save-button">Excluir</button>
+            <button id="excluir-button">Excluir</button>
           </div>
         </div>
       </div>
