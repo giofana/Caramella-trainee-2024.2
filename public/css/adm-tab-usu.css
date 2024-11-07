@@ -440,6 +440,14 @@ input:focus {
   .pagina{
     margin-top: 3%;
   }
+
+  .topo p{
+    margin-top: 15%;
+  }
+
+  .botao-criar button{
+    margin-bottom: 50%;
+  }
 }
 
 @media (max-width: 425px) {
