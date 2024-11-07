@@ -62,8 +62,8 @@ body {
 }
 
 .texto-sombra {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.582);
-  }
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.582);
+}
 
 /* --------------- Tabela --------------- */
 .tabela {
@@ -157,31 +157,31 @@ body {
   height: auto;
 }
 
-.botao-criar button img {
-    margin-left: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    }
-    
-      
-    
+.botao-criar {
+  width: 5vw;
+  height: 6vh;
+}
+
 .botao-criar button {
-    width: 5vw;
-    height: 6vh;
-    border: #d0f4d4;
-    background-color: #fad2a4;
-    border: 2px solid #64473b;
-    border-radius: 25px;
-    font-size: 20px;
-    cursor: pointer;
-    }
-    
+  width: 100%;
+  height: 100%;
+  background-color: #fad2a4;
+  border: 2px solid #64473b;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao-criar button img {
+  width: 50%;
+}
+
 .botao-criar button:hover {
-    color: #13142a;
-    box-shadow: #64473b 0px 0px 10px;
-    }
+  color: #13142a;
+  box-shadow: #64473b 0px 0px 10px;
+}
 
 /* --------------- Paginação ---------------*/
 .bottom {
@@ -532,26 +532,26 @@ form > h2 {
 }
 
 @media (max-width: 1024px) {
-    .botao-criar button {
-        margin-top: -20%;
-        width: 10vw;   
-        }
+  .botao-criar button {
+    margin-top: -20%;
+    width: 10vw;
+  }
 
-    .top {
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 0;
-        }
+  .top {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 0;
+  }
 
-    .top h2{
-        margin: 6% 0;
-        }
+  .top h2 {
+    margin: 6% 0;
+  }
 
-    .botao-criar button img {
-        max-width: 40px;
-        height: auto;
-        margin-left: 28%;
-    }
+  .botao-criar button img {
+    max-width: 40px;
+    height: auto;
+    margin-left: 28%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -576,13 +576,11 @@ form > h2 {
   .botao-criar button {
     margin-top: 10px;
     width: 15vw;
-    }
+  }
 
-    
-
-    .top h2 {
-        font-size: 40px;
-      }
+  .top h2 {
+    font-size: 40px;
+  }
 
   .container {
     padding: 0 20px;
@@ -605,8 +603,6 @@ form > h2 {
     font-size: 20px;
     min-width: 600px;
   }
-
-
 
   .bottom {
     min-width: 300px;
