@@ -15,21 +15,6 @@ body {
   font-family: "Josefin Sans";
 }
 
-/* Estilos para a barra de rolagem */
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(250, 210, 164, 0.65);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(250, 210, 164, 0.85);
-}
-
 /* --------------- Card e Card Header --------------- */
 .container {
   display: flex;
@@ -633,13 +618,13 @@ form > h2 {
   }
 
   .view {
-    width: 6vw;
+    width: 25.5px;
     height: auto;
   }
 
   .edit,
   .delete {
-    width: 4.5vw;
+    width: 25.5px;
     height: auto;
   }
 
