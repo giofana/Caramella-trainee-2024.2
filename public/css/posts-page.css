@@ -86,7 +86,7 @@ body {
 }
 
 .linha-header {
-  background-color: #d0f4d4;
+  background-color: #64473B;
   color: #13142a;
   margin-bottom: 0.8rem;
 }
@@ -191,7 +191,6 @@ body {
   align-items: center;
   flex-direction: row;
   gap: 1rem;
-  min-width: 600px;
 }
 
 .pagination {
@@ -207,11 +206,11 @@ body {
   padding: 0.7% 1.2%;
   text-decoration: none;
   transition: background-color 0.3s;
-  margin: 0 2%;
+  margin: 0 0.5%;
   border: 1px solid #13142a;
   border-radius: 4px;
-  width: 7vw;
-  height: 3.5vh;
+  width: 40px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -597,35 +596,34 @@ form > h2 {
     padding: 0 20px;
   }
 
-  .center {
-    width: 300px;
-    overflow-x: auto;
+  .tabela {
+    margin: 20px, 15px;
   }
 
-  .tabela {
-    overflow-x: auto;
-    width: 100%;
-    min-width: 600px;
+  .tabela .celula-autor, 
+  .tabela th.celula-autor,
+  .tabela .celula-data,
+  .tabela th.celular-data,
+  .tabela .celula-id,
+  .tabela th.celula-id {
+    display: none;
   }
+
 
   .linha-comum,
   .linha-header {
     width: 100%;
     font-size: 20px;
-    min-width: 600px;
+    max-width: 280px;
+    justify-content: space-around;
   }
 
-  .bottom {
-    min-width: 300px;
+  th.celula-acoes {
+    margin-right: 16px;
   }
 
-  .pagination {
-    width: 300px;
-    margin-right: 0;
-  }
-
-  .button-group button {
-    width: 100vw;
+  .celula-acoes {
+    gap: 10px;
   }
 
   .square {
@@ -646,14 +644,11 @@ form > h2 {
   }
 
   .pagination a {
-    width: 15vw;
-    height: 3.5vh;
+    width: 35px;
+    height: 36px;
   }
 
-  .button-group button {
-    max-width: 50px;
-    font-size: 18px;
-  }
+
   /*----------------------------------- Modal de Criar Post ---------------------------------------------*/
   /* Bruno */
 
