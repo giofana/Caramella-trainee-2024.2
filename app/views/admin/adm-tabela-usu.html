@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../public/css/adm-tab-usu.css" />
+    <title>Caramella</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="corpo">
+      <div class="topo">
+        <p style="font-family: Abril Fatface">Tabela de Usuarios</p>
+        <div class="botao-criar">
+          <button class="button">
+            <img src="../../../public/assets/add.png" />
+          </button>
+        </div>
+      </div>
+      <div class="barras">
+        <div class="barra1">
+          <div class="id"><p>ID</p></div>
+          <div class="nome"><p>NOME</p></div>
+          <div class="email"><p>EMAIL</p></div>
+          <div class="acoes"><p>AÇÕES</p></div>
+        </div>
+        <div class="barra2">
+          <div class="idb"><p>1</p></div>
+          <div class="nomeb"><p>Tim Mayers</p></div>
+          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
+          <div class="barra2b">
+            <button
+              class="button"
+              id="openModalView"
+              onclick="openModal('modalView')"
+            >
+              <img src="../../../public/assets/visu.png"/>
+            </button>
+            <button 
+              class="button2"
+              id="openModalEdit"
+              onclick="openModal('modalEdit')">
+              <img src="../../../public/assets/edit.png"/>
+            </button>
+            <button
+            class="button3"
+            id="openModalDel"
+            onclick="openModal('modalDel')">
+              <img src="../../../public/assets/lixo.png"/>
+            </button>
+          </div>
+        </div>
+        <div class="barra2">
+          <div class="idb"><p>1</p></div>
+          <div class="nomeb"><p>Tim Mayers</p></div>
+          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
+          <div class="barra2b">
+            <button class="button">
+              <img src="../../../public/assets/visu.png" />
+            </button>
+            <button class="button2">
+              <img src="../../../public/assets/edit.png" />
+            </button>
+            <button class="button3">
+              <img src="../../../public/assets/lixo.png" />
+            </button>
+          </div>
+        </div>
+        <div class="barra2">
+          <div class="idb"><p>1</p></div>
+          <div class="nomeb"><p>Tim Mayers</p></div>
+          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
+          <div class="barra2b">
+            <button class="button">
+              <img src="../../../public/assets/visu.png" />
+            </button>
+            <button class="button2">
+              <img src="../../../public/assets/edit.png" />
+            </button>
+            <button class="button3">
+              <img src="../../../public/assets/lixo.png" />
+            </button>
+          </div>
+        </div>
+        <div class="barra2">
+          <div class="idb"><p>1</p></div>
+          <div class="nomeb"><p>Tim Mayers</p></div>
+          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
+          <div class="barra2b">
+            <button class="button">
+              <img src="../../../public/assets/visu.png" />
+            </button>
+            <button class="button2">
+              <img src="../../../public/assets/edit.png" />
+            </button>
+            <button class="button3">
+              <img src="../../../public/assets/lixo.png" />
+            </button>
+          </div>
+        </div>
+        <div class="barra2">
+          <div class="idb"><p>1</p></div>
+          <div class="nomeb"><p>Tim Mayers</p></div>
+          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
+          <div class="barra2b">
+            <button class="button">
+              <img src="../../../public/assets/visu.png" />
+            </button>
+            <button class="button2">
+              <img src="../../../public/assets/edit.png" />
+            </button>
+            <button class="button3">
+              <img src="../../../public/assets/lixo.png" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagina">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">&raquo;</a>
+      </div>
+      
+      <div class="modal modal-view" id="modalView">
+        <div class="modal-content modal-content-view">
+          <form class="form-view" action="">
+            <div class="modal-view-titulo">
+              <h2>Detalhes de ...</h2>
+            </div>
+            <div class="modal-view-infos">
+              <label for="">ID: 1</label>
+              <label for="">Nome: Tim Mayers</label>
+              <label for="">Email: paulinjoderson@gmail.com</label>
+            </div>
+          <div class="button-box">
+            <button class="cancel-button" onclick="closeModal('modalView')">
+              Cancelar
+            </button>
+          </div>
+          </form>
+        </div>
+      </div>
+
+      <!-------------- Modal Excluir ------------------>
+
+      <div class="modal modal-del" id="modalDel">
+        <div class="modal-content excluir">
+            <img src = "../../../public/assets/trash.png">
+            <h2>Excluir Usuario</h2>
+            <p>Tem certeza que deseja excluir este usuario?</p>
+            <div class = "botm">
+            <button class = "canc" onclick="closeModal('modalDel')">Cancelar</button>
+            <button class = "exc">Excluir</button>
+            </div>
+        </div>
+     </div>
+      <!-------------- Fim Modal Excluir ------------------>
+
+      <!-------------- Tela de editar usário ------------------>
+      <div class="modal modal-edit" id="modalEdit">
+        <div class="modal-content modal-content-edit">
+          <form>
+            <h2>Editar usuário</h2>
+            <!-- inputs do modal -->
+             <div class="input-box-edit">
+              <label for="">Nome: <input type="text" value="fulano" /></label>
+              <label for=""
+                  >E-mail: <input type="email" value="fulano@gmail.com"
+              /></label>
+              <label for="">Senha: <input type="password" value="muitodificil " /></label>
+              </div>
+              <!-- fim inputs do modal -->
+             <!-- div de botão -->
+            <div class="button-box">
+              <button class="cancel-button" onclick="closeModal('modalEdit')">
+                Cancelar
+              </button>
+              <button id="save-button">Salvar</button>
+          </form>
+        </div>
+        </div>
+
+        <div class="modal modal-create" id="modalCreate">
+          <div class=" modal-content modal-content-create">
+            <form>
+              <h2>Criar usuário</h2>
+              <!-- inputs do modal -->
+               <div class="input-box-create">
+                <label for="">Nome: <input type="text"/></label>
+                <label for=""
+                    >E-mail: <input type="email"
+                /></label>
+                <label for="">Senha: <input type="password" /></label>
+                </div>
+                <!-- fim inputs do modal -->
+               <!-- div de botão -->
+              <div class="button-box">
+                <button class="cancel-button" onclick="closeModal('modalCreate')">
+                  Cancelar
+                </button>
+                <button id="create-button">Criar</button>
+            </form>
+          </div>
+          </div>
+
+
+    
+      </div>
+    <script src="/public/js/adm-tabela-usu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+header {
+  background-color: #e7baa7;
+  height: 72px;
+}
+
+/* --------------- search-bar----------------*/
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.txt-search {
+  width: 50%;
+  height: 44px;
+  border: #64473b 1px solid;
+  border-radius: 20px;
+  padding: 0 20px 0 40px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #e7baa7d2;
+
+  /* Colocando a imagem de lupa */
+  background-image: url("../assets/search-icon.png");
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease; /* Adiciona transição suave para o efeito de aumento */
+}
+
+.txt-search::placeholder {
+  color: #64473b;
+}
+
+.txt-search:hover {
+  transform: scale(1.05); /* aumenta o tamanho do input ao passar o mouse */
+  outline: none; /* Remove o efeito de seleção original */
+  outline-offset: 0; /* Remove o efeito de seleção original */
+  mask-border-outset: 0; /* Remove o efeito de seleção original */
+}
+
+.txt-search:focus {
+  outline: none; /* Remove a borda preta ao clicar */
+}
+
+/* ---------------- posts ------------------ */
+
+.post-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.post-box {
+  width: 25%;
+  height: auto;
+  margin: 3%;
+  padding: 2%;
+  border-radius: 20px;
+  box-shadow: #64473b1a 0px 0px 10px; /* add sombra ao passar o mouse */
+  transition: transform 0.3s ease; /* add transição para o efeito de aumento */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* acerta espaço entre itens */
+  background-color: #e5caec4f;
+}
+
+.post-box:hover {
+  transform: scale(1.05); /* aumenta o tamanho do post ao passar o mouse */
+  box-shadow: #64473b1a 0px 0px 20px; /* add sombra ao passar o mouse */
+}
+
+.post-img {
+  width: 80%;
+  height: auto;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.post-title {
+  font-size: 24px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto ao invés de usar bold*/
+  color: #13142a;
+  margin: 5% 5%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.post-description {
+  font-size: 16px;
+  color: #13142a;
+  margin: 5% 5%;
+  text-align: center;
+}
+
+.post-description p {
+  text-align: center;
+  margin: 0;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin: 0 5%;
+  align-self: flex-start; /* o autor alinhado à esquerda */
+}
+
+.author img {
+  margin-right: 16px;
+  width: 25px;
+}
+
+/* --------------- paginacao ---------------*/
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 2% 0;
+}
+
+.pagination a {
+  color: #64473b;
+  padding: 0.7% 1.2%;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin: 0 0.5%;
+  border: 1px solid #64473b;
+  border-radius: 4px;
+  background-color: #e7baa7c9;
+}
+
+.pagination a:hover {
+  background-color: #e5caec;
+}
+
+/* -------------- responsividade -------------- */
+
+@media (max-width: 768px) {
+  header {
+    height: 150px;
+  }
+
+  .search-bar {
+    margin-top: 20px; /* Espaçamento superior reduzido */
+    margin-bottom: 20px; /* Espaçamento inferior reduzido */
+  }
+
+  .txt-search {
+    width: 60%;
+  }
+
+  .post-box {
+    width: 40%; /* Ajusta a largura dos posts para telas menores */
+    margin: 4%; /* Ajusta a margem dos posts para telas menores */
+  }
+
+  .pagination a {
+    padding: 2% 2.5%;
+  }
+}
+
+/* ------------- telas pequenas ---------------- */
+
+@media (max-width: 480px) {
+  .search-bar {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .txt-search {
+    width: 70%;
+    height: 40px;
+  }
+
+  .post-box {
+    width: 90%; /* Ajusta a largura dos posts para telas muito pequenas */
+    margin: 6%; /* Ajusta a margem dos posts para telas muito pequenas */
+  }
+}
+
+/* ------------- telas pequenas ---------------- */
