@@ -71,7 +71,7 @@ body {
 }
 
 .linha-header {
-  background-color: #64473B;
+  background-color: #64473b;
   color: #13142a;
   margin-bottom: 0.8rem;
 }
@@ -148,7 +148,7 @@ body {
 }
 
 .botao-criar button {
-  max-width: 100%;
+  max-width: 70%;
   height: 100%;
   background-color: #fad2a4;
   border: 2px solid #64473b;
@@ -160,7 +160,7 @@ body {
 }
 
 .botao-criar button img {
-  max-width: 36%;
+  max-width: 30%;
   height: auto;
 }
 
@@ -547,7 +547,6 @@ form > h2 {
     border-radius: 20px;
   }
 
-
   .tabela {
     margin-left: 5%;
   }
@@ -585,7 +584,7 @@ form > h2 {
     margin: 20px, 15px;
   }
 
-  .tabela .celula-autor, 
+  .tabela .celula-autor,
   .tabela th.celula-autor,
   .tabela .celula-data,
   .tabela th.celular-data,
@@ -593,7 +592,6 @@ form > h2 {
   .tabela th.celula-id {
     display: none;
   }
-
 
   .linha-comum,
   .linha-header {
@@ -632,7 +630,6 @@ form > h2 {
     width: 35px;
     height: 36px;
   }
-
 
   /*----------------------------------- Modal de Criar Post ---------------------------------------------*/
   /* Bruno */
