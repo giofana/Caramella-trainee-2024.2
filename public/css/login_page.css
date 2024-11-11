@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Reset padrão de navegadores */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Josefin Sans';
+    overflow: hidden;
+}
+
+.body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #fad2a4a9 0%, #e7baa7b6 50%, #fac0cf79 100%), url(/public/assets/cupcake.svg);
+    background-size: 8%;
+    background-repeat: round;
+}
+
+.form {
+    background-color: rgba(231, 186, 167, 0.8);
+    width: 80vw; 
+    max-width: 480px; 
+    padding-top: 20px;
+    padding-bottom: 12px;
+    border-radius: 20px; 
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.form-header {
+    padding-bottom: 16px;
+    width: 100%;
+    text-align: center;
+    color: #13142A;
+}
+
+.email-group, .senha-group, .button-group {
+    width: 100%;
+    text-align: center;
+}
+
+.email-group h3, .senha-group h3 {
+    margin-left: 12.5%;
+    text-align: left;
+    margin-bottom: 12px;
+    color: #13142A;
+}
+
+.email-group input, .senha-group input {
+    width: 80%; 
+    max-width: 380px; 
+    height: 56px; 
+    padding-left: 24px;
+    border-radius: 12px;
+    border: 1px solid white;
+    background-color: rgba(100, 71, 59, 0.2); 
+    font-weight: bold; 
+    font-size: 16px;
+    outline: 0;
+}
+
+.email-group input::placeholder, .senha-group input::placeholder {
+    color: #13142A;
+    font-family: 'Josefin Sans';
+}
+
+.input-container {
+    position: relative;
+    width: 80%; /* mesma largura do input */
+    max-width: 380px;
+}
+
+.senha-group input {
+    width: 100%; /* ajuste para o tamanho do contêiner */
+    margin-left: 12.5%;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 0px;
+    top: 50%; /* ajuste de posição à direita */
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #13142A;
+}
+
+
+.button-group button {
+    width: 40%;
+    max-width: 200px;
+    height: 48px;
+    background-color: rgba(100, 71, 59, 0.2);
+    border: 1px solid white;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in;
+    color: #13142A;
+    font-family: 'Josefin Sans';
+}
+
+.button-group button:hover {
+    background-color: rgba(100, 71, 59, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form {
+        width: 80vw;
+        max-width: 480px;
+    }
+
+    .email-group input, .senha-group input {
+        width: 80%;
+        max-width: 360px;
+    }
+
+    .input-container {
+    position: relative;
+    width: 80%; /* mesma largura do input */
+    max-width: 380px;
+    }
+
+    .senha-group input {
+    width: 100%; /* ajuste para o tamanho do contêiner */
+    margin-left: 15.5%;
+    }
+
+    #togglePassword {
+    position: absolute;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+    .button-group button {
+        width: 60%;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .form {
+        width: 80vw;
+        max-width: 340px;
+        padding-top: 16px;
+        padding-bottom: 8px;
+    }
+
+    .email-group input, .senha-group input {
+        width: 80%;
+        max-width: 300px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .input-container {
+        position: relative;
+        width: 80%; /* mesma largura do input */
+        max-width: 380px;
+        }
+    
+        .senha-group input {
+        width: 100%; /* ajuste para o tamanho do contêiner */
+        margin-left: 13%;
+        }
+    
+        #togglePassword {
+        position: absolute;
+        left: auto;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .button-group button {
+        width: 60%;
+        max-width: 160px;
+        height: 44px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
