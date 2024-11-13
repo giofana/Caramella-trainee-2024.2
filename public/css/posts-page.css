@@ -21,15 +21,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
 }
 
 .card {
   background-color: rgba(100, 71, 59, 0.42);
-  border-radius: 16px;
+  border-radius: 60px;
   padding-top: 2%;
   width: 80%;
+  min-height: 640px;
   flex-direction: column;
 }
 
@@ -41,9 +42,9 @@ body {
   margin-bottom: 5%;
 }
 
-.top h2 {
-  color: #f5f5f5;
-  font-size: 52px;
+.top p {
+  color: white;
+  font-size: 60px;
 }
 
 .texto-sombra {
@@ -143,8 +144,8 @@ body {
 }
 
 .botao-criar {
-  width: 8vw;
-  height: 6vh;
+  width: 72px;
+  height: 48px;
 }
 
 .botao-criar button {
@@ -157,10 +158,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
 }
 
 .botao-criar button img {
-  max-width: 36%;
+  width: 41.5%;
   height: auto;
 }
 
@@ -173,16 +175,16 @@ body {
 .bottom {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: row;
   gap: 1rem;
 }
 
 .pagination {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 2% 0;
   margin-right: 2%;
+  width: 100%;
 }
 
 .pagination a {
@@ -194,7 +196,7 @@ body {
   margin: 0 0.5%;
   border: 1px solid #13142a;
   border-radius: 4px;
-  width: 40px;
+  min-width: 40px;
   height: 36px;
   display: flex;
   align-items: center;
@@ -528,7 +530,7 @@ form > h2 {
     margin-bottom: 0;
   }
 
-  .top h2 {
+  .top p {
     margin: 6% 0;
   }
 
@@ -541,10 +543,26 @@ form > h2 {
 @media (max-width: 768px) {
   .card {
     overflow: hidden;
+    width: 714px;
+    height: 744px;
   }
 
   .botao-criar button {
-    border-radius: 20px;
+    border-radius: 25px;
+  }
+
+  .botao-criar button img {
+    width: 21px;
+    height: auto;
+  }
+
+  .linha-comum, .linha-header {
+    width: 640px;
+  }
+
+  .celula-acoes {
+    justify-content: center;
+    gap: 12%;
   }
 
 
@@ -556,25 +574,29 @@ form > h2 {
 @media (max-width: 425px) {
   .card {
     padding-top: 6%;
+    width: 393px;
+    height: 744px;
   }
 
   .botao-criar {
-    width: 50px;
+    width: 63px;
     display: flex;
     justify-content: center;
   }
 
   .botao-criar button {
-    border-radius: 16px;
+    width: 63px;
+    border-radius: 25px;
   }
 
   .botao-criar button img {
-    max-width: 20px;
+    width: 20px;
     height: auto;
   }
 
-  .top h2 {
-    font-size: 40px;
+  .top {
+    min-height: 200px;
+    text-align: center;
   }
 
   .container {
@@ -599,7 +621,7 @@ form > h2 {
   .linha-header {
     width: 100%;
     font-size: 20px;
-    max-width: 280px;
+    max-width: 350px;
     justify-content: space-around;
   }
 
@@ -608,7 +630,7 @@ form > h2 {
   }
 
   .celula-acoes {
-    gap: 10px;
+    gap: 20px;
   }
 
   .square {
@@ -629,6 +651,7 @@ form > h2 {
   }
 
   .pagination a {
+    min-width: 0;
     width: 35px;
     height: 36px;
   }
@@ -665,6 +688,10 @@ form > h2 {
 @media (max-width: 375px) {
   .card {
     width: 300px;
+  }
+
+  .linha-comum, .linha-header {
+    width: 260px;
   }
 
   .center {
