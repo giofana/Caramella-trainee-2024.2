@@ -1,212 +1,351 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/posts-page.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/posts-page.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Admin | Posts Page</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="tela"></div>
-    <div class ="modal" id="modalCriar">
-        <form>
-            <h2>Preencha todos os campos abaixo para criar post:</h2>
-            <div class="inputModal"><label for="Título">Título da receita</label><input id="Título" type="text"></div>
-            <div class="auxSubForm">
-                <div class="subForm">
-                    <div class="inputModal" id="autor"><label for="Autor">Autor</label><input id="Autor" type="text"></div>
-                    <div class="inputModal" id="tempo"><label for="Tempo">Tempo</label><input id="Tempo" type="text"></div>
-                </div>
-                <div class="subForm">
-                    <div class="inputModal" id="custo"><label for="Custo">Custo</label><input id="Custo" type="text"></div>
-                    <div class="inputModal" id="dificuldade"><label for="Dificuldade">Dificuldade</label><select id="Dificuldade">
-                        <option value="#" selected></option>
-                        <option value="0">Fácil</option>
-                        <option value="1">Médio</option>
-                        <option value="2">Difícil</option>
-                    </select></div>
-                </div>
+    <div class="modal" id="modalCriar">
+      <form>
+        <h2>Preencha todos os campos abaixo para criar post:</h2>
+        <div class="inputModal">
+          <label for="Título">Título da receita</label
+          ><input id="Título" type="text" />
+        </div>
+        <div class="auxSubForm">
+          <div class="subForm">
+            <div class="inputModal" id="autor">
+              <label for="Autor">Autor</label><input id="Autor" type="text" />
             </div>
-            <div class="inputModal"><label for="Ingredientes">Ingredientes</label><textarea id="Ingredientes" rows="3"></textarea></div>
-            <div class="inputModal"><label for="Modo">Modo de preparo</label><textarea id="Modo" rows="3"></textarea></div>
-            <div class="inputModal"><label for="História">História</label><textarea id="História" rows="3"></textarea></div>
-            <div class="inputModal"><label for="Imagem">Imagem</label><input id="Imagem" type="file"></div>
-            <div id="btCC">
-                <button>Criar</button>
-                <button onclick="closeModal('modalCriar')">Cancelar</button>
+            <div class="inputModal" id="tempo">
+              <label for="Tempo">Tempo</label><input id="Tempo" type="text" />
             </div>
-        </form>
+          </div>
+          <div class="subForm">
+            <div class="inputModal" id="custo">
+              <label for="Custo">Custo</label><input id="Custo" type="text" />
+            </div>
+            <div class="inputModal" id="dificuldade">
+              <label for="Dificuldade">Dificuldade</label
+              ><select id="Dificuldade">
+                <option value="#" selected></option>
+                <option value="0">Fácil</option>
+                <option value="1">Médio</option>
+                <option value="2">Difícil</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="inputModal">
+          <label for="Ingredientes">Ingredientes</label
+          ><textarea id="Ingredientes" rows="3"></textarea>
+        </div>
+        <div class="inputModal">
+          <label for="Modo">Modo de preparo</label
+          ><textarea id="Modo" rows="3"></textarea>
+        </div>
+        <div class="inputModal">
+          <label for="História">História</label
+          ><textarea id="História" rows="3"></textarea>
+        </div>
+        <div class="inputModal">
+          <label for="Imagem">Imagem</label><input id="Imagem" type="file" />
+        </div>
+        <div id="btCC">
+          <button>Criar</button>
+          <button onclick="closeModal('modalCriar')">Cancelar</button>
+        </div>
+      </form>
     </div>
 
-    <div class = "modal" id="modalEditar">
-        <form>
-            <h2>Preencha todos os campos abaixo para criar post:</h2>
-            <div class="inputModal"><label for="Título1">Título da receita</label><input id="Título1" type="text"></div>
-            <div class="auxSubForm">
-                <div class="subForm">
-                    <div class="inputModal" id="autor1"><label for="Autor1">Autor</label><input id="Autor1" type="text"></div>
-                    <div class="inputModal" id="tempo1"><label for="Tempo1">Tempo</label><input id="Tempo1" type="text"></div>
-                </div>
-                <div class="subForm">
-                    <div class="inputModal" id="custo1"><label for="Custo1">Custo</label><input id="Custo1" type="text"></div>
-                    <div class="inputModal" id="dificuldade1"><label for="Dificuldade1">Dificuldade</label><select id="Dificuldade1">
-                        <option value="#" selected></option>
-                        <option value="0">Fácil</option>
-                        <option value="1">Médio</option>
-                        <option value="2">Difícil</option>
-                    </select></div>
-                </div>
+    <div class="modal" id="modalEditar">
+      <form>
+        <h2>Preencha todos os campos abaixo para criar post:</h2>
+        <div class="inputModal">
+          <label for="Título1">Título da receita</label
+          ><input id="Título1" type="text" />
+        </div>
+        <div class="auxSubForm">
+          <div class="subForm">
+            <div class="inputModal" id="autor1">
+              <label for="Autor1">Autor</label><input id="Autor1" type="text" />
             </div>
-            <div class="inputModal"><label for="Ingredientes1">Ingredientes</label><textarea id="Ingredientes1" rows="3"></textarea></div>
-            <div class="inputModal"><label for="Modo1">Modo de preparo</label><textarea id="Modo1" rows="3"></textarea></div>
-            <div class="inputModal"><label for="História1">História</label><textarea id="História1" rows="3"></textarea></div>
-            <div class="inputModal"><label for="Imagem1">Imagem</label><input id="Imagem1" type="file"></div>
-            <div id="btCC">
-                <button>Editar</button>
-                <button onclick="closeModal('modalCriar')">Cancelar</button>
+            <div class="inputModal" id="tempo1">
+              <label for="Tempo1">Tempo</label><input id="Tempo1" type="text" />
             </div>
-        </form>
+          </div>
+          <div class="subForm">
+            <div class="inputModal" id="custo1">
+              <label for="Custo1">Custo</label><input id="Custo1" type="text" />
+            </div>
+            <div class="inputModal" id="dificuldade1">
+              <label for="Dificuldade1">Dificuldade</label
+              ><select id="Dificuldade1">
+                <option value="#" selected></option>
+                <option value="0">Fácil</option>
+                <option value="1">Médio</option>
+                <option value="2">Difícil</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="inputModal">
+          <label for="Ingredientes1">Ingredientes</label
+          ><textarea id="Ingredientes1" rows="3"></textarea>
+        </div>
+        <div class="inputModal">
+          <label for="Modo1">Modo de preparo</label
+          ><textarea id="Modo1" rows="3"></textarea>
+        </div>
+        <div class="inputModal">
+          <label for="História1">História</label
+          ><textarea id="História1" rows="3"></textarea>
+        </div>
+        <div class="inputModal">
+          <label for="Imagem1">Imagem</label><input id="Imagem1" type="file" />
+        </div>
+        <div id="btCC">
+          <button>Editar</button>
+          <button onclick="closeModal('modalCriar')">Cancelar</button>
+        </div>
+      </form>
     </div>
-    
-    <div class = "modal" id="modalVisu">
-        <form>
-            <h2>Preencha todos os campos abaixo para criar post:</h2>
-            <div class="inputModal"><label for="Título2">Título da receita</label><input id="Título2" type="text"></div>
-            <div class="auxSubForm">
-                <div class="subForm">
-                    <div class="inputModal" id="autor2"><label for="Autor2">Autor</label><input id="Autor2" type="text"></div>
-                    <div class="inputModal" id="tempo2"><label for="Tempo2">Tempo</label><input id="Tempo2" type="text"></div>
-                </div>
-                <div class="subForm">
-                    <div class="inputModal" id="custo2"><label for="Custo2">Custo</label><input id="Custo2" type="text"></div>
-                    <div class="inputModal" id="dificuldade2"><label for="Dificuldade2">Dificuldade</label><select id="Dificuldade2">
-                        <option value="#" selected></option>
-                        <option value="0">Fácil</option>
-                        <option value="1">Médio</option>
-                        <option value="2">Difícil</option>
-                    </select></div>
-                </div>
+
+    <div class="modal" id="modalVisu">
+      <form>
+        <h2>Preencha todos os campos abaixo para criar post:</h2>
+        <div class="inputModal">
+          <label for="Título2">Título da receita</label
+          ><input id="Título2" type="text" />
+        </div>
+        <div class="auxSubForm">
+          <div class="subForm">
+            <div class="inputModal" id="autor2">
+              <label for="Autor2">Autor</label><input id="Autor2" type="text" />
             </div>
-            <div class="inputModal"><label for="Ingredientes2">Ingredientes</label><textarea id="Ingredientes2" rows="3"></textarea></div>
-            <div class="inputModal"><label for="Modo2">Modo de preparo</label><textarea id="Modo2" rows="3"></textarea></div>
-            <div class="inputModal"><label for="História2">História</label><textarea id="História2" rows="3"></textarea></div>
-            <div class="inputModal" id="imgEnviada"><label for="Imagem">Imagem</label><img src="/public/assets/cake.png"></div>
-            <div class = "btnf">
-                <button class = "btnfechar"onclick="closeModal('modalCriar')">Fechar</button>
+            <div class="inputModal" id="tempo2">
+              <label for="Tempo2">Tempo</label><input id="Tempo2" type="text" />
             </div>
-        </form>
+          </div>
+          <div class="subForm">
+            <div class="inputModal" id="custo2">
+              <label for="Custo2">Custo</label><input id="Custo2" type="text" />
+            </div>
+            <div class="inputModal" id="dificuldade2">
+              <label for="Dificuldade2">Dificuldade</label
+              ><select id="Dificuldade2">
+                <option value="#" selected></option>
+                <option value="0">Fácil</option>
+                <option value="1">Médio</option>
+                <option value="2">Difícil</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="inputModal">
+          <label for="Ingredientes2">Ingredientes</label
+          ><textarea id="Ingredientes2" rows="3"></textarea>
+        </div>
+        <div class="inputModal">
+          <label for="Modo2">Modo de preparo</label
+          ><textarea id="Modo2" rows="3"></textarea>
+        </div>
+        <div class="inputModal">
+          <label for="História2">História</label
+          ><textarea id="História2" rows="3"></textarea>
+        </div>
+        <div class="inputModal" id="imgEnviada">
+          <label for="Imagem">Imagem</label
+          ><img src="/public/assets/cake.png" />
+        </div>
+        <div class="btnf">
+          <button class="btnfechar" onclick="closeModal('modalCriar')">
+            Fechar
+          </button>
+        </div>
+      </form>
     </div>
 
     <!-------------- Modal Excluir ------------------>
 
     <div class="modall modal-del" id="modalDel">
-        <div class="modal-content excluir">
-            <img src = "../../../public/assets/trash.png">
-            <h2>Excluir Usuario</h2>
-            <p>Tem certeza que deseja excluir este usuario?</p>
-            <div class = "botm">
-            <button class = "canc" onclick="closeModal('modalDel')">Cancelar</button>
-            <button class = "exc">Excluir</button>
-            </div>
+      <div class="modal-content excluir">
+        <h1>Excluir Usuario</h1>
+        <img src="../../../public/assets/trash.png" />
+
+        <p>Tem certeza que deseja excluir este usuario?</p>
+        <div id="btCC">
+          <button class="canc" onclick="closeModal('modalDel')">
+            Cancelar
+          </button>
+          <button class="exc">Excluir</button>
         </div>
-     </div>
-      <!-------------- Fim Modal Excluir ------------------>
+      </div>
+    </div>
+    <!-------------- Fim Modal Excluir ------------------>
 
     <div class="container">
-        <div class="card">
-            <div class="top">
-                <h2>Lista de posts</h2>
+      <div class="card">
+        <div class="top">
+          <p style="font-family: Abril Fatface" class="texto-sombra">
+            Tabela de Posts
+          </p>
 
-                <div class="button-group">
-                    <button onclick="openModal('modalCriar')">+</button>
-                </div>
-            </div>
-            <div class="center">
-                <table class="tabela">
-                    <thead>
-                        <tr class="linha-header">
-                            <th class="celula-id">ID</th>
-                            <th class="celula-titulo">TÍTULO</th>
-                            <th class="celula-autor">AUTOR</th>
-                            <th class="celula-data">DATA</th>
-                            <th class="celula-acoes">AÇÕES</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="linha-comum">
-                            <td class="celula-id">1</td>
-                            <td class="celula-titulo">Cupcake</td>
-                            <td class="celula-autor">Harry</td>
-                            <td class="celula-data">34/25/0000</td>
-                            <td class="celula-acoes">
-                                <div class="square" onclick="openModal('modalVisu')"><img class="view" src="/public/assets/view.svg" alt=""></div>
-                                <div class="square" onclick="openModal('modalEditar')"><img class="edit" src="/public/assets/edit.svg" alt=""></div>
-                                <div class="square" onclick="openModal('modalDel')"><img class="delete" src="/public/assets/delete.svg" alt=""></div>
-                            </td>
-                        </tr>
-                        <tr class="linha-comum">
-                            <td class="celula-id">2</td>
-                            <td class="celula-titulo">Cupcake</td>
-                            <td class="celula-autor">Harry Potter</td>
-                            <td class="celula-data">34/25/0000</td>
-                            <td class="celula-acoes">
-                                <div class="square"><img class="view" src="/public/assets/view.svg" alt=""></div>
-                                <div class="square"><img class="edit" src="/public/assets/edit.svg" alt=""></div>
-                                <div class="square"><img class="delete" src="/public/assets/delete.svg" alt=""></div>
-                            </td>
-                        </tr>
-                        <tr class="linha-comum">
-                            <td class="celula-id">3</td>
-                            <td class="celula-titulo">Cupcake</td>
-                            <td class="celula-autor">Harry</td>
-                            <td class="celula-data">34/25/0000</td>
-                            <td class="celula-acoes">
-                                <div class="square"><img class="view" src="/public/assets/view.svg" alt=""></div>
-                                <div class="square"><img class="edit" src="/public/assets/edit.svg" alt=""></div>
-                                <div class="square"><img class="delete" src="/public/assets/delete.svg" alt=""></div>
-                            </td>
-                        </tr>
-                        <tr class="linha-comum">
-                            <td class="celula-id">4</td>
-                            <td class="celula-titulo">Cupcake</td>
-                            <td class="celula-autor">Harry</td>
-                            <td class="celula-data">34/25/0000</td>
-                            <td class="celula-acoes">
-                                <div class="square"><img class="view" src="/public/assets/view.svg" alt=""></div>
-                                <div class="square"><img class="edit" src="/public/assets/edit.svg" alt=""></div>
-                                <div class="square"><img class="delete" src="/public/assets/delete.svg" alt=""></div>
-                            </td>
-                        </tr>
-                        <tr class="linha-comum">
-                            <td class="celula-id">5</td>
-                            <td class="celula-titulo">Cupcake</td>
-                            <td class="celula-autor">Harry</td>
-                            <td class="celula-data">34/25/0000</td>
-                            <td class="celula-acoes">
-                                <div class="square"><img class="view" src="/public/assets/view.svg" alt=""></div>
-                                <div class="square"><img class="edit" src="/public/assets/edit.svg" alt=""></div>
-                                <div class="square"><img class="delete" src="/public/assets/delete.svg" alt=""></div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="bottom">
-                <div class="pagination">
-                    <a href="#">&laquo;</a>
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">&raquo;</a>
-                </div>
-            </div>
+          <div class="botao-criar">
+            <button
+              class="button"
+              onclick="openModal('modalCriar')"
+              id="openModalCriar"
+            >
+              <img src="../../../public/assets/add.png" />
+            </button>
+          </div>
         </div>
+        <div class="center">
+          <table class="tabela">
+            <thead>
+              <tr class="linha-header">
+                <th class="celula-id" style="font-weight: normal">ID</th>
+                <th class="celula-titulo" style="font-weight: normal">
+                  TÍTULO
+                </th>
+                <th class="celula-autor" style="font-weight: normal">AUTOR</th>
+                <th class="celula-data" style="font-weight: normal">DATA</th>
+                <th class="celula-acoes" style="font-weight: normal">AÇÕES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="linha-comum">
+                <td class="celula-id">1</td>
+                <td class="celula-titulo">Cupcake</td>
+                <td class="celula-autor">Harry</td>
+                <td class="celula-data">34/25/0000</td>
+                <td class="celula-acoes">
+                  <div class="square" onclick="openModal('modalVisu')">
+                    <img class="view" src="/public/assets/view.svg" alt="" />
+                  </div>
+                  <div class="square" onclick="openModal('modalEditar')">
+                    <img class="edit" src="/public/assets/edit.svg" alt="" />
+                  </div>
+                  <div class="square" onclick="openModal('modalDel')">
+                    <img
+                      class="delete"
+                      src="/public/assets/delete.svg"
+                      alt=""
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr class="linha-comum">
+                <td class="celula-id">2</td>
+                <td class="celula-titulo">Cupcake</td>
+                <td class="celula-autor">Harry</td>
+                <td class="celula-data">34/25/0000</td>
+                <td class="celula-acoes">
+                  <div class="square">
+                    <img class="view" src="/public/assets/view.svg" alt="" />
+                  </div>
+                  <div class="square">
+                    <img class="edit" src="/public/assets/edit.svg" alt="" />
+                  </div>
+                  <div class="square">
+                    <img
+                      class="delete"
+                      src="/public/assets/delete.svg"
+                      alt=""
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr class="linha-comum">
+                <td class="celula-id">3</td>
+                <td class="celula-titulo">Cupcake</td>
+                <td class="celula-autor">Harry</td>
+                <td class="celula-data">34/25/0000</td>
+                <td class="celula-acoes">
+                  <div class="square">
+                    <img class="view" src="/public/assets/view.svg" alt="" />
+                  </div>
+                  <div class="square">
+                    <img class="edit" src="/public/assets/edit.svg" alt="" />
+                  </div>
+                  <div class="square">
+                    <img
+                      class="delete"
+                      src="/public/assets/delete.svg"
+                      alt=""
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr class="linha-comum">
+                <td class="celula-id">4</td>
+                <td class="celula-titulo">Cupcake</td>
+                <td class="celula-autor">Harry</td>
+                <td class="celula-data">34/25/0000</td>
+                <td class="celula-acoes">
+                  <div class="square">
+                    <img class="view" src="/public/assets/view.svg" alt="" />
+                  </div>
+                  <div class="square">
+                    <img class="edit" src="/public/assets/edit.svg" alt="" />
+                  </div>
+                  <div class="square">
+                    <img
+                      class="delete"
+                      src="/public/assets/delete.svg"
+                      alt=""
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr class="linha-comum">
+                <td class="celula-id">5</td>
+                <td class="celula-titulo">Cupcake</td>
+                <td class="celula-autor">Harry</td>
+                <td class="celula-data">34/25/0000</td>
+                <td class="celula-acoes">
+                  <div class="square">
+                    <img class="view" src="/public/assets/view.svg" alt="" />
+                  </div>
+                  <div class="square">
+                    <img class="edit" src="/public/assets/edit.svg" alt="" />
+                  </div>
+                  <div class="square">
+                    <img
+                      class="delete"
+                      src="/public/assets/delete.svg"
+                      alt=""
+                    />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bottom">
+          <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">&raquo;</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="/public/js/adm-tabela-posts.js"></script>
-</body>
+  </body>
 </html>
 

@@ -15,36 +15,22 @@ body {
   font-family: "Josefin Sans";
 }
 
-/* Estilos para a barra de rolagem */
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(250, 210, 164, 0.65);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(250, 210, 164, 0.85);
-}
-
 /* --------------- Card e Card Header --------------- */
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
 }
 
 .card {
   background-color: rgba(100, 71, 59, 0.42);
-  border-radius: 16px;
+  border-radius: 60px;
   padding-top: 2%;
   width: 80%;
+  min-height: 640px;
   flex-direction: column;
 }
 
@@ -56,9 +42,13 @@ body {
   margin-bottom: 5%;
 }
 
-.top h2 {
-  color: #f5f5f5;
-  font-size: 52px;
+.top p {
+  color: white;
+  font-size: 60px;
+}
+
+.texto-sombra {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.582);
 }
 
 /* --------------- Tabela --------------- */
@@ -82,15 +72,15 @@ body {
 }
 
 .linha-header {
-  background-color: #d0f4d4;
+  background-color: #64473B;
   color: #13142a;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .linha-comum {
   background-color: rgba(250, 210, 164, 0.65);
   color: #13142a;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
 }
 
 .celula-id,
@@ -129,9 +119,7 @@ body {
 }
 
 .square {
-  border: #d0f4d4;
   background-color: #fad2a4;
-  border: 2px solid #64473b;
   border-radius: 20px;
   width: 4.2vw;
   height: 4vh;
@@ -155,21 +143,48 @@ body {
   height: auto;
 }
 
+.botao-criar {
+  width: 72px;
+  height: 48px;
+}
+
+.botao-criar button {
+  max-width: 100%;
+  height: 100%;
+  background-color: #fad2a4;
+  border: 2px solid #64473b;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.botao-criar button img {
+  width: 41.5%;
+  height: auto;
+}
+
+.botao-criar button:hover {
+  color: #13142a;
+  box-shadow: #64473b 0px 0px 10px;
+}
+
 /* --------------- Paginação ---------------*/
 .bottom {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: row;
   gap: 1rem;
-  min-width: 600px;
 }
 
 .pagination {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 2% 0;
   margin-right: 2%;
+  width: 100%;
 }
 
 .pagination a {
@@ -178,11 +193,11 @@ body {
   padding: 0.7% 1.2%;
   text-decoration: none;
   transition: background-color 0.3s;
-  margin: 0 2%;
+  margin: 0 0.5%;
   border: 1px solid #13142a;
   border-radius: 4px;
-  width: 7vw;
-  height: 3.5vh;
+  min-width: 40px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -438,6 +453,7 @@ form > h2 {
   justify-content: space-around;
 }
 
+
 .botm button {
   width: 7vw;
   height: 3vh;
@@ -503,10 +519,53 @@ form > h2 {
   /*------------------------------------ Fim Modal de Criar Post ---------------------------------------*/
 }
 
+@media (max-width: 1024px) {
+  .botao-criar button {
+    margin-top: 0;
+    width: 10vw;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .top p {
+    margin: 6% 0;
+  }
+
+  .botao-criar button img {
+    max-width: 36px;
+    height: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .card {
     overflow: hidden;
+    width: 714px;
+    height: 744px;
   }
+
+  .botao-criar button {
+    border-radius: 25px;
+  }
+
+  .botao-criar button img {
+    width: 21px;
+    height: auto;
+  }
+
+  .linha-comum, .linha-header {
+    width: 640px;
+  }
+
+  .celula-acoes {
+    justify-content: center;
+    gap: 12%;
+  }
+
 
   .tabela {
     margin-left: 5%;
@@ -516,45 +575,63 @@ form > h2 {
 @media (max-width: 425px) {
   .card {
     padding-top: 6%;
+    width: 393px;
+    height: 744px;
+  }
+
+  .botao-criar {
+    width: 63px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .botao-criar button {
+    width: 63px;
+    border-radius: 25px;
+  }
+
+  .botao-criar button img {
+    width: 20px;
+    height: auto;
+  }
+
+  .top {
+    min-height: 200px;
+    text-align: center;
   }
 
   .container {
     padding: 0 20px;
   }
 
-  .center {
-    width: 300px;
-    overflow-x: auto;
+  .tabela {
+    margin: 20px, 15px;
   }
 
-  .tabela {
-    overflow-x: auto;
-    width: 100%;
-    min-width: 600px;
+  .tabela .celula-autor, 
+  .tabela th.celula-autor,
+  .tabela .celula-data,
+  .tabela th.celular-data,
+  .tabela .celula-id,
+  .tabela th.celula-id {
+    display: none;
   }
+
 
   .linha-comum,
   .linha-header {
     width: 100%;
     font-size: 20px;
-    min-width: 600px;
+    max-width: 350px;
+    justify-content: space-around;
   }
 
-  .top h2 {
-    font-size: 30px;
+  th.celula-acoes {
+    margin-right: 16px;
   }
 
-  .bottom {
-    min-width: 300px;
-  }
-
-  .pagination {
-    width: 300px;
-    margin-right: 0;
-  }
-
-  .button-group button {
-    width: 100vw;
+  .celula-acoes {
+    gap: 20px;
   }
 
   .square {
@@ -564,25 +641,23 @@ form > h2 {
   }
 
   .view {
-    width: 6vw;
+    width: 25.5px;
     height: auto;
   }
 
   .edit,
   .delete {
-    width: 4.5vw;
+    width: 25.5px;
     height: auto;
   }
 
   .pagination a {
-    width: 15vw;
-    height: 3.5vh;
+    min-width: 0;
+    width: 35px;
+    height: 36px;
   }
 
-  .button-group button {
-    max-width: 50px;
-    font-size: 18px;
-  }
+
   /*----------------------------------- Modal de Criar Post ---------------------------------------------*/
   /* Bruno */
 
@@ -614,6 +689,10 @@ form > h2 {
 @media (max-width: 375px) {
   .card {
     width: 300px;
+  }
+
+  .linha-comum, .linha-header {
+    width: 260px;
   }
 
   .center {
