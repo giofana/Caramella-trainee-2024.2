@@ -72,7 +72,7 @@ body {
 }
 
 .linha-header {
-  background-color: #64473B;
+  background-color: #64473b;
   color: #13142a;
   margin-bottom: 0.8rem;
 }
@@ -226,7 +226,7 @@ body {
   font-family: "Josefin Sans";
 }
 
-/*----------------------------------- Modal de Criar Post ---------------------------------------------*/
+/* /----------------------------------- Modal de Criar Post ---------------------------------------------/ */
 /* Bruno */
 
 #tela {
@@ -394,7 +394,35 @@ form > h2 {
   background-color: rgb(219, 60, 60);
 }
 
-/*------------------------------------ Fim Modal de Criar Post ---------------------------------------*/
+.btt-ingredient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#create-ingredient,
+#delete-ingredient {
+  font-family: "Josefin Sans";
+  padding: 1.5%;
+  margin: 2%;
+  background-color: #64473b;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+#create-ingredient:hover,
+#delete-ingredient:hover {
+  transform: scale(1.04);
+  box-shadow: #64473b 0px 0px 10px;
+  cursor: pointer;
+  background-color: #775a4e;
+}
+
+/* /------------------------------------ Fim Modal de Criar Post ---------------------------------------/ */
 
 /* Inicio modal excluir*/
 
@@ -476,7 +504,7 @@ form > h2 {
 /* Fim modal excluir*/
 
 @media (min-width: 600px) and (max-width: 1020px) {
-  /*----------------------------------- Modal de Criar Post ---------------------------------------------*/
+  /* /----------------------------------- Modal de Criar Post ---------------------------------------------/ */
   /* Bruno */
 
   .modal {
@@ -515,7 +543,7 @@ form > h2 {
     font-size: 24px;
   }
 
-  /*------------------------------------ Fim Modal de Criar Post ---------------------------------------*/
+  /* /------------------------------------ Fim Modal de Criar Post ---------------------------------------/ */
 }
 
 @media (max-width: 1024px) {
@@ -556,7 +584,8 @@ form > h2 {
     height: auto;
   }
 
-  .linha-comum, .linha-header {
+  .linha-comum,
+  .linha-header {
     width: 640px;
   }
 
@@ -564,7 +593,6 @@ form > h2 {
     justify-content: center;
     gap: 12%;
   }
-
 
   .tabela {
     margin-left: 5%;
@@ -607,7 +635,7 @@ form > h2 {
     margin: 20px, 15px;
   }
 
-  .tabela .celula-autor, 
+  .tabela .celula-autor,
   .tabela th.celula-autor,
   .tabela .celula-data,
   .tabela th.celular-data,
@@ -615,7 +643,6 @@ form > h2 {
   .tabela th.celula-id {
     display: none;
   }
-
 
   .linha-comum,
   .linha-header {
@@ -656,8 +683,7 @@ form > h2 {
     height: 36px;
   }
 
-
-  /*----------------------------------- Modal de Criar Post ---------------------------------------------*/
+  /* /----------------------------------- Modal de Criar Post ---------------------------------------------/ */
   /* Bruno */
 
   .modal {
@@ -682,7 +708,7 @@ form > h2 {
     margin-top: 5vh;
   }
 
-  /*------------------------------------ Fim Modal de Criar Post ---------------------------------------*/
+  /* /------------------------------------ Fim Modal de Criar Post ---------------------------------------/ */
 }
 
 @media (max-width: 375px) {
@@ -690,11 +716,81 @@ form > h2 {
     width: 300px;
   }
 
-  .linha-comum, .linha-header {
+  .linha-comum,
+  .linha-header {
     width: 260px;
   }
 
   .center {
     width: 290px;
+  }
+}
+
+/* ---------------- Estilo para ingredientes adicionados com js ---------------- */
+
+.ingrediente-item {
+  list-style-type: none;
+  padding: 1.5%;
+  margin: 1% 0;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  justify-content: space-between; /* Espaça o conteúdo */
+  align-items: center; /* Centraliza verticalmente */
+  width: 48%;
+}
+
+#ingredientesList {
+  display: flex;
+  flex-wrap: wrap; /*itens quebram para a próxima linha */
+  justify-content: space-between;
+  width: 100%;
+  row-gap: 4px;
+}
+
+.remove-ingredient {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 1%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 10%;
+  height: 100%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove-ingredient:hover {
+  background-color: #c0392b;
+}
+
+/* ------------------ responsividade para ingredientes --------------  */
+@media (max-width: 768px) {
+  #ingredientesList {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ingrediente-item {
+    width: 60%;
+  }
+
+  .remove-ingredient {
+    width: 15%;
+    height: 100%;
+  }
+
+  #create-ingredient {
+    padding: 3%;
+    margin: 2%;
   }
 }

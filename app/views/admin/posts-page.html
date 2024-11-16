@@ -50,9 +50,31 @@
           </div>
         </div>
         <div class="inputModal">
-          <label for="Ingredientes">Ingredientes</label
-          ><textarea id="Ingredientes" rows="3"></textarea>
+          <label for="Ingredientes">Ingredientes</label>
+          <input id="ingredienteInput" type="text" />
+
+          <div class="btt-ingredient">
+            <button
+              type="button"
+              onclick="addIngredient()"
+              id="create-ingredient"
+            >
+              Adicionar Ingrediente
+            </button>
+
+            <button
+              type="button"
+              onclick="deleteLastIngredient()"
+              id="delete-ingredient"
+              style="display: none"
+            >
+              Deletar último ingrediente
+            </button>
+          </div>
         </div>
+        <ul id="ingredientesList"></ul>
+        <input type="hidden" id="ingredientes" name="ingredientes" />
+
         <div class="inputModal">
           <label for="Modo">Modo de preparo</label
           ><textarea id="Modo" rows="3"></textarea>
@@ -354,4 +376,3 @@
     <script src="/public/js/adm-tabela-posts.js"></script>
   </body>
 </html>
-
