@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 16/11/2024 às 06:22
--- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.2.12
+-- Host: localhost
+-- Generation Time: Nov 14, 2024 at 03:24 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,14 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `caramella`
+-- Database: `caramella`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `posts`
+-- Table structure for table `posts`
 --
+CREATE DATABASE IF NOT EXISTS caramella CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE caramella;
 
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL,
@@ -44,7 +46,7 @@ CREATE TABLE `posts` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -55,48 +57,38 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `posts`
+-- Indexes for table `posts`
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`),
   ADD KEY `author_user` (`author`);
 
 --
--- Índices de tabela `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email_user` (`email`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `posts`
+-- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Restrições para tabelas despejadas
---
-
---
--- Restrições para tabelas `posts`
---
-ALTER TABLE `posts`
-  ADD CONSTRAINT `user_id` FOREIGN KEY (`author`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
