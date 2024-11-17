@@ -94,110 +94,207 @@
     </div>
 
     <div class="modal" id="modalEditar">
-      <form>
+      <form action="posts-list/edit-post" method="POST">
+        <?php foreach ($posts as $post) : ?>
         <h2>Preencha todos os campos abaixo para criar post:</h2>
         <div class="inputModal">
           <label for="Título1">Título da receita</label
-          ><input id="Título1" type="text" />
+          ><input id="Título1" type="text" name="editTitulo" value="<?= $post->title ?>"/>
         </div>
         <div class="auxSubForm">
           <div class="subForm">
             <div class="inputModal" id="autor1">
-              <label for="Autor1">Autor</label><input id="Autor1" type="text" />
+              <label for="Autor1">Autor</label><input id="Autor1" type="text" name="editAutor" value="<?= $post->author ?>" />
             </div>
             <div class="inputModal" id="tempo1">
-              <label for="Tempo1">Tempo</label><input id="Tempo1" type="text" />
+              <label for="Tempo1">Tempo</label><input id="Tempo1" type="text" name="editTempo" value="<?= $post->time ?>" />
             </div>
           </div>
           <div class="subForm">
-            <div class="inputModal" id="custo1">
-              <label for="Custo1">Custo</label><input id="Custo1" type="text" />
+          <div class="inputModal" id="custo">
+              <label for="Custo">Custo</label>
+              <select id="Custo" name="editCusto">
+                <?php if($post->cost == 0) :?>
+                <option value="0" selected>Barato</option>
+                <option value="1">Intermediário</option>
+                <option value="2">Caro</option>
+                <?php endif ?>
+                <?php if($post->cost == 1) :?>
+                <option value="0">Barato</option>
+                <option value="1" selected>Intermediário</option>
+                <option value="2">Caro</option>
+                <?php endif ?>
+                <?php if ($post->cost == 2) :?>
+                <option value="0">Barato</option>
+                <option value="1">Intermediário</option>
+                <option value="2" selected>Caro</option>
+                <?php endif ?>
+              </select>
             </div>
             <div class="inputModal" id="dificuldade1">
               <label for="Dificuldade1">Dificuldade</label
-              ><select id="Dificuldade1">
-                <option value="#" selected></option>
-                <option value="0">Fácil</option>
+              ><select id="Dificuldade1" name="editDificuldade">
+              <?php if($post->difficulty == 0) :?>
+                <option value="0" selected>Fácil</option>
                 <option value="1">Médio</option>
                 <option value="2">Difícil</option>
+                <?php endif ?>
+                <?php if($post->difficulty == 1) :?>
+                <option value="0">Fácil</option>
+                <option value="1" selected>Médio</option>
+                <option value="2">Difícil</option>
+                <?php endif ?>
+                <?php if($post->difficulty == 2) :?>
+                <option value="0">Fácil</option>
+                <option value="1">Médio</option>
+                <option value="2" selected>Difícil</option>
+                <?php endif ?>
               </select>
             </div>
           </div>
         </div>
+
         <div class="inputModal">
-          <label for="Ingredientes1">Ingredientes</label
-          ><textarea id="Ingredientes1" rows="3"></textarea>
+          <label for="Ingredientes">Ingredientes</label>
+          <input id="ingredienteInput" type="text" />
+
+          <div class="btt-ingredient">
+            <button
+              type="button"
+              onclick="addIngredient()"
+              id="create-ingredient"
+            >
+              Adicionar Ingrediente
+            </button>
+
+            <button
+              type="button"
+              onclick="deleteLastIngredient()"
+              id="delete-ingredient"
+              style="display: none"
+            >
+              Deletar último ingrediente
+            </button>
+          </div>
         </div>
+        <ul id="ingredientesList"></ul>
+        <input type="hidden" id="ingredientes" name="ingredientes" />
+        
         <div class="inputModal">
           <label for="Modo1">Modo de preparo</label
-          ><textarea id="Modo1" rows="3"></textarea>
+          ><textarea id="Modo1" rows="3" name="editPreparo"><?= $post->prepare ?></textarea>
         </div>
         <div class="inputModal">
           <label for="História1">História</label
-          ><textarea id="História1" rows="3"></textarea>
+          ><textarea id="História1" rows="3" name="editHistoria"><?= $post->history ?></textarea>
         </div>
         <div class="inputModal">
-          <label for="Imagem1">Imagem</label><input id="Imagem1" type="file" />
+          <label for="Imagem1">Imagem</label><input id="Imagem1" type="file" name="editImagem" value="<?= $post->image ?>" />
         </div>
+        <input type="hidden" name="editId" value="<?= $post->id ?>">
         <div id="btCC">
-          <button>Editar</button>
+          <button type="submit">Editar</button>
           <button onclick="closeModal('modalCriar')">Cancelar</button>
         </div>
+        <?php endforeach; ?>
       </form>
     </div>
 
     <div class="modal" id="modalVisu">
       <form>
+        <?php foreach ($posts as $post) : ?>
         <h2>Preencha todos os campos abaixo para criar post:</h2>
         <div class="inputModal">
           <label for="Título2">Título da receita</label
-          ><input id="Título2" type="text" />
+          ><input id="Título2" type="text" value="<?= $post->title ?>" disabled/>
         </div>
         <div class="auxSubForm">
           <div class="subForm">
             <div class="inputModal" id="autor2">
-              <label for="Autor2">Autor</label><input id="Autor2" type="text" />
+              <label for="Autor2">Autor</label><input id="Autor2" type="text" value="<?= $post->author ?>"disabled />
             </div>
             <div class="inputModal" id="tempo2">
-              <label for="Tempo2">Tempo</label><input id="Tempo2" type="text" />
+              <label for="Tempo2">Tempo</label><input id="Tempo2" type="text" value="<?= $post->time ?>"disabled />
             </div>
           </div>
           <div class="subForm">
-            <div class="inputModal" id="custo2">
-              <label for="Custo2">Custo</label><input id="Custo2" type="text" />
+          <div class="inputModal" id="custo">
+              <label for="Custo">Custo</label>
+              <select id="Custo" disabled>
+                <?php if($post->cost == 0) :?>
+                <option value="0" selected>Barato</option>
+                <?php endif ?>
+                <?php if($post->cost == 1) :?>
+                <option value="1" selected>Intermediário</option>
+                <?php endif ?>
+                <?php if ($post->cost == 2) :?>
+                <option value="2" selected>Caro</option>
+                <?php endif ?>
+              </select>
             </div>
             <div class="inputModal" id="dificuldade2">
               <label for="Dificuldade2">Dificuldade</label
-              ><select id="Dificuldade2">
-                <option value="#" selected></option>
-                <option value="0">Fácil</option>
-                <option value="1">Médio</option>
-                <option value="2">Difícil</option>
+              ><select id="Dificuldade2" disabled>
+              <?php if($post->difficulty == 0) :?>
+                <option value="0" selected>Fácil</option>
+                <?php endif ?>
+                <?php if($post->difficulty == 1) :?>
+                <option value="1" selected>Médio</option>
+                <?php endif ?>
+                <?php if ($post->difficulty == 2) :?>
+                <option value="2" selected>Difícil</option>
+                <?php endif ?>
               </select>
             </div>
           </div>
         </div>
+
+
         <div class="inputModal">
-          <label for="Ingredientes2">Ingredientes</label
-          ><textarea id="Ingredientes2" rows="3"></textarea>
+          <label for="Ingredientes">Ingredientes</label>
+          <input id="ingredienteInput" type="text" />
+
+          <div class="btt-ingredient">
+            <button
+              type="button"
+              onclick="addIngredient()"
+              id="create-ingredient"
+            >
+              Adicionar Ingrediente
+            </button>
+
+            <button
+              type="button"
+              onclick="deleteLastIngredient()"
+              id="delete-ingredient"
+              style="display: none"
+            >
+              Deletar último ingrediente
+            </button>
+          </div>
         </div>
+        <ul id="ingredientesList"></ul>
+        <input type="hidden" id="ingredientes" name="ingredientes" />
+
+
         <div class="inputModal">
           <label for="Modo2">Modo de preparo</label
-          ><textarea id="Modo2" rows="3"></textarea>
+          ><textarea id="Modo2" rows="3" disabled><?= $post->prepare ?></textarea>
         </div>
         <div class="inputModal">
           <label for="História2">História</label
-          ><textarea id="História2" rows="3"></textarea>
+          ><textarea id="História2" rows="3" disabled><?= $post->history ?></textarea>
         </div>
         <div class="inputModal" id="imgEnviada">
           <label for="Imagem">Imagem</label
-          ><img src="/public/assets/cake.png" />
+          ><img src="/public/assets/cake.png" value="<?= $post->image ?>"/>
         </div>
         <div class="btnf">
           <button class="btnfechar" onclick="closeModal('modalCriar')">
             Fechar
           </button>
         </div>
+        <?php endforeach; ?>
       </form>
     </div>
 
@@ -209,12 +306,17 @@
         <img src="../../../public/assets/trash.png" />
 
         <p>Tem certeza que deseja excluir este usuario?</p>
-        <div id="btCC">
-          <button class="canc" onclick="closeModal('modalDel')">
-            Cancelar
-          </button>
-          <button class="exc">Excluir</button>
-        </div>
+        <form action="posts-list/delete" method="POST">
+          <?php foreach ($posts as $post): ?>
+          <input type="hidden" name="idDelete" value="<?= $post->id ?>">
+          <div id="btCC">
+            <button class="canc" onclick="closeModal('modalDel')">
+              Cancelar
+            </button>
+            <button class="exc" type="submit">Excluir</button>
+          </div>
+          <?php endforeach; ?>
+        </form>
       </div>
     </div>
     <!-------------- Fim Modal Excluir ------------------>
@@ -250,11 +352,12 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($posts as $post):?>
               <tr class="linha-comum">
-                <td class="celula-id">1</td>
-                <td class="celula-titulo">Cupcake</td>
-                <td class="celula-autor">Harry</td>
-                <td class="celula-data">34/25/0000</td>
+                <td class="celula-id"><?= $post->id?></td>
+                <td class="celula-titulo"><?= $post->title?></td>
+                <td class="celula-autor"><?= $post->author?></td>
+                <td class="celula-data"><?= $post->date?></td>
                 <td class="celula-acoes">
                   <div class="square" onclick="openModal('modalVisu')">
                     <img class="view" src="/public/assets/view.svg" alt="" />
@@ -271,90 +374,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="linha-comum">
-                <td class="celula-id">2</td>
-                <td class="celula-titulo">Cupcake</td>
-                <td class="celula-autor">Harry</td>
-                <td class="celula-data">34/25/0000</td>
-                <td class="celula-acoes">
-                  <div class="square">
-                    <img class="view" src="/public/assets/view.svg" alt="" />
-                  </div>
-                  <div class="square">
-                    <img class="edit" src="/public/assets/edit.svg" alt="" />
-                  </div>
-                  <div class="square">
-                    <img
-                      class="delete"
-                      src="/public/assets/delete.svg"
-                      alt=""
-                    />
-                  </div>
-                </td>
-              </tr>
-              <tr class="linha-comum">
-                <td class="celula-id">3</td>
-                <td class="celula-titulo">Cupcake</td>
-                <td class="celula-autor">Harry</td>
-                <td class="celula-data">34/25/0000</td>
-                <td class="celula-acoes">
-                  <div class="square">
-                    <img class="view" src="/public/assets/view.svg" alt="" />
-                  </div>
-                  <div class="square">
-                    <img class="edit" src="/public/assets/edit.svg" alt="" />
-                  </div>
-                  <div class="square">
-                    <img
-                      class="delete"
-                      src="/public/assets/delete.svg"
-                      alt=""
-                    />
-                  </div>
-                </td>
-              </tr>
-              <tr class="linha-comum">
-                <td class="celula-id">4</td>
-                <td class="celula-titulo">Cupcake</td>
-                <td class="celula-autor">Harry</td>
-                <td class="celula-data">34/25/0000</td>
-                <td class="celula-acoes">
-                  <div class="square">
-                    <img class="view" src="/public/assets/view.svg" alt="" />
-                  </div>
-                  <div class="square">
-                    <img class="edit" src="/public/assets/edit.svg" alt="" />
-                  </div>
-                  <div class="square">
-                    <img
-                      class="delete"
-                      src="/public/assets/delete.svg"
-                      alt=""
-                    />
-                  </div>
-                </td>
-              </tr>
-              <tr class="linha-comum">
-                <td class="celula-id">5</td>
-                <td class="celula-titulo">Cupcake</td>
-                <td class="celula-autor">Harry</td>
-                <td class="celula-data">34/25/0000</td>
-                <td class="celula-acoes">
-                  <div class="square">
-                    <img class="view" src="/public/assets/view.svg" alt="" />
-                  </div>
-                  <div class="square">
-                    <img class="edit" src="/public/assets/edit.svg" alt="" />
-                  </div>
-                  <div class="square">
-                    <img
-                      class="delete"
-                      src="/public/assets/delete.svg"
-                      alt=""
-                    />
-                  </div>
-                </td>
-              </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
         </div>
