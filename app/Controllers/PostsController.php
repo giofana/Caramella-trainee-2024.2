@@ -10,6 +10,7 @@ class PostsController
 
     public function index()
     {
+        // retornando todos os posts da tabela de posts
         $posts = App::get('database')->selectAll('posts');
         return view('admin/posts-page', compact('posts'));
     }
@@ -24,7 +25,7 @@ class PostsController
             'history' => $_POST['editHistoria'],
             'prepare' => $_POST['editPreparo'],
             'image' => $_POST['editImagem'],
-            //'ingredients' => $_POST['editIngrediente'],
+            'ingredients' => $_POST['editIngrediente'],
         ];
         $id = $_POST['editId'];
 
@@ -38,7 +39,6 @@ class PostsController
         App::get('database')->delete('posts', $id);
         header('Location: /posts-list');
     }
-
 }
 
 ?>

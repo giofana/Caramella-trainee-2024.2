@@ -1,9 +1,15 @@
 const tela = document.querySelector("#tela");
 
-function openModal(modalId) {
+function openModal(modalId, mode = null, ingredients = null, id = null) {
   const modal = document.getElementById(modalId);
   modal.style.display = "block";
   tela.style.display = "block";
+
+  if (mode == "view") {
+    displayIngredients(ingredients, id);
+  } else if (mode == "edit") {
+    displayIngredientsEdit(ingredients, id);
+  }
 }
 
 function closeModal(modalId) {
@@ -38,7 +44,7 @@ function addIngredient() {
     removeButton.textContent = "x";
     removeButton.classList.add("remove-ingredient");
     removeButton.onclick = function () {
-      removeIngredient(ingrediente);
+      removeIngredient(ingrediente, "ingredientsList");
     };
 
     li.appendChild(span);
@@ -53,12 +59,12 @@ function addIngredient() {
 }
 
 // Funcao para remover o ingrediente -> remover da lista exibida e do array
-function removeIngredient(ingrediente) {
+function removeIngredient(ingrediente, list) {
   const index = ingredientes.indexOf(ingrediente);
   if (index > -1) {
     ingredientes.splice(index, 1); // Remove o ingrediente do array
 
-    const ingredientesList = document.getElementById("ingredientesList");
+    const ingredientesList = document.getElementById(list);
     const li = ingredientesList.children[index];
     ingredientesList.removeChild(li); // Remove o item da lista exibida
 
@@ -78,3 +84,93 @@ ingredienteInput.addEventListener("mouseover", function () {
 ingredienteInput.addEventListener("mouseout", function () {
   ingredienteInput.removeAttribute("placeholder");
 });
+
+// Função para exibir os ingredientes do JSON à lista
+function displayIngredients(ingredientesView, id) {
+  const modalIngredientesList = document.getElementById(
+    "ingredientesListView" + id.toString()
+  );
+
+  console.log(typeof id.toString());
+
+  console.log(ingredientesView);
+
+  ingredientesView.forEach((ingrediente) => {
+    const li = document.createElement("li");
+    li.classList.add("ingrediente-item"); // Adiciona a classe ao li
+
+    const span = document.createElement("span");
+    span.textContent = ingrediente;
+
+    li.appendChild(span);
+    modalIngredientesList.appendChild(li);
+  });
+}
+
+// Função para editar os ingredientes do JSON à lista
+function displayIngredientsEdit(ingredientsEdit, id) {
+  const modalIngredientesList = document.getElementById(
+    "ingredientesListEdit" + id.toString()
+  );
+
+  console.log(ingredientsEdit);
+
+  ingredientsEdit.forEach((ingrediente) => {
+    const li = document.createElement("li");
+    li.classList.add("ingrediente-item"); // Adiciona a classe ao li
+
+    const span = document.createElement("span");
+    span.textContent = ingrediente;
+
+    // Cria o botão de remoção
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "x";
+    removeButton.classList.add("remove-ingredient");
+    removeButton.type = "button";
+    removeButton.onclick = function () {
+      removeIngredient(ingrediente, "ingredientesListEdit" + id.toString());
+    };
+
+    li.appendChild(span);
+    li.appendChild(removeButton);
+    modalIngredientesList.appendChild(li);
+  });
+
+  // Atualiza o campo hidden com os ingredientes em JSON
+  document.getElementById("ingredientes").value = JSON.stringify(ingredientes);
+}
+
+// Função para adicionar ingrediente na lista de edição e no array -> adiciona html para exibição
+function addIngredientEdit() {
+  const ingredienteInput = document.getElementById("ingredienteInputEdit");
+  const ingrediente = ingredienteInput.value.trim();
+
+  if (ingrediente) {
+    ingredientes.push(ingrediente);
+    ingredienteInput.value = "";
+
+    const ingredientesList = document.getElementById("ingredientesListEdit");
+    const li = document.createElement("li");
+    li.classList.add("ingrediente-item"); // Adiciona a classe ao li
+
+    const span = document.createElement("span");
+    span.textContent = ingrediente;
+
+    // Cria o botão de remoção
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "x";
+    removeButton.classList.add("remove-ingredient");
+    removeButton.onclick = function () {
+      removeIngredientEdit(ingrediente);
+    };
+
+    li.appendChild(span);
+    li.appendChild(removeButton);
+    ingredientesList.appendChild(li);
+
+    // Atualiza o campo hidden com os ingredientes em JSON
+    document.getElementById("ingredientesEdit").value =
+      JSON.stringify(ingredientes);
+  }
+  console.log(ingredientes);
+}

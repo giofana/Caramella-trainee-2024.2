@@ -744,10 +744,13 @@ form > h2 {
   width: 48%;
 }
 
-#ingredientesList {
+#ingredientesList,
+#ingredientesListView,
+#ingredientesListEdit {
   display: flex;
   flex-wrap: wrap; /*itens quebram para a próxima linha */
   justify-content: space-between;
+  justify-items: center;
   width: 100%;
   row-gap: 4px;
 }

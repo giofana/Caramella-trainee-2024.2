@@ -93,9 +93,10 @@
       </form>
     </div>
 
-    <div class="modal" id="modalEditar">
+
+    <?php foreach ($posts as $post) : ?>
+    <div class="modal" id="modalEditar<?= $post->id; ?>">
       <form action="posts-list/edit-post" method="POST">
-        <?php foreach ($posts as $post) : ?>
         <h2>Preencha todos os campos abaixo para criar post:</h2>
         <div class="inputModal">
           <label for="Título1">Título da receita</label
@@ -159,25 +160,18 @@
           <input id="ingredienteInput" type="text" />
 
           <div class="btt-ingredient">
+            <!-- fazer add ingredient -->
             <button
               type="button"
-              onclick="addIngredient()"
-              id="create-ingredient"
+              onclick='editIngredients(<?= $post->ingredients; ?>)'
+              id="edit-ingredient"
             >
               Adicionar Ingrediente
             </button>
 
-            <button
-              type="button"
-              onclick="deleteLastIngredient()"
-              id="delete-ingredient"
-              style="display: none"
-            >
-              Deletar último ingrediente
-            </button>
           </div>
         </div>
-        <ul id="ingredientesList"></ul>
+        <ul id="ingredientesListEdit<?= $post->id; ?>"></ul>
         <input type="hidden" id="ingredientes" name="ingredientes" />
         
         <div class="inputModal">
@@ -196,13 +190,11 @@
           <button type="submit">Editar</button>
           <button onclick="closeModal('modalCriar')">Cancelar</button>
         </div>
-        <?php endforeach; ?>
       </form>
     </div>
-
-    <div class="modal" id="modalVisu">
+    
+    <div class="modal" id="modalVisu<?= $post->id ?>">
       <form>
-        <?php foreach ($posts as $post) : ?>
         <h2>Preencha todos os campos abaixo para criar post:</h2>
         <div class="inputModal">
           <label for="Título2">Título da receita</label
@@ -253,27 +245,8 @@
         <div class="inputModal">
           <label for="Ingredientes">Ingredientes</label>
           <input id="ingredienteInput" type="text" />
-
-          <div class="btt-ingredient">
-            <button
-              type="button"
-              onclick="addIngredient()"
-              id="create-ingredient"
-            >
-              Adicionar Ingrediente
-            </button>
-
-            <button
-              type="button"
-              onclick="deleteLastIngredient()"
-              id="delete-ingredient"
-              style="display: none"
-            >
-              Deletar último ingrediente
-            </button>
-          </div>
         </div>
-        <ul id="ingredientesList"></ul>
+        <ul id="ingredientesListView<?= $post->id ; ?>"></ul>
         <input type="hidden" id="ingredientes" name="ingredientes" />
 
 
@@ -294,7 +267,6 @@
             Fechar
           </button>
         </div>
-        <?php endforeach; ?>
       </form>
     </div>
 
@@ -307,7 +279,6 @@
 
         <p>Tem certeza que deseja excluir este usuario?</p>
         <form action="posts-list/delete" method="POST">
-          <?php foreach ($posts as $post): ?>
           <input type="hidden" name="idDelete" value="<?= $post->id ?>">
           <div id="btCC">
             <button class="canc" onclick="closeModal('modalDel')">
@@ -315,10 +286,12 @@
             </button>
             <button class="exc" type="submit">Excluir</button>
           </div>
-          <?php endforeach; ?>
         </form>
       </div>
     </div>
+
+    <?php endforeach; ?>
+
     <!-------------- Fim Modal Excluir ------------------>
 
     <div class="container">
@@ -359,10 +332,10 @@
                 <td class="celula-autor"><?= $post->author?></td>
                 <td class="celula-data"><?= $post->date?></td>
                 <td class="celula-acoes">
-                  <div class="square" onclick="openModal('modalVisu')">
+                  <div class="square" onclick='openModal("modalVisu<?= $post->id ?>", "view", <?= $post->ingredients ?>, <?= $post->id ?>)'>
                     <img class="view" src="/public/assets/view.svg" alt="" />
                   </div>
-                  <div class="square" onclick="openModal('modalEditar')">
+                  <div class="square" onclick='openModal("modalEditar<?= $post->id ?>", "edit", <?= $post->ingredients ?>, <?= $post->id ?>)'>
                     <img class="edit" src="/public/assets/edit.svg" alt="" />
                   </div>
                   <div class="square" onclick="openModal('modalDel')">
