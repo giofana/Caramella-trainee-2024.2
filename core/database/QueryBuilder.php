@@ -28,4 +28,24 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function insert($table, $parametros)
+    {
+        $sql = sprintf(
+            'INSERT INTO %s (%s) VALUE (%s)',
+            $table, 
+            implode(', ', array_keys($parametros)), //pega os parametros da funcion no usercontroller
+            ':' . implode(', :', array_keys($parametros)) //pega os valores da mesma função do usercontroller 
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($parametros);
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

@@ -41,15 +41,19 @@
           <div class="email"><p>EMAIL</p></div>
           <div class="acoes"><p>AÇÕES</p></div>
         </div>
+
+
+        <?php foreach($users as $user) :
+        ?>
         <div class="barra2">
-          <div class="idb"><p>1</p></div>
-          <div class="nomeb"><p>Tim Mayers</p></div>
-          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
+          <div class="idb"><p><?= $user->id ?></p></div>
+          <div class="nomeb"><p><?= $user->name ?></p></div>
+          <div class="emailb"><p><?= $user->email ?></p></div>
           <div class="barra2b">
             <button
               class="button"
               id="openModalView"
-              onclick="openModal('modalView')"
+              onclick="openModal('modalView<?= $user->id ?>')"
             >
               <img src="../../../public/assets/visu.png" />
             </button>
@@ -69,71 +73,9 @@
             </button>
           </div>
         </div>
-        <div class="barra2">
-          <div class="idb"><p>1</p></div>
-          <div class="nomeb"><p>Tim Mayers</p></div>
-          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
-          <div class="barra2b">
-            <button class="button">
-              <img src="../../../public/assets/visu.png" />
-            </button>
-            <button class="button2">
-              <img src="../../../public/assets/edit.png" />
-            </button>
-            <button class="button3">
-              <img src="../../../public/assets/lixo.png" />
-            </button>
-          </div>
-        </div>
-        <div class="barra2">
-          <div class="idb"><p>1</p></div>
-          <div class="nomeb"><p>Tim Mayers</p></div>
-          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
-          <div class="barra2b">
-            <button class="button">
-              <img src="../../../public/assets/visu.png" />
-            </button>
-            <button class="button2">
-              <img src="../../../public/assets/edit.png" />
-            </button>
-            <button class="button3">
-              <img src="../../../public/assets/lixo.png" />
-            </button>
-          </div>
-        </div>
-        <div class="barra2">
-          <div class="idb"><p>1</p></div>
-          <div class="nomeb"><p>Tim Mayers</p></div>
-          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
-          <div class="barra2b">
-            <button class="button">
-              <img src="../../../public/assets/visu.png" />
-            </button>
-            <button class="button2">
-              <img src="../../../public/assets/edit.png" />
-            </button>
-            <button class="button3">
-              <img src="../../../public/assets/lixo.png" />
-            </button>
-          </div>
-        </div>
-        <div class="barra2">
-          <div class="idb"><p>1</p></div>
-          <div class="nomeb"><p>Tim Mayers</p></div>
-          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
-          <div class="barra2b">
-            <button class="button">
-              <img src="../../../public/assets/visu.png" />
-            </button>
-            <button class="button2">
-              <img src="../../../public/assets/edit.png" />
-            </button>
-            <button class="button3">
-              <img src="../../../public/assets/lixo.png" />
-            </button>
-          </div>
-        </div>
       </div>
+      <?php endforeach;
+        ?>
 
       <div class="pagina">
         <a href="#">&laquo;</a>
@@ -144,19 +86,19 @@
         <a href="#">5</a>
         <a href="#">&raquo;</a>
       </div>
-
+      <!-- modal criar -->
       <div class="modal modal-criar" id="modalCriar">
         <div class="modal-content modal-content-criar">
-          <form>
+          <form action = "/creat" method = "post">
             <h2>Criar usuário</h2>
             <!-- inputs do modal -->
             <div class="input-box-create">
               <label for="create-user-name">Nome:</label>
-              <input type="text" name="" id="name-create-user" />
+              <input type="text" name="name" id="name-create-user" />
               <label for="email-create-user">Email:</label>
-              <input type="email" id="email-create-user" />
+              <input type="email" name = "email" id="email-create-user" />
               <label for="password-create-user">Senha:</label>
-              <input type="password" name="" id="password-create-user" />
+              <input type="password" name="password" id="password-create-user" />
             </div>
             <div class="button-box">
               <button class="cancel-button" onclick="closeModal('modalCriar')">
@@ -168,21 +110,25 @@
         </div>
       </div>
 
-      <div class="modal modal-view" id="modalView">
+
+       <!-- modal editar -->
+       <?php foreach($users as $user) :
+        ?>
+      <div class="modal modal-view modalView">
         <div class="modal-content modal-content-view">
           <form class="form-view" action="">
             <h2>Detalhes do Usuário</h2>
             <div class="row-view-info">
               <label for="">Nome:</label>
-              <div class="bg-view"><label for="">fulano</label></div>
+              <div class="bg-view"><label for=""><?= $user->name ?></label></div>
             </div>
             <div class="row-view-info">
               <label for="">E-mail:</label>
-              <div class="bg-view"><label for="">fulano@gmail.com</label></div>
+              <div class="bg-view"><label for=""><?= $user->email ?></label></div>
             </div>
             <div class="row-view-info">
               <label for="">Senha:</label>
-              <div class="bg-view"><label for="">adminadmin</label></div>
+              <div class="bg-view"><label for=""><?= $user->senha ?></label></div>
             </div>
             <div class="button-box">
               <button class="close-button" onclick="closeModal('modalView')">
@@ -192,7 +138,9 @@
           </form>
         </div>
       </div>
-
+      <?php endforeach;
+        ?>
+       <!-- fim modal editar -->
       <!-------------- Modal Excluir ------------------>
 
       <div class="modal modal-del" id="modalDel">

@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Controllers;
-use App\Controllers\ExampleController;
+use App\Controllers\UsersController;
 use App\Core\Router;
 
-    $router->get('', 'ExampleController@index');
+
+    $router->get('users', 'UsersController@users');
+    
+    $router->post('creat', 'UsersController@creat');
 
 ?>
