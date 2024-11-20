@@ -61,13 +61,14 @@
 
         <div class="inputModal">
           <label for="Ingredientes">Ingredientes</label>
-          <input id="ingredienteInput" type="text" />
+          <!-- definindo ingrediente de modal especifico -->
+          <input id="editIngredienteInput<?= $post->id; ?>" type="text" />
 
           <div class="btt-ingredient">
             <!-- fazer add ingredient -->
             <button
               type="button"
-              onclick='editIngredients(<?= $post->ingredients; ?>)'
+              onclick='editIngredients(<?= $post->id; ?>)'
               id="edit-ingredient"
             >
               Adicionar Ingrediente
@@ -76,7 +77,8 @@
           </div>
         </div>
         <ul id="ingredientesListEdit<?= $post->id; ?>"></ul>
-        <input type="hidden" id="ingredientes" name="ingredientes" />
+        <!-- para receber os ingredientes atuais e atuasliza com a edição -->
+        <input type="hidden" id="ingredientesEdit" name="ingredientes" value='<?= $post->ingredients; ?>' />
         
         <div class="inputModal">
           <label for="Modo1">Modo de preparo</label

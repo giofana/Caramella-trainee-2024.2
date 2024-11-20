@@ -32,7 +32,7 @@ function addIngredient() {
     ingredientes.push(ingrediente);
     ingredienteInput.value = "";
 
-    const ingredientesList = document.getElementById("ingredientesList");
+    const ingredientesList = document.getElementById("ingredientesListCreate");
     const li = document.createElement("li");
     li.classList.add("ingrediente-item"); // Adiciona a classe ao li
 
@@ -42,9 +42,15 @@ function addIngredient() {
     // Cria o botão de remoção
     const removeButton = document.createElement("button");
     removeButton.textContent = "x";
+    removeButton.type = "button";
     removeButton.classList.add("remove-ingredient");
     removeButton.onclick = function () {
-      removeIngredient(ingrediente, "ingredientsList");
+      removeIngredient(
+        ingrediente,
+        "ingredientesListCreate",
+        ingredientes,
+        "ingredientesCreate"
+      );
     };
 
     li.appendChild(span);
@@ -59,21 +65,27 @@ function addIngredient() {
 }
 
 // Funcao para remover o ingrediente -> remover da lista exibida e do array
-function removeIngredient(ingrediente, list) {
-  const index = ingredientes.indexOf(ingrediente);
+function removeIngredient(
+  ingredienteRemove,
+  listElement,
+  ingredienteJson,
+  inputHiddenName
+) {
+  const index = ingredienteJson.indexOf(ingredienteRemove);
   if (index > -1) {
-    ingredientes.splice(index, 1); // Remove o ingrediente do array
+    ingredienteJson.splice(index, 1); // Remove o ingrediente do array json
 
-    const ingredientesList = document.getElementById(list);
+    const ingredientesList = document.getElementById(listElement);
+    // removendo do html
     const li = ingredientesList.children[index];
     ingredientesList.removeChild(li); // Remove o item da lista exibida
 
     // Atualiza o campo hidden com os ingredientes em JSON
-    document.getElementById("ingredientes").value =
-      JSON.stringify(ingredientes);
+    document.getElementById(inputHiddenName).value =
+      JSON.stringify(ingredienteJson);
   }
 
-  console.log(ingredientes);
+  console.log(ingredienteJson);
 }
 
 // Adiciona o placeholder no evento hover

@@ -49,8 +49,8 @@
 
       </div>
     </div>
-    <ul id="ingredientesList"></ul>
-    <input required type="hidden" id="ingredientes" name="ingredientes-receita" />
+    <ul id="ingredientesListCreate"></ul>
+    <input required type="hidden" id="ingredientesCreate" name="ingredientes-receita" />
 
     <div class="inputModal">
       <label for="Modo">Modo de preparo</label>
