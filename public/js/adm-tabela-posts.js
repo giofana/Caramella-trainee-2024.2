@@ -58,7 +58,7 @@ function addIngredient() {
     ingredientesList.appendChild(li);
 
     // Atualiza o campo hidden com os ingredientes em JSON
-    document.getElementById("ingredientes").value =
+    document.getElementById("ingredientesCreate").value =
       JSON.stringify(ingredientes);
   }
   console.log(ingredientes);
