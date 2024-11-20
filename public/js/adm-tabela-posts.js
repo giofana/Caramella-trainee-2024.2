@@ -72,6 +72,7 @@ function removeIngredient(
   inputHiddenName
 ) {
   const index = ingredienteJson.indexOf(ingredienteRemove);
+  console.log(index);
   if (index > -1) {
     ingredienteJson.splice(index, 1); // Remove o ingrediente do array json
 
@@ -105,8 +106,6 @@ function displayIngredients(ingredientesView, id) {
 
   console.log(typeof id.toString());
 
-  console.log(ingredientesView);
-
   ingredientesView.forEach((ingrediente) => {
     const li = document.createElement("li");
     li.classList.add("ingrediente-item"); // Adiciona a classe ao li
@@ -125,8 +124,6 @@ function displayIngredientsEdit(ingredientsEdit, id) {
     "ingredientesListEdit" + id.toString()
   );
 
-  console.log(ingredientsEdit);
-
   ingredientsEdit.forEach((ingrediente) => {
     const li = document.createElement("li");
     li.classList.add("ingrediente-item"); // Adiciona a classe ao li
@@ -139,8 +136,14 @@ function displayIngredientsEdit(ingredientsEdit, id) {
     removeButton.textContent = "x";
     removeButton.classList.add("remove-ingredient");
     removeButton.type = "button";
+
     removeButton.onclick = function () {
-      removeIngredient(ingrediente, "ingredientesListEdit" + id.toString());
+      removeIngredient(
+        ingrediente,
+        "ingredientesListEdit" + id.toString(),
+        ingredientsEdit,
+        "ingredientesEdit"
+      );
     };
 
     li.appendChild(span);
@@ -153,27 +156,45 @@ function displayIngredientsEdit(ingredientsEdit, id) {
 }
 
 // Função para adicionar ingrediente na lista de edição e no array -> adiciona html para exibição
-function addIngredientEdit() {
-  const ingredienteInput = document.getElementById("ingredienteInputEdit");
-  const ingrediente = ingredienteInput.value.trim();
+function addIngredientEdit(id) {
+  const ingredienteInput = document.getElementById(
+    "editIngredienteInput" + id.toString()
+  );
 
-  if (ingrediente) {
-    ingredientes.push(ingrediente);
+  // obtendo ingredientes antigos para editar
+  ingredientes = document.getElementById("ingredientesEdit").value;
+  // obtendo ingrediente para add
+  const ingredienteNovo = ingredienteInput.value.trim();
+  // transformando ingredientes antigos em json -> reutilizando a variuavel criada no escopo global
+  ingredientes = JSON.parse(ingredientes);
+  console.log(ingredientes);
+
+  if (ingredienteNovo) {
+    ingredientes.push(ingredienteNovo);
     ingredienteInput.value = "";
 
-    const ingredientesList = document.getElementById("ingredientesListEdit");
+    const ingredientesList = document.getElementById(
+      "ingredientesListEdit" + id.toString()
+    );
+
     const li = document.createElement("li");
     li.classList.add("ingrediente-item"); // Adiciona a classe ao li
 
     const span = document.createElement("span");
-    span.textContent = ingrediente;
+    span.textContent = ingredienteNovo;
 
     // Cria o botão de remoção
     const removeButton = document.createElement("button");
     removeButton.textContent = "x";
+    removeButton.type = "button";
     removeButton.classList.add("remove-ingredient");
     removeButton.onclick = function () {
-      removeIngredientEdit(ingrediente);
+      removeIngredient(
+        ingredienteNovo,
+        "ingredientesListEdit" + id.toString(),
+        ingredientes,
+        "editIngredienteInput" + id.toString()
+      );
     };
 
     li.appendChild(span);

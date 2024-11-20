@@ -68,7 +68,7 @@
             <!-- fazer add ingredient -->
             <button
               type="button"
-              onclick='editIngredients(<?= $post->id; ?>)'
+              onclick='addIngredientEdit(<?= $post->id; ?>)'
               id="edit-ingredient"
             >
               Adicionar Ingrediente

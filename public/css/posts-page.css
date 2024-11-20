@@ -745,7 +745,7 @@ form > h2 {
 }
 
 #ingredientesList,
-#ingredientesListView,
+.ingredientesList,
 #ingredientesListEdit {
   display: flex;
   flex-wrap: wrap; /*itens quebram para a próxima linha */
