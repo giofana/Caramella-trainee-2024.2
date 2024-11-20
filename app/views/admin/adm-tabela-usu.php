@@ -35,105 +35,52 @@
         </div>
       </div>
       <div class="barras">
-        <div class="barra1">
-          <div class="id"><p>ID</p></div>
-          <div class="nome"><p>NOME</p></div>
-          <div class="email"><p>EMAIL</p></div>
-          <div class="acoes"><p>AÇÕES</p></div>
-        </div>
+    <div class="barra1">
+        <div class="id"><p>ID</p></div>
+        <div class="nome"><p>NOME</p></div>
+        <div class="email"><p>EMAIL</p></div>
+        <div class="acoes"><p>AÇÕES</p></div>
+    </div>
+
+    <?php if (empty($users)): ?>
         <div class="barra2">
-          <div class="idb"><p>1</p></div>
-          <div class="nomeb"><p>Tim Mayers</p></div>
-          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
-          <div class="barra2b">
-            <button
-              class="button"
-              id="openModalView"
-              onclick="openModal('modalView')"
-            >
-              <img src="../../../public/assets/visu.png" />
-            </button>
-            <button
-              class="button2"
-              id="openModalEdit"
-              onclick="openModal('modalEdit')"
-            >
-              <img src="../../../public/assets/edit.png" />
-            </button>
-            <button
-              class="button3"
-              id="openModalDel"
-              onclick="openModal('modalDel')"
-            >
-              <img src="../../../public/assets/lixo.png" />
-            </button>
-          </div>
+            <p style="text-align: center; width: 100%; color: red;">Nenhum usuário encontrado.</p>
         </div>
-        <div class="barra2">
-          <div class="idb"><p>1</p></div>
-          <div class="nomeb"><p>Tim Mayers</p></div>
-          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
-          <div class="barra2b">
-            <button class="button">
-              <img src="../../../public/assets/visu.png" />
-            </button>
-            <button class="button2">
-              <img src="../../../public/assets/edit.png" />
-            </button>
-            <button class="button3">
-              <img src="../../../public/assets/lixo.png" />
-            </button>
-          </div>
-        </div>
-        <div class="barra2">
-          <div class="idb"><p>1</p></div>
-          <div class="nomeb"><p>Tim Mayers</p></div>
-          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
-          <div class="barra2b">
-            <button class="button">
-              <img src="../../../public/assets/visu.png" />
-            </button>
-            <button class="button2">
-              <img src="../../../public/assets/edit.png" />
-            </button>
-            <button class="button3">
-              <img src="../../../public/assets/lixo.png" />
-            </button>
-          </div>
-        </div>
-        <div class="barra2">
-          <div class="idb"><p>1</p></div>
-          <div class="nomeb"><p>Tim Mayers</p></div>
-          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
-          <div class="barra2b">
-            <button class="button">
-              <img src="../../../public/assets/visu.png" />
-            </button>
-            <button class="button2">
-              <img src="../../../public/assets/edit.png" />
-            </button>
-            <button class="button3">
-              <img src="../../../public/assets/lixo.png" />
-            </button>
-          </div>
-        </div>
-        <div class="barra2">
-          <div class="idb"><p>1</p></div>
-          <div class="nomeb"><p>Tim Mayers</p></div>
-          <div class="emailb"><p>paulinjoderson@gmail.com</p></div>
-          <div class="barra2b">
-            <button class="button">
-              <img src="../../../public/assets/visu.png" />
-            </button>
-            <button class="button2">
-              <img src="../../../public/assets/edit.png" />
-            </button>
-            <button class="button3">
-              <img src="../../../public/assets/lixo.png" />
-            </button>
-          </div>
-        </div>
-      </div>
+        <?php else: ?>
+        <!-- Iterando os usuários -->
+        <?php foreach ($users as $user): ?>
+            <div class="barra2">
+                <div class="idb"><p><?= htmlspecialchars($user->id) ?></p></div>
+                <div class="nomeb"><p><?= htmlspecialchars($user->name) ?></p></div>
+                <div class="emailb"><p><?= htmlspecialchars($user->email) ?></p></div>
+                <div class="barra2b">
+                    <button
+                        class="button"
+                        id="openModalView-<?= $user->id ?>"
+                        onclick="openModal('modalView-<?= $user->id ?>')"
+                    >
+                        <img src="../../../public/assets/visu.png" />
+                    </button>
+                    <button
+                        class="button2"
+                        id="openModalEdit-<?= $user->id ?>"
+                        onclick="openModal('modalEdit-<?= $user->id ?>')"
+                    >
+                        <img src="../../../public/assets/edit.png" />
+                    </button>
+                    <button
+                        class="button3"
+                        id="openModalDel-<?= $user->id ?>"
+                        onclick="openModal('modalDel-<?= $user->id ?>')"
+                    >
+                        <img src="../../../public/assets/lixo.png" />
+                    </button>
+                </div>
+            </div>
+        <?php endforeach; ?>
+        <?php endif; ?>
+</div>
+
 
       <div class="pagina">
         <a href="#">&laquo;</a>
@@ -145,11 +92,11 @@
         <a href="#">&raquo;</a>
       </div>
 
+      <!-- Modal de Criar -->
       <div class="modal modal-criar" id="modalCriar">
         <div class="modal-content modal-content-criar">
           <form>
             <h2>Criar usuário</h2>
-            <!-- inputs do modal -->
             <div class="input-box-create">
               <label for="create-user-name">Nome:</label>
               <input type="text" name="" id="name-create-user" />
@@ -168,6 +115,7 @@
         </div>
       </div>
 
+      <!-- Modal de Visualização -->
       <div class="modal modal-view" id="modalView">
         <div class="modal-content modal-content-view">
           <form class="form-view" action="">
@@ -193,30 +141,35 @@
         </div>
       </div>
 
-      <!-------------- Modal Excluir ------------------>
-
+      <!-- Modal Excluir -->
       <div class="modal modal-del" id="modalDel">
-        <div class="modal-content excluir">
-          <h2>Excluir Usuario</h2>
-          <img src="../../../public/assets/trash.png" />
-          
-          <p>Tem certeza que deseja excluir este usuario?</p>
-          <div class="button-box">
-            <button class="cancel-button" onclick="closeModal('modalDel')">
-              Cancelar
-            </button>
-            <button id="excluir-button">Excluir</button>
-          </div>
-        </div>
-      </div>
-      <!-------------- Fim Modal Excluir ------------------>
+        <form action="/delete" method="post">
+            <div class="modal-content excluir">
+                <h2>Excluir Usuário</h2>
+                <img src="../../../public/assets/trash.png" alt="Ícone de lixeira" />
+                <p>Tem certeza que deseja excluir este usuário?</p>
+                <div class="button-box">
+                    <button 
+                        type="button" 
+                        class="cancel-button" 
+                        onclick="closeModal('modalDel')">
+                        Cancelar
+                    </button>
+                    <button 
+                        type="submit" 
+                        id="excluir-button">
+                        Excluir
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
 
-      <!-------------- Tela de editar usário ------------------>
+      <!-- Modal Editar -->
       <div class="modal modal-edit" id="modalEdit">
         <div class="modal-content modal-content-edit">
           <form>
             <h2>Editar usuário</h2>
-            <!-- inputs do modal -->
             <div class="input-box-edit">
               <label for="edit-name">Nome:</label>
               <input type="text" id="edit-name" value="Fulano" />
@@ -225,8 +178,6 @@
               <label for="edit-password">Senha:</label>
               <input type="password" id="edit-password" value="muitodificil" />
             </div>
-            <!-- fim inputs do modal -->
-            <!-- div de botão -->
             <div class="button-box">
               <button class="cancel-button" onclick="closeModal('modalEdit')">
                 Cancelar
@@ -237,6 +188,7 @@
         </div>
       </div>
     </div>
+
     <script src="/public/js/adm-tabela-usu.js"></script>
   </body>
 </html>
