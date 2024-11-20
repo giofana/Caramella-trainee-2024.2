@@ -73,7 +73,6 @@
             </button>
           </div>
         </div>
-      </div>
       <?php endforeach;
         ?>
 
@@ -101,7 +100,7 @@
               <input type="password" name="password" id="password-create-user" />
             </div>
             <div class="button-box">
-              <button class="cancel-button" onclick="closeModal('modalCriar')">
+              <button type="button" class="cancel-button" onclick="closeModal('modalCriar')">
                 Cancelar
               </button>
               <button id="criar-button">Criar</button>
@@ -131,7 +130,7 @@
               <div class="bg-view"><label for=""><?= $user->senha ?></label></div>
             </div>
             <div class="button-box">
-              <button class="close-button" onclick="closeModal('modalView')">
+              <button type="button" class="close-button" onclick="closeModal('modalView')">
                 Fechar
               </button>
             </div>
@@ -145,12 +144,12 @@
 
       <div class="modal modal-del" id="modalDel">
         <div class="modal-content excluir">
-          <h2>Excluir Usuario</h2>
+          <h1>Excluir Usuário</h1>
           <img src="../../../public/assets/trash.png" />
           
           <p>Tem certeza que deseja excluir este usuario?</p>
           <div class="button-box">
-            <button class="cancel-button" onclick="closeModal('modalDel')">
+            <button type="button" class="cancel-button" onclick="closeModal('modalDel')">
               Cancelar
             </button>
             <button id="excluir-button">Excluir</button>
@@ -176,7 +175,7 @@
             <!-- fim inputs do modal -->
             <!-- div de botão -->
             <div class="button-box">
-              <button class="cancel-button" onclick="closeModal('modalEdit')">
+              <button type="button" class="cancel-button" onclick="closeModal('modalEdit')">
                 Cancelar
               </button>
               <button id="save-button">Salvar</button>

@@ -11,7 +11,6 @@ body {
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
   padding: 5% 0 0 0;
   z-index: 1;
-  overflow: hidden;
 }
 
 .corpo {
@@ -19,8 +18,11 @@ body {
   justify-content: center;
   background-color: rgba(100, 71, 59, 0.42);
   width: 80vw;
-  height: 80vh;
+  height: fit-content;
   border-radius: 60px;
+  overflow: hidden;
+  margin-bottom: 10%;
+
 }
 
 .topo {
