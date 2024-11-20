@@ -142,7 +142,7 @@ function displayIngredientsEdit(ingredientsEdit, id) {
         ingrediente,
         "ingredientesListEdit" + id.toString(),
         ingredientsEdit,
-        "ingredientesEdit"
+        "ingredientesEdit" + id.toString()
       );
     };
 
@@ -162,7 +162,9 @@ function addIngredientEdit(id) {
   );
 
   // obtendo ingredientes antigos para editar
-  ingredientes = document.getElementById("ingredientesEdit").value;
+  ingredientes = document.getElementById(
+    "ingredientesEdit" + id.toString()
+  ).value;
   // obtendo ingrediente para add
   const ingredienteNovo = ingredienteInput.value.trim();
   // transformando ingredientes antigos em json -> reutilizando a variuavel criada no escopo global
@@ -193,7 +195,7 @@ function addIngredientEdit(id) {
         ingredienteNovo,
         "ingredientesListEdit" + id.toString(),
         ingredientes,
-        "editIngredienteInput" + id.toString()
+        "ingredientesEdit" + id.toString()
       );
     };
 
@@ -202,7 +204,7 @@ function addIngredientEdit(id) {
     ingredientesList.appendChild(li);
 
     // Atualiza o campo hidden com os ingredientes em JSON
-    document.getElementById("ingredientesEdit").value =
+    document.getElementById("ingredientesEdit" + id.toString()).value =
       JSON.stringify(ingredientes);
   }
   console.log(ingredientes);

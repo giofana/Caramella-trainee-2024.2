@@ -78,7 +78,7 @@
         </div>
         <ul id="ingredientesListEdit<?= $post->id; ?>"></ul>
         <!-- para receber os ingredientes atuais e atuasliza com a edição -->
-        <input type="hidden" id="ingredientesEdit" name="ingredientes" value='<?= $post->ingredients; ?>' />
+        <input type="hidden" id="ingredientesEdit<?= $post->id; ?>" name="editIngrediente" value='<?= $post->ingredients; ?>' />
         
         <div class="inputModal">
           <label for="Modo1">Modo de preparo</label
