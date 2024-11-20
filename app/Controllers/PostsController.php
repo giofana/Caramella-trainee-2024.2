@@ -15,7 +15,14 @@ class PostsController
         return view('admin/posts-page', compact('posts'));
     }
 
+    // TODO: arrumar autor
     public function edit(){
+        $temporario = $_FILES['editImagem']['tmp_name'];
+        $nomeimagem =  sha1(uniqid($_FILES['editImage']['name'], true)) . '.' . pathinfo($_FILES['editImage']['name'], PATHINFO_EXTENSION);
+        $destinoimagem = "public/imagens/";
+        move_uploaded_file($temporario, $destinoimagem . $nomeimagem);
+        $caminhodaimagem = "public/imagens/" . $nomeimagem;
+
         $parameters = [
             'title' => $_POST['editTitulo'],
             'author' => $_POST['editAutor'],
@@ -24,7 +31,7 @@ class PostsController
             'time' => $_POST['editTempo'],
             'history' => $_POST['editHistoria'],
             'prepare' => $_POST['editPreparo'],
-            'image' => $_POST['editImagem'],
+            'image' => $caminhodaimagem,
             'ingredients' => $_POST['editIngrediente'],
         ];
         $id = $_POST['editId'];
@@ -42,6 +49,13 @@ class PostsController
 
     // TODO: fix autor para autor logado e imagem
     public function createPost(){
+        $temporario = $_FILES['imagem-receita']['tmp_name'];
+        $nomeimagem =  sha1(uniqid($_FILES['imagem-receita']['name'], true)) . '.' . pathinfo($_FILES['imagem-receita']['name'], PATHINFO_EXTENSION);
+        $destinoimagem = "public/imagens/";
+        move_uploaded_file($temporario, $destinoimagem . $nomeimagem);
+        $caminhodaimagem = "public/imagens/" . $nomeimagem;
+
+
         $parameters = [
             'title' => $_POST['titulo-receita'],
             'author' => 1,
@@ -50,7 +64,7 @@ class PostsController
             'time' => $_POST['tempo-receita'],
             'history' => $_POST['historia-receita'],
             'prepare' => $_POST['modo-receita'],
-            'image' => '/public/assets/pudim.jpg',
+            'image' => $caminhodaimagem,
             'ingredients' => $_POST['ingredientes-receita'],
         ];
 

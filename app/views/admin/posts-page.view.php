@@ -23,29 +23,13 @@
       <?php include "adm-post-edit.php"; ?>
     <!-- fim moidal editar -->
   
+    <!-- modal view -->
     <?php include "adm-post-view.php"; ?>
-    
-   
+    <!-- fim modal view-->
 
     <!-------------- Modal Excluir ------------------>
-
-    <div class="modall modal-del" id="modalDel<?= $post->id ?>">
-      <div class="modal-content excluir">
-        <h1>Excluir Usuario</h1>
-        <img src="../../../public/assets/trash.png" />
-
-        <p>Tem certeza que deseja excluir este usuario?</p>
-        <form action="posts-list/delete" method="POST">
-          <input type="hidden" name="idDelete" value="<?= $post->id ?>">
-          <div id="btCC">
-            <button class="canc" type="button" onclick="closeModal('modalDel<?= $post->id ?>')">
-              Cancelar
-            </button>
-            <button class="exc" type="submit">Excluir</button>
-          </div>
-        </form>
-      </div>
-    </div>
+    <?php include "adm-post-delete.php"; ?>
+    <!-- fim modal excluir -->
 
     <?php endforeach; ?>
 
@@ -87,7 +71,7 @@
                 <td class="celula-id"><?= $post->id?></td>
                 <td class="celula-titulo"><?= $post->title?></td>
                 <td class="celula-autor"><?= $post->author?></td>
-                <td class="celula-data"><?= $post->date?></td>
+                <td class="celula-data"><?php $date=new DateTime($post->date); echo $date->format('d/m/Y');?></td>
                 <td class="celula-acoes">
                   <div class="square" onclick='openModal("modalVisu<?= $post->id ?>", "view", <?= $post->ingredients ?>, <?= $post->id ?>)'>
                     <img class="view" src="/public/assets/view.svg" alt="" />

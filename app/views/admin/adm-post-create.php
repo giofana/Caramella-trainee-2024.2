@@ -1,6 +1,6 @@
 <!-- modal-criar.php -->
 <div class="modal" id="modalCriar">
-  <form method="POST" action="posts-list/create">
+  <form method="POST" action="posts-list/create" enctype="multipart/form-data">
     <h2>Preencha todos os campos abaixo para criar post:</h2>
     <div class="inputModal">
       <label for="Título">Título da receita</label>
@@ -14,8 +14,7 @@
         </div>
         <div class="inputModal" id="tempo">
           <label for="Tempo">Tempo</label>
-          <input required id="Tempo" type="text" name="tempo-receita"/>
-        </div>
+          <input required id="Tempo" type="number" name="tempo-receita" min="0" oninput="this.value = Math.abs(this.value)"/>        </div>
       </div>
       <div class="subForm">
         <div class="inputModal" id="custo">

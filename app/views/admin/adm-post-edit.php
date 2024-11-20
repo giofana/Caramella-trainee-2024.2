@@ -1,6 +1,6 @@
 
     <div class="modal" id="modalEditar<?= $post->id; ?>">
-      <form action="posts-list/edit-post" method="POST">
+      <form action="posts-list/edit-post" method="POST" enctype="multipart/form-data" >
         <h2>Preencha todos os campos abaixo para criar post:</h2>
         <div class="inputModal">
           <label for="Título1">Título da receita</label
