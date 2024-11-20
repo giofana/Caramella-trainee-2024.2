@@ -39,6 +39,25 @@ class PostsController
         App::get('database')->delete('posts', $id);
         header('Location: /posts-list');
     }
+
+    // TODO: fix autor para autor logado e imagem
+    public function createPost(){
+        $parameters = [
+            'title' => $_POST['titulo-receita'],
+            'author' => 1,
+            'cost' => $_POST['custo-receita'],
+            'difficulty' => $_POST ['dificuldade-receita'],
+            'time' => $_POST['tempo-receita'],
+            'history' => $_POST['historia-receita'],
+            'prepare' => $_POST['modo-receita'],
+            'image' => '/public/assets/pudim.jpg',
+            'ingredients' => $_POST['ingredientes-receita'],
+        ];
+
+        App::get('database')->insert('posts', $parameters);
+        header('Location: /posts-list');
+
+    }
 }
 
 ?>
