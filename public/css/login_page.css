@@ -92,7 +92,7 @@ html, body {
 
 #togglePassword {
     position: absolute;
-    right: 0px;
+    left: 100%;
     top: 50%; /* ajuste de posição à direita */
     transform: translateY(-50%);
     cursor: pointer;
@@ -144,7 +144,7 @@ html, body {
 
     #togglePassword {
     position: absolute;
-    left: auto;
+    left: 100%;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -183,7 +183,7 @@ html, body {
     
         #togglePassword {
         position: absolute;
-        left: auto;
+        left: 100%;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -193,6 +193,12 @@ html, body {
         max-width: 160px;
         height: 44px;
         font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    #togglePassword {
+        left: 98%;
     }
 }
 
