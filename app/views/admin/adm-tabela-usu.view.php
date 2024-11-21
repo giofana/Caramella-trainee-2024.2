@@ -67,7 +67,7 @@
             <button
               class="button3"
               id="openModalDel"
-              onclick="openModal('modalDel')"
+              onclick="openModal('modalDel-<?= $user->id ?>')"
             >
               <img src="../../../public/assets/lixo.png" />
             </button>
@@ -142,20 +142,33 @@
        <!-- fim modal editar -->
       <!-------------- Modal Excluir ------------------>
 
-      <div class="modal modal-del" id="modalDel">
-        <div class="modal-content excluir">
-          <h1>Excluir Usuário</h1>
-          <img src="../../../public/assets/trash.png" />
-          
-          <p>Tem certeza que deseja excluir este usuario?</p>
-          <div class="button-box">
-            <button type="button" class="cancel-button" onclick="closeModal('modalDel')">
-              Cancelar
-            </button>
-            <button id="excluir-button">Excluir</button>
-          </div>
-        </div>
+      <?php foreach($users as $user) :
+        ?>
+      <div class="modal modal-del" id="modalDel-<?= $user->id ?>">
+        <form action="/delete" method="post">
+        <input type="hidden" name="id" value="<?= $user->id ?>"> <!--Input oculto que envia o ID do usuário dinamicamente -->
+            <div class="modal-content excluir">
+                <h2>Excluir Usuário</h2>
+                <img src="../../../public/assets/trash.png" alt="Ícone de lixeira" />
+                <p>Tem certeza que deseja excluir este usuário?</p>
+                <div class="button-box">
+                    <button 
+                        type="button" 
+                        class="cancel-button" 
+                        onclick="closeModal('modalDel-<?= $user->id ?>')">
+                        Cancelar
+                    </button>
+                    <button 
+                        type="submit" 
+                        id="excluir-button-<?= $user->id ?>">
+                        Excluir
+                    </button>
+                </div>
+            </div>
+        </form>
       </div>
+      <?php endforeach;
+      ?>
       <!-------------- Fim Modal Excluir ------------------>
 
       <!-------------- Tela de editar usário ------------------>

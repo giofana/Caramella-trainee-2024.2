@@ -48,4 +48,27 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function delete($table, $id)
+    {
+        $sql = sprintf('DELETE FROM %s WHERE id = :id', $table); // %s e :id são placeholders
+        try {
+            // Preparando a consulta
+            $stmt = $this->pdo->prepare($sql);
+            
+            // associa o valor da variável ao parâmetro
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            
+            // Executando a consulta
+            $stmt->execute();
+
+            // Verificando se a exclusão deu certo
+            return $stmt->rowCount() > 0; // Retorna true se uma linha foi excluída
+        } catch (Exception $e) {
+            die($e->getMessage()); // Em caso de erro, exibe a mensagem de erro
+        }
+    }
+    /* Usando placeholders como %s o valor é substituído diretamente na string SQL antes de a consulta ser preparada ou executada.
+    Quando você usa placeholders nomeados, como :id, você está apenas referenciando o valor que será associado posteriormente à consulta, a substituição ocorre somente quando você executa a consulta. 
+    O segundo método é mais seguro, evita SQL Injection */
 }
