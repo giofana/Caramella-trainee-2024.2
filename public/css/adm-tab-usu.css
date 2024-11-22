@@ -272,6 +272,10 @@ body {
   align-items: center;
 }
 
+.senha{
+  overflow-x: scroll;
+}
+
 .bg-view {
   width: 70%;
   height: 40px;

@@ -113,7 +113,7 @@
        <!-- modal editar -->
        <?php foreach($users as $user) :
         ?>
-      <div class="modal modal-view modalView">
+      <div class="modal modal-view modalView" id="modalView<?= $user->id ?>">
         <div class="modal-content modal-content-view">
           <form class="form-view" action="">
             <h2>Detalhes do Usuário</h2>
@@ -127,10 +127,10 @@
             </div>
             <div class="row-view-info">
               <label for="">Senha:</label>
-              <div class="bg-view"><label for=""><?= $user->senha ?></label></div>
+              <div class="bg-view senha"><?= str_repeat('•', strlen($user->password)) ?></label></div>
             </div>
             <div class="button-box">
-              <button type="button" class="close-button" onclick="closeModal('modalView')">
+              <button type="button" class="close-button" onclick="closeModal('modalView<?= $user->id ?>')">
                 Fechar
               </button>
             </div>
