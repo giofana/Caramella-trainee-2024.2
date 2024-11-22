@@ -58,7 +58,36 @@ class UsersController
         }
     }
 
+    public function edit()
+    {
+        try {
+            if (isset($_POST['id']) && is_numeric($_POST['id'])) {
+                $id = (int) $_POST['id'];
 
+                // atribui os novos valores
+                $parametros = [
+                    'name' => $_POST['name'],
+                    'email' => $_POST['email'],
+                ];
+
+                if (!empty($_POST['password'])) { // Verifica se tem uma senha sendo enviada
+                    $parametros['password'] = $_POST['password'];
+                }            
+
+                $result = App::get('database')->edit('users', $id, $parametros);
+
+                if ($result) {
+                    return redirect('users');
+                } else {
+                    echo "Erro ao editar o usuário.";
+                }
+            } else {
+                echo "ID inválido ou não fornecido.";
+            }
+        } catch (Exception $e) {
+            // Exibe a mensagem de erro capturada
+            die("Erro capturado: " . $e->getMessage());
+        }
+    }
 }
-
 ?>
