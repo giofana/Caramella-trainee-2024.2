@@ -69,14 +69,14 @@
             <button
               type="button"
               onclick='addIngredientEdit(<?= $post->id; ?>)'
-              id="edit-ingredient"
+              id="edit-ingredient" class="create-ingredient"
             >
               Adicionar Ingrediente
             </button>
 
           </div>
         </div>
-        <ul id="ingredientesListEdit<?= $post->id; ?>"></ul>
+        <ul class="ingredient-list" id="ingredientesListEdit<?= $post->id; ?>"></ul>
         <!-- para receber os ingredientes atuais e atuasliza com a edição -->
         <input type="hidden" id="ingredientesEdit<?= $post->id; ?>" name="editIngrediente" value='<?= $post->ingredients; ?>' />
         

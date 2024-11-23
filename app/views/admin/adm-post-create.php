@@ -42,13 +42,13 @@
       <input  id="ingredienteInput" type="text" />
 
       <div class="btt-ingredient">
-        <button type="button" onclick="addIngredient()" id="create-ingredient">
+        <button type="button" onclick="addIngredient()" id="create-ingredient" class="create-ingredient">
           Adicionar Ingrediente
         </button>
 
       </div>
     </div>
-    <ul id="ingredientesListCreate"></ul>
+    <ul id="ingredientesListCreate" class="ingredient-list"></ul>
     <input required type="hidden" id="ingredientesCreate" name="ingredientes-receita" />
 
     <div class="inputModal">

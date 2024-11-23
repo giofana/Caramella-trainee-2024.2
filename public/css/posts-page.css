@@ -748,7 +748,8 @@ form > h2 {
 
 #ingredientesList,
 .ingredientesList,
-#ingredientesListEdit {
+#ingredientesListEdit,
+.ingredient-list {
   display: flex;
   flex-wrap: wrap; /*itens quebram para a próxima linha */
   justify-content: space-between;

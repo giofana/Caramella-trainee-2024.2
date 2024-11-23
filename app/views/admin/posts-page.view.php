@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <title>Admin | Posts Page</title>
+    <link rel="icon" type="image/png" href="public/assets/icon-logo.png" />
   </head>
   <body>
     <div id="tela"></div>
