@@ -65,7 +65,12 @@
         </div>
         <div class="inputModal" id="imgEnviada">
           <label for="Imagem">Imagem</label
-          ><img src="/public/assets/cake.png" value="<?= $post->image ?>"/>
+          <?php if ($post->image != ""): ?>
+          ><img src="<?= $post->image ?>"/>
+          <?php endif; ?>
+          <?php if ($post->image == ""): ?>
+          ><img src="public/imagens/no-picture.png" alt="Nenhuma imagem atribuída" style="box-shadow: none;"/>
+          <?php endif; ?>
         </div>
         <div class="btnf">
           <button class="btnfechar" onclick="closeModal('modalCriar')">
