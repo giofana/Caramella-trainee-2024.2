@@ -127,7 +127,9 @@
             </div>
             <div class="row-view-info">
               <label for="">Senha:</label>
-              <div class="bg-view senha"><?= str_repeat('•', strlen($user->password)) ?></label></div>
+              <div class="bg-view senha"><?= str_repeat('•', strlen($user->password)) ?>
+              <div class = "view1"><img src = "../../../public/assets/visua.svg"></div> </label></div>
+          
             </div>
             <div class="button-box">
               <button type="button" class="close-button" onclick="closeModal('modalView<?= $user->id ?>')">
