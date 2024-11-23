@@ -68,6 +68,35 @@ class QueryBuilder
             die($e->getMessage()); // Em caso de erro, exibe a mensagem de erro
         }
     }
+
+   public function edit($table, $id, $parametros)
+    {
+        // Constrói a string de SET dinamicamente
+        $sets = implode(', ', array_map(fn($key) => "$key = :$key", array_keys($parametros)));
+
+        // SQL para atualização
+        $sql = sprintf(
+            'UPDATE %s SET %s WHERE id = :id',
+            $table,
+            $sets
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            // Adiciona o ID aos parâmetros para a cláusula WHERE
+            $parametros['id'] = $id;
+
+            // Executa a query
+            $stmt->execute($parametros);
+
+            // Retorna verdadeiro se a execução foi bem-sucedida
+            return $stmt->rowCount(); // Retorna o número de linhas afetadas
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
     /* Usando placeholders como %s o valor é substituído diretamente na string SQL antes de a consulta ser preparada ou executada.
     Quando você usa placeholders nomeados, como :id, você está apenas referenciando o valor que será associado posteriormente à consulta, a substituição ocorre somente quando você executa a consulta. 
     O segundo método é mais seguro, evita SQL Injection */

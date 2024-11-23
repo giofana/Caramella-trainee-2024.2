@@ -9,5 +9,6 @@ use App\Core\Router;
     
     $router->post('creat', 'UsersController@creat');
     $router->post('delete', 'UsersController@delete');
+    $router->post('edit', 'UsersController@edit');
 
 ?>

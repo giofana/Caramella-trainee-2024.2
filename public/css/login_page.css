@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 /* Reset padrão de navegadores */
-
 * {
     margin: 0;
     padding: 0;
@@ -29,11 +28,11 @@ html, body {
 
 .form {
     background-color: rgba(231, 186, 167, 0.8);
-    width: 80vw; 
-    max-width: 480px; 
+    width: 80vw;
+    max-width: 480px;
     padding-top: 20px;
     padding-bottom: 12px;
-    border-radius: 20px; 
+    border-radius: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
@@ -62,14 +61,14 @@ html, body {
 }
 
 .email-group input, .senha-group input {
-    width: 80%; 
-    max-width: 380px; 
-    height: 56px; 
+    width: 80%;
+    max-width: 380px;
+    height: 56px;
     padding-left: 24px;
     border-radius: 12px;
     border: 1px solid white;
-    background-color: rgba(100, 71, 59, 0.2); 
-    font-weight: bold; 
+    background-color: rgba(100, 71, 59, 0.2);
+    font-weight: bold;
     font-size: 16px;
     outline: 0;
 }
@@ -81,24 +80,23 @@ html, body {
 
 .input-container {
     position: relative;
-    width: 80%; /* mesma largura do input */
+    width: 80%;
     max-width: 380px;
 }
 
 .senha-group input {
-    width: 100%; /* ajuste para o tamanho do contêiner */
+    width: 100%;
     margin-left: 12.5%;
 }
 
 #togglePassword {
     position: absolute;
-    right: 0px;
-    top: 50%; /* ajuste de posição à direita */
+    left: 100%;
+    top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
     color: #13142A;
 }
-
 
 .button-group button {
     width: 40%;
@@ -132,29 +130,28 @@ html, body {
     }
 
     .input-container {
-    position: relative;
-    width: 80%; /* mesma largura do input */
-    max-width: 380px;
+        position: relative;
+        width: 80%;
+        max-width: 380px;
     }
 
     .senha-group input {
-    width: 100%; /* ajuste para o tamanho do contêiner */
-    margin-left: 15.5%;
+        width: 100%;
+        margin-left: 15.5%;
     }
 
     #togglePassword {
-    position: absolute;
-    left: auto;
-    top: 50%;
-    transform: translateY(-50%);
-}
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
     .button-group button {
         width: 60%;
     }
 }
 
-/* Responsividade */
 @media (max-width: 480px) {
     .form {
         width: 80vw;
@@ -172,18 +169,18 @@ html, body {
 
     .input-container {
         position: relative;
-        width: 80%; /* mesma largura do input */
+        width: 80%;
         max-width: 380px;
-        }
-    
-        .senha-group input {
-        width: 100%; /* ajuste para o tamanho do contêiner */
+    }
+
+    .senha-group input {
+        width: 100%;
         margin-left: 13%;
-        }
-    
-        #togglePassword {
+    }
+
+    #togglePassword {
         position: absolute;
-        left: auto;
+        left: 100%;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -195,6 +192,13 @@ html, body {
         font-size: 14px;
     }
 }
+
+@media (max-width: 320px) {
+    #togglePassword {
+        left: 98%;
+    }
+}
+
 
 
 

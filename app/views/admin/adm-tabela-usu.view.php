@@ -60,7 +60,7 @@
             <button
               class="button2"
               id="openModalEdit"
-              onclick="openModal('modalEdit')"
+              onclick="openModal('modalEdit-<?= $user->id ?>')"
             >
               <img src="../../../public/assets/edit.png" />
             </button>
@@ -85,7 +85,9 @@
         <a href="#">5</a>
         <a href="#">&raquo;</a>
       </div>
+
       <!-- modal criar -->
+
       <div class="modal modal-criar" id="modalCriar">
         <div class="modal-content modal-content-criar">
           <form action = "/creat" method = "post">
@@ -109,8 +111,11 @@
         </div>
       </div>
 
+        <!-- Fim modal criar -->
 
-       <!-- modal editar -->
+
+       <!-- modal view -->
+
        <?php foreach($users as $user) :
         ?>
       <div class="modal modal-view modalView" id="modalView<?= $user->id ?>">
@@ -141,7 +146,10 @@
       </div>
       <?php endforeach;
         ?>
-       <!-- fim modal editar -->
+
+       <!-- fim modal view -->
+
+
       <!-------------- Modal Excluir ------------------>
 
       <?php foreach($users as $user) :
@@ -171,33 +179,45 @@
       </div>
       <?php endforeach;
       ?>
+
       <!-------------- Fim Modal Excluir ------------------>
 
-      <!-------------- Tela de editar usário ------------------>
-      <div class="modal modal-edit" id="modalEdit">
-        <div class="modal-content modal-content-edit">
-          <form>
-            <h2>Editar usuário</h2>
-            <!-- inputs do modal -->
-            <div class="input-box-edit">
-              <label for="edit-name">Nome:</label>
-              <input type="text" id="edit-name" value="Fulano" />
-              <label for="edit-email">Email:</label>
-              <input type="email" id="edit-email" value="fulano@gmail.com" />
-              <label for="edit-password">Senha:</label>
-              <input type="password" id="edit-password" value="muitodificil" />
-            </div>
-            <!-- fim inputs do modal -->
-            <!-- div de botão -->
-            <div class="button-box">
-              <button type="button" class="cancel-button" onclick="closeModal('modalEdit')">
-                Cancelar
-              </button>
-              <button id="save-button">Salvar</button>
-            </div>
-          </form>
+
+      <!-------------- Modal Edit ------------------>
+
+      <?php foreach($users as $user): ?>
+  <div class="modal modal-edit" id="modalEdit-<?= $user->id ?>">
+    <div class="modal-content modal-content-edit">
+      <form action="/edit" method="post">
+        <input type="hidden" name="id" value="<?= $user->id ?>"> <!-- Input oculto para ID -->
+
+        <h2>Editar usuário</h2>
+        
+        <!-- Campos do formulário -->
+        <div class="input-box-edit">
+          <label for="edit-name-<?= $user->id ?>">Nome:</label>
+          <input type="text" id="edit-name-<?= $user->id ?>" name="name" value="<?= $user->name ?>" />
+
+          <label for="edit-email-<?= $user->id ?>">Email:</label>
+          <input type="email" id="edit-email-<?= $user->id ?>" name="email" value="<?= $user->email ?>" />
+
+          <label for="edit-password-<?= $user->id ?>">Senha:</label>
+          <input type="password" id="edit-password-<?= $user->id ?>" name="password" value="" />
         </div>
-      </div>
+
+        <!-- Botões -->
+        <div class="button-box">
+          <button type="button" class="cancel-button" onclick="closeModal('modalEdit-<?= $user->id ?>')">
+            Cancelar
+          </button>
+          <button type="submit" id="save-button-<?= $user->id ?>">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<?php endforeach; ?>
+
+      <!-------------- Fim Modal Edit ------------------>
     </div>
     <script src="/public/js/adm-tabela-usu.js"></script>
   </body>
