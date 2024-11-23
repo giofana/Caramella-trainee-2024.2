@@ -17,11 +17,13 @@ class PostsController
 
     // TODO: arrumar autor
     public function edit(){
-        $temporario = $_FILES['editImagem']['tmp_name'];
-        $nomeimagem =  sha1(uniqid($_FILES['editImage']['name'], true)) . '.' . pathinfo($_FILES['editImage']['name'], PATHINFO_EXTENSION);
-        $destinoimagem = "public/imagens/";
-        move_uploaded_file($temporario, $destinoimagem . $nomeimagem);
-        $caminhodaimagem = "public/imagens/" . $nomeimagem;
+        $id = $_POST['editId'];
+        $file = $_FILES['editImagem'];
+        $extensao = strtolower(pathinfo($file['name'],PATHINFO_EXTENSION));
+
+        App::get('database')->verificaExtensao($extensao);
+        App::get('database')->verificaErroUpload($file);
+        $img = App::get('database')->uploadImage($file, $id);
 
         $parameters = [
             'title' => $_POST['editTitulo'],
@@ -31,10 +33,9 @@ class PostsController
             'time' => $_POST['editTempo'],
             'history' => $_POST['editHistoria'],
             'prepare' => $_POST['editPreparo'],
-            'image' => $caminhodaimagem,
+            'image' => $img,
             'ingredients' => $_POST['editIngrediente'],
         ];
-        $id = $_POST['editId'];
 
         App::get('database')->update('posts', $id, $parameters);
         header('Location: /posts-list');
@@ -49,22 +50,22 @@ class PostsController
 
     // TODO: fix autor para autor logado e imagem
     public function createPost(){
-        $temporario = $_FILES['imagem-receita']['tmp_name'];
-        $nomeimagem =  sha1(uniqid($_FILES['imagem-receita']['name'], true)) . '.' . pathinfo($_FILES['imagem-receita']['name'], PATHINFO_EXTENSION);
-        $destinoimagem = "public/imagens/";
-        move_uploaded_file($temporario, $destinoimagem . $nomeimagem);
-        $caminhodaimagem = "public/imagens/" . $nomeimagem;
+        $file = $_FILES['imagem-receita'];
+        $extensao = strtolower(pathinfo($file['name'],PATHINFO_EXTENSION));
 
+        App::get('database')->verificaExtensao($extensao);
+        App::get('database')->verificaErroUpload($file);
+        $img = App::get('database')->uploadImage($file, 0);
 
         $parameters = [
             'title' => $_POST['titulo-receita'],
-            'author' => 1,
+            'author' => "1",
             'cost' => $_POST['custo-receita'],
             'difficulty' => $_POST ['dificuldade-receita'],
             'time' => $_POST['tempo-receita'],
             'history' => $_POST['historia-receita'],
             'prepare' => $_POST['modo-receita'],
-            'image' => $caminhodaimagem,
+            'image' => "$img",
             'ingredients' => $_POST['ingredientes-receita'],
         ];
 
