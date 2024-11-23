@@ -401,6 +401,7 @@ form > h2 {
 }
 
 #create-ingredient,
+#edit-ingredient,
 #delete-ingredient {
   font-family: "Josefin Sans";
   padding: 1.5%;
@@ -415,6 +416,7 @@ form > h2 {
 }
 
 #create-ingredient:hover,
+#edit-ingredient:hover,
 #delete-ingredient:hover {
   transform: scale(1.04);
   box-shadow: #64473b 0px 0px 10px;
