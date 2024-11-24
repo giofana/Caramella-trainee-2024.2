@@ -46,7 +46,7 @@ class QueryBuilder
 
 
     public function verificaExtensao($ext){
-        if($ext === "jpg" || $ext === "jpeg" || $ext === "png"){
+        if($ext === "jpg" || $ext === "jpeg" || $ext === "png" || $ext===""){
             return;
         }
         echo "Arquivo não é uma imagem / Extensão não permitida.";
