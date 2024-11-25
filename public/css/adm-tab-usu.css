@@ -153,6 +153,10 @@ body {
   width: 45%;
 }
 
+.email21{
+  overflow-x: scroll;
+}
+
 .barra2b {
   display: flex;
   align-items: center;
@@ -294,6 +298,12 @@ body {
   justify-content:space-between;
   align-items: center;
   padding: 0 0.7rem;
+}
+
+.disable {
+  pointer-events: none; 
+  opacity: 0.5;       
+  cursor: not-allowed; 
 }
 
 .bg-view label {
@@ -650,5 +660,18 @@ input:focus {
   .barra2b,
   .acoes {
     width: 50%;
+  }
+
+  .row-view-info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bg-view{
+    width: 100%;
+  }
+
+  .row-view-info{
+    gap: 0px;
   }
 }
