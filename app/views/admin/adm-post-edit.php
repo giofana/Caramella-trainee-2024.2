@@ -1,5 +1,4 @@
-
-    <div class="modal" id="modalEditar<?= $post->id; ?>">
+<div class="modal" id="modalEditar<?= $post->id; ?>">
       <form action="posts-list/edit-post" method="POST" enctype="multipart/form-data" >
         <h2>Preencha todos os campos abaixo para criar post:</h2>
         <div class="inputModal">
@@ -79,7 +78,7 @@
         <ul class="ingredient-list" id="ingredientesListEdit<?= $post->id; ?>"></ul>
         <!-- para receber os ingredientes atuais e atuasliza com a edição -->
         <input type="hidden" id="ingredientesEdit<?= $post->id; ?>" name="editIngrediente" value='<?= $post->ingredients; ?>' />
-        
+
         <div class="inputModal">
           <label for="Modo1">Modo de preparo</label
           ><textarea id="Modo1" rows="3" name="editPreparo"><?= $post->prepare ?></textarea>
@@ -94,9 +93,7 @@
         <input type="hidden" name="editId" value="<?= $post->id ?>">
         <div id="btCC">
           <button type="submit">Editar</button>
+          <button type="button" class="cancel-button" onclick="closeModal('modalEditar<?= $post-> id ?>')">Cancelar</button>
         </div>
-      </form>
-      <form action="/posts-list/edit-post-cancel" method="get" class="cancel-form">
-          <button type="submit" class="cancel-button">Cancelar</button>
       </form>
     </div>
