@@ -73,7 +73,7 @@
           <?php endif; ?>
         </div>
         <div class="btnf">
-          <button class="btnfechar" onclick="closeModal('modalCriar')">
+          <button type="button" class="btnfechar" onclick="closeModal('modalVisu<?= $post->id ?>')">
             Fechar
           </button>
         </div>
