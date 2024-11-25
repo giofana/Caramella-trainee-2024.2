@@ -94,7 +94,9 @@
         <input type="hidden" name="editId" value="<?= $post->id ?>">
         <div id="btCC">
           <button type="submit">Editar</button>
-          <button type="button" onclick="closeModal('modalEditar<?= $post->id; ?>')">Cancelar</button>
         </div>
+      </form>
+      <form action="/posts-list/edit-post-cancel" method="get" class="cancel-form">
+          <button type="submit" class="cancel-button">Cancelar</button>
       </form>
     </div>

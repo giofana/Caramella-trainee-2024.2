@@ -73,6 +73,12 @@ class PostsController
         header('Location: /posts-list');
 
     }
+
+    public function cancel(){
+        header('Location: /posts-list');
+        exit;
+
+    }
 }
 
 ?>

@@ -366,14 +366,16 @@ form > h2 {
   background-color: rgb(65, 163, 65);
 }
 
-.btnf {
+.btnf,
+.cancel-button {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
 
-.btnfechar {
+.btnfechar,
+.cancel-button {
   font-family: "Josefin Sans";
   flex: 0 1;
   padding: 15px 20px;
@@ -387,7 +389,8 @@ form > h2 {
   font-size: 16px;
 }
 
-.btnf button:hover {
+.btnf button:hover,
+.cancel-button:hover {
   transform: scale(1.05);
   box-shadow: #64473b 0px 0px 10px;
   cursor: pointer;
@@ -537,10 +540,17 @@ form > h2 {
     margin-top: 8vh;
     margin-bottom: 2vh;
     scale: 0.9;
+    width: fit-content;
+    height: fit-content;
   }
 
   #btCC > button {
     font-size: 24px;
+  }
+
+  .cancel-form {
+    display: inline-block;
+    width: fit-content;
   }
 
   /* /------------------------------------ Fim Modal de Criar Post ---------------------------------------/ */

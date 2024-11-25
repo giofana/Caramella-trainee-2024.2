@@ -8,6 +8,7 @@ function openModal(modalId, mode = null, ingredients = null, id = null) {
   if (mode == "view") {
     displayIngredients(ingredients, id);
   } else if (mode == "edit") {
+    console.log(ingredientes);
     displayIngredientsEdit(ingredients, id);
   }
 }
@@ -169,7 +170,6 @@ function addIngredientEdit(id) {
   const ingredienteNovo = ingredienteInput.value.trim();
   // transformando ingredientes antigos em json -> reutilizando a variuavel criada no escopo global
   ingredientes = JSON.parse(ingredientes);
-  console.log(ingredientes);
 
   if (ingredienteNovo) {
     ingredientes.push(ingredienteNovo);
