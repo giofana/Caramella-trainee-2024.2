@@ -15,6 +15,10 @@ function openModal(modalId, mode = null, ingredients = null, id = null) {
 
 function closeModal(modalId) {
   const modal = document.getElementById(modalId);
+  const form = document.querySelector(`#${modalId} form`);
+  form.querySelectorAll(".ingrediente-item").forEach(campo => {
+    campo.remove();
+  });
   modal.style.display = "none";
   tela.style.display = "none";
 }
