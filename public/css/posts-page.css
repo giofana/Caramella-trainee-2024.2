@@ -762,19 +762,19 @@ form > h2 {
   display: flex;
   justify-content: space-between; /* Espaça o conteúdo */
   align-items: center; /* Centraliza verticalmente */
-  width: 48%;
+  width: 45%;
 }
 
 #ingredientesList,
 .ingredientesList,
 #ingredientesListEdit,
 .ingredient-list {
+  padding-inline-start: 0px;
   display: flex;
   flex-wrap: wrap; /*itens quebram para a próxima linha */
   justify-content: space-between;
-  justify-items: center;
   width: 100%;
-  row-gap: 4px;
+  row-gap: 6px;
 }
 
 .remove-ingredient {
@@ -787,7 +787,6 @@ form > h2 {
   transition: background-color 0.3s ease;
   width: 10%;
   height: 100%;
-  padding: 1%;
   display: flex;
   justify-content: center;
   align-items: center;
