@@ -61,7 +61,7 @@
     </div>
     <div class="inputModal">
       <label for="Imagem">Imagem</label>
-      <input required id="Imagem" type="file" name="imagem-receita"/>
+      <input required accept="image/*" id="Imagem" type="file" name="imagem-receita"/>
     </div>
     <div id="btCC">
       <button>Criar</button>

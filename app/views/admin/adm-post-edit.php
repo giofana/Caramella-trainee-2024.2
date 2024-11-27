@@ -88,7 +88,8 @@
           ><textarea id="História1" rows="3" name="editHistoria"><?= $post->history ?></textarea>
         </div>
         <div class="inputModal">
-          <label for="Imagem1">Imagem</label><input id="Imagem1" type="file" name="editImagem" value="<?= $post->image ?>" />
+          <label for="Imagem1">Imagem</label>
+          <input accept="image/*" id="Imagem1" type="file" name="editImagem" value="<?= $post->image ?>" />
         </div>
         <input type="hidden" name="editId" value="<?= $post->id ?>">
         <div id="btCC">

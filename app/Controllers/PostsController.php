@@ -21,7 +21,6 @@ class PostsController
         $file = $_FILES['editImagem'];
         $extensao = strtolower(pathinfo($file['name'],PATHINFO_EXTENSION));
 
-        App::get('database')->verificaExtensao($extensao);
         App::get('database')->verificaErroUpload($file);
         $img = App::get('database')->uploadImage($file, $id);
 
@@ -53,7 +52,6 @@ class PostsController
         $file = $_FILES['imagem-receita'];
         $extensao = strtolower(pathinfo($file['name'],PATHINFO_EXTENSION));
 
-        App::get('database')->verificaExtensao($extensao);
         App::get('database')->verificaErroUpload($file);
         $img = App::get('database')->uploadImage($file, 0);
 
@@ -74,11 +72,6 @@ class PostsController
 
     }
 
-    // public function cancel(){
-    //     header('Location: /posts-list');
-    //     exit;
-
-    // }
 }
 
 ?>

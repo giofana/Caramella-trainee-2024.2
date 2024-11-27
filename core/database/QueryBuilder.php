@@ -45,15 +45,6 @@ class QueryBuilder
     }
 
 
-    public function verificaExtensao($ext){
-        if($ext === "jpg" || $ext === "jpeg" || $ext === "png" || $ext===""){
-            return;
-        }
-        echo "Arquivo não é uma imagem / Extensão não permitida.";
-        die();
-    }
-
-
     public function uploadImage ($arquivo, $id){
 
         $pasta = "public/imagens/";
