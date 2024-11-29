@@ -504,6 +504,7 @@ form > h2 {
 }
 
 
+
 .botm button {
   width: 7vw;
   height: 3vh;
@@ -578,6 +579,8 @@ form > h2 {
 
   /* /------------------------------------ Fim Modal de Criar Post ---------------------------------------/ */
 }
+
+
 
 @media (max-width: 1024px) {
   .botao-criar button {

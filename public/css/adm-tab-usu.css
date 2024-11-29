@@ -11,7 +11,6 @@ body {
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
   padding: 5% 0 0 0;
   z-index: 1;
-  overflow: hidden;
 }
 
 .corpo {
@@ -19,9 +18,19 @@ body {
   justify-content: center;
   background-color: rgba(100, 71, 59, 0.42);
   width: 80vw;
-  height: 80vh;
+  height: fit-content;
   border-radius: 60px;
+  overflow: hidden;
+  margin-bottom: 10%;
+
 }
+
+.view1{
+  display: flex;
+  align-items: flex-end;
+}
+
+
 
 .topo {
   display: flex;
@@ -144,6 +153,10 @@ body {
   width: 45%;
 }
 
+.email21{
+  overflow-x: scroll;
+}
+
 .barra2b {
   display: flex;
   align-items: center;
@@ -178,6 +191,7 @@ body {
   display: flex;
   justify-content:center;
   padding: 2% 0;
+  margin-bottom: 3%;
 }
 
 .pagina a {
@@ -270,6 +284,10 @@ body {
   align-items: center;
 }
 
+.senha{
+  overflow-x: scroll;
+}
+
 .bg-view {
   width: 70%;
   height: 40px;
@@ -278,8 +296,15 @@ body {
   padding-left: 10px;
   border-radius: 20px;
   display: flex;
-  justify-content: flex-start;
+  justify-content:space-between;
   align-items: center;
+  padding: 0 0.7rem;
+}
+
+.disable {
+  pointer-events: none; 
+  opacity: 0.5;       
+  cursor: not-allowed; 
 }
 
 .bg-view label {
@@ -453,12 +478,16 @@ input:focus {
   .button-box {
     margin: 5% 0 5% 0;
   }
+
+  .pagina{
+    margin-bottom: 10%;
+  }
 }
 
 @media (max-width: 1024px) {
   .corpo {
     width: 93vw;
-    height: 93vh;
+    height: fit-content;
   }
 
   .barras {
@@ -532,6 +561,7 @@ input:focus {
 
   .corpo {
     width: 100%;
+    height: fit-content;
     overflow-x: auto;
   }
 
@@ -636,5 +666,18 @@ input:focus {
   .barra2b,
   .acoes {
     width: 50%;
+  }
+
+  .row-view-info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bg-view{
+    width: 100%;
+  }
+
+  .row-view-info{
+    gap: 0px;
   }
 }

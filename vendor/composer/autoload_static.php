@@ -26,7 +26,11 @@ class ComposerStaticInit90bbf95869b4e88bf0dc5022e708a458
 
     public static $classMap = array (
         'App\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Controllers/ExampleController.php',
+<<<<<<< HEAD
         'App\\Controllers\\PostsController' => __DIR__ . '/../..' . '/app/Controllers/PostsController.php',
+=======
+        'App\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Controllers/UsersController.php',
+>>>>>>> main
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
@@ -36,6 +40,7 @@ class ComposerStaticInit90bbf95869b4e88bf0dc5022e708a458
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit90bbf95869b4e88bf0dc5022e708a458' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+<<<<<<< HEAD
         'PHPMailer\\PHPMailer\\DSNConfigurator' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/DSNConfigurator.php',
         'PHPMailer\\PHPMailer\\Exception' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/Exception.php',
         'PHPMailer\\PHPMailer\\OAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/OAuth.php',
@@ -91,6 +96,8 @@ class ComposerStaticInit90bbf95869b4e88bf0dc5022e708a458
         'PHPMailer\\Test\\Security\\DenialOfServiceVectorsTest' => __DIR__ . '/..' . '/phpmailer/phpmailer/test/Security/DenialOfServiceVectorsTest.php',
         'PHPMailer\\Test\\SendTestCase' => __DIR__ . '/..' . '/phpmailer/phpmailer/test/SendTestCase.php',
         'PHPMailer\\Test\\TestCase' => __DIR__ . '/..' . '/phpmailer/phpmailer/test/TestCase.php',
+=======
+>>>>>>> main
     );
 
     public static function getInitializer(ClassLoader $loader)
