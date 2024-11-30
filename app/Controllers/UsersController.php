@@ -8,10 +8,34 @@ use Exception;
 class UsersController
 {
 
+
+    //usado na paginacao
     public function index()
     {
-        $users = App::get('database')->selectAll('users');
-        return view('admin/adm-tabela-usu', compact('$users'));
+
+        $page = 1;
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
+            $page = intval($_GET['paginacaoNumero']);
+            
+            if($page <= 0 ){
+                return redirect('admin/adm-tabela-usu');
+
+            }
+
+        }
+
+        $itensPage = 5;
+        $inicio = $itensPage * $page - $itensPage;
+        $count = App::get('database')-> countAll('users');
+
+        if($inicio > $count){
+            return redirect('admin/adm-tabela-usu');
+        }
+
+        $users = App::get('database')->selectAll('users', $inicio, $itensPage);
+
+        $total_pages = ceil($count/$itensPage);
+        return view('admin/adm-tabela-usu', compact('users', 'page', 'total_pages'));
 
     }
 

@@ -311,6 +311,12 @@ body {
   font-size: 20px;
 }
 
+.pagina a.active {
+  background-color: #D0F4D4;
+  border: 2px solid #fad2a4; 
+  transform: scale(1.1); 
+  box-shadow: 0 0 15px rgba(250, 210, 164, 0.8); 
+}
 /* ------------ estilo da tela de editar ----------------- */
 
 .modal-content-edit,
@@ -551,6 +557,8 @@ input:focus {
     padding: 0.5%;
     margin-top: 3%;
   }
+
+  
 }
 
 @media (max-width: 540px) {

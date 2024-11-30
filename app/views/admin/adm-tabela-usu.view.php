@@ -76,15 +76,21 @@
       <?php endforeach;
         ?>
 
-      <div class="pagina">
-        <a href="#">&laquo;</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">&raquo;</a>
+<!-- paginaçao -->
+
+      <div class="pagina ativo">
+        <a class = "pagina <?= $page <= 1 ? "disable" : "" ?>"href="?paginaçaousuarionumber=<? $page - 1 ?>">&laquo;</a>
+
+        <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+
+        <a class = "pag-number <?= $page_number == $page ? "active" : "" ?>" href="?paginaçaousuarionumber=<?= $page_number ?>"><?= $page_number ?></a>
+
+        <?php endfor; ?>
+
+        <a class = "pagina <?= $total_pages >= 1 ? "disable" : "" ?>"href="?paginaçaousuarionumber=<? $page + 1 ?>">&raquo;</a>
       </div>
+
+      <!-- paginaçao -->
 
       <!-- modal criar -->
 
