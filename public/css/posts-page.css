@@ -9,7 +9,7 @@ body {
   width: 100vw;
   overflow: hidden;
   font-family: "Josefin Sans";
-  background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%)
+  background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
 }
 
 /* --------------- Card e Card Header --------------- */
@@ -37,11 +37,10 @@ body {
   flex-wrap: nowrap;
 }
 
-.botao-criar{
+.botao-criar {
   display: flex;
   align-self: center;
 }
-
 
 .top p {
   display: flex;
@@ -64,10 +63,10 @@ body {
   gap: 20px;
 }
 
-tbody{
+tbody {
   display: flex;
   flex-direction: column;
-  gap:12px;
+  gap: 12px;
 }
 
 .linha-header,
@@ -477,11 +476,11 @@ form > h2 {
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
 }
 
-.excluir p{
+.excluir p {
   font-size: 24px;
 }
 
-.excluir h1{
+.excluir h1 {
   font-size: 32px;
 }
 
@@ -530,8 +529,6 @@ form > h2 {
   box-shadow: #64473b 0px 0px 10px;
 }*/
 
-
-
 /* Fim modal excluir*/
 
 @media (min-width: 600px) and (max-width: 1020px) {
@@ -576,18 +573,14 @@ form > h2 {
     font-size: 24px;
   }
 
-
   /* /------------------------------------ Fim Modal de Criar Post ---------------------------------------/ */
 }
-
-
 
 @media (max-width: 1024px) {
   .botao-criar button {
     margin-top: 0;
     width: 95%;
   }
-
 
   .top {
     flex-direction: column;
@@ -605,67 +598,65 @@ form > h2 {
     width: 50%;
   }
 
-
   /* Inicio modal excluir*/
 
-.modall {
-  display: none; /* Ocultar o modal por padrão */
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  overflow-y: auto; /* Habilitar rolagem se necessário */
-  background-color: rgba(0, 0, 0, 0.5);
+  .modall {
+    display: none; /* Ocultar o modal por padrão */
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto; /* Habilitar rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-content,
+  .modal-content-edit {
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .excluir {
+    height: fit-content;
+    width: fit-content;
+    align-items: center;
+    position: absolute;
+  }
+
+  .excluir p {
+    font-size: 24px;
+    padding-bottom: 2px;
+  }
+
+  .excluir h1 {
+    font-size: 32px;
+  }
+
+  .excluir img {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    width: 65%;
+  }
+
+  .canc,
+  .exc {
+    width: fit-content;
+  }
+
+  #btCC > .canc,
+  #btCC > .exc {
+    font-size: 18px;
+  }
+
+  /* fim modal de excluir */
 }
 
-.modal-content,
-.modal-content-edit {
-  padding: 40px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.excluir {
-  height: fit-content;
-  width: fit-content;
-  align-items: center;
-  position: absolute;
-}
-
-.excluir p{
-  font-size: 24px;
-  padding-bottom: 2px;
-}
-
-.excluir h1{
-  font-size: 32px;
-}
-
-.excluir img {
-  margin-top: 5%;
-  margin-bottom: 10%;
-  width: 65%;
-}
-
-.canc,.exc{
-  width: fit-content;
-}
-
-#btCC > .canc, #btCC > .exc{
-  font-size: 18px;
-}
-
-
-/* fim modal de excluir */
-
-}
-
-@media (max-width: 768px){
-
-  .container{
+@media (max-width: 768px) {
+  .container {
     overflow: hidden;
   }
 
@@ -681,23 +672,24 @@ form > h2 {
     align-items: center;
   }
 
-  .top p{
+  .top p {
     font-size: 52px;
   }
 
-  td, th{
+  td,
+  th {
     font-size: 24px;
     font-weight: bold;
   }
 
-  .tabela{
+  .tabela {
     overflow-x: auto;
     align-items: flex-start;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .botao-criar{
+  .botao-criar {
     width: 44px;
   }
 
@@ -707,7 +699,7 @@ form > h2 {
 
   .botao-criar button img {
     padding: 4px;
-    width:70%;
+    width: 70%;
   }
 
   .linha-comum,
@@ -716,11 +708,11 @@ form > h2 {
     width: 750px;
   }
 
-  .square{
+  .square {
     width: 32px;
     border-radius: 8px;
   }
-  .square img{
+  .square img {
     width: 75%;
   }
 
@@ -729,28 +721,21 @@ form > h2 {
     gap: 12%;
   }
 
-  .pagination a{
+  .pagination a {
     margin: 0 0.75%;
   }
 
- /* Inicio modal excluir*/
+  /* Inicio modal excluir*/
 
+  .excluir img {
+    width: 60%;
+  }
 
-.excluir img {
-  width:60%;
-}
-
-
-
-/* fim modal de excluir */
-
-
+  /* fim modal de excluir */
 }
 
 @media (max-width: 425px) {
-
-
-  .container{
+  .container {
     overflow: hidden;
   }
 
@@ -767,11 +752,12 @@ form > h2 {
     align-items: center;
   }
 
-  .top p{
+  .top p {
     font-size: 44px;
   }
 
-  td, th{
+  td,
+  th {
     font-size: 24px;
     font-weight: bold;
   }
@@ -785,13 +771,13 @@ form > h2 {
     display: none;
   }
 
-  .tabela{
+  .tabela {
     overflow-x: auto;
     align-items: center;
     padding: 0;
   }
 
-  .botao-criar{
+  .botao-criar {
     width: 44px;
   }
 
@@ -801,7 +787,7 @@ form > h2 {
 
   .botao-criar button img {
     padding: 4px;
-    width:70%;
+    width: 70%;
   }
 
   .linha-comum,
@@ -810,11 +796,11 @@ form > h2 {
     justify-content: space-around;
   }
 
-  .square{
+  .square {
     width: 32px;
     border-radius: 8px;
   }
-  .square img{
+  .square img {
     width: 75%;
   }
 
@@ -823,21 +809,19 @@ form > h2 {
     gap: 20px;
   }
 
-  .pagination a{
+  .pagination a {
     width: 35px;
     height: 36px;
     margin: 0 0.75%;
   }
 
-   /* Inicio modal excluir*/
+  /* Inicio modal excluir*/
 
+  .excluir img {
+    width: 55%;
+  }
 
-.excluir img {
-  width:55%;
-}
-
-
-/* fim modal de excluir */
+  /* fim modal de excluir */
 
   /* /----------------------------------- Modal de Criar Post ---------------------------------------------/ */
   /* Bruno */
@@ -868,73 +852,72 @@ form > h2 {
 }
 
 @media (max-width: 375px) {
-  .top p{
+  .top p {
     text-wrap: pretty;
     text-align: center;
   }
 
-  .tabela th{
+  .tabela th {
     justify-content: center;
   }
 
-  .linha-comum{
+  .linha-comum {
     justify-content: space-around;
   }
 
-  .tabela td, th{
+  .tabela td,
+  th {
     font-size: 22px;
   }
 
-  .botao-criar{
+  .botao-criar {
     width: 40px;
   }
 
   .botao-criar button img {
     padding: 4px;
-    width:70%;
+    width: 70%;
   }
 
-  .celula-acoes{
+  .celula-acoes {
     gap: 8px;
     justify-content: center;
   }
 
-  .square{
+  .square {
     width: 28px;
   }
-  .square img{
+  .square img {
     width: 85%;
   }
 
-  .pagination a{
+  .pagination a {
     width: 4px;
     height: 4px;
     padding: 12px;
     margin: 0 1%;
   }
 
-   /* Inicio modal excluir*/
+  /* Inicio modal excluir*/
 
-
-   .excluir img {
-    width:50%;
+  .excluir img {
+    width: 50%;
   }
 
-  .excluir p{
+  .excluir p {
     font-size: 20px;
   }
 
-  .excluir h1{
+  .excluir h1 {
     font-size: 28px;
   }
 
-  #btCC > .canc, #btCC > .exc{
+  #btCC > .canc,
+  #btCC > .exc {
     font-size: 14px;
   }
 
-
   /* fim modal de excluir */
-
 }
 
 /* ---------------- Estilo para ingredientes adicionados com js ---------------- */
@@ -1007,4 +990,8 @@ form > h2 {
     padding: 3%;
     margin: 2%;
   }
+}
+
+.pagination a.active {
+  background-color: #e7baa7;
 }

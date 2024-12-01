@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -94,17 +96,19 @@
           </table>
         </div>
 
-        <div class="bottom">
-          <div class="pagination">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">&raquo;</a>
+        <!-- TODO: terminar para estilizar o previous e next -->
+          <!-- TODO: terminar para estilizar o previous e next -->
+          <div class="bottom">
+            <div class="pagination">
+              <a class="page-previous<?= $page <= 1 ? " disabled" : "" ?>" href="?paginaLista=<?= $page - 1 ?>">&laquo;</a>
+
+              <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                <a class="link_pagination <?= $i == $page ? "active" : "" ?>" href="?paginaLista=<?= $i ?>"><?= $i ?></a>
+              <?php endfor ?>
+
+              <a class="page-next<?= $page >= $total_pages ? " disabled" : "" ?>" href="?paginaLista=<?= $page + 1 ?>">&raquo;</a>
+            </div>
           </div>
-        </div>
       </div>
     </div>
 

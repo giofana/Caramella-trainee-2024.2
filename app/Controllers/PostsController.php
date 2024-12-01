@@ -7,12 +7,31 @@ use Exception;
 
 class PostsController
 {
-
     public function index()
     {
-        // retornando todos os posts da tabela de posts
-        $posts = App::get('database')->selectAll('posts');
-        return view('admin/posts-page', compact('posts'));
+        $page = 1;
+
+        if (isset($_GET['paginaLista']) && !empty($_GET['paginaLista'])) {
+            $page = intval($_GET['paginaLista']);
+            if ($page <= 0) {
+                header('Location: /posts-list?paginaLista=1');
+                exit();
+            }
+        }
+
+        $itensView = 5; 
+        $startPage = $itensView * $page - $itensView;
+        $rowsCount = App::get('database')->countAll('posts');
+        $total_pages = ceil($rowsCount / $itensView);
+
+        if ($page > $total_pages) {
+            header('Location: /posts-list?paginaLista=' . $total_pages);
+            exit();
+        }
+
+        $posts = App::get('database')->selectAll('posts', $startPage, $itensView);
+
+        return view('admin/posts-page', compact('posts', 'page', 'total_pages'));
     }
 
     // TODO: arrumar autor
