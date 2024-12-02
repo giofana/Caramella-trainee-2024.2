@@ -108,7 +108,7 @@
 
               <a class="page-next<?= $page >= $total_pages ? " disabled" : "" ?>" href="?paginaLista=<?= $page + 1 ?>">&raquo;</a>
             </div>
-          </div>
+          </div>  
       </div>
     </div>
 
