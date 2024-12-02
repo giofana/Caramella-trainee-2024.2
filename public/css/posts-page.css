@@ -960,6 +960,7 @@ form > h2 {
   justify-content: space-between;
   width: 100%;
   row-gap: 6px;
+  margin: 0;
 }
 
 .remove-ingredient {
@@ -998,12 +999,26 @@ form > h2 {
     height: 100%;
   }
 
-  #create-ingredient {
+  .btt-ingredient {
+    height: 6vh;
+  }
+
+  .create-ingredient {
     padding: 3%;
     margin: 2%;
+    height: 60%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .create-ingredient {
+    height: 50%;
+    font-size: 12px;
+    padding: 2%;
   }
 }
 
 .pagination a.active {
-  background-color: #e7baa7;
+  background-color: #d0f4d4;
 }
