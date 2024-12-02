@@ -53,11 +53,6 @@ class UsersController
         return redirect('users');
     }
 
-    public function users()
-    {
-        $users = App::get('database')->selectAll('users');
-        return view('admin/adm-tabela-usu', compact('users'));
-    }
 
     public function delete()
     {

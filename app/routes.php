@@ -10,7 +10,7 @@ use App\Core\Router;
     $router->get('posts-list/view-post', 'PostsController@viewPostAdmin');
     $router->post('posts-list/create', 'PostsController@createPost');
 
-    $router->get('users', 'UsersController@users');
+    $router->get('users', 'UsersController@index');
     
     $router->post('creat', 'UsersController@creat');
     $router->post('delete', 'UsersController@delete');

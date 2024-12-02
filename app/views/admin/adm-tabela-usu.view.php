@@ -79,15 +79,15 @@
 <!-- paginaçao -->
 
       <div class="pagina ativo">
-        <a class = "pagina <?= $page <= 1 ? "disable" : "" ?>"href="?paginaçaousuarionumber=<? $page - 1 ?>">&laquo;</a>
+        <a class = "pagina <?= $page <= 1 ? "disable" : "" ?>"href="?paginacaoNumero=<?= $page - 1 ?>">&laquo;</a>
 
         <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
 
-        <a class = "pag-number <?= $page_number == $page ? "active" : "" ?>" href="?paginaçaousuarionumber=<?= $page_number ?>"><?= $page_number ?></a>
+        <a class = "pag-number <?= $page_number == $page ? "active" : "" ?>" href="?paginacaoNumero=<?= $page_number ?>"><?= $page_number ?></a>
 
         <?php endfor; ?>
 
-        <a class = "pagina <?= $total_pages >= 1 ? "disable" : "" ?>"href="?paginaçaousuarionumber=<? $page + 1 ?>">&raquo;</a>
+        <a class = "pagina <?= $page >= $total_pages ? "disable" : "" ?>"href="?paginacaoNumero=<?= $page + 1 ?>">&raquo;</a>
       </div>
 
       <!-- paginaçao -->
