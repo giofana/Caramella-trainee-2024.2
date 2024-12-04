@@ -14,7 +14,14 @@
       <div id="dashboard">
         <div class="botoes"><a href="#"><img src="/public/assets/posts.png" alt=""><label>Lista de publicações</label></a></div>
         <div class="botoes"><a href="#"><img src="/public/assets/users.png" alt=""><label>Lista de usuários</label></a></div>
-        <div class="botoes"><a href="#"><img src="/public/assets/logout.png" alt=""><label>Logout</label></a></div>
+        <div class="botoes">
+          <form action="/logout" method="POST">
+            <button type="submit">
+              <img src="/public/assets/logout.png" alt="Logout">
+              <label>Logout</label>
+            </button>
+          </form>
+        </div>
       </div>
     </main>
   </body>

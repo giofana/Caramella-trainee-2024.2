@@ -134,7 +134,7 @@ class QueryBuilder
     }
     }
 
-    public function insert($table, $parametros)
+    public function insertUser($table, $parametros)
     {
         $sql = sprintf(
             'INSERT INTO %s (%s) VALUE (%s)',
@@ -154,7 +154,7 @@ class QueryBuilder
         }
     }
 
-    public function delete($table, $id)
+    public function deleteUser($table, $id)
     {
         $sql = sprintf('DELETE FROM %s WHERE id = :id', $table); // %s e :id são placeholders
         try {
@@ -205,4 +205,33 @@ class QueryBuilder
     /* Usando placeholders como %s o valor é substituído diretamente na string SQL antes de a consulta ser preparada ou executada.
     Quando você usa placeholders nomeados, como :id, você está apenas referenciando o valor que será associado posteriormente à consulta, a substituição ocorre somente quando você executa a consulta. 
     O segundo método é mais seguro, evita SQL Injection */
+
+
+    // Função de Login
+    public function verificaLogin($email, $senha)
+    {
+        $sql = 'SELECT * FROM users WHERE email = :email AND password = :password';
+
+        try {
+            // Prepara a consulta
+            $stmt = $this->pdo->prepare($sql);
+            
+            // Executa a consulta com os parâmetros
+            $stmt->execute([
+                'email' => $email,
+                'password' => $senha // Corrigido para 'password' que é o nome correto do parâmetro na consulta
+            ]);
+
+            // Recupera o usuário
+            $user = $stmt->fetch(PDO::FETCH_OBJ);
+
+            // Retorna o usuário encontrado
+            return $user;
+
+        } catch (Exception $e) {
+            // Em caso de erro, exibe a mensagem
+            die($e->getMessage());
+        }
+    }
+
 }

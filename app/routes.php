@@ -16,4 +16,9 @@ use App\Core\Router;
     $router->post('delete', 'UsersController@delete');
     $router->post('edit', 'UsersController@edit');
 
+    $router->get('dashboard', 'UsersController@exibirDashboard');
+    $router->get('login', 'UsersController@exibirLogin');
+    $router->post('login', 'UsersController@efetuaLogin');
+    $router->post('logout', 'UsersController@logout');
+
 ?>

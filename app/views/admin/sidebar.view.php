@@ -44,10 +44,12 @@
           </li>
         </ul>
         <div id="logout-container">
-          <button id="logout-button">
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            <p class="item-title">Logout</p>
-          </button>
+          <form action="/logout" method="POST">
+            <button id="logout-button" type="submit">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <p class="item-title">Logout</p>
+            </button>
+          </form>
         </div>
         <button id="open-button">
           <i id="open-button-icon" class="fa-solid fa-chevron-right open"></i>
