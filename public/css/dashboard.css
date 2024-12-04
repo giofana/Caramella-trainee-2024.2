@@ -28,7 +28,7 @@ body {
 
 /*---------------------INICIO BOTOES---------------------*/
 
-.botoes > a {
+.botoes > a, .botoes > form {
   display: flex;
   background: #ffd5a5;
   justify-content: center;
@@ -44,14 +44,28 @@ body {
   text-align: center;
 }
 
-.botoes > a:hover {
+form > .logout{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #00000000;
+}
+
+.botoes > a:hover, .botoes > form:hover {
   background: linear-gradient(to bottom, #facb95 30%, #ffb662 100%);
   scale: 1.05;
   cursor: pointer;
   transition: all 0.4s ease;
 }
 
-a > label {
+.logout:hover{
+  cursor: pointer;
+}
+
+a > label, .logout > label {
   color: black;
   font-family: "Josefin Sans";
   font-size: clamp(14px, 1vw, 16px);
@@ -59,7 +73,7 @@ a > label {
   contain: contain;
 }
 
-a > img {
+a > img, .logout > img {
   display: flex;
   width: 50%;
 }
@@ -74,7 +88,7 @@ a > img {
     column-gap: 8vw;
   }
 
-  .botoes > a {
+  .botoes > a, .botoes > form {
     display: flex;
     background: #ffd5a5;
     justify-content: center;
@@ -130,7 +144,7 @@ a > img {
     scale: 1.3;
   }
 
-  .botoes > a {
+  .botoes > a, .botoes > form {
     display: flex;
     background: #ffd5a5;
     justify-content: center;
@@ -148,14 +162,14 @@ a > img {
     scale: 1.2;
   }
 
-  .botoes > a:hover {
+  .botoes > a:hover, .botoes > form:hover {
     background: linear-gradient(to bottom, #facb95 30%, #ffb662 100%);
     scale: 1.35;
     cursor: pointer;
     transition: all 0.4s ease;
   }
 
-  a > label {
+  a > label, .logout > label {
     color: black;
     font-family: "Josefin Sans";
     font-size: clamp(10px, 1vw, 14px);
@@ -163,7 +177,7 @@ a > img {
     contain: contain;
   }
 
-  a > img {
+  a > img ,.logout > img {
     display: flex;
     width: 50%;
   }
