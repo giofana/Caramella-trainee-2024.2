@@ -11,7 +11,9 @@
     <div class="body">
         <form action="/login" method="POST">
             <div class="form">
-                <div class="mensagem-erro">
+                <div class="form-header">
+                    <h2>Login</h2>
+                    <div class="mensagem-erro">
                     <p>
                         <?php
                             session_start();
@@ -21,8 +23,6 @@
                         ?>
                     </p>
                 </div>
-                <div class="form-header">
-                    <h2>Login</h2>
                 </div>
                 <div class="email-group">
                     <h3>Email</h3>

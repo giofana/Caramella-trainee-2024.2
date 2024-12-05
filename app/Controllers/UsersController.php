@@ -99,6 +99,11 @@ class UsersController
 
     public function exibirLogin()
     {
+        session_start();
+
+            if(isset($_SESSION['id'])){
+                header('Location: /dashboard');
+            }
         return view('site/login_page');
     }
 
