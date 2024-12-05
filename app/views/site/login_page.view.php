@@ -16,7 +16,7 @@
                     <div class="mensagem-erro">
                     <p>
                         <?php
-                            session_start();
+                            //session_start();
                             if(isset($_SESSION['mensagem-erro']))
                                 echo $_SESSION['mensagem-erro'];
                             unset($_SESSION['mensagem-erro']);
@@ -44,4 +44,3 @@
     <script src="/public/js/login-page.js"></script>
 </body>
 </html>
-
