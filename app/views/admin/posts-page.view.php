@@ -72,8 +72,9 @@
               <?php foreach ($posts as $post):?>
               <tr class="linha-comum">
                 <td class="celula-id"><?= $post->id?></td>
-                <td class="celula-titulo"><?= $post->title?></td>
-                <td class="celula-autor"><?= $post->author?></td>
+                <td class="celula-titulo">
+                    <?= strlen($post->title) > 10 ? substr($post->title, 0, 10) . "..." : $post->title ?>
+                </td>                <td class="celula-autor"><?= $post->author?></td>
                 <td class="celula-data"><?php $date=new DateTime($post->date); echo $date->format('d/m/Y');?></td>
                 <td class="celula-acoes">
                   <div class="square" onclick='openModal("modalVisu<?= $post->id ?>", "view", <?= $post->ingredients ?>, <?= $post->id ?>)'>
@@ -103,7 +104,7 @@
               <a class="page-previous<?= $page <= 1 ? " disabled" : "" ?>" href="?paginaLista=<?= $page - 1 ?>">&laquo;</a>
 
               <?php for ($i = 1; $i <= $total_pages; $i++): ?>
-                <a class="link_pagination <?= $i == $page ? "active" : "" ?>" href="?paginaLista=<?= $i ?>"><?= $i ?></a>
+                <a class="link_pagination <?= $i == $page ? "active" : "" ?>" href="?paginaLista=<?=$i ?>"><?= $i ?></a>
               <?php endfor ?>
 
               <a class="page-next<?= $page >= $total_pages ? " disabled" : "" ?>" href="?paginaLista=<?= $page + 1 ?>">&raquo;</a>

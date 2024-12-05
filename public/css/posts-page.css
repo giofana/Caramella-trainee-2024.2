@@ -108,8 +108,12 @@ tbody {
   flex-basis: 10%; /* 10% da largura total */
 }
 
-.celula-titulo {
+th .celula-titulo {
   flex-basis: 20%;
+}
+
+.celula-titulo {
+  width: 50%;
 }
 
 .celula-autor {
@@ -201,12 +205,11 @@ tbody {
   padding: 0.7% 1.2%;
   text-decoration: none;
   transition: background-color 0.3s;
-  margin: 0 0.25%;
+  margin: 0 0.5%;
   border: 1px solid #13142a;
   border-radius: 4px;
-  width: 28px;
-  height: 22px;
-  font-size: 20px;
+  min-width: 40px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -273,6 +276,7 @@ form > h2 {
   border-radius: 8px;
   box-shadow: black 4px 4px 40px;
   width: 100%;
+  z-index: 1000;
 }
 
 .auxSubForm {
@@ -445,6 +449,7 @@ form > h2 {
   height: 100vh;
   overflow-y: auto; /* Habilitar rolagem se necessário */
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
 
 .modal-content,
@@ -666,6 +671,7 @@ form > h2 {
     width: 95vw;
     height: 90vh;
     border-radius: 16px;
+    z-index: 1;
   }
 
   .top {
@@ -1021,4 +1027,13 @@ form > h2 {
 
 .pagination a.active {
   background-color: #d0f4d4;
+  border: 2px solid #fad2a4;
+  /* transform: scale(1.1); */
+  box-shadow: 0 0 15px rgba(250, 210, 164, 0.8);
+}
+
+.pagination a.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
 }

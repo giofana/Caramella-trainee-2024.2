@@ -14,7 +14,7 @@ class PostsController
         if (isset($_GET['paginaLista']) && !empty($_GET['paginaLista'])) {
             $page = intval($_GET['paginaLista']);
             if ($page <= 0) {
-                header('Location: /posts-list?paginaLista=1');
+                header('Location: /posts-list');
                 exit();
             }
         }
@@ -24,8 +24,12 @@ class PostsController
         $rowsCount = App::get('database')->countAll('posts');
         $total_pages = ceil($rowsCount / $itensView);
 
+        if ($total_pages == 0) {
+            $total_pages = 1;
+        }
+
         if ($page > $total_pages) {
-            header('Location: /posts-list?paginaLista=' . $total_pages);
+            header('Location: /posts-list');
             exit();
         }
 
