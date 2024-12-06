@@ -11,7 +11,7 @@ use App\Core\Router;
     $router->post('posts-list/create', 'PostsController@createPost');
 
     $router->get('users', 'UsersController@users');
-    
+
     $router->post('creat', 'UsersController@creat');
     $router->post('delete', 'UsersController@delete');
     $router->post('edit', 'UsersController@edit');
@@ -20,5 +20,7 @@ use App\Core\Router;
     $router->get('login', 'UsersController@exibirLogin');
     $router->post('login', 'UsersController@efetuaLogin');
     $router->post('logout', 'UsersController@logout');
+
+    $router->get('landing-page', 'PostsController@exibirLandingPage');
 
 ?>
