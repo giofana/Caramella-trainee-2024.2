@@ -20,8 +20,28 @@
   <body>
     <main>
       <div id="dashboard">
-        <div class="botoes"><a href="#"><img src="/public/assets/posts.png" alt=""><label>Lista de publicações</label></a></div>
-        <div class="botoes"><a href="#"><img src="/public/assets/users.png" alt=""><label>Lista de usuários</label></a></div>
+
+
+        <div class="botoes">
+          <form action="/posts-list" method="POST">
+            <button class="postsbutton" type="submit">
+              <img src="/public/assets/posts.png" alt="">
+              <label>Lista de publicações</label>
+            </button>
+          </form>
+        </div>
+
+
+        <div class="botoes">
+          <form action="/users" method="POST">
+            <button class="usersbutton" type="submit">
+              <img src="/public/assets/users.png" alt="">
+              <label>Lista de usuários</label>
+            </button>
+          </form>
+        </div>
+
+
         <div class="botoes">
           <form action="/logout" method="POST">
             <button class="logout" type="submit">
@@ -30,6 +50,8 @@
             </button>
           </form>
         </div>
+
+
       </div>
     </main>
   </body>
