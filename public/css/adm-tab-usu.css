@@ -10,7 +10,6 @@ body {
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
   padding: 5% 0 0 0;
   z-index: 1;
-  overflow: hidden;
 }
 
 .corpo {
@@ -46,6 +45,8 @@ body {
 
 .texto-sombra {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.582);
+  margin-top: 2%;
+  margin-bottom: 3%;
 }
 
 .botao-criar button img {
@@ -443,9 +444,36 @@ input:focus {
   font-size: 18px;
   cursor: pointer;
 }
-
-
 /* Fim modal excluir*/
+
+.modal{
+  overflow: hidden;
+}
+
+.input-senha {
+  display: flex;
+  align-items: center; /* Alinha o input e a imagem verticalmente */
+  position: relative;
+  width: 70%;
+}
+
+.bg-view.senha {
+  flex: 1; /* Faz o input ocupar o espaço restante */
+  padding-right: 2rem; /* Evita que o texto do input se sobreponha à imagem */
+  gap: 0;
+}
+
+.view1 {
+  position: absolute;
+  right: 0.5rem; /* Alinha a imagem no canto direito do input */
+  cursor: pointer; /* Mostra um ícone de "mão" ao passar o mouse */
+}
+
+.view1 img {
+  width: 20px; /* Ajusta o tamanho da imagem */
+  height: 20px;
+}
+
 
 @media (max-width: 768px) {
   .modal-content {
@@ -462,12 +490,13 @@ input:focus {
     margin-top: 3%;
   }
 
-  .topo p{
-    margin-top: 15%;
-  }
 
   .botao-criar button{
     margin-bottom: 50%;
+  }
+
+  .input-senha img{
+    margin-bottom: 80%;
   }
 }
 
@@ -488,6 +517,16 @@ input:focus {
   .pagina{
     margin-bottom: 10%;
   }
+
+  .texto-sombra{
+    margin-top: 10%;
+    margin-bottom: 2%;
+  }
+
+  .barra1, .barra2{
+    font-size: 18px;
+  }
+  
 }
 
 @media (max-width: 1024px) {
@@ -521,12 +560,11 @@ input:focus {
   }
 
   .barra2b button {
-    display: flex;
+   
     align-items: center;
   }
 
   .barra2 button img {
-    margin-right: 50%;
     width: 2.5vw;
   }
 
@@ -558,6 +596,9 @@ input:focus {
     margin-top: 3%;
   }
 
+  .texto-sombra{
+    margin-bottom: 5%;
+  }
   
 }
 
@@ -596,18 +637,15 @@ input:focus {
     padding: 0 0;
   }
 
-  .topo p {
-    margin-bottom: 5%;
-    margin-top: 10%;
-  }
 
   .botao-criar button {
     margin-top: 10px;
     width: 15vw;
+    margin-bottom: 5%;
   }
 
   .barra2b button {
-    display: flex;
+
     align-items: center;
     justify-content: center;
     align-content: center;
@@ -617,7 +655,7 @@ input:focus {
 
   .barra2 button img {
     margin-right: 1%;
-    width: 6vw;
+    width: 4.5vw;
   }
 
   .excluir {
@@ -647,7 +685,7 @@ input:focus {
     display: flex;
     justify-content: center;
     margin-right: 0%;
-    margin-top: 5%;
+
   }
 
   .pagina a {
@@ -656,7 +694,7 @@ input:focus {
   }
 
   .botao-criar {
-    margin-bottom: 8%;
+    margin-bottom: 4%;
   }
 
   .email,
@@ -688,4 +726,36 @@ input:focus {
   .row-view-info{
     gap: 0px;
   }
+
+  .barra1, .barra2{
+    font-size: 19px;
+  }
+
+  .input-senha{
+    width: 100%;
+  }
+
+  .texto-sombra{
+    margin-top: 7%;
+  }
+
 }
+
+@media screen and (min-width: 1024px)and (max-width: 1024px) 
+  and (min-height: 600px) and (max-height: 600px){
+
+    body{
+      overflow: hidden;
+      padding: 2% 0 0 0;
+    }
+
+    .topo{
+      flex-direction: row;
+    }
+
+    .barra2{
+      font-size: 18px;
+    }
+
+    
+  }

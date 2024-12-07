@@ -138,10 +138,14 @@
             </div>
             <div class="row-view-info">
               <label for="">Senha:</label>
-              <div class="bg-view senha"><?= str_repeat('•', strlen($user->password)) ?>
-              <div class = "view1"><img src = "../../../public/assets/visua.svg"></div> </label></div>
-          
+              <div class="input-senha">
+                <input class="bg-view senha" id="senhaInput" type="password" value="<?= $user->password ?>" disabled>
+                <div class="view1">
+                  <img src="../../../public/assets/visua.svg" alt="Visualizar senha" id="viewSenha">
+                </div>
+              </div>
             </div>
+
             <div class="button-box">
               <button type="button" class="close-button" onclick="closeModal('modalView<?= $user->id ?>')">
                 Fechar

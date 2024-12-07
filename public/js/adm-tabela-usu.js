@@ -30,3 +30,23 @@ document.addEventListener("keydown", function (event) {
     });
   }
 });
+
+  const senhaInput = document.getElementById("senhaInput");
+  const viewSenha = document.getElementById("viewSenha");
+
+
+  viewSenha.addEventListener("mousedown", () => {
+    senhaInput.type = "text"; 
+    console.log("Hello World")
+  });
+
+
+  viewSenha.addEventListener("mouseup", () => {
+    senhaInput.type = "password"; 
+    console.log("World")
+  });
+
+  viewSenha.addEventListener("mouseleave", () => {
+    senhaInput.type = "password"; 
+    console.log("Hello")
+  });
