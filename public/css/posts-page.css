@@ -196,7 +196,8 @@ th .celula-titulo {
 .pagination {
   display: flex;
   justify-content: center;
-  width: 100%;
+  padding: 2% 0;
+  margin-bottom: 3%;
 }
 
 .pagination a {
@@ -942,13 +943,13 @@ form > h2 {
 
 .ingrediente-item {
   list-style-type: none;
-  padding: 1.5%;
-  margin: 1% 0;
-  background-color: #f5f5f5;
+  padding: 4px;
+  /* margin: 1% 0; */
+  background-color: #ffffff9f;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: "Josefin Sans", sans-serif;
-  font-size: 16px;
+  font-size: large;
   color: #333;
   display: flex;
   justify-content: space-between; /* Espaça o conteúdo */
@@ -1025,11 +1026,13 @@ form > h2 {
   }
 }
 
+/* -------------- efeito paginacao ------------------ */
+
 .pagination a.active {
   background-color: #d0f4d4;
-  border: 2px solid #fad2a4;
+  /* border: 2px solid #fad2a4; */
   /* transform: scale(1.1); */
-  box-shadow: 0 0 15px rgba(250, 210, 164, 0.8);
+  /* box-shadow: 0 0 15px rgba(250, 210, 164, 0.8); */
 }
 
 .pagination a.disabled {
