@@ -350,14 +350,14 @@ form > h2 {
   box-shadow: black 1px 1px 6px;
 }
 
-#btCC {
+#btCC, #btCC2 {
   display: flex;
   justify-content: center;
   gap: 12px;
   margin-top: 40px;
 }
 
-#btCC > button {
+#btCC > button, #btCC2 > button {
   font-family: "Josefin Sans";
   flex: 0 1;
   padding: 15px 20px;
@@ -371,7 +371,7 @@ form > h2 {
   font-size: 16px;
 }
 
-#btCC button:hover {
+#btCC button:hover, #btCC2 button:hover {
   transform: scale(1.05);
   box-shadow: #64473b 0px 0px 10px;
   cursor: pointer;
@@ -473,11 +473,11 @@ form > h2 {
 
 .excluir {
   height: fit-content;
-  width: fit-content;
+  max-width: 25vw;
   display: flex;
   align-items: center;
   border-radius: 10px;
-  padding: 10px;
+  padding: 40px;
   flex-direction: column;
   position: absolute;
   text-align: center;
@@ -485,17 +485,18 @@ form > h2 {
 }
 
 .excluir p {
-  font-size: 24px;
+  text-wrap: pretty;
+  font-size: 20px;
 }
 
 .excluir h1 {
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .excluir img {
   margin-top: 5%;
   margin-bottom: 10%;
-  width: 50%;
+  width: 40%;
 }
 
 /*.tex{
@@ -522,12 +523,20 @@ form > h2 {
   cursor: pointer;
 } */
 
+#btCC2{
+  margin: 0;
+}
+
 .exc {
   background-color: rgb(226, 77, 77);
   color: white;
 }
 
-#btCC .canc:first-child:hover {
+.exc, .canc{
+  scale: 0.92;
+}
+
+#btCC2 .canc:first-child:hover {
   background-color: #64473b;
   box-shadow: #775a4e 2px 2px 12px;
 }
@@ -571,8 +580,6 @@ form > h2 {
   }
 
   #btCC {
-    margin-top: 8vh;
-    margin-bottom: 2vh;
     scale: 0.9;
     /* width: fit-content;
     height: fit-content; */
@@ -630,34 +637,38 @@ form > h2 {
   }
 
   .excluir {
-    height: fit-content;
-    width: fit-content;
+    max-width: 35vw;
     align-items: center;
     position: absolute;
   }
 
   .excluir p {
-    font-size: 24px;
-    padding-bottom: 2px;
+    margin: 0;
+    font-size: 20px;
+    padding-bottom: 10%;
   }
 
   .excluir h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .excluir img {
     margin-top: 5%;
     margin-bottom: 10%;
-    width: 65%;
+    width: 150px;
   }
 
   .canc,
   .exc {
-    width: fit-content;
+    scale: 0.95;
   }
 
-  #btCC > .canc,
-  #btCC > .exc {
+  #btCC2{
+    margin: 0;
+  }
+
+  #btCC2 > .canc,
+  #btCC2 > .exc {
     font-size: 18px;
   }
 
@@ -737,9 +748,7 @@ form > h2 {
 
   /* Inicio modal excluir*/
 
-  .excluir img {
-    width: 60%;
-  }
+
 
   /* fim modal de excluir */
 
@@ -838,8 +847,12 @@ form > h2 {
 
   /* Inicio modal excluir*/
 
+  .excluir{
+    max-width: 90vw;
+  }
+
   .excluir img {
-    width: 55%;
+    width: 50%;
   }
 
   /* fim modal de excluir */
@@ -933,8 +946,8 @@ form > h2 {
     font-size: 28px;
   }
 
-  #btCC > .canc,
-  #btCC > .exc {
+  #btCC2 > .canc,
+  #btCC2 > .exc {
     font-size: 14px;
   }
 
