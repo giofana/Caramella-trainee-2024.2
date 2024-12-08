@@ -69,9 +69,11 @@
               </tr>
             </thead>
             <tbody>
-              <?php foreach ($posts as $post):?>
+              <?php
+              $cont = $startPage + 1;
+              foreach ($posts as $post):?>
               <tr class="linha-comum">
-                <td class="celula-id"><?= $post->id?></td>
+                <td class="celula-id"><?= $cont++ ?></td>
                 <td class="celula-titulo">
                     <?= strlen($post->title) > 10 ? substr($post->title, 0, 10) . "..." : $post->title ?>
                 </td>                <td class="celula-autor"><?= $post->author?></td>

@@ -7,7 +7,7 @@ use Exception;
 
 class PostsController
 {
-    public function index()
+    public function index($itensView=5)
     {
         $page = 1;
 
@@ -19,7 +19,6 @@ class PostsController
             }
         }
 
-        $itensView = 5; 
         $startPage = $itensView * $page - $itensView;
         $rowsCount = App::get('database')->countAll('posts');
         $total_pages = ceil($rowsCount / $itensView);
@@ -35,7 +34,7 @@ class PostsController
 
         $posts = App::get('database')->selectAll('posts', $startPage, $itensView);
 
-        return view('admin/posts-page', compact('posts', 'page', 'total_pages'));
+        return view('admin/posts-page', compact('posts', 'page', 'total_pages', 'startPage'));
     }
 
     // TODO: arrumar autor
