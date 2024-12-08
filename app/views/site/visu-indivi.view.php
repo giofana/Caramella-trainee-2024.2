@@ -25,7 +25,7 @@
                 <h2><?= $post->title ?></h2>
                 <div class="t1">
                     <p>Por: <?= $post->author ?></p>
-                    <p><?= date("d/m/Y", strtotime($post->created_at)) ?></p> <!-- Data de criação -->
+                    <p><?= date("d/m/Y", strtotime($post->created_at)) ?></p> 
                 </div>
                 <div class="t2">
                     <p>Dificuldade: <strong><?= $post->difficulty == 0 ? 'Fácil' : ($post->difficulty == 1 ? 'Médio' : 'Difícil') ?></strong></p>
@@ -42,7 +42,6 @@
             <h2>Ingredientes:</h2>
             
             <?php
-            // Supondo que $post->ingredients seja uma string com os ingredientes separados por vírgulas
             $ingredientes = explode(',', $post->ingredients);
             foreach ($ingredientes as $ingrediente):
             ?>
@@ -60,7 +59,6 @@
                 <h2>Modo de Preparo:</h2>
                 <div class="mop">
                     <?php
-                    // Supondo que o modo de preparo seja uma lista separada por quebras de linha
                     $modo_preparo = explode("\n", $post->prepare);
                     foreach ($modo_preparo as $passo):
                     ?>

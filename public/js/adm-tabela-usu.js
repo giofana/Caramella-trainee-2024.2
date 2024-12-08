@@ -30,22 +30,22 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-document.querySelectorAll(".modalView").forEach((modal) => {
-  const senhaInput = modal.querySelector("input.senha");
-  const viewSenha = modal.querySelector(".view1 img");
+  document.querySelectorAll(".modalView").forEach((modal) => {
+    const senhaInput = modal.querySelector("input.senha");
+    const viewSenha = modal.querySelector(".view1 img");
 
-  viewSenha.addEventListener("mousedown", () => {
-    senhaInput.type = "text";
-    console.log("Hello World");
-  });
+    viewSenha.addEventListener("mousedown", () => {
+      senhaInput.type = "text";
+      console.log("Hello World");
+    });
 
-  viewSenha.addEventListener("mouseup", () => {
-    senhaInput.type = "password";
-    console.log("World");
-  });
+    viewSenha.addEventListener("mouseup", () => {
+      senhaInput.type = "password";
+      console.log("World");
+    });
 
-  viewSenha.addEventListener("mouseleave", () => {
-    senhaInput.type = "password";
-    console.log("Hello");
+    viewSenha.addEventListener("mouseleave", () => {
+      senhaInput.type = "password";
+      console.log("Hello");
+    });
   });
-});

@@ -71,7 +71,6 @@ class PostsController
         header('Location: /posts-list');
 
     }
-
 }
 
 ?>

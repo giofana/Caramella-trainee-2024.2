@@ -189,5 +189,18 @@ class QueryBuilder
         }
     }
 
+    public function select($table, $id)
+{
+     $sql = 'SELECT * FROM {$table} WHERE id= :id';
+
+     try {
+         $stmt = $this->pdo->prepare($sql);
+         $stmt->execute(['id' => $id]);  // Passando o valor do id
+         return $stmt->fetchAll(PDO::FETCH_CLASS);
+     } catch (Exception $e) {
+         die($e->getMessage());
+     }
+}
+
 
 }
