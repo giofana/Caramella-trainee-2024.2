@@ -113,7 +113,7 @@ th .celula-titulo {
 }
 
 .celula-titulo {
-  width: 50%;
+  width: 45%;
 }
 
 .celula-autor {
@@ -129,6 +129,7 @@ th .celula-titulo {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-right: 1%;
 }
 
 .square {
@@ -139,6 +140,8 @@ th .celula-titulo {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1%;
+  /* margin-right: 1%; */
 }
 
 .square:hover {
@@ -276,7 +279,6 @@ form > h2 {
   color: black;
   border-radius: 8px;
   box-shadow: black 4px 4px 40px;
-  width: 100%;
   z-index: 1000;
 }
 
@@ -954,7 +956,7 @@ form > h2 {
   display: flex;
   justify-content: space-between; /* Espaça o conteúdo */
   align-items: center; /* Centraliza verticalmente */
-  width: 45%;
+  width: 46%;
 }
 
 #ingredientesList,
