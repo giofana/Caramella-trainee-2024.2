@@ -22,7 +22,7 @@
     <div class="corpo">
       <div class="topo">
         <p style="font-family: Abril Fatface" class="texto-sombra">
-          Tabela de Usuarios
+          Tabela de Usuários
         </p>
         <div class="botao-criar">
           <button
@@ -42,11 +42,11 @@
           <div class="acoes"><p>AÇÕES</p></div>
         </div>
 
-
-        <?php foreach($users as $user) :
+        <?php
+         foreach($users as $user) :
         ?>
         <div class="barra2">
-          <div class="idb"><p><?= $user->id ?></p></div>
+          <div class="idb"><p><?= $index++ ?></p></div>
           <div class="nomeb"><p><?= $user->name ?></p></div>
           <div class="emailb"><p><?= $user->email ?></p></div>
           <div class="barra2b">
@@ -172,14 +172,14 @@
                 <img src="../../../public/assets/trash.png" alt="Ícone de lixeira" />
                 <p>Tem certeza que deseja excluir este usuário?</p>
                 <div class="button-box">
-                    <button 
-                        type="button" 
-                        class="cancel-button" 
+                    <button
+                        type="button"
+                        class="cancel-button"
                         onclick="closeModal('modalDel-<?= $user->id ?>')">
                         Cancelar
                     </button>
-                    <button 
-                        type="submit" 
+                    <button
+                        type="submit"
                         id="excluir-button-<?= $user->id ?>">
                         Excluir
                     </button>
@@ -202,7 +202,7 @@
         <input type="hidden" name="id" value="<?= $user->id ?>"> <!-- Input oculto para ID -->
 
         <h2>Editar usuário</h2>
-        
+
         <!-- Campos do formulário -->
         <div class="input-box-edit">
           <label for="edit-name-<?= $user->id ?>">Nome:</label>
