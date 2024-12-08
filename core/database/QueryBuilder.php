@@ -189,5 +189,20 @@ class QueryBuilder
         }
     }
 
+    public function searchPosts($table, $start, $limit, $search = '')
+    {
+        $sql = "SELECT * FROM {$table}";
+        if (!empty($search)) {
+            $sql .= " WHERE title LIKE :search OR author LIKE :search";
+        }
+        $sql .= " LIMIT {$start}, {$limit}";
+        $statement = $this->pdo->prepare($sql);
+        if (!empty($search)) {
+            $statement->bindValue(':search', '%' . $search . '%');
+        }
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_OBJ);
+    }
+
 
 }

@@ -16,4 +16,7 @@ use App\Core\Router;
     $router->post('delete', 'UsersController@delete');
     $router->post('edit', 'UsersController@edit');
 
+    $router->get('posts', 'PostsController@viewPosts');
+
+
 ?>
