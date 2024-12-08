@@ -6,7 +6,7 @@
         <p>Tem certeza que deseja excluir este post?</p>
         <form action="posts-list/delete" method="POST">
           <input type="hidden" name="idDelete" value="<?= $post->id ?>">
-          <div id="btCC">
+          <div id="btCC2">
             <button class="canc" type="button" onclick="closeModal('modalDel<?= $post->id ?>')">
               Cancelar
             </button>
