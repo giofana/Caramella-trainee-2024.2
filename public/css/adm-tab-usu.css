@@ -451,25 +451,26 @@ input:focus {
 
 .input-senha {
   display: flex;
-  align-items: center; /* Alinha o input e a imagem verticalmente */
+  align-items: center;
   position: relative;
   width: 70%;
 }
 
 .bg-view.senha {
-  flex: 1; /* Faz o input ocupar o espaço restante */
-  padding-right: 2rem; /* Evita que o texto do input se sobreponha à imagem */
+  flex: 1; 
+  padding-right: 2rem;
   gap: 0;
+  font-size: 18px;
 }
 
 .view1 {
   position: absolute;
-  right: 0.5rem; /* Alinha a imagem no canto direito do input */
-  cursor: pointer; /* Mostra um ícone de "mão" ao passar o mouse */
+  right: 0.5rem; 
+  cursor: pointer; 
 }
 
 .view1 img {
-  width: 20px; /* Ajusta o tamanho da imagem */
+  width: 20px; 
   height: 20px;
 }
 
