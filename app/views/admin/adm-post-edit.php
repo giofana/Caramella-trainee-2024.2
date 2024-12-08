@@ -11,7 +11,7 @@
               <label for="Autor1">Autor</label><input id="Autor1" type="text" name="editAutor" value="<?= $post->author ?>" />
             </div>
             <div class="inputModal" id="tempo1">
-              <label for="Tempo1">Tempo</label><input id="Tempo1" type="text" name="editTempo" value="<?= $post->time ?>" />
+              <label for="Tempo1">Tempo (min)</label><input id="Tempo1" type="text" name="editTempo" value="<?= $post->time ?>" />
             </div>
           </div>
           <div class="subForm">

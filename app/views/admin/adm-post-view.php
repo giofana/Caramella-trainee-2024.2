@@ -12,7 +12,7 @@
               <label for="Autor2">Autor</label><input id="Autor2" type="text" value="<?= $post->author ?>"disabled />
             </div>
             <div class="inputModal" id="tempo2">
-              <label for="Tempo2">Tempo</label><input id="Tempo2" type="text" value="<?= $post->time ?>"disabled />
+              <label for="Tempo2">Tempo (min)</label><input id="Tempo2" type="text" value="<?= $post->time ?>"disabled />
             </div>
           </div>
           <div class="subForm">

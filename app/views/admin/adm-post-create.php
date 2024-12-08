@@ -13,7 +13,7 @@
           <input required id="Autor" type="text" name="autor-receita"/>
         </div>
         <div class="inputModal" id="tempo">
-          <label for="Tempo">Tempo</label>
+          <label for="Tempo">Tempo (min)</label>
           <input required id="Tempo" type="number" name="tempo-receita" min="0" oninput="this.value = Math.abs(this.value)"/>        </div>
       </div>
       <div class="subForm">
