@@ -5,7 +5,7 @@
     font-family: Josefin Sans;
    }
 
- body{
+ main{
     margin: 0;
     padding: 0 ;
     width: 100%;
@@ -82,6 +82,10 @@
 .logo button:hover{
     color: #13142a; 
     box-shadow: #64473b 0px 0px 10px;
+}
+
+.infos2 .text{
+    
 }
 
 

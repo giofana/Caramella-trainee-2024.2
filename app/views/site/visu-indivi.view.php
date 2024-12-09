@@ -12,6 +12,9 @@
 </head>
 
 <body>
+
+<?php include "navbar.php"; ?>
+
 <div class="receitas">
     <?php foreach ($posts as $post): ?>
         <div class="img_receita">
@@ -31,7 +34,7 @@
                 </div>
                 <div class="t2">
                     <p>Dificuldade: <strong><?= $post->difficulty == 0 ? 'Fácil' : ($post->difficulty == 1 ? 'Médio' : 'Difícil') ?></strong></p>
-                    <p>Tempo: <strong><?= $post->time ?></strong></p>
+                    <p>Tempo: <strong><?= $post->time ?> Min</strong></p>
                     <p>Custo: <strong><?= $post->cost == 0 ? 'Barato' : ($post->cost == 1 ? 'Intermediário' : 'Caro') ?></strong></p>
                 </div>
             </div>
@@ -81,11 +84,11 @@
     </div>
     
     <div class="VMR">
-        <form action="/posts" method="get">
-            <button type="submit">Veja mais Receitas</button>
-        </form>
+            <button onclick="window.location.href='/posts';" type="submit">Veja mais Receitas</button>
     </div>
 
+    <?php include 'C:/Users/guilh/Desktop/Antigo PC/crml/Caramella-trainee-2024.2/app/views/site/footer.view.php';
+ ?>
 
 </body>
 </html>

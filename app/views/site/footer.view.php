@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../public/css/footer.css">
 </head>
-<body>
+<main>
     <footer class="footer">
         <div class="infos1">
             <div class ="text">
@@ -42,5 +42,5 @@
         </div>
         </div>
     </footer>
-</body>
+</main>
 </html>

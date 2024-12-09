@@ -15,6 +15,7 @@
 </head>
 <body>
 
+<?php include "navbar.php"; ?>
 
     <div class = "principal">
         <div class = "img">
@@ -77,6 +78,7 @@
                 </div>
             </div>
         </div>
+<div class = "foter"><?php include 'C:/Users/guilh/Desktop/Antigo PC/crml/Caramella-trainee-2024.2/app/views/site/footer.view.php';?></div>
     
 </body>
 </html>
