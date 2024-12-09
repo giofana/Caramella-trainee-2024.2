@@ -28,7 +28,7 @@ body {
 
 /*---------------------INICIO BOTOES---------------------*/
 
-.botoes > a, .botoes > form {
+.botoes > form {
   display: flex;
   background: #ffd5a5;
   justify-content: center;
@@ -44,7 +44,7 @@ body {
   text-align: center;
 }
 
-form > .logout{
+.postsbutton, .usersbutton, .logout{
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -54,18 +54,18 @@ form > .logout{
   background-color: #00000000;
 }
 
-.botoes > a:hover, .botoes > form:hover {
+.botoes form:hover{
   background: linear-gradient(to bottom, #facb95 30%, #ffb662 100%);
   scale: 1.05;
   cursor: pointer;
   transition: all 0.4s ease;
 }
 
-.logout:hover{
+.botoes button:hover{
   cursor: pointer;
 }
 
-a > label, .logout > label {
+.usersbutton label, .postsbutton label, .logout  label {
   color: black;
   font-family: "Josefin Sans";
   font-size: clamp(14px, 1vw, 16px);
@@ -73,7 +73,7 @@ a > label, .logout > label {
   contain: contain;
 }
 
-a > img, .logout > img {
+.usersbutton img, .postsbutton img, .logout img {
   display: flex;
   width: 50%;
 }
