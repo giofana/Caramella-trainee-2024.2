@@ -108,5 +108,16 @@ class UsersController
             die("Erro capturado: " . $e->getMessage());
         }
     }
+
+    
+
+    public function footer(){
+        return view ('site/footer');
+    }
+
+    public function minfos(){
+        return view ('site/mais-infos');
+    }
+
 }
 ?>

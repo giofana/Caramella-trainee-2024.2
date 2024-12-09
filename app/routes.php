@@ -12,7 +12,9 @@ use App\Core\Router;
 
     $router->get('users', 'UsersController@index');
 
-    $router->get('vdpi', 'SiteController@visuindivi');
+    $router->get('vdpi', 'SiteController@vdpi');
+    $router->get('footer', 'UsersController@footer');
+    $router->get('minfos', 'UsersController@minfos');
     
     $router->post('creat', 'UsersController@creat');
     $router->post('delete', 'UsersController@delete');

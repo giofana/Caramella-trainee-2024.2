@@ -8,7 +8,7 @@ use Exception;
 class SiteController
 {
 
-    public function visuindivi(){
+    public function vdpi(){
 
         $id = $_GET['id'];
         $users = App::get('database')->select('users', $id);

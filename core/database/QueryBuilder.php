@@ -191,7 +191,7 @@ class QueryBuilder
 
     public function select($table, $id)
 {
-     $sql = 'SELECT * FROM {$table} WHERE id= :id';
+    $sql = "SELECT * FROM {$table} WHERE id = :id";
 
      try {
          $stmt = $this->pdo->prepare($sql);
