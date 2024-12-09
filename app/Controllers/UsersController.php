@@ -16,7 +16,7 @@ class UsersController
         $page = 1;
         if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
             $page = intval($_GET['paginacaoNumero']);
-            
+
             if($page <= 0 ){
                 return redirect('admin/adm-tabela-usu');
 
@@ -35,7 +35,7 @@ class UsersController
         $users = App::get('database')->selectAll('users', $inicio, $itensPage);
 
         $total_pages = ceil($count/$itensPage);
-        return view('admin/adm-tabela-usu', compact('users', 'page', 'total_pages'));
+        return view('admin/adm-tabela-usu', compact('users', 'page', 'total_pages', 'inicio'));
 
     }
 
@@ -53,11 +53,6 @@ class UsersController
         return redirect('users');
     }
 
-    public function users()
-    {
-        $users = App::get('database')->selectAll('users');
-        return view('admin/adm-tabela-usu', compact('users'));
-    }
 
     public function deleteUser()
     {
@@ -96,7 +91,7 @@ class UsersController
 
                 if (!empty($_POST['password'])) { // Verifica se tem uma senha sendo enviada
                     $parametros['password'] = $_POST['password'];
-                }            
+                }
 
                 $result = App::get('database')->edit('users', $id, $parametros);
 
@@ -155,5 +150,16 @@ class UsersController
         session_destroy();
         header('Location: /login');
     }
+
+    
+
+    public function footer(){
+        return view ('site/footer');
+    }
+
+    public function minfos(){
+        return view ('site/mais-infos');
+    }
+
 }
 ?>

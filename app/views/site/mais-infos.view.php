@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <link rel="icon" href="../../../public/assets/icon-logo.png" type="image/png">
 </head>
 <body>
 
@@ -61,15 +61,15 @@
                             </div>
                             <div class = "face">
                                 <img src = "../../../public/assets/Facebook1.png">
-                                <div><a href = "https://www.instagram.com">facebook/caramella</a></div>
+                                <div><a href = "https://www.facebook.com">facebook/caramella</a></div>
                             </div>
                             <div class = "tt">
                                 <img src = "../../../public/assets/Twitter1.png">
-                                <div><a href = "https://www.instagram.com">x.com/caramella</a></div>
+                                <div><a href = "https://www.x.com">x.com/caramella</a></div>
                             </div>
                             <div class = "blus">
                                 <img src = "../../../public/assets/blues1.png">
-                                <div><a href = "https://www.instagram.com">bluesky.com/caramella</a></div>
+                                <div><a href = "https://bsky.app">bluesky.com/caramella</a></div>
                             </div>
                         </div>
                     </div>

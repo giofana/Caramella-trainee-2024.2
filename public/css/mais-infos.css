@@ -95,7 +95,12 @@ body {
     line-height: 50%;
     margin-bottom: 20%;
 }
+@media (min-width: 1280px) and (max-width: 1355px){
+    .end{
+        font-size: 15px;
+    }
 
+}
 
 @media (max-width: 1280px){
 
@@ -116,7 +121,7 @@ body {
 
 }
 
-@media (max-width: 912px){
+@media (max-width: 1015px){
 
     .map{
         width: 80vw;
