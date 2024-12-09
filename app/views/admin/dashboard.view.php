@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['id'])){
+      header('Location: /login');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -14,7 +22,14 @@
       <div id="dashboard">
         <div class="botoes"><a href="#"><img src="/public/assets/posts.png" alt=""><label>Lista de publicações</label></a></div>
         <div class="botoes"><a href="#"><img src="/public/assets/users.png" alt=""><label>Lista de usuários</label></a></div>
-        <div class="botoes"><a href="#"><img src="/public/assets/logout.png" alt=""><label>Logout</label></a></div>
+        <div class="botoes">
+          <form action="/logout" method="POST">
+            <button class="logout" type="submit">
+              <img src="/public/assets/logout.png" alt="Logout">
+              <label>Logout</label>
+            </button>
+          </form>
+        </div>
       </div>
     </main>
   </body>

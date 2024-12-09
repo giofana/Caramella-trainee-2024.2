@@ -49,7 +49,7 @@ class UsersController
             'password' => $_POST['password']
         ];
 
-        App::get('database')->insert('users', $parametros);
+        App::get('database')->insertUser('users', $parametros);
         return redirect('users');
     }
 
@@ -59,7 +59,7 @@ class UsersController
         return view('admin/adm-tabela-usu', compact('users'));
     }
 
-    public function delete()
+    public function deleteUser()
     {
         // Verifica se o ID foi enviado via POST e é um número válido
         if (isset($_POST['id']) && is_numeric($_POST['id'])) {
@@ -112,6 +112,48 @@ class UsersController
             // Exibe a mensagem de erro capturada
             die("Erro capturado: " . $e->getMessage());
         }
+    }
+
+    public function exibirDashboard()
+    {
+        return view('admin/dashboard');
+    }
+
+    // Função de Login
+
+    public function exibirLogin()
+    {
+        session_start();
+
+            if(isset($_SESSION['id'])){
+                header('Location: /dashboard');
+            }
+        return view('site/login_page');
+    }
+
+    public function efetuaLogin()
+    {
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+
+        $user = App::get('database')->verificaLogin($email, $senha);
+        session_start();
+        if($user != false){
+            $_SESSION['id'] = $user->id;
+            header('Location: /dashboard');
+        }
+        else{
+            $_SESSION['mensagem-erro'] = 'Usuário e/ou senha incorretos';
+            header('Location: /login');
+        }
+    }
+
+    public function logout()
+    {
+        session_start();
+        session_unset();
+        session_destroy();
+        header('Location: /login');
     }
 }
 ?>

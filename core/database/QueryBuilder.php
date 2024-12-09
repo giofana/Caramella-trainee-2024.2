@@ -139,6 +139,46 @@ class QueryBuilder
         die($e->getMessage());
     }
     }
+
+    public function insertUser($table, $parametros)
+    {
+        $sql = sprintf(
+            'INSERT INTO %s (%s) VALUE (%s)',
+            $table, 
+            implode(', ', array_keys($parametros)), //pega os parametros da funcion no usercontroller
+            ':' . implode(', :', array_keys($parametros)) //pega os valores da mesma função do usercontroller 
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($parametros);
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function deleteUser($table, $id)
+    {
+        $sql = sprintf('DELETE FROM %s WHERE id = :id', $table); // %s e :id são placeholders
+        try {
+            // Preparando a consulta
+            $stmt = $this->pdo->prepare($sql);
+            
+            // associa o valor da variável ao parâmetro
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            
+            // Executando a consulta
+            $stmt->execute();
+
+            // Verificando se a exclusão deu certo
+            return $stmt->rowCount() > 0; // Retorna true se uma linha foi excluída
+        } catch (Exception $e) {
+            die($e->getMessage()); // Em caso de erro, exibe a mensagem de erro
+        }
+    }
     
    public function edit($table, $id, $parametros)
     {
@@ -204,5 +244,34 @@ class QueryBuilder
         return $statement->fetchAll(PDO::FETCH_OBJ);
     }
 
+
+
+
+    // Função de Login
+    public function verificaLogin($email, $senha)
+    {
+        $sql = 'SELECT * FROM users WHERE email = :email AND password = :password';
+
+        try {
+            // Prepara a consulta
+            $stmt = $this->pdo->prepare($sql);
+            
+            // Executa a consulta com os parâmetros
+            $stmt->execute([
+                'email' => $email,
+                'password' => $senha // Corrigido para 'password' que é o nome correto do parâmetro na consulta
+            ]);
+
+            // Recupera o usuário
+            $user = $stmt->fetch(PDO::FETCH_OBJ);
+
+            // Retorna o usuário encontrado
+            return $user;
+
+        } catch (Exception $e) {
+            // Em caso de erro, exibe a mensagem
+            die($e->getMessage());
+        }
+    }
 
 }

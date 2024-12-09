@@ -20,4 +20,9 @@ use App\Core\Router;
 
     $router->get('contato', 'InfoController@show');
 
+    $router->get('dashboard', 'UsersController@exibirDashboard');
+    $router->get('login', 'UsersController@exibirLogin');
+    $router->post('login', 'UsersController@efetuaLogin');
+    $router->post('logout', 'UsersController@logout');
+
 ?>
