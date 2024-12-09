@@ -10,6 +10,10 @@ class PostsController
 
     public function index()
     {
+        session_start();
+        if(!isset($_SESSION['id'])){
+            header('Location: /login');
+        }
         // retornando todos os posts da tabela de posts
         $posts = App::get('database')->selectAll('posts');
         return view('admin/posts-page', compact('posts'));

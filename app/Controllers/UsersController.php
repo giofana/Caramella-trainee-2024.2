@@ -31,6 +31,10 @@ class UsersController
 
     public function users()
     {
+        session_start();
+        if(!isset($_SESSION['id'])){
+            header('Location: /login');
+        }
         $users = App::get('database')->selectAll('users');
         return view('admin/adm-tabela-usu', compact('users'));
     }
@@ -72,7 +76,7 @@ class UsersController
 
                 if (!empty($_POST['password'])) { // Verifica se tem uma senha sendo enviada
                     $parametros['password'] = $_POST['password'];
-                }            
+                }
 
                 $result = App::get('database')->edit('users', $id, $parametros);
 
@@ -131,5 +135,7 @@ class UsersController
         session_destroy();
         header('Location: /login');
     }
+
+
 }
 ?>
