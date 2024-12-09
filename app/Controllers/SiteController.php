@@ -10,9 +10,12 @@ class SiteController
 
     public function vdpi(){
 
-        $id = $_GET['id'];
+        $id = $_GET['id-post'];
+        if(!isset ($id)){
+            header('location:/posts');
+        }
         $users = App::get('database')->select('users', $id);
-        $posts = App::get('database')->selectAll('posts', $id);
+        $posts = App::get('database')->select('posts', $id);
 
         return view('site/visu-indivi', compact('posts', 'users'));
     }

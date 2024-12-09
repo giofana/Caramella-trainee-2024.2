@@ -20,7 +20,7 @@
       <?php 
       $cont = $startPage + 1;
       foreach ($posts as $post): ?>
-        <a href="?id-post=<?= $post->id ?>" class="post-box">
+        <a href="/vdpi?id-post=<?= $post->id ?>" class="post-box">
           <div class="post-title"><?= $post->title ?></div>
           <img src="<?= $post->image ?>" alt="Imagem do post" class="post-img" />
           <div class="post-description">

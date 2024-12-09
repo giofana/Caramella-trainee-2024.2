@@ -35,6 +35,7 @@
 
 .receitas img{
     border-radius: 10%;
+    width: 400px;
 }
 
 .inf_post{
@@ -178,6 +179,7 @@ ol li{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
     .receitas img{

@@ -13,6 +13,7 @@ use App\Core\Router;
     $router->get('users', 'UsersController@index');
 
     $router->get('vdpi', 'SiteController@vdpi');
+    $router->post('vdpi', 'SiteController@vdpi');
     $router->get('footer', 'UsersController@footer');
     $router->get('minfos', 'UsersController@minfos');
     

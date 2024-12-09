@@ -13,6 +13,7 @@
 
 <body>
 <div class="receitas">
+    <?php foreach ($posts as $post): ?>
         <div class="img_receita">
             <?php if ($post->image != ""): ?>
                 <img src="<?= $post->image ?>" alt="Imagem da receita">
@@ -26,7 +27,7 @@
                 <h2><?= $post->title ?></h2>
                 <div class="t1">
                     <p>Por: <?= $post->author ?></p>
-                    <p><?= date("d/m/Y", strtotime($post->created_at)) ?></p> 
+                    <p><?= date("d/m/Y", strtotime($post->date)) ?></p> 
                 </div>
                 <div class="t2">
                     <p>Dificuldade: <strong><?= $post->difficulty == 0 ? 'Fácil' : ($post->difficulty == 1 ? 'Médio' : 'Difícil') ?></strong></p>
@@ -35,6 +36,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
     
     <div class="inf_receitas">
@@ -75,7 +77,7 @@
                 <p><?= $post->history ?></p>
             </div>
         </div>
-
+        <?php endforeach ?>
     </div>
     
     <div class="VMR">
