@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use App\Controllers\UsersController;
+use App\Controllers\x;
 use App\Core\Router;
 
     $router->get('posts-list', 'PostsController@index');
@@ -18,5 +18,6 @@ use App\Core\Router;
 
     $router->get('posts', 'PostsController@viewPosts');
 
+    $router->get('contato', 'InfoController@show');
 
 ?>

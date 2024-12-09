@@ -95,6 +95,7 @@ class PostsController
     }
 
 
+    // TODO: colocar em controller separado
     public function viewPosts($itensView = 6)
     {
         $page = 1;

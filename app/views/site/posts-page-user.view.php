@@ -8,6 +8,8 @@
   </head>
   <body>
 
+  <?php include "navbar.php"; ?>
+
     <div class="search-bar">
     <form action="/posts" method="GET">
           <input type="text" name="search" placeholder="Buscar" class="txt-search" value="<?= htmlspecialchars($search) ?>" />
@@ -50,6 +52,6 @@
 
     </div>
 
-    <!-- <footer></footer> -->
+
   </body>
 </html>
