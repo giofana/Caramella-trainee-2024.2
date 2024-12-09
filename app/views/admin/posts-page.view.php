@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -67,11 +69,14 @@
               </tr>
             </thead>
             <tbody>
-              <?php foreach ($posts as $post):?>
+              <?php
+              $cont = $startPage + 1;
+              foreach ($posts as $post):?>
               <tr class="linha-comum">
-                <td class="celula-id"><?= $post->id?></td>
-                <td class="celula-titulo"><?= $post->title?></td>
-                <td class="celula-autor"><?= $post->author?></td>
+                <td class="celula-id"><?= $cont++ ?></td>
+                <td class="celula-titulo">
+                    <?= strlen($post->title) > 10 ? substr($post->title, 0, 10) . "..." : $post->title ?>
+                </td>                <td class="celula-autor"><?= $post->author?></td>
                 <td class="celula-data"><?php $date=new DateTime($post->date); echo $date->format('d/m/Y');?></td>
                 <td class="celula-acoes">
                   <div class="square" onclick='openModal("modalVisu<?= $post->id ?>", "view", <?= $post->ingredients ?>, <?= $post->id ?>)'>
@@ -94,19 +99,23 @@
           </table>
         </div>
 
-        <div class="bottom">
-          <div class="pagination">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">&raquo;</a>
-          </div>
-        </div>
+        <!-- TODO: terminar para estilizar o previous e next -->
+          <!-- TODO: terminar para estilizar o previous e next -->
+          <div class="bottom">
+            <div class="pagination">
+              <a class="page-previous<?= $page <= 1 ? " disabled" : "" ?>" href="?paginaLista=<?= $page - 1 ?>">&laquo;</a>
+
+              <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                <a class="link_pagination <?= $i == $page ? "active" : "" ?>" href="?paginaLista=<?=$i ?>"><?= $i ?></a>
+              <?php endfor ?>
+
+              <a class="page-next<?= $page >= $total_pages ? " disabled" : "" ?>" href="?paginaLista=<?= $page + 1 ?>">&raquo;</a>
+            </div>
+          </div>  
       </div>
     </div>
+
+    <?php include "footer.php"; ?>
 
     <script src="/public/js/adm-tabela-posts.js"></script>
   </body>

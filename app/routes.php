@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use App\Controllers\UsersController;
+use App\Controllers\x;
 use App\Core\Router;
 
     $router->get('posts-list', 'PostsController@index');
@@ -19,5 +19,14 @@ use App\Core\Router;
     $router->post('creat', 'UsersController@creat');
     $router->post('delete', 'UsersController@delete');
     $router->post('edit', 'UsersController@edit');
+
+    $router->get('posts', 'SiteController@viewPosts');
+
+    $router->get('contato', 'InfoController@show');
+
+    $router->get('dashboard', 'UsersController@exibirDashboard');
+    $router->get('login', 'UsersController@exibirLogin');
+    $router->post('login', 'UsersController@efetuaLogin');
+    $router->post('logout', 'UsersController@logout');
 
 ?>

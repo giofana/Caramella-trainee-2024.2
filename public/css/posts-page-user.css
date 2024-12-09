@@ -3,6 +3,7 @@
 }
 
 body {
+  min-height: 100vh;
   padding: 0;
   margin: 0;
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
@@ -15,7 +16,7 @@ header {
 }
 
 /* --------------- search-bar----------------*/
-.search-bar {
+.search-bar form {
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -78,6 +79,7 @@ header {
   align-items: center;
   justify-content: space-between; /* acerta espaço entre itens */
   background-color: #e5caec4f;
+  text-decoration: none;
 }
 
 .post-box:hover {
@@ -144,6 +146,16 @@ header {
 
 .pagination a:hover {
   background-color: #e5caec;
+}
+
+.pagination a.active {
+  background-color: #e5caec;
+}
+
+.pagination a.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* -------------- responsividade -------------- */
