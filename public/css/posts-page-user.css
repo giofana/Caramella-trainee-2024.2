@@ -79,6 +79,7 @@ header {
   align-items: center;
   justify-content: space-between; /* acerta espaço entre itens */
   background-color: #e5caec4f;
+  text-decoration: none;
 }
 
 .post-box:hover {
