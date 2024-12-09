@@ -24,7 +24,9 @@
         </div>
         <div class ="logo">
             <img src ="../../../public/assets/caramella2.png">
-            <button type = "button">Mais Informações</button>
+            <form action="/minfos" method="get">
+                <button type="submit">Mais Informações</button>
+            </form>
         </div>
 
         <div class="infos2">
