@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../../public/assets/icon-logo.png" type="image/png">
 </head>
 
 <body>
@@ -78,8 +79,11 @@
     </div>
     
     <div class="VMR">
-        <button type="button">Veja mais Receitas</button>
+        <form action="/posts" method="get">
+            <button type="submit">Veja mais Receitas</button>
+        </form>
     </div>
+
 
 </body>
 </html>

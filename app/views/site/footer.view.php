@@ -15,10 +15,10 @@
             <div class ="text">
                 <p>Venha conhecer nossas redes sociais!</p>
                     <div class = "infos1l">
-                        <img src = "../../../public/assets/Instagram2.png" >
-                        <img src = "../../../public/assets/Facebook2.png" >
-                        <img src = "../../../public/assets/Twitter2.png" >
-                        <img src = "../../../public/assets/bluesky2.png">
+                        <a href = "https://www.instagram.com"><img src = "../../../public/assets/Instagram2.png" ></a>
+                        <a href = "https://www.facebook.com"><img src = "../../../public/assets/Facebook2.png" ></a>
+                        <a href = "https://www.x.com"><img src = "../../../public/assets/Twitter2.png" ></a>
+                        <a href = "https://bsky.app"><img src = "../../../public/assets/bluesky2.png"></a>
                     </div>
             </div>
         </div>
