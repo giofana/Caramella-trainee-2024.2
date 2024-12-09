@@ -115,6 +115,8 @@
       </div>
     </div>
 
+    <?php include "footer.php"; ?>
+
     <script src="/public/js/adm-tabela-posts.js"></script>
   </body>
 </html>
