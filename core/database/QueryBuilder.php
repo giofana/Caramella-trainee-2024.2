@@ -14,9 +14,15 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
+
+    //usado na paginacao
+    public function selectAll($table, $inicio = null, $count = null)
     {
         $sql = "select * from {$table}";
+
+        if($inicio >= 0 && $count > 0){
+            $sql .= " LIMIT {$inicio}, {$count}";
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -173,7 +179,7 @@ class QueryBuilder
             die($e->getMessage()); // Em caso de erro, exibe a mensagem de erro
         }
     }
-
+    
    public function edit($table, $id, $parametros)
     {
         // Constrói a string de SET dinamicamente
@@ -207,6 +213,40 @@ class QueryBuilder
     O segundo método é mais seguro, evita SQL Injection */
 
 
+    //usado na paginacao
+    public function countAll($table)
+    {
+        $sql = "select COUNT(*) from {$table}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return intval($stmt->fetch(PDO::FETCH_NUM)[0]);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function searchPosts($table, $start, $limit, $search = '')
+    {
+        $sql = "SELECT * FROM {$table}";
+        if (!empty($search)) {
+            $sql .= " WHERE title LIKE :search OR author LIKE :search";
+        }
+        $sql .= " LIMIT {$start}, {$limit}";
+        $statement = $this->pdo->prepare($sql);
+        if (!empty($search)) {
+            $statement->bindValue(':search', '%' . $search . '%');
+        }
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_OBJ);
+    }
+
+
+
+
     // Função de Login
     public function verificaLogin($email, $senha)
     {
@@ -233,5 +273,18 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+    public function select($table, $id)
+{
+    $sql = "SELECT * FROM {$table} WHERE id = :id";
+
+     try {
+         $stmt = $this->pdo->prepare($sql);
+         $stmt->execute(['id' => $id]);  // Passando o valor do id
+         return $stmt->fetchAll(PDO::FETCH_CLASS);
+     } catch (Exception $e) {
+         die($e->getMessage());
+     }
+}
+
 
 }

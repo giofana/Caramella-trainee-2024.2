@@ -22,7 +22,7 @@
     <div class="corpo">
       <div class="topo">
         <p style="font-family: Abril Fatface" class="texto-sombra">
-          Tabela de Usuarios
+          Tabela de Usuários
         </p>
         <div class="botao-criar">
           <button
@@ -42,11 +42,13 @@
           <div class="acoes"><p>AÇÕES</p></div>
         </div>
 
+        <?php
 
-        <?php foreach($users as $user) :
+        $cont = $inicio + 1;
+         foreach($users as $user) :
         ?>
         <div class="barra2">
-          <div class="idb"><p><?= $user->id ?></p></div>
+          <div class="idb"><p><?= $cont++ ?></p></div>
           <div class="nomeb"><p><?= $user->name ?></p></div>
           <div class="emailb"><p><?= $user->email ?></p></div>
           <div class="barra2b">
@@ -76,15 +78,21 @@
       <?php endforeach;
         ?>
 
-      <div class="pagina">
-        <a href="#">&laquo;</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">&raquo;</a>
+<!-- paginaçao -->
+
+      <div class="pagina ativo">
+        <a class = "pagina <?= $page <= 1 ? "disable" : "" ?>"href="?paginacaoNumero=<?= $page - 1 ?>">&laquo;</a>
+
+        <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+
+        <a class = "pag-number <?= $page_number == $page ? "active" : "" ?>" href="?paginacaoNumero=<?= $page_number ?>"><?= $page_number ?></a>
+
+        <?php endfor; ?>
+
+        <a class = "pagina <?= $page >= $total_pages ? "disable" : "" ?>"href="?paginacaoNumero=<?= $page + 1 ?>">&raquo;</a>
       </div>
+
+      <!-- paginaçao -->
 
       <!-- modal criar -->
 
@@ -132,10 +140,14 @@
             </div>
             <div class="row-view-info">
               <label for="">Senha:</label>
-              <div class="bg-view senha"><?= str_repeat('•', strlen($user->password)) ?>
-              <div class = "view1"><img src = "../../../public/assets/visua.svg"></div> </label></div>
-          
+              <div class="input-senha">
+                <input class="bg-view senha" id="senhaInput" type="password" value="<?= $user->password ?>" disabled>
+                <div class="view1">
+                  <img src="../../../public/assets/visua.svg" alt="Visualizar senha" id="viewSenha">
+                </div>
+              </div>
             </div>
+
             <div class="button-box">
               <button type="button" class="close-button" onclick="closeModal('modalView<?= $user->id ?>')">
                 Fechar
@@ -162,14 +174,14 @@
                 <img src="../../../public/assets/trash.png" alt="Ícone de lixeira" />
                 <p>Tem certeza que deseja excluir este usuário?</p>
                 <div class="button-box">
-                    <button 
-                        type="button" 
-                        class="cancel-button" 
+                    <button
+                        type="button"
+                        class="cancel-button"
                         onclick="closeModal('modalDel-<?= $user->id ?>')">
                         Cancelar
                     </button>
-                    <button 
-                        type="submit" 
+                    <button
+                        type="submit"
                         id="excluir-button-<?= $user->id ?>">
                         Excluir
                     </button>
@@ -192,7 +204,7 @@
         <input type="hidden" name="id" value="<?= $user->id ?>"> <!-- Input oculto para ID -->
 
         <h2>Editar usuário</h2>
-        
+
         <!-- Campos do formulário -->
         <div class="input-box-edit">
           <label for="edit-name-<?= $user->id ?>">Nome:</label>
