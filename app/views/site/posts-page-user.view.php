@@ -43,6 +43,7 @@
       <?php endfor ?>
       <a class="page-next<?= $page >= $total_pages ? " disabled" : "" ?>" href="?paginaLista=<?= $page + 1 ?>">&raquo;</a>
     </div>
-
+    <?php include 'C:/Users/guilh/Desktop/Antigo PC/crml/Caramella-trainee-2024.2/app/views/site/footer.view.php';
+ ?>
   </body>
 </html>
