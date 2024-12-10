@@ -25,8 +25,7 @@
           <img src="<?= $post->image ?>" alt="Imagem do post" class="post-img" />
           <div class="post-description">
             <p class="description">
-              <?= strlen($post->history) > 150 ? substr($post->history, 0, 150) . "..." : $post->history ?>
-            </p>
+            <?= strlen($post->history) > 140 ? wordwrap(substr($post->history, 0, 140), 40, "\n", true) . "..." : wordwrap($post->history, 40, "\n", true) ?>            </p>
           </div>
           <div class="author">
             <img src="../../../public/assets/author-icon.png" alt="author-icon" />

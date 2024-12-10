@@ -48,8 +48,8 @@
             <h2>Ingredientes:</h2>
             
             <?php
-            $ingredientes = explode(',', $post->ingredients);
-            foreach ($ingredientes as $ingrediente):
+            $ingredientesList = json_decode($post->ingredients);
+            foreach ($ingredientesList as $ingrediente):
             ?>
                 <div class="mp">
                     <div class="cb">
