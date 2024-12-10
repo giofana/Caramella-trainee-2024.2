@@ -12,6 +12,10 @@ class UsersController
     //usado na paginacao
     public function index()
     {
+        session_start();
+        if(!isset($_SESSION['id'])){
+            header('Location: /login');
+        }
 
         $page = 1;
         if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
@@ -53,15 +57,6 @@ class UsersController
         return redirect('users');
     }
 
-    public function users()
-    {
-        session_start();
-        if(!isset($_SESSION['id'])){
-            header('Location: /login');
-        }
-        $users = App::get('database')->selectAll('users');
-        return view('admin/adm-tabela-usu', compact('users'));
-    }
 
     public function deleteUser()
     {
