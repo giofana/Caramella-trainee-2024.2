@@ -20,7 +20,7 @@
 
     <!-------------------------------------NAVBAR---------------------------------->
 
-    <?php //include "navbar.view.php"; ?>
+    <?php include "navbar.php"; ?>
 
     <!-------------------------------------FIM-NAVBAR---------------------------------->
 
@@ -40,8 +40,9 @@
             <!----------------------------------------CARD DE POST------------------------------------>
             <?php for ($i = count($posts)-1; $i >= count($posts) - 5; $i = $i - 1): ?>
             <div class="posts">
-                <a href="#"><img src="<?= $posts[$i]->image ?>" alt="">
-                    <h3><?= $posts[$i]->title ?></h3>
+                <a href="/vdpi?id-post=<?= $posts[$i]->id ?>">
+                <img src="<?= $posts[$i]->image ?>" alt="">
+                <h3><?= $posts[$i]->title ?></h3>
                 </a>
 
                 <?php if ($posts[$i]->difficulty == 0){
@@ -70,7 +71,7 @@
 
     <!-------------------------------------FOOTER---------------------------------->
 
-    <?php //include "footer.view.php"; ?>
+    <?php include "footer.view.php"; ?>
 
     <!-------------------------------------FIM-FOOTER---------------------------------->
 
