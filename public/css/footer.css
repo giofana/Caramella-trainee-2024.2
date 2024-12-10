@@ -84,11 +84,6 @@
     box-shadow: #64473b 0px 0px 10px;
 }
 
-.infos2 .text{
-    
-}
-
-
 @media screen and (min-width: 600px) and (max-width: 1000px){
     .footer {
         display: flex;
@@ -119,11 +114,6 @@
 
     .infos2 img{
         width: 15%;
-    }
-
-    .infos22{
-
-       
     }
 
     .infos1 .infos1l{
