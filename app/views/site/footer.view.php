@@ -9,26 +9,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../public/css/footer.css">
 </head>
-<body>
+<main>
     <footer class="footer">
         <div class="infos1">
             <div class ="text">
                 <p>Venha conhecer nossas redes sociais!</p>
                     <div class = "infos1l">
-                        <img src = "../../../public/assets/Instagram2.png" >
-                        <img src = "../../../public/assets/Facebook2.png" >
-                        <img src = "../../../public/assets/Twitter2.png" >
-                        <img src = "../../../public/assets/bluesky2.png">
+                        <a href = "https://www.instagram.com"><img src = "../../../public/assets/Instagram2.png" ></a>
+                        <a href = "https://www.facebook.com"><img src = "../../../public/assets/Facebook2.png" ></a>
+                        <a href = "https://www.x.com"><img src = "../../../public/assets/Twitter2.png" ></a>
+                        <a href = "https://bsky.app"><img src = "../../../public/assets/bluesky2.png"></a>
                     </div>
             </div>
         </div>
         <div class ="logo">
             <img src ="../../../public/assets/caramella2.png">
-            <button type = "button">Mais Informações</button>
+            <form action="/minfos" method="get">
+                <button type="submit">Mais Informações</button>
+            </form>
         </div>
 
         <div class="infos2">
-            <div class="infos2-box">
+            <div class=>
             <div class = "infos21">
             <img src = "../../../public/assets/wpp2.png" >
             <p>(00) 0 0000-0000</p>
@@ -40,5 +42,5 @@
         </div>
         </div>
     </footer>
-</body>
+</main>
 </html>

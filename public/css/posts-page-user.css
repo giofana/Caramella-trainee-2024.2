@@ -3,6 +3,7 @@
 }
 
 body {
+  min-height: 100vh;
   padding: 0;
   margin: 0;
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
@@ -15,7 +16,7 @@ header {
 }
 
 /* --------------- search-bar----------------*/
-.search-bar {
+.search-bar form {
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -68,16 +69,20 @@ header {
 .post-box {
   width: 25%;
   height: auto;
+  max-height: 54vh;
   margin: 3%;
   padding: 2%;
-  border-radius: 20px;
-  box-shadow: #64473b1a 0px 0px 10px; /* add sombra ao passar o mouse */
-  transition: transform 0.3s ease; /* add transição para o efeito de aumento */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between; /* acerta espaço entre itens */
-  background-color: #e5caec4f;
+  text-decoration: none;
 }
 
 .post-box:hover {
@@ -86,8 +91,8 @@ header {
 }
 
 .post-img {
-  width: 80%;
-  height: auto;
+  max-width: 80%;
+  max-height: 20vh;
   border-radius: 20px 20px 20px 20px;
 }
 
@@ -124,6 +129,10 @@ header {
   width: 25px;
 }
 
+.description {
+  word-wrap: break-word; /* Força a quebra de palavras longas */
+}
+
 /* --------------- paginacao ---------------*/
 .pagination {
   display: flex;
@@ -144,6 +153,16 @@ header {
 
 .pagination a:hover {
   background-color: #e5caec;
+}
+
+.pagination a.active {
+  background-color: #e5caec;
+}
+
+.pagination a.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* -------------- responsividade -------------- */

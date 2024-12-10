@@ -6,11 +6,11 @@
 body {
   display: flex;
   justify-content: center;
-  width: 100vw;
   height: 100vh;
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
-  padding: 5% 0 0 0;
+  padding: 6% 0 0 0;
   z-index: 1;
+  margin: 0;
 }
 
 .corpo {
@@ -22,15 +22,12 @@ body {
   border-radius: 60px;
   overflow: hidden;
   margin-bottom: 10%;
-
 }
 
-.view1{
+.view1 {
   display: flex;
   align-items: flex-end;
 }
-
-
 
 .topo {
   display: flex;
@@ -46,6 +43,8 @@ body {
 
 .texto-sombra {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.582);
+  margin-top: 2%;
+  margin-bottom: 3%;
 }
 
 .botao-criar button img {
@@ -80,7 +79,7 @@ body {
 }
 
 .barra1 {
-  background-color: #64473B;
+  background-color: #64473b;
   display: flex;
   align-items: center;
   width: 70vw;
@@ -89,6 +88,7 @@ body {
   margin-top: 0.5%;
   font-size: 22px;
   margin-bottom: 0.6%;
+  color: #f5f5f5;
 }
 
 .id {
@@ -153,7 +153,7 @@ body {
   width: 45%;
 }
 
-.email21{
+.email21 {
   overflow-x: scroll;
 }
 
@@ -189,7 +189,7 @@ body {
 
 .pagina {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   padding: 2% 0;
   margin-bottom: 3%;
 }
@@ -229,7 +229,7 @@ body {
   background-repeat: round;
   margin: 15% auto;
   padding: 20px;
-  width: 60%;
+  width: 40%;
   height: max-content;
   border-radius: 10px;
   display: flex;
@@ -284,8 +284,9 @@ body {
   align-items: center;
 }
 
-.senha{
+.senha {
   overflow-x: scroll;
+  border: white;
 }
 
 .bg-view {
@@ -296,26 +297,32 @@ body {
   padding-left: 10px;
   border-radius: 20px;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   padding: 0 0.7rem;
 }
 
 .disable {
-  pointer-events: none; 
-  opacity: 0.5;       
-  cursor: not-allowed; 
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .bg-view label {
   font-size: 20px;
 }
 
+.pagina a.active {
+  background-color: #d0f4d4;
+  border: 2px solid #fad2a4;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(250, 210, 164, 0.8);
+}
 /* ------------ estilo da tela de editar ----------------- */
 
 .modal-content-edit,
 .modal-content-criar {
-  width: 50%;
+  width: 40%;
   height: auto;
 }
 
@@ -401,15 +408,15 @@ input:focus {
 /* Inicio modal excluir*/
 
 .excluir {
-  width: 25%;
-  height: fit-content;
+  width: 40%;
+  height: auto;
   display: block;
   align-items: center;
   border-radius: 10px;
   padding: 10px;
   flex-direction: column;
   position: absolute;
-  left: 35%;
+  left: 30%;
   text-align: center;
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
 }
@@ -417,7 +424,7 @@ input:focus {
 .excluir img {
   margin-top: 5%;
   margin-bottom: 10%;
-  width: 50%;
+  width: 40%;
 }
 
 .botm {
@@ -437,9 +444,36 @@ input:focus {
   font-size: 18px;
   cursor: pointer;
 }
-
-
 /* Fim modal excluir*/
+
+.modal {
+  overflow: hidden;
+}
+
+.input-senha {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 70%;
+}
+
+.bg-view.senha {
+  flex: 1;
+  padding-right: 2rem;
+  gap: 0;
+  font-size: 18px;
+}
+
+.view1 {
+  position: absolute;
+  right: 0.5rem;
+  cursor: pointer;
+}
+
+.view1 img {
+  width: 20px;
+  height: 20px;
+}
 
 @media (max-width: 768px) {
   .modal-content {
@@ -452,16 +486,16 @@ input:focus {
     margin: 0 0 3% 0;
   }
 
-  .pagina{
+  .pagina {
     margin-top: 3%;
   }
 
-  .topo p{
-    margin-top: 15%;
+  .botao-criar button {
+    margin-bottom: 50%;
   }
 
-  .botao-criar button{
-    margin-bottom: 50%;
+  .input-senha img {
+    margin-bottom: 80%;
   }
 }
 
@@ -479,8 +513,18 @@ input:focus {
     margin: 5% 0 5% 0;
   }
 
-  .pagina{
+  .pagina {
     margin-bottom: 10%;
+  }
+
+  .texto-sombra {
+    margin-top: 10%;
+    margin-bottom: 2%;
+  }
+
+  .barra1,
+  .barra2 {
+    font-size: 18px;
   }
 }
 
@@ -515,12 +559,10 @@ input:focus {
   }
 
   .barra2b button {
-    display: flex;
     align-items: center;
   }
 
   .barra2 button img {
-    margin-right: 50%;
     width: 2.5vw;
   }
 
@@ -550,6 +592,10 @@ input:focus {
   .pagina {
     padding: 0.5%;
     margin-top: 3%;
+  }
+
+  .texto-sombra {
+    margin-bottom: 5%;
   }
 }
 
@@ -588,18 +634,13 @@ input:focus {
     padding: 0 0;
   }
 
-  .topo p {
-    margin-bottom: 5%;
-    margin-top: 10%;
-  }
-
   .botao-criar button {
     margin-top: 10px;
     width: 15vw;
+    margin-bottom: 5%;
   }
 
   .barra2b button {
-    display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
@@ -609,7 +650,7 @@ input:focus {
 
   .barra2 button img {
     margin-right: 1%;
-    width: 6vw;
+    width: 4.5vw;
   }
 
   .excluir {
@@ -639,7 +680,6 @@ input:focus {
     display: flex;
     justify-content: center;
     margin-right: 0%;
-    margin-top: 5%;
   }
 
   .pagina a {
@@ -648,7 +688,7 @@ input:focus {
   }
 
   .botao-criar {
-    margin-bottom: 8%;
+    margin-bottom: 4%;
   }
 
   .email,
@@ -668,16 +708,44 @@ input:focus {
     width: 50%;
   }
 
-  .row-view-info{
+  .row-view-info {
     display: flex;
     flex-direction: column;
   }
 
-  .bg-view{
+  .bg-view {
     width: 100%;
   }
 
-  .row-view-info{
+  .row-view-info {
     gap: 0px;
+  }
+
+  .barra1,
+  .barra2 {
+    font-size: 19px;
+  }
+
+  .input-senha {
+    width: 100%;
+  }
+
+  .texto-sombra {
+    margin-top: 7%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height: 600px) {
+  body {
+    overflow: hidden;
+    padding: 2% 0 0 0;
+  }
+
+  .topo {
+    flex-direction: row;
+  }
+
+  .barra2 {
+    font-size: 18px;
   }
 }
