@@ -12,6 +12,8 @@ body {
     background-size: cover; /* Ajusta o fundo para cobrir toda a área */
     background-attachment: fixed; /* Mantém o fundo fixo */
     flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .foter{

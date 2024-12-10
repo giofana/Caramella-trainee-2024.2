@@ -8,6 +8,7 @@ body {
 header {
   background-color: #e7baa7;
   height: 72px;
+  width: 100%;
 }
 
 * {
