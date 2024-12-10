@@ -101,7 +101,6 @@ class UsersController
                 if (!empty($_POST['password'])) { // Verifica se tem uma senha sendo enviada
                     $parametros['password'] = $_POST['password'];
                 }
-                }
 
                 $result = App::get('database')->edit('users', $id, $parametros);
 
