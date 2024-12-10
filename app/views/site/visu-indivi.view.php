@@ -87,7 +87,7 @@
             <button onclick="window.location.href='/posts';" type="submit">Veja mais Receitas</button>
     </div>
 
-    <?php include 'C:/Users/guilh/Desktop/Antigo PC/crml/Caramella-trainee-2024.2/app/views/site/footer.view.php';
+    <?php include 'footer.view.php';
  ?>
 
 </body>

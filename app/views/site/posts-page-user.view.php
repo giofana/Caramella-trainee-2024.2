@@ -25,7 +25,7 @@
           <img src="<?= $post->image ?>" alt="Imagem do post" class="post-img" />
           <div class="post-description">
             <p class="description">
-            <?= strlen($post->history) > 140 ? wordwrap(substr($post->history, 0, 140), 40, "\n", true) . "..." : wordwrap($post->history, 40, "\n", true) ?>            </p>
+            <?= strlen($post->history) > 140 ? wordwrap(substr($post->history, 0, 140), 40, "\n", true) . "..." : wordwrap($post->history, 2540, "\n", true) ?>            </p>
           </div>
           <div class="author">
             <img src="../../../public/assets/author-icon.png" alt="author-icon" />
@@ -42,7 +42,7 @@
       <?php endfor ?>
       <a class="page-next<?= $page >= $total_pages ? " disabled" : "" ?>" href="?paginaLista=<?= $page + 1 ?>">&raquo;</a>
     </div>
-    <?php include 'C:/Users/guilh/Desktop/Antigo PC/crml/Caramella-trainee-2024.2/app/views/site/footer.view.php';
+    <?php include 'footer.view.php';
  ?>
   </body>
 </html>
