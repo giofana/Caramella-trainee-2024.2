@@ -20,8 +20,6 @@ class PostsController
             header('Location: /login');
         }
         // retornando todos os posts da tabela de posts
-        $posts = App::get('database')->selectAll('posts');
-        return view('admin/posts-page', compact('posts'));
         $page = 1;
 
         if (isset($_GET['paginaLista']) && !empty($_GET['paginaLista'])) {
