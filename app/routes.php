@@ -32,4 +32,6 @@ use App\Core\Router;
     $router->post('posts-list', 'PostsController@index');
     $router->post('users','UsersController@users');
 
+    $router->get('landing-page', 'PostsController@exibirLandingPage');
+
 ?>

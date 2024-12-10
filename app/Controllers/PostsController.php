@@ -7,6 +7,12 @@ use Exception;
 
 class PostsController
 {
+
+    public function exibirLandingPage(){
+        $posts = App::get('database')->selectAll('posts');
+        return view('site/landing-page', compact('posts'));
+    }
+
     public function index($itensView=5)
     {
         session_start();
