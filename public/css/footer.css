@@ -138,10 +138,11 @@
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
-        background-image: url(../../public/assets/fundo.jpg);
+        background-color: #E7BAA7;
+        background-image: none;
         background-repeat: no-repeat;
         background-size: contain;
-        padding: 0 12%;
+        padding: 0 4%;
         height: 100%;
         width: 100%;
     }
@@ -149,6 +150,7 @@
     .infos1, .infos2{
         margin-top: 3%;
     }
+
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
