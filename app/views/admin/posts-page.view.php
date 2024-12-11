@@ -10,8 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <title>Admin | Posts Page</title>
-    <link rel="icon" type="image/png" href="public/assets/icon-logo.png" />
+    <title>Admin | Posts Table</title>
+    <link rel="icon" type="image/png" href="/public/assets/posts.png" />
   </head>
   <body>
     <div id="tela"></div>
@@ -80,17 +80,13 @@
                 <td class="celula-data"><?php $date=new DateTime($post->date); echo $date->format('d/m/Y');?></td>
                 <td class="celula-acoes">
                   <div class="square" onclick='openModal("modalVisu<?= $post->id ?>", "view", <?= $post->ingredients ?>, <?= $post->id ?>)'>
-                    <img class="view" src="/public/assets/view.svg" alt="" />
+                  <img class='view' src="../../../public/assets/visu.png" />
                   </div>
                   <div class="square" onclick='openModal("modalEditar<?= $post->id ?>", "edit", <?= $post->ingredients ?>, <?= $post->id ?>)'>
-                    <img class="edit" src="/public/assets/edit.svg" alt="" />
+                  <img class='edit' src="../../../public/assets/edit.png" />
                   </div>
                   <div class="square" onclick="openModal('modalDel<?= $post->id ?>')">
-                    <img
-                      class="delete"
-                      src="/public/assets/delete.svg"
-                      alt=""
-                    />
+                    <img class='delete' src="../../../public/assets/lixo.png" />
                   </div>
                 </td>
               </tr>

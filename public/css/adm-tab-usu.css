@@ -314,9 +314,9 @@ body {
 
 .pagina a.active {
   background-color: #d0f4d4;
-  border: 2px solid #fad2a4;
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(250, 210, 164, 0.8);
+  /* border: 2px solid #fad2a4; */
+  /* transform: scale(1.1); */
+  /* box-shadow: 0 0 15px rgba(250, 210, 164, 0.8); */
 }
 /* ------------ estilo da tela de editar ----------------- */
 

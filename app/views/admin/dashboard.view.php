@@ -15,7 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kurale&display=swap" rel="stylesheet">
-    <title>Caramella - Dashboard</title>
+    <title>Caramella | Dashboard</title>
+    <link rel="icon" href="../../../public/assets/icon-logo.png" type="image/png">
   </head>
   <body>
     <main>

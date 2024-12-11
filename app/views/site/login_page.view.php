@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/public/css/login_page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Caramella | Login</title>
+    <link rel="icon" type="image/png" href="/public/assets/logout.png"/>
 </head>
 <body>
     <div class="body">

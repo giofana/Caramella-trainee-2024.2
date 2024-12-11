@@ -34,8 +34,9 @@ body {
 }
 
 .top {
+  margin: 0 7%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: nowrap;
 }
 
@@ -62,13 +63,13 @@ body {
   align-items: center;
   min-width: 65%;
   overflow: hidden;
-  gap: 20px;
+  gap: 12px;
 }
 
 tbody {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .linha-header,
@@ -77,7 +78,6 @@ tbody {
   align-items: center;
   justify-content: space-between;
   width: 70vw;
-  max-width: 1000px;
   height: 6vh;
   border-radius: 40px;
   font-size: 24px;
@@ -127,7 +127,7 @@ th .celula-titulo {
 }
 
 .celula-acoes {
-  flex-basis: 30%;
+  flex-basis: 32%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -136,28 +136,25 @@ th .celula-titulo {
 
 .square {
   background-color: #fad2a4;
-  border-radius: 20px;
-  width: 4.2vw;
+  border-radius: 15px;
+  width: 3.8vw;
   height: 4vh;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 1%;
-  /* margin-right: 1%; */
 }
 
 .square:hover {
   cursor: pointer;
+  color: #13142a;
+  box-shadow: #64473b 0px 0px 10px;
 }
 
-.view {
-  width: 2.2vw;
-  height: auto;
-}
-
+.view,
 .edit,
 .delete {
-  width: 2vw;
+  width: 1.6vw;
   height: auto;
 }
 
@@ -688,7 +685,6 @@ form > h2 {
     font-size: 52px;
   }
 
-  td,
   th {
     font-size: 24px;
     font-weight: bold;
@@ -724,8 +720,11 @@ form > h2 {
     width: 32px;
     border-radius: 8px;
   }
-  .square img {
-    width: 75%;
+
+  .view,
+  .edit,
+  .delete {
+    width: 2.5vw;
   }
 
   .celula-acoes {
@@ -757,6 +756,14 @@ form > h2 {
   }
 }
 
+@media (max-width: 540px) {
+  .view,
+  .edit,
+  .delete {
+    width: 4.5vw;
+  }
+}
+
 @media (max-width: 425px) {
   .container {
     overflow: hidden;
@@ -779,7 +786,6 @@ form > h2 {
     font-size: 44px;
   }
 
-  td,
   th {
     font-size: 24px;
     font-weight: bold;
@@ -822,9 +828,6 @@ form > h2 {
   .square {
     width: 32px;
     border-radius: 8px;
-  }
-  .square img {
-    width: 75%;
   }
 
   .celula-acoes {
@@ -909,9 +912,6 @@ form > h2 {
 
   .square {
     width: 28px;
-  }
-  .square img {
-    width: 85%;
   }
 
   .pagination a {
