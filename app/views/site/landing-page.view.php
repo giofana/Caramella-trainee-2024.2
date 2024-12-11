@@ -28,7 +28,7 @@
     <div id="banner">
         <h2>CONHEÇA O LADO MAIS DOCE DA VIDA</h2>
         <p>Fique à vontade para ver nossas receitas, dicas e histórias de vida.</p>
-        <button>Ver mais</button>
+        <button class="vermais"><a href="/posts">Ver mais</a></button>
     </div>
     <!-----------------------------------------FIM BANNER------------------------------------>
 
