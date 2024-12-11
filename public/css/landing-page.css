@@ -72,6 +72,11 @@ body::-webkit-scrollbar{
     border: none;
 }
 
+.vermais a{
+    text-decoration:none;
+    color: #30231c;
+}
+
 #banner button:hover{
     cursor: pointer;
     transition-duration: 0.2s;
@@ -136,7 +141,7 @@ a>h3:hover{
     transition-duration: 0.2s;
 }
 
-a:-webkit-any-link{
+.imglp{
     color:#bb856e;
 }
 
@@ -202,6 +207,7 @@ a:-webkit-any-link{
         padding: 2px 6px;
         font-size: 12px;
     }
+
 
     /*--------------- FIM BANNER  -------------------- */
 
