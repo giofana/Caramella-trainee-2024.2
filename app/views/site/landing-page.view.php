@@ -40,7 +40,7 @@
             <!----------------------------------------CARD DE POST------------------------------------>
             <?php for ($i = count($posts)-1; $i >= count($posts) - 5; $i = $i - 1): ?>
             <div class="posts">
-                <a href="/vdpi?id-post=<?= $posts[$i]->id ?>">
+            <a class = "imglp"href="/vdpi?id-post=<?= $posts[$i]->id ?>">
                 <img src="<?= $posts[$i]->image ?>" alt="">
                 <h3><?= $posts[$i]->title ?></h3>
                 </a>
