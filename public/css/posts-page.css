@@ -30,7 +30,7 @@ body {
   max-height: 90%;
   flex-direction: column;
   justify-content: space-evenly;
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 .top {
@@ -114,9 +114,7 @@ th .celula-titulo {
   flex-basis: 20%;
 }
 
-.celula-titulo {
-  width: 45%;
-}
+
 
 .celula-autor {
   flex-basis: 20%;
@@ -690,11 +688,24 @@ form > h2 {
     font-weight: bold;
   }
 
+  .center{
+    width: 100%;
+  }
+
   .tabela {
     overflow-x: auto;
     align-items: flex-start;
     padding-left: 20px;
     padding-right: 20px;
+    width: 100%;
+  }
+
+  thead{
+    width: 100%;
+  }
+
+  tbody{
+    width: 100%;
   }
 
   .botao-criar {
@@ -713,7 +724,7 @@ form > h2 {
   .linha-comum,
   .linha-header {
     align-items: flex-start;
-    width: 750px;
+    width: 100%;
   }
 
   .square {
@@ -727,9 +738,27 @@ form > h2 {
     width: 2.5vw;
   }
 
+  .celula-id{
+    flex-basis: 15%;
+  }
+
+  .celula-titulo{
+    flex-basis: 30%;
+  }
+
+  .celula-autor{
+    flex-basis: 25%;
+  }
+
+
   .celula-acoes {
+    flex-basis: 30%;
     justify-content: center;
     gap: 12%;
+  }
+
+  .celula-data{
+    display: none;
   }
 
   .pagination a {
@@ -800,11 +829,27 @@ form > h2 {
     display: none;
   }
 
+  .center{
+    justify-content: center;
+  }
+
   .tabela {
     overflow-x: auto;
     align-items: center;
+    justify-content: center;
     padding: 0;
   }
+
+  thead{
+    display: flex;
+    justify-content: center;
+  }
+
+  tbody{
+    display: flex;
+    align-items: center;
+  }
+
 
   .botao-criar {
     width: 44px;
