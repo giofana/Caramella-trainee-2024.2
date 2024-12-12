@@ -24,24 +24,24 @@
           />
         </div>
         <ul id="sidebar-itens">
-          <li class="side-item active">
-            <a href="#">
-              <i class="fa-solid fa-chart-line"></i>
-              <p class="item-title">Dashboard</p>
-            </a>
-          </li>
-          <li class="side-item">
-            <a href="#">
+          <a class="" href="/dashboard">
+            <li class="side-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <p class="item-title">Dashboard</p>
+              </li>
+          </a>
+          <a class="" href="/posts-list">
+            <li class="side-item">
               <i class="fa-regular fa-pen-to-square"></i>
               <p class="item-title">Publicações</p>
-            </a>
-          </li>
-          <li class="side-item">
-            <a href="#">
+            </li>
+          </a>
+          <a href="/users">
+            <li class="side-item">
               <i class="fa-solid fa-users"></i>
               <p class="item-title">Usuários</p>
-            </a>
-          </li>
+            </li>
+          </a>
         </ul>
         <div id="logout-container">
           <form action="/logout" method="POST">

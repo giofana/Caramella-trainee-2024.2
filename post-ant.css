@@ -17,7 +17,6 @@ body {
 .container {
   display: flex;
   height: 100%;
-  /* width: 100%; */
 }
 
 .content-container {
@@ -37,14 +36,15 @@ body {
   height: fit-content;
   border-radius: 60px;
   overflow: hidden;
-  /* margin-bottom: 10%; */
+  margin-bottom: 10%;
 }
 
 .top {
+  /* margin: 0 7%; */
+  padding: 2% 8%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 2% 8%;
+  flex-wrap: nowrap;
 }
 
 .botao-criar {
@@ -53,16 +53,16 @@ body {
 }
 
 .top p {
-  /* display: flex; */
+  display: flex;
   color: white;
-  /* width: fit-content; */
+  width: fit-content;
   font-size: 60px;
+  margin-top: 2%;
+  margin-bottom: 3%;
 }
 
 .texto-sombra {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.582);
-  margin-top: 2%;
-  margin-bottom: 3%;
 }
 
 /* --------------- Tabela --------------- */
@@ -167,9 +167,9 @@ th .celula-titulo {
   height: auto;
 }
 
-.botao-criar {
+/* .botao-criar {
   width: 7%;
-}
+} */
 
 .botao-criar button {
   width: 5vw;
@@ -200,24 +200,24 @@ th .celula-titulo {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin-bottom: 2%;
-  margin-top: 2%;
+  /* margin-bottom: 2%; */
+  /* margin-top: 2%; */
 }
 
 .pagination {
   display: flex;
   justify-content: center;
-  /* padding: 2% 0 3%; */
-  /* margin-bottom: 3%; */
+  padding: 2% 0;
+  margin-bottom: 3%;
 }
 
 .pagination a {
   background-color: rgba(250, 210, 164, 0.65);
   color: #13142a;
-  padding: 0.7% 1.2%;
+  /* padding: 0.7% 1.2%; */
   text-decoration: none;
   transition: background-color 0.3s;
-  margin: 0 0.5%;
+  /* margin: 0 0.5%; */
   border: 1px solid #13142a;
   border-radius: 4px;
   min-width: 40px;
@@ -551,13 +551,6 @@ form > h2 {
   /* /----------------------------------- Modal de Criar Post ---------------------------------------------/ */
   /* Bruno */
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    width: 80%;
-  }
-
   .modal {
     display: none;
     width: 90%;
@@ -603,7 +596,7 @@ form > h2 {
 @media (max-width: 1024px) {
   .botao-criar button {
     margin-top: 0;
-    width: 95%;
+    /* width: 95%; */
   }
 
   .top {
@@ -686,7 +679,7 @@ form > h2 {
 
   .card {
     overflow: hidden;
-    width: 100%;
+    width: 95vw;
     height: 90vh;
     border-radius: 16px;
     z-index: 1;
@@ -783,20 +776,11 @@ form > h2 {
 @media (max-width: 425px) {
   .container {
     overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  body {
-    margin: 0;
-    padding: 16px;
-    width: 100vw;
-    height: 100%;
   }
 
   .card {
     overflow: hidden;
-    /* width: 95vw; */
+    width: 95vw;
     height: 90vh;
     border-radius: 16px;
   }
