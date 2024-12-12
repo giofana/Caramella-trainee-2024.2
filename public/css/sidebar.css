@@ -160,11 +160,11 @@ body {
 }
 
 .side-item:hover:not(.active) {
-  background-color: #fad2a43f;
+  background-color: #64473b49;
 }
 
 #sidebar.close .side-item:hover:not(.active) {
-  background-color: #fad2a43f;
+  background-color: #64473b69;
   border-radius: 50px;
 }
 
