@@ -17,15 +17,11 @@ body {
 .container {
   display: flex;
   height: 100%;
-  /* width: 100%; */
 }
 
 .content-container {
-  flex-grow: 1; /* O conteúdo principal ocupa o restante do espaço */
+  flex-grow: 1;
   padding: 20px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
 
 .card {
@@ -53,16 +49,12 @@ body {
 }
 
 .top p {
-  /* display: flex; */
-  color: white;
-  /* width: fit-content; */
   font-size: 60px;
+  color: white;
 }
 
 .texto-sombra {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.582);
-  margin-top: 2%;
-  margin-bottom: 3%;
 }
 
 /* --------------- Tabela --------------- */
@@ -123,10 +115,6 @@ th .celula-titulo {
   flex-basis: 20%;
 }
 
-.celula-titulo {
-  width: 45%;
-}
-
 .celula-autor {
   flex-basis: 20%;
 }
@@ -167,9 +155,9 @@ th .celula-titulo {
   height: auto;
 }
 
-.botao-criar {
+/* .botao-criar {
   width: 7%;
-}
+} */
 
 .botao-criar button {
   width: 5vw;
@@ -207,8 +195,8 @@ th .celula-titulo {
 .pagination {
   display: flex;
   justify-content: center;
-  /* padding: 2% 0 3%; */
-  /* margin-bottom: 3%; */
+  padding: 2% 0;
+  margin-bottom: 3%;
 }
 
 .pagination a {
@@ -551,13 +539,6 @@ form > h2 {
   /* /----------------------------------- Modal de Criar Post ---------------------------------------------/ */
   /* Bruno */
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    width: 80%;
-  }
-
   .modal {
     display: none;
     width: 90%;
@@ -602,8 +583,13 @@ form > h2 {
 
 @media (max-width: 1024px) {
   .botao-criar button {
-    margin-top: 0;
-    width: 95%;
+    /* margin-top: -20%; */
+    width: 10vw;
+  }
+
+  .botao-criar button img {
+    margin-left: 32%;
+    width: 35%;
   }
 
   .top {
@@ -618,9 +604,9 @@ form > h2 {
     margin: 0;
   }
 
-  .botao-criar button img {
+  /* .botao-criar button img {
     width: 50%;
-  }
+  } */
 
   /* Inicio modal excluir*/
 
@@ -684,13 +670,13 @@ form > h2 {
     overflow: hidden;
   }
 
-  .card {
+  /* .card {
     overflow: hidden;
-    width: 100%;
+    width: 95vw;
     height: 90vh;
     border-radius: 16px;
     z-index: 1;
-  }
+  } */
 
   .top {
     flex-direction: column;
@@ -706,14 +692,27 @@ form > h2 {
     font-weight: bold;
   }
 
+  .center {
+    width: 100%;
+  }
+
   .tabela {
     overflow-x: auto;
     align-items: flex-start;
     padding-left: 20px;
     padding-right: 20px;
+    width: 100%;
   }
 
-  .botao-criar {
+  thead {
+    width: 100%;
+  }
+
+  tbody {
+    width: 100%;
+  }
+
+  /* .botao-criar {
     width: 44px;
   }
 
@@ -724,12 +723,12 @@ form > h2 {
   .botao-criar button img {
     padding: 4px;
     width: 70%;
-  }
+  } */
 
   .linha-comum,
   .linha-header {
     align-items: flex-start;
-    width: 750px;
+    width: 100%;
   }
 
   .square {
@@ -743,9 +742,26 @@ form > h2 {
     width: 2.5vw;
   }
 
+  .celula-id {
+    flex-basis: 15%;
+  }
+
+  .celula-titulo {
+    flex-basis: 30%;
+  }
+
+  .celula-autor {
+    flex-basis: 25%;
+  }
+
   .celula-acoes {
+    flex-basis: 30%;
     justify-content: center;
     gap: 12%;
+  }
+
+  .celula-data {
+    display: none;
   }
 
   .pagination a {
@@ -783,23 +799,20 @@ form > h2 {
 @media (max-width: 425px) {
   .container {
     overflow: hidden;
-    display: flex;
-    justify-content: space-between;
   }
 
-  body {
-    margin: 0;
-    padding: 16px;
-    width: 100vw;
-    height: 100%;
+  .botao-criar button {
+    margin-top: 10px;
+    width: 15vw;
+    margin-bottom: 5%;
   }
 
-  .card {
+  /* .card {
     overflow: hidden;
-    /* width: 95vw; */
+    width: 95vw;
     height: 90vh;
     border-radius: 16px;
-  }
+  } */
 
   .top {
     gap: 36px;
@@ -825,13 +838,28 @@ form > h2 {
     display: none;
   }
 
+  .center {
+    justify-content: center;
+  }
+
   .tabela {
     overflow-x: auto;
     align-items: center;
+    justify-content: center;
     padding: 0;
   }
 
-  .botao-criar {
+  thead {
+    display: flex;
+    justify-content: center;
+  }
+
+  tbody {
+    display: flex;
+    align-items: center;
+  }
+
+  /* .botao-criar {
     width: 44px;
   }
 
@@ -842,7 +870,7 @@ form > h2 {
   .botao-criar button img {
     padding: 4px;
     width: 70%;
-  }
+  } */
 
   .linha-comum,
   .linha-header {
@@ -921,14 +949,20 @@ form > h2 {
     font-size: 22px;
   }
 
-  .botao-criar {
+  /* .botao-criar button {
+    margin-top: 10px;
+    width: 15vw;
+    margin-bottom: 5%;
+  } */
+
+  /* .botao-criar {
     width: 40px;
   }
 
   .botao-criar button img {
     padding: 4px;
     width: 70%;
-  }
+  } */
 
   .celula-acoes {
     gap: 8px;
