@@ -10,7 +10,7 @@
     <header>
       <nav>
         <div class="navbar-container">
-          <img src="../../../public/assets/logo-font.jpg" alt="logo" />
+          <img id="secretButton" src="../../../public/assets/logo-font.jpg" alt="logo" />
           <!-- TODO: colocar links -->
           <ul class="nav-links">
             <li><a href="/landing-page">Home</a></li>
@@ -21,5 +21,7 @@
         </div>
       </nav>
     </header>
+
+<script src="/public/js/navbar.js"></script>
   </body>
 </html>

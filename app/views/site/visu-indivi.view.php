@@ -15,6 +15,12 @@
 
 <?php include "navbar.php"; ?>
 
+<!-------------------------------------COOKIE-ALERT---------------------------------->
+
+<?php include "cookie-alert.php"; ?>
+
+<!-------------------------------------FIM-COOKIE-ALERT---------------------------------->
+
 <div class="receitas">
     <?php foreach ($posts as $post): ?>
         <div class="img_receita">

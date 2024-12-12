@@ -17,6 +17,12 @@
 
 <?php include "navbar.php"; ?>
 
+<!-------------------------------------COOKIE-ALERT---------------------------------->
+
+<?php include "cookie-alert.php"; ?>
+
+<!-------------------------------------FIM-COOKIE-ALERT---------------------------------->
+
     <div class = "principal">
         <div class = "img">
             <img src = "../../../public/assets/caramella21.png">

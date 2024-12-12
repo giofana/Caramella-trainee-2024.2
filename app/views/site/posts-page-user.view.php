@@ -10,6 +10,12 @@
 
   <?php include "navbar.php"; ?>
 
+ <!-------------------------------------COOKIE-ALERT---------------------------------->
+
+ <?php include "cookie-alert.php"; ?>
+
+<!-------------------------------------FIM-COOKIE-ALERT---------------------------------->
+
     <div class="search-bar">
       <form action="/posts" method="GET">
         <input type="text" name="search" placeholder="Buscar" class="txt-search" value="<?= htmlspecialchars($search) ?>" />

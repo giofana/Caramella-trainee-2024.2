@@ -57,6 +57,11 @@ class SiteController
         return view('site/posts-page-user', compact('posts', 'page', 'total_pages', 'startPage', 'search'));
     }
 
+    // Função que leva para a página secreta
+    public function showSecret(){
+        return view('site/secret');
+    }
+
 
 }
 ?>

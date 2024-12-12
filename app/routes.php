@@ -48,4 +48,8 @@ use App\Core\Router;
 
     $router->get('contato', 'InfoController@show');
 
+// ROTA DA PÁGINA SECRETA
+
+    $router->get('secret', 'SiteController@showSecret');
+
 ?>
