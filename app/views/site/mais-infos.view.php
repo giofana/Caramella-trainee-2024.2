@@ -64,19 +64,19 @@
                         <div class = "redes">
                             <div class = "insta">
                                 <img src = "../../../public/assets/Instagram1.png">
-                                <div><a href = "https://www.instagram.com">instagram/caramella</a></div>
+                                <div><a href = "https://www.instagram.com" target="_blank">instagram/caramella</a></div>
                             </div>
                             <div class = "face">
                                 <img src = "../../../public/assets/Facebook1.png">
-                                <div><a href = "https://www.facebook.com">facebook/caramella</a></div>
+                                <div><a href = "https://www.facebook.com" target="_blank">facebook/caramella</a></div>
                             </div>
                             <div class = "tt">
                                 <img src = "../../../public/assets/Twitter1.png">
-                                <div><a href = "https://www.x.com">x.com/caramella</a></div>
+                                <div><a href = "https://www.x.com" target="_blank">x.com/caramella</a></div>
                             </div>
                             <div class = "blus">
                                 <img src = "../../../public/assets/blues1.png">
-                                <div><a href = "https://bsky.app">bluesky.com/caramella</a></div>
+                                <div><a href = "https://bsky.app" target="_blank">bluesky.com/caramella</a></div>
                             </div>
                         </div>
                     </div>

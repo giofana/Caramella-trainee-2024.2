@@ -7,10 +7,10 @@ body {
     display: flex;
     justify-content: center;
     width: fit-content;
-    height: 100%;
+    height: fit-content;
     background: linear-gradient(to bottom, #FAD2A4 0%, #E7BAA7 50%, #FAC0CF 100%);
-    background-size: cover; /* Ajusta o fundo para cobrir toda a área */
-    background-attachment: fixed; /* Mantém o fundo fixo */
+    background-size: cover;
+    background-attachment: fixed;
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -90,6 +90,10 @@ body {
 
 .insta a, .face a, .tt a, .blus a{
     color: black;
+}
+
+.redes a{
+    text-decoration: none;
 }
 
 .redes img{
@@ -173,8 +177,14 @@ body {
 
 }
 
-@media (max-width: 540px) {
+@media (max-width: 768px) {
+    
+    .principal img{
+        display: none;
+    }
+}
 
+@media (max-width: 540px) {
     .missao, .valores, .visao{
         font-size: 16px;
     }

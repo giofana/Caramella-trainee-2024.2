@@ -15,10 +15,10 @@
             <div class ="text">
                 <p>Venha conhecer nossas redes sociais!</p>
                     <div class = "infos1l">
-                        <a href = "https://www.instagram.com"><img src = "../../../public/assets/Instagram2.png" ></a>
-                        <a href = "https://www.facebook.com"><img src = "../../../public/assets/Facebook2.png" ></a>
-                        <a href = "https://www.x.com"><img src = "../../../public/assets/Twitter2.png" ></a>
-                        <a href = "https://bsky.app"><img src = "../../../public/assets/bluesky2.png"></a>
+                        <a href = "https://www.instagram.com" target="_blank"><img src = "../../../public/assets/Instagram2.png" ></a>
+                        <a href = "https://www.facebook.com" target="_blank"><img src = "../../../public/assets/Facebook2.png" ></a>
+                        <a href = "https://www.x.com" target="_blank"><img src = "../../../public/assets/Twitter2.png" ></a>
+                        <a href = "https://bsky.app" target="_blank"><img src = "../../../public/assets/bluesky2.png"></a>
                     </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
             <div class=>
             <div class = "infos21">
             <img src = "../../../public/assets/wpp2.png" >
-            <p>(00) 0 0000-0000</p>
+            <p>(32) 9 4002-8922</p>
             </div>
             <div class = "infos22">
             <img src = "../../../public/assets/email2.png" >

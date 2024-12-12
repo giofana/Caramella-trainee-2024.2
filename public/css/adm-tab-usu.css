@@ -8,9 +8,9 @@ body {
   justify-content: center;
   height: 100vh;
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
-  padding: 6% 0 0 0;
   z-index: 1;
   margin: 0;
+  align-items: center;
 }
 
 .corpo {
@@ -21,7 +21,6 @@ body {
   height: fit-content;
   border-radius: 60px;
   overflow: hidden;
-  margin-bottom: 10%;
 }
 
 .view1 {
@@ -605,6 +604,10 @@ input:focus {
     align-items: row;
   }
 
+  body{
+    padding: 0 2%;
+  }
+
   .corpo {
     width: 100%;
     height: fit-content;
@@ -723,7 +726,7 @@ input:focus {
 
   .barra1,
   .barra2 {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .input-senha {
@@ -738,7 +741,6 @@ input:focus {
 @media screen and (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height: 600px) {
   body {
     overflow: hidden;
-    padding: 2% 0 0 0;
   }
 
   .topo {

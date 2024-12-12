@@ -18,7 +18,7 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    background-image: url(../../public/assets/fundo.jpg);
+    background-image: url(../../public/assets/fundo.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0 12%;
@@ -50,9 +50,7 @@
     height: 50%;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    white-space: nowrap;
-    
+    flex-direction: column;   
 }
 
 .infos21,.infos22{
@@ -155,7 +153,7 @@
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
 
-    body{
+    main{
         height: fit-content;
     }
 
