@@ -106,8 +106,6 @@
       <!-- fim modal excluir -->
     <?php endforeach; ?>
 
-    <?php include "footer.php"; ?>
-
     <script src="/public/js/adm-tabela-posts.js"></script>
   </body>
 </html>
