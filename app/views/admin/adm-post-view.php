@@ -1,7 +1,7 @@
 
 <div class="modal" id="modalVisu<?= $post->id ?>">
       <form>
-        <h2>Preencha todos os campos abaixo para criar post:</h2>
+        <h2>Seu post:</h2>
         <div class="inputModal">
           <label for="Título2">Título da receita</label
           ><input id="Título2" type="text" value="<?= $post->title ?>" disabled/>

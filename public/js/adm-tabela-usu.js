@@ -30,6 +30,8 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+
+// A senha se torna visivel quando segura o botao do mouse
   document.querySelectorAll(".modalView").forEach((modal) => {
     const senhaInput = modal.querySelector("input.senha");
     const viewSenha = modal.querySelector(".view1 img");
