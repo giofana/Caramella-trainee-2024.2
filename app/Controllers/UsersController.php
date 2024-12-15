@@ -59,27 +59,36 @@ class UsersController
 
 
     public function deleteUser()
-    {
-        // Verifica se o ID foi enviado via POST e é um número válido
-        if (isset($_POST['id']) && is_numeric($_POST['id'])) {
-            $id = (int) $_POST['id']; // Converte para inteiro
+{
+    // Verifica se o ID foi enviado via POST e é um número válido
+    if (isset($_POST['id']) && is_numeric($_POST['id'])) {
+        $id = (int)$_POST['id']; // Converte para inteiro
 
-            // Chama o método delete no QueryBuilder
-            $result = App::get('database')->delete('users', $id);
+        // Verifica se existem posts relacionados ao usuário
+        $posts = App::get('database')->selectPosts('posts', $id, 'author');
 
-            // Verifica se a exclusão deu certo
-            if ($result) {
-                // Redireciona para a pagina users
-                return redirect('users');
-            } else {
-                // Se não foi possível excluir, exibe mensagem de erro
-                echo "Erro ao excluir o usuário.";
+        if (!empty($posts)) {
+            // Exclui os posts
+            $postsDeleted = App::get('database')->deletePostsByUserId('posts', $id);
+            if (!$postsDeleted) {
+                echo "Erro ao excluir os posts vinculados ao usuário.";
+                return;
             }
-        } else {
-            // Se o ID não for fornecido ou não for válido, exibe mensagem de erro
-            echo "ID inválido ou não fornecido.";
         }
+
+        // Exclui o usuário
+        $userDeleted = App::get('database')->deleteUser('users', $id);
+
+        if ($userDeleted) {
+            return redirect('users');
+        } else {
+            echo "Erro ao excluir o usuário.";
+        }
+    } else {
+        // Se o ID não for fornecido ou não for válido, exibe mensagem de erro
+        echo "ID inválido ou não fornecido.";
     }
+}
 
     public function edit()
     {

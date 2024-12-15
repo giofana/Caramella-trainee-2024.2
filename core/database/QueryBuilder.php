@@ -286,6 +286,32 @@ class QueryBuilder
      }
 }
 
+public function deletePostsByUserId($table, $userId)
+{
+    $sql = sprintf('DELETE FROM %s WHERE author = :author', $table);
 
+    try {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(':author', $userId, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->rowCount() > 0; // Retorna true se ao menos um post foi excluído
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }
+}
+
+public function selectPosts($table, $value, $column = 'id')
+{
+    $sql = sprintf('SELECT * FROM %s WHERE %s = :value', $table, $column);
+
+    try {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute(['value' => $value]);
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }
+}
 
 }
