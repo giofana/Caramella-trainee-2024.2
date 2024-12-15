@@ -1,3 +1,6 @@
+<?php
+session_start(); // Certifique-se de que a sessão está iniciada
+?>
 <!-- modal-criar.php -->
 <div class="modal" id="modalCriar">
   <form method="POST" action="posts-list/create" enctype="multipart/form-data">
@@ -10,11 +13,12 @@
       <div class="subForm">
         <div class="inputModal" id="autor">
           <label for="Autor">Autor</label>
-          <input required id="Autor" type="text" name="autor-receita"/>
+          <input required id="Autor" type="text" name="autor-receita" value="<?php echo $_SESSION['id']; ?>" readonly/>        
         </div>
         <div class="inputModal" id="tempo">
           <label for="Tempo">Tempo</label>
-          <input required id="Tempo" type="number" name="tempo-receita" min="0" oninput="this.value = Math.abs(this.value)"/>        </div>
+          <input required id="Tempo" type="number" name="tempo-receita" min="0" oninput="this.value = Math.abs(this.value)"/>
+        </div>
       </div>
       <div class="subForm">
         <div class="inputModal" id="custo">
@@ -39,18 +43,15 @@
     </div>
     <div class="inputModal">
       <label for="Ingredientes">Ingredientes</label>
-      <input  id="ingredienteInput" type="text" />
-
+      <input id="ingredienteInput" type="text" />
       <div class="btt-ingredient">
         <button type="button" onclick="addIngredient()" id="create-ingredient" class="create-ingredient">
           Adicionar Ingrediente
         </button>
-
       </div>
     </div>
     <ul id="ingredientesListCreate" class="ingredient-list"></ul>
     <input required type="hidden" id="ingredientesCreate" name="ingredientes-receita" />
-
     <div class="inputModal">
       <label for="Modo">Modo de preparo</label>
       <textarea id="Modo" rows="3" name="modo-receita"></textarea>

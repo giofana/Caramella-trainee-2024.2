@@ -90,7 +90,7 @@ class PostsController
 
         $parameters = [
             'title' => $_POST['titulo-receita'],
-            'author' => "1",
+            'author' => $_POST['autor-receita'],
             'cost' => $_POST['custo-receita'],
             'difficulty' => $_POST ['dificuldade-receita'],
             'time' => $_POST['tempo-receita'],
