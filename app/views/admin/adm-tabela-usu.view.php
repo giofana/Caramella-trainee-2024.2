@@ -49,11 +49,10 @@
             </div>
 
             <?php
-            $cont = $inicio + 1;
             foreach($users as $user) :
             ?>
             <div class="barra2">
-              <div class="idb"><p><?= $cont++ ?></p></div>
+              <div class="idb"><p><?= $user->id ?></p></div>
               <div class="nomeb"><p><?= $user->name ?></p></div>
               <div class="emailb"><p><?= $user->email ?></p></div>
               <div class="barra2b">
