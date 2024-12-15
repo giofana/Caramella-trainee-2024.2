@@ -268,7 +268,10 @@ body {
 
 @media (max-width: 768px) {
   #sidebar {
-    width: 100%;
+    width: 35%;
+    position: fixed;
+    top: 40px;
+    left: 10px;
   }
 
   .sidebar-container.expanded {
@@ -291,12 +294,47 @@ body {
     width: 25px;
     height: 25px;
   }
+
+  #sidebar.close ul {
+    display: none;
+  }
+
+  #sidebar.close {
+    max-width: 0;
+  }
+
+  #open-button {
+    position: fixed; /* Altera para posição fixa */
+    top: 40px;
+    left: 10px; /* Ajusta a posição para o canto superior esquerdo */
+    background-color: #64473be5;
+    color: #fff;
+    border: none; /* Remove a borda do botão */
+    width: 35px; /* Largura do botão */
+    height: 35px; /* Altura do botão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: left 0.3s ease; /* Adiciona uma transição suave para a posição */
+  }
+
+  #open-button i {
+    font-size: 20px; /* Tamanho do ícone */
+  }
+
+  #sidebar.close #open-button {
+    left: 10px; /* Mantém o botão no canto superior esquerdo quando a sidebar está fechada */
+  }
+  #sidebar.close #logout-container {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
-  /* #sidebar {
-    width: 40%;
-  } */
+  #sidebar {
+    width: 50%;
+  }
 
   /* /* #sidebar.close {
     width: 12%;

@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="sidebar-container">
-      <nav id="sidebar">
+      <nav id="sidebar" class="close">
         <div class="logo-container">
           <img
             src="../../../public/assets/logo-png.svg"
@@ -54,6 +54,7 @@
         <button id="open-button">
           <i id="open-button-icon" class="fa-solid fa-chevron-right open"></i>
           <i id="close-button-icon" class="fa-solid fa-chevron-left close"></i>
+          <i class="fa-solid fa-bars" id="menu-icon"></i>
         </button>
       </nav>
     </div>
