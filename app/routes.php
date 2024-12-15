@@ -18,7 +18,7 @@ use App\Core\Router;
     $router->get('users', 'UsersController@index');
     $router->post('users','UsersController@index');
     $router->post('creat', 'UsersController@creat');
-    $router->post('delete', 'UsersController@delete');
+    $router->post('delete', 'UsersController@deleteUser');
     $router->post('edit', 'UsersController@edit');
 
 
