@@ -15,7 +15,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 90%;
+  width: 5%;
   height: 100%;
   display: flex;
   justify-content: flex-start;
@@ -246,7 +246,7 @@ body {
   } */
 
   .sidebar-container {
-    width: 80%;
+    width: 6%;
     /* margin-left: 0; */
   }
   .item-title {
