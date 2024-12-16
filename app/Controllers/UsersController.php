@@ -80,7 +80,10 @@ class UsersController
         $userDeleted = App::get('database')->deleteUser('users', $id);
 
         if ($userDeleted) {
-            return redirect('users');
+            session_start();
+            session_unset();
+            session_destroy();
+            header('Location: /');
         } else {
             echo "Erro ao excluir o usuário.";
         }
