@@ -52,7 +52,7 @@ body {
 }
 
 .topo p {
-  font-size: 60px;
+  font-size: 44px;
   color: white;
 }
 
@@ -634,10 +634,10 @@ input:focus {
   .button-box {
     margin: 5% 0 5% 0;
   }
-
+  /* 
   .pagina {
     margin-bottom: 10%;
-  }
+  } */
 
   .texto-sombra {
     margin-top: 10%;
@@ -806,6 +806,7 @@ input:focus {
     display: flex;
     justify-content: center;
     margin-right: 0%;
+    margin-bottom: 3%;
   }
 
   .pagina a {
@@ -875,9 +876,9 @@ input:focus {
     margin: 5% 0 5% 0;
   }
 
-  .pagina {
+  /* .pagina {
     margin-bottom: 10%;
-  }
+  } */
 
   .texto-sombra {
     margin-top: 10%;
