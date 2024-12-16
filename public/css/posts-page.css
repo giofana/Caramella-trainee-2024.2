@@ -32,9 +32,6 @@ body {
   height: 80vh;
   height: fit-content;
   border-radius: 60px;
-  width: 80%;
-  min-height: 70%;
-  max-height: 90%;
   flex-direction: column;
   justify-content: space-evenly;
   overflow: hidden;
@@ -55,6 +52,8 @@ body {
 .top p {
   font-size: 60px;
   color: white;
+  margin-top: 2%;
+  margin-bottom: 3%;
 }
 
 .texto-sombra {
@@ -136,7 +135,7 @@ th .celula-titulo {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-right: 1%;
+  /* margin-right: 1%; */
 }
 
 .square {
@@ -196,15 +195,15 @@ th .celula-titulo {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin-bottom: 2%;
-  margin-top: 2%;
+  /* margin-bottom: 2%;
+  margin-top: 2%; */
 }
 
 .pagination {
   display: flex;
   justify-content: center;
-  padding: 2% 0;
-  margin-bottom: 3%;
+  padding: 2% 0 3%;
+  /* margin-bottom: 3%; */
 }
 
 .pagination a {
@@ -776,6 +775,10 @@ form > h2 {
     flex-basis: 30%;
   }
 
+  td .celula-titulo {
+    font-size: 18px;
+  }
+
   .celula-autor {
     flex-basis: 25%;
   }
@@ -918,7 +921,7 @@ form > h2 {
 
   .linha-comum,
   .linha-header {
-    width: 90vw;
+    width: 70vw;
     justify-content: space-around;
   }
 
@@ -994,7 +997,7 @@ form > h2 {
 
   .tabela td,
   th {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   /* .botao-criar button {

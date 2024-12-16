@@ -91,6 +91,7 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-y: hidden;
+  gap: 8px;
 }
 
 .barra1 {
@@ -139,9 +140,9 @@ body {
   width: 70vw;
   height: 6vh;
   border-radius: 50px;
-  margin-top: 0.5%;
+  /* margin-top: 0.5%; */
   font-size: 22px;
-  margin-bottom: 0.1%;
+  /* margin-bottom: 0.1%; */
 }
 
 .barra1 p,
