@@ -121,6 +121,7 @@ header {
   align-items: center;
   margin: 0 5%;
   align-self: flex-start; /* o autor alinhado à esquerda */
+  color: #13142a;
 }
 
 .author img {
