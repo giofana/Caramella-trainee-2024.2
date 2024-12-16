@@ -8,9 +8,23 @@ body {
   justify-content: center;
   height: 100vh;
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
+  padding: 3% 0 0 0;
   z-index: 1;
   margin: 0;
-  align-items: center;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.content-container {
+  flex-grow: 1; /* O conteúdo principal ocupa o restante do espaço */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .corpo {
@@ -18,9 +32,11 @@ body {
   justify-content: center;
   background-color: rgba(100, 71, 59, 0.42);
   width: 80vw;
+  height: 80vh;
   height: fit-content;
   border-radius: 60px;
   overflow: hidden;
+  /* margin-bottom: 10%; */
 }
 
 .view1 {
@@ -189,8 +205,8 @@ body {
 .pagina {
   display: flex;
   justify-content: center;
-  padding: 2% 0;
-  margin-bottom: 3%;
+  padding: 2% 0 3%;
+  /* margin-bottom: 3%; */
 }
 
 .pagina a {
@@ -217,8 +233,10 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow-y: auto; /* Habilitar rolagem se necessário */
   background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Habilitar rolagem se necessário */
 }
 
 .modal-content {
@@ -226,7 +244,6 @@ body {
     url(/public/assets/cupcake.svg);
   background-size: 8%;
   background-repeat: round;
-  margin: 15% auto;
   padding: 20px;
   width: 40%;
   height: max-content;
@@ -406,21 +423,15 @@ input:focus {
 
 /* Inicio modal excluir*/
 
-.excluir {
-  width: 40%;
-  height: auto;
-  display: block;
+.modal-content-del {
   align-items: center;
-  border-radius: 10px;
   padding: 10px;
   flex-direction: column;
-  position: absolute;
-  left: 30%;
   text-align: center;
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
 }
 
-.excluir img {
+.modal-content-del img {
   margin-top: 5%;
   margin-bottom: 10%;
   width: 40%;
@@ -475,13 +486,8 @@ input:focus {
 }
 
 @media (max-width: 768px) {
-  .input-box-edit label {
-    display: flex;
-    align-items: row;
-  }
-
-  body{
-    padding: 0 2%;
+  .modal-content {
+    width: 90%;
   }
 
   .corpo {
@@ -645,7 +651,7 @@ input:focus {
 
 @media (max-width: 1024px) {
   .corpo {
-    width: 93vw;
+    width: 80vw;
     height: fit-content;
   }
 
@@ -656,7 +662,7 @@ input:focus {
 
   .barra1,
   .barra2 {
-    min-width: 90vw;
+    min-width: 70vw;
   }
 
   .topo {
@@ -681,7 +687,7 @@ input:focus {
     width: 2.5vw;
   }
 
-  .excluir {
+  .modal-content-del {
     top: 10%;
     width: 50%;
     left: 25%;
@@ -720,7 +726,7 @@ input:focus {
     align-items: row;
   }
 
-  body{
+  body {
     padding: 0 2%;
   }
 
@@ -772,7 +778,247 @@ input:focus {
     width: 4.5vw;
   }
 
-  .excluir {
+  .modal-content-del {
+    top: 20%;
+    width: 80%;
+    left: 10%;
+  }
+
+  .botm {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .botm button {
+    width: 30vw;
+    height: 3vh;
+    border: #d0f4d4;
+    border: 1.5px solid #64473b;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .pagina {
+    display: flex;
+    justify-content: center;
+    margin-right: 0%;
+  }
+
+  .pagina a {
+    min-width: 35px;
+    height: 36px;
+  }
+
+  .botao-criar {
+    margin-bottom: 4%;
+  }
+
+  .email,
+  .emailb,
+  .id,
+  .idb {
+    display: none;
+  }
+
+  .barra1,
+  .barra2 {
+    justify-content: space-around;
+  }
+
+  .barra2b,
+  .acoes {
+    width: 50%;
+  }
+
+  .row-view-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bg-view {
+    width: 100%;
+  }
+
+  .row-view-info {
+    gap: 0px;
+  }
+
+  .barra1,
+  .barra2 {
+    font-size: 18px;
+  }
+
+  .input-senha {
+    width: 100%;
+  }
+
+  .texto-sombra {
+    margin-top: 7%;
+  }
+}
+
+@media (max-width: 425px) {
+  .modal-content-view {
+    width: 95%;
+  }
+
+  body {
+    margin: 0;
+    padding: 16px;
+  }
+
+  .button-box {
+    margin: 5% 0 5% 0;
+  }
+
+  .pagina {
+    margin-bottom: 10%;
+  }
+
+  .texto-sombra {
+    margin-top: 10%;
+    margin-bottom: 2%;
+  }
+
+  .barra1,
+  .barra2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .corpo {
+    width: 80vw;
+    height: fit-content;
+  }
+
+  .barras {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .barra1,
+  .barra2 {
+    min-width: 70vw;
+  }
+
+  .topo {
+    flex-direction: column;
+  }
+
+  .botao-criar button {
+    margin-top: -20%;
+    width: 10vw;
+  }
+
+  .botao-criar button img {
+    margin-left: 32%;
+    width: 35%;
+  }
+
+  .barra2b button {
+    align-items: center;
+  }
+
+  .barra2 button img {
+    width: 2.5vw;
+  }
+
+  .modal-content-del {
+    top: 10%;
+    width: 50%;
+    left: 25%;
+  }
+
+  .botm {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .botm button {
+    width: 15vw;
+    height: 3vh;
+    border: #d0f4d4;
+    border: 1.5px solid #64473b;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .pagina {
+    padding: 0.5%;
+    margin-top: 3%;
+  }
+
+  .texto-sombra {
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 540px) {
+  .input-box-edit label {
+    display: flex;
+    align-items: row;
+  }
+
+  body {
+    padding: 0 2%;
+  }
+
+  .corpo {
+    width: 100%;
+    height: fit-content;
+    overflow-x: auto;
+  }
+
+  .barras {
+    display: flex;
+  }
+
+  .barra1 {
+    margin-bottom: 2%;
+  }
+
+  .barra2 {
+    margin-bottom: 0.5%;
+  }
+
+  .barra1,
+  .barra2 {
+    max-width: 60px;
+  }
+
+  .topo {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 0;
+  }
+
+  .botao-criar button {
+    margin-top: 10px;
+    width: 15vw;
+    margin-bottom: 5%;
+  }
+
+  .barra2b button {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 10vw;
+    height: 4vh;
+  }
+
+  .barra2 button img {
+    margin-right: 1%;
+    width: 4.5vw;
+  }
+
+  .modal-content-del {
     top: 20%;
     width: 80%;
     left: 10%;

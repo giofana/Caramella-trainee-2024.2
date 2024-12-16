@@ -12,31 +12,50 @@ body {
 /* --------------- alterações gerais da sidebar ------------------ */
 
 .sidebar-container {
-  width: 100%;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5%;
+  height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-left: 2%;
-  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+
+  /* backdrop-filter: blur(10px); */
 }
 
-/* TODO: achar uma transição boa */
 #sidebar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 16px;
-  background-color: #64473a3f;
-  width: 16%;
+  background-color: #fad2a4;
+  width: fit-content;
   height: max-content;
   font-size: 20px;
   position: relative;
-  /* transition: ; */
+  width: 30vw;
+}
+
+.content-container {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.sidebar-container.collapsed {
+  width: 5%;
+}
+
+.sidebar-container.expanded {
+  width: 18%;
 }
 
 #sidebar.close {
-  width: 6%; /* Ajusta a largura da sidebar quando fechada */
+  width: fit-content; /* Ajusta a largura da sidebar quando fechada */
+  max-width: 100%;
 }
 
 /* Adiciona separação entre logo e links */
@@ -74,23 +93,26 @@ body {
   padding: 5%;
   cursor: pointer;
   position: relative; /* Para posicionar botão de fechar */
-  margin: 10% 0 0 0; /* Adiciona um pouco de margem para melhorar distância entre links*/
+  margin: 5% 0 0 0; /* Adiciona um pouco de margem para melhorar distância entre links*/
+  gap: 5%;
 }
 
 #sidebar.close .side-item {
   padding: 30% 0 30% 0;
+  justify-content: center;
 }
 
-.side-item a {
+.side-item li {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: #64473b;
-  gap: 10%; /* Espaçamento entre o ícone e o texto */
+  gap: 5%; /* Espaçamento entre o ícone e o texto */
 }
 
 /* Retirando gap após a imagem na sidebar fechada */
-#sidebar.close a {
+#sidebar.close li {
   gap: 0;
 }
 
@@ -134,15 +156,15 @@ body {
 
 /* Distanciando o efeito da borda  */
 .side-item:not(.active) {
-  margin: 5%;
+  margin: 5% 0 0 0;
 }
 
 .side-item:hover:not(.active) {
-  background-color: #fad2a43f;
+  background-color: #64473b49;
 }
 
 #sidebar.close .side-item:hover:not(.active) {
-  background-color: #fad2a43f;
+  background-color: #64473b69;
   border-radius: 50px;
 }
 
@@ -188,7 +210,7 @@ body {
   height: 40px;
   cursor: pointer;
   margin-bottom: 20%;
-  margin-top: 20%;
+  margin-top: 5%;
 }
 
 #logout-button p {
@@ -207,50 +229,118 @@ body {
   transition: transform 0.3s ease;
 }
 
+#close-button-icon {
+  color: #fff;
+}
+
+#sidebar-itens a {
+  text-decoration: none;
+  color: #64473be5;
+}
+
 /* ---------------- responsividade --------------- */
 
 @media (max-width: 1024px) {
-  #sidebar {
+  /* #sidebar {
     width: 20%;
-  }
+  } */
 
+  .sidebar-container {
+    width: 6%;
+    /* margin-left: 0; */
+  }
   .item-title {
     font-size: 16px;
   }
 
-  #sidebar.close {
+  /* #sidebar.close {
     width: 8%;
-  }
+  } */
 
   #logout-button {
     width: 70%;
+  }
+
+  .sidebar-container.collapsed {
+    width: 6%;
   }
 }
 
 @media (max-width: 768px) {
   #sidebar {
+    width: 35%;
+    position: fixed;
+    top: 40px;
+    left: 10px;
+  }
+
+  .sidebar-container.expanded {
+    width: 30%;
+  }
+
+  .sidebar-container.collapsed {
     width: 40%;
   }
 
   #sidebar.close {
-    width: 10%;
+    width: 20%;
   }
 
   #logout-button {
     width: 80%;
   }
+
+  #open-button {
+    width: 25px;
+    height: 25px;
+  }
+
+  #sidebar.close ul {
+    display: none;
+  }
+
+  #sidebar.close {
+    max-width: 0;
+  }
+
+  #open-button {
+    position: fixed; /* Altera para posição fixa */
+    top: 40px;
+    left: 10px; /* Ajusta a posição para o canto superior esquerdo */
+    background-color: #64473be5;
+    color: #fff;
+    border: none; /* Remove a borda do botão */
+    width: 35px; /* Largura do botão */
+    height: 35px; /* Altura do botão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: left 0.3s ease; /* Adiciona uma transição suave para a posição */
+  }
+
+  #open-button i {
+    font-size: 20px; /* Tamanho do ícone */
+  }
+
+  #sidebar.close #open-button {
+    left: 10px; /* Mantém o botão no canto superior esquerdo quando a sidebar está fechada */
+  }
+  #sidebar.close #logout-container {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
   #sidebar {
-    width: 40%;
+    width: 50%;
   }
 
-  #sidebar.close {
+  /* /* #sidebar.close {
     width: 12%;
-  }
+  } */
 
-  .side-item a {
+  /* .side-item a {
     font-size: 16px;
   }
 
@@ -265,5 +355,13 @@ body {
 
   #logout-button {
     width: 90%;
+  } */
+
+  .sidebar-container.collapsed {
+    width: 50%;
+  }
+
+  .sidebar-container.expanded {
+    width: 40%;
   }
 }

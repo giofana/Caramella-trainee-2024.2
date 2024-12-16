@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -14,89 +12,67 @@
     <link rel="icon" type="image/png" href="/public/assets/posts.png" />
   </head>
   <body>
-    <div id="tela"></div>
-
-  <!-- modal criar -->
-  <?php include "adm-post-create.php"; ?>
-  <!-- fim modal criar -->
-
-   <?php foreach ($posts as $post) : ?>
-
-    <!-- modal editar -->
-      <?php include "adm-post-edit.php"; ?>
-    <!-- fim moidal editar -->
-  
-    <!-- modal view -->
-    <?php include "adm-post-view.php"; ?>
-    <!-- fim modal view-->
-
-    <!-------------- Modal Excluir ------------------>
-    <?php include "adm-post-delete.php"; ?>
-    <!-- fim modal excluir -->
-
-    <?php endforeach; ?>
-
-    <!-------------- Fim Modal Excluir ------------------>
-
     <div class="container">
-      <div class="card">
-        <div class="top">
-          <p style="font-family: Abril Fatface" class="texto-sombra">
-            Tabela de Posts
-          </p>
+      <?php include "sidebar.view.php"; ?>
 
-          <div class="botao-criar">
-            <button
-              class="button"
-              onclick="openModal('modalCriar')"
-              id="openModalCriar"
-            >
-              <img src="../../../public/assets/add.png" />
-            </button>
+      <div class="content-container">
+        <div class="card">
+          <div class="top">
+            <p style="font-family: Abril Fatface" class="texto-sombra">
+              Tabela de Posts
+            </p>
+
+            <div class="botao-criar">
+              <button
+                class="button"
+                onclick="openModal('modalCriar')"
+                id="openModalCriar"
+              >
+                <img src="../../../public/assets/add.png" />
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="center">
-          <table class="tabela">
-            <thead>
-              <tr class="linha-header">
-                <th class="celula-id" style="font-weight: normal">ID</th>
-                <th class="celula-titulo" style="font-weight: normal">
-                  TÍTULO
-                </th>
-                <th class="celula-autor" style="font-weight: normal">AUTOR</th>
-                <th class="celula-data" style="font-weight: normal">DATA</th>
-                <th class="celula-acoes" style="font-weight: normal">AÇÕES</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php
-              $cont = $startPage + 1;
-              foreach ($posts as $post):?>
-              <tr class="linha-comum">
-                <td class="celula-id"><?= $cont++ ?></td>
-                <td class="celula-titulo">
-                    <?= strlen($post->title) > 10 ? substr($post->title, 0, 10) . "..." : $post->title ?>
-                </td>                <td class="celula-autor"><?= $post->author?></td>
-                <td class="celula-data"><?php $date=new DateTime($post->date); echo $date->format('d/m/Y');?></td>
-                <td class="celula-acoes">
-                  <div class="square" onclick='openModal("modalVisu<?= $post->id ?>", "view", <?= $post->ingredients ?>, <?= $post->id ?>)'>
-                  <img class='view' src="../../../public/assets/visu.png" />
-                  </div>
-                  <div class="square" onclick='openModal("modalEditar<?= $post->id ?>", "edit", <?= $post->ingredients ?>, <?= $post->id ?>)'>
-                  <img class='edit' src="../../../public/assets/edit.png" />
-                  </div>
-                  <div class="square" onclick="openModal('modalDel<?= $post->id ?>')">
-                    <img class='delete' src="../../../public/assets/lixo.png" />
-                  </div>
-                </td>
-              </tr>
-              <?php endforeach; ?>
-            </tbody>
-          </table>
-        </div>
+          <div class="center">
+            <table class="tabela">
+              <thead>
+                <tr class="linha-header">
+                  <th class="celula-id" style="font-weight: normal">ID</th>
+                  <th class="celula-titulo" style="font-weight: normal">
+                    TÍTULO
+                  </th>
+                  <th class="celula-autor" style="font-weight: normal">AUTOR</th>
+                  <th class="celula-data" style="font-weight: normal">DATA</th>
+                  <th class="celula-acoes" style="font-weight: normal">AÇÕES</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $cont = $startPage + 1;
+                foreach ($posts as $post):?>
+                <tr class="linha-comum">
+                  <td class="celula-id"><?= $cont++ ?></td>
+                  <td class="celula-titulo">
+                      <?= strlen($post->title) > 10 ? substr($post->title, 0, 10) . "..." : $post->title ?>
+                  </td>
+                  <td class="celula-autor"><?= $post->author?></td>
+                  <td class="celula-data"><?php $date=new DateTime($post->date); echo $date->format('d/m/Y');?></td>
+                  <td class="celula-acoes">
+                    <div class="square" onclick='openModal("modalVisu<?= $post->id ?>", "view", <?= $post->ingredients ?>, <?= $post->id ?>)'>
+                    <img class='view' src="../../../public/assets/visu.png" />
+                    </div>
+                    <div class="square" onclick='openModal("modalEditar<?= $post->id ?>", "edit", <?= $post->ingredients ?>, <?= $post->id ?>)'>
+                    <img class='edit' src="../../../public/assets/edit.png" />
+                    </div>
+                    <div class="square" onclick="openModal('modalDel<?= $post->id ?>')">
+                      <img class='delete' src="../../../public/assets/lixo.png" />
+                    </div>
+                  </td>
+                </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+          </div>
 
-        <!-- TODO: terminar para estilizar o previous e next -->
-          <!-- TODO: terminar para estilizar o previous e next -->
           <div class="bottom">
             <div class="pagination">
               <a class="page-previous<?= $page <= 1 ? " disabled" : "" ?>" href="?paginaLista=<?= $page - 1 ?>">&laquo;</a>
@@ -108,10 +84,27 @@
               <a class="page-next<?= $page >= $total_pages ? " disabled" : "" ?>" href="?paginaLista=<?= $page + 1 ?>">&raquo;</a>
             </div>
           </div>  
+        </div>
       </div>
     </div>
 
-    <?php include "footer.php"; ?>
+    <!-- modal criar -->
+    <?php include "adm-post-create.php"; ?>
+    <!-- fim modal criar -->
+
+    <?php foreach ($posts as $post) : ?>
+      <!-- modal editar -->
+      <?php include "adm-post-edit.php"; ?>
+      <!-- fim modal editar -->
+    
+      <!-- modal view -->
+      <?php include "adm-post-view.php"; ?>
+      <!-- fim modal view-->
+
+      <!-- modal excluir -->
+      <?php include "adm-post-delete.php"; ?>
+      <!-- fim modal excluir -->
+    <?php endforeach; ?>
 
     <script src="/public/js/adm-tabela-posts.js"></script>
   </body>

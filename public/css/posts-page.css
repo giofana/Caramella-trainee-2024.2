@@ -3,27 +3,34 @@
 /* --------------- Reset Padrão --------------- */
 
 body {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
   height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  font-family: "Josefin Sans";
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
+  padding: 3% 0 0 0;
+  z-index: 1;
+  margin: 0;
+  width: 100vw;
 }
 
 /* --------------- Card e Card Header --------------- */
 .container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100%;
 }
 
+.content-container {
+  flex-grow: 1;
+  padding: 20px;
+}
+
 .card {
-  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: rgba(100, 71, 59, 0.42);
+  width: 80vw;
+  height: 80vh;
+  height: fit-content;
   border-radius: 60px;
   width: 80%;
   min-height: 70%;
@@ -34,10 +41,10 @@ body {
 }
 
 .top {
-  margin: 0 7%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2% 8%;
 }
 
 .botao-criar {
@@ -46,10 +53,8 @@ body {
 }
 
 .top p {
-  display: flex;
-  color: white;
-  width: fit-content;
   font-size: 60px;
+  color: white;
 }
 
 .texto-sombra {
@@ -114,7 +119,9 @@ th .celula-titulo {
   flex-basis: 20%;
 }
 
-
+.celula-titulo {
+  width: 45%;
+}
 
 .celula-autor {
   flex-basis: 20%;
@@ -156,27 +163,27 @@ th .celula-titulo {
   height: auto;
 }
 
-.botao-criar {
+/* .botao-criar {
   width: 7%;
-}
+} */
 
 .botao-criar button {
-  max-width: 100%;
-  height: 100%;
-  padding: 8%;
+  width: 5vw;
+  height: 6vh;
+  border: #d0f4d4;
   background-color: #fad2a4;
   border: 2px solid #64473b;
   border-radius: 25px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .botao-criar img {
-  width: 41.5%;
-  height: auto;
+  margin-left: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
 }
 
 .botao-criar button:hover {
@@ -347,14 +354,16 @@ form > h2 {
   box-shadow: black 1px 1px 6px;
 }
 
-#btCC, #btCC2 {
+#btCC,
+#btCC2 {
   display: flex;
   justify-content: center;
   gap: 12px;
   margin-top: 40px;
 }
 
-#btCC > button, #btCC2 > button {
+#btCC > button,
+#btCC2 > button {
   font-family: "Josefin Sans";
   flex: 0 1;
   padding: 15px 20px;
@@ -368,7 +377,8 @@ form > h2 {
   font-size: 16px;
 }
 
-#btCC button:hover, #btCC2 button:hover {
+#btCC button:hover,
+#btCC2 button:hover {
   transform: scale(1.05);
   box-shadow: #64473b 0px 0px 10px;
   cursor: pointer;
@@ -520,7 +530,7 @@ form > h2 {
   cursor: pointer;
 } */
 
-#btCC2{
+#btCC2 {
   margin: 0;
 }
 
@@ -529,7 +539,8 @@ form > h2 {
   color: white;
 }
 
-.exc, .canc{
+.exc,
+.canc {
   scale: 0.92;
 }
 
@@ -593,8 +604,13 @@ form > h2 {
 
 @media (max-width: 1024px) {
   .botao-criar button {
-    margin-top: 0;
-    width: 95%;
+    /* margin-top: -20%; */
+    width: 10vw;
+  }
+
+  .botao-criar button img {
+    margin-left: 32%;
+    width: 35%;
   }
 
   .top {
@@ -609,9 +625,9 @@ form > h2 {
     margin: 0;
   }
 
-  .botao-criar button img {
+  /* .botao-criar button img {
     width: 50%;
-  }
+  } */
 
   /* Inicio modal excluir*/
 
@@ -662,7 +678,7 @@ form > h2 {
     scale: 0.95;
   }
 
-  #btCC2{
+  #btCC2 {
     margin: 0;
   }
 
@@ -679,13 +695,13 @@ form > h2 {
     overflow: hidden;
   }
 
-  .card {
+  /* .card {
     overflow: hidden;
     width: 95vw;
     height: 90vh;
     border-radius: 16px;
     z-index: 1;
-  }
+  } */
 
   .top {
     flex-direction: column;
@@ -701,7 +717,7 @@ form > h2 {
     font-weight: bold;
   }
 
-  .center{
+  .center {
     width: 100%;
   }
 
@@ -713,15 +729,15 @@ form > h2 {
     width: 100%;
   }
 
-  thead{
+  thead {
     width: 100%;
   }
 
-  tbody{
+  tbody {
     width: 100%;
   }
 
-  .botao-criar {
+  /* .botao-criar {
     width: 44px;
   }
 
@@ -732,11 +748,12 @@ form > h2 {
   .botao-criar button img {
     padding: 4px;
     width: 70%;
-  }
+  } */
 
   .linha-comum,
   .linha-header {
     align-items: flex-start;
+    width: 100%;
     width: 100%;
   }
 
@@ -751,26 +768,26 @@ form > h2 {
     width: 2.5vw;
   }
 
-  .celula-id{
+  .celula-id {
     flex-basis: 15%;
   }
 
-  .celula-titulo{
+  .celula-titulo {
     flex-basis: 30%;
   }
 
-  .celula-autor{
+  .celula-autor {
     flex-basis: 25%;
   }
 
-
   .celula-acoes {
+    flex-basis: 30%;
     flex-basis: 30%;
     justify-content: center;
     gap: 12%;
   }
 
-  .celula-data{
+  .celula-data {
     display: none;
   }
 
@@ -779,8 +796,6 @@ form > h2 {
   }
 
   /* Inicio modal excluir*/
-
-
 
   /* fim modal de excluir */
 
@@ -809,12 +824,18 @@ form > h2 {
     overflow: hidden;
   }
 
-  .card {
+  .botao-criar button {
+    margin-top: 10px;
+    width: 15vw;
+    margin-bottom: 5%;
+  }
+
+  /* .card {
     overflow: hidden;
     width: 95vw;
     height: 90vh;
     border-radius: 16px;
-  }
+  } */
 
   .top {
     gap: 36px;
@@ -840,7 +861,7 @@ form > h2 {
     display: none;
   }
 
-  .center{
+  .center {
     justify-content: center;
   }
 
@@ -848,21 +869,41 @@ form > h2 {
     overflow-x: auto;
     align-items: center;
     justify-content: center;
+    justify-content: center;
     padding: 0;
   }
 
-  thead{
+  thead {
     display: flex;
     justify-content: center;
   }
 
-  tbody{
+  tbody {
     display: flex;
     align-items: center;
   }
 
+  thead {
+    display: flex;
+    justify-content: center;
+  }
 
-  .botao-criar {
+  tbody {
+    display: flex;
+    align-items: center;
+  }
+
+  thead {
+    display: flex;
+    justify-content: center;
+  }
+
+  tbody {
+    display: flex;
+    align-items: center;
+  }
+
+  /* .botao-criar {
     width: 44px;
   }
 
@@ -873,7 +914,7 @@ form > h2 {
   .botao-criar button img {
     padding: 4px;
     width: 70%;
-  }
+  } */
 
   .linha-comum,
   .linha-header {
@@ -899,7 +940,7 @@ form > h2 {
 
   /* Inicio modal excluir*/
 
-  .excluir{
+  .excluir {
     max-width: 90vw;
   }
 
@@ -956,14 +997,20 @@ form > h2 {
     font-size: 22px;
   }
 
-  .botao-criar {
+  /* .botao-criar button {
+    margin-top: 10px;
+    width: 15vw;
+    margin-bottom: 5%;
+  } */
+
+  /* .botao-criar {
     width: 40px;
   }
 
   .botao-criar button img {
     padding: 4px;
     width: 70%;
-  }
+  } */
 
   .celula-acoes {
     gap: 8px;
