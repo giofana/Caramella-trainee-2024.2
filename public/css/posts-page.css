@@ -7,16 +7,16 @@ body {
   justify-content: center;
   height: 100vh;
   background: linear-gradient(to bottom, #fad2a4 0%, #e7baa7 50%, #fac0cf 100%);
-  padding: 3% 0 0 0;
   z-index: 1;
   margin: 0;
   width: 100vw;
+  align-items: center;
 }
 
 /* --------------- Card e Card Header --------------- */
 .container {
   display: flex;
-  height: 100%;
+  height: fit-content;
 }
 
 .content-container {
