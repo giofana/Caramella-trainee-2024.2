@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caramella</title>
     <link rel="stylesheet" href="../../../public/css/posts-page-user.css" />
+    <link rel="icon" href="../../../public/assets/icon-logo.png" type="image/png">
+
   </head>
   <body>
 
