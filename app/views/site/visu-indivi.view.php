@@ -1,3 +1,4 @@
+<?php use App\Core\App; ?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +36,7 @@
             <div>
                 <h2><?= $post->title ?></h2>
                 <div class="t1">
-                    <p>Por: <?= $post->author ?></p>
+                    <p>Por: <?= App::get('database')->select('users', $post->author)[0]->name?></p>
                     <p><?= date("d/m/Y", strtotime($post->date)) ?></p> 
                 </div>
                 <div class="t2">

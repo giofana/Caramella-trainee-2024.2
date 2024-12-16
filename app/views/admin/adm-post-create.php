@@ -1,5 +1,5 @@
 <?php
-session_start(); // Certifique-se de que a sessão está iniciada
+ if (session_status() != PHP_SESSION_ACTIVE)session_start(); // Certifique-se de que a sessão está iniciada
 ?>
 <!-- modal-criar.php -->
 <div class="modal" id="modalCriar">

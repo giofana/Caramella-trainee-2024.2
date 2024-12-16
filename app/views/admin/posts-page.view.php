@@ -1,3 +1,4 @@
+<?php use App\Core\App; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -54,7 +55,7 @@
                   <td class="celula-titulo">
                       <?= strlen($post->title) > 10 ? substr($post->title, 0, 10) . "..." : $post->title ?>
                   </td>
-                  <td class="celula-autor"><?= $post->author?></td>
+                  <td class="celula-autor"><?= App::get('database')->select('users', $post->author)[0]->name?></td>
                   <td class="celula-data"><?php $date=new DateTime($post->date); echo $date->format('d/m/Y');?></td>
                   <td class="celula-acoes">
                     <div class="square" onclick='openModal("modalVisu<?= $post->id ?>", "view", <?= $post->ingredients ?>, <?= $post->id ?>)'>

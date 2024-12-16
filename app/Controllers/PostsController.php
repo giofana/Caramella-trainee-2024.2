@@ -15,7 +15,7 @@ class PostsController
 
     public function index($itensView=5)
     {
-        session_start();
+        if (session_status() != PHP_SESSION_ACTIVE)session_start();
         if(!isset($_SESSION['id'])){
             header('Location: /login');
         }

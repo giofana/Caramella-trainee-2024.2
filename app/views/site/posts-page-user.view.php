@@ -1,3 +1,4 @@
+<?php use App\Core\App; ?>
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -31,11 +32,11 @@
           <img src="<?= $post->image ?>" alt="Imagem do post" class="post-img" />
           <div class="post-description">
             <p class="description">
-            <?= strlen($post->history) > 140 ? wordwrap(substr($post->history, 0, 140), 40, "\n", true) . "..." : wordwrap($post->history, 2540, "\n", true) ?>            </p>
+            <?= strlen($post->history) > 140 ? wordwrap(substr($post->history, 0, 140), 40, "\n", true) . "..." : wordwrap($post->history, 2540, "\n", true) ?></p>
           </div>
           <div class="author">
             <img src="../../../public/assets/author-icon.png" alt="author-icon" />
-            <p class="author-name"><?= $post->author ?></p>
+            <p class="author-name"><?= App::get('database')->select('users', $post->author)[0]->name?></p>
           </div>
         </a>
       <?php endforeach ?>

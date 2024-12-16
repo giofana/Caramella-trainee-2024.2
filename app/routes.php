@@ -42,7 +42,7 @@ use App\Core\Router;
 
     $router->get('minfos', 'UsersController@minfos');
 
-    $router->get('landing-page', 'PostsController@exibirLandingPage');
+    $router->get('', 'PostsController@exibirLandingPage');
 
     $router->get('posts', 'SiteController@viewPosts');
 

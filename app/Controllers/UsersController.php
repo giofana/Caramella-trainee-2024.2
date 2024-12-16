@@ -161,7 +161,7 @@ class UsersController
         session_start();
         session_unset();
         session_destroy();
-        header('Location: /landing-page');
+        header('Location: /');
     }
 
 
