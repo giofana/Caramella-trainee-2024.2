@@ -25,7 +25,7 @@
         <div class ="logo">
             <img src ="../../../public/assets/caramella2.png">
             <form action="/minfos" method="get">
-                <button type="submit">Mais Informações</button>
+                <button type="submit">Contato</button>
             </form>
         </div>
 
