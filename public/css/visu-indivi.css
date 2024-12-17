@@ -130,6 +130,7 @@ ol li{
 }
 
 .VMR button{
+    background: linear-gradient(to bottom,#E7BAA7 50%, #FAC0CF 100%);;
     border: #64473b 2px solid;
     padding: 4px 24px;
     border-radius: 20px;
