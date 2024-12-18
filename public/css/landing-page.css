@@ -43,7 +43,7 @@ body::-webkit-scrollbar{
 #banner > h2{
     letter-spacing: 1.8vh;
     font-size:xx-large;
-    font-weight:lighter;
+    font-weight:normal;
     margin-top: 60px;
     margin-bottom: 0px;
     padding: 4px;

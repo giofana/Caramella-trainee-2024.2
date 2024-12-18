@@ -1,4 +1,4 @@
-
+<?php use App\Core\App; ?> 
 <div class="modal" id="modalVisu<?= $post->id ?>">
       <form>
         <h2>Seu post:</h2>
@@ -9,7 +9,7 @@
         <div class="auxSubForm">
           <div class="subForm">
             <div class="inputModal" id="autor2">
-              <label for="Autor2">Autor</label><input id="Autor2" type="text" value="<?= $post->author ?>"disabled />
+              <label for="Autor2">Autor</label><input id="Autor2" type="text" value="<?= App::get('database')->select('users', $post->author)[0]->name?>"disabled />
             </div>
             <div class="inputModal" id="tempo2">
               <label for="Tempo2">Tempo</label><input id="Tempo2" type="text" value="<?= $post->time ?>"disabled />

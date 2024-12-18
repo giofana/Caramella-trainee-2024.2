@@ -1,3 +1,4 @@
+<?php use App\Core\App; ?> 
 <div class="modal" id="modalEditar<?= $post->id; ?>">
       <form action="posts-list/edit-post" method="POST" enctype="multipart/form-data" >
         <h2>Preencha todos os campos abaixo para editar post:</h2>
@@ -8,7 +9,7 @@
         <div class="auxSubForm">
           <div class="subForm">
             <div class="inputModal" id="autor1">
-              <label for="Autor1">Autor</label><input id="Autor1" type="text" name="editAutor" value="<?= $post->author ?>" />
+              <label for="Autor1">Autor</label><input id="Autor1" type="text" name="editAutor" value="<?= App::get('database')->select('users', $post->author)[0]->name?>" />
             </div>
             <div class="inputModal" id="tempo1">
               <label for="Tempo1">Tempo</label><input id="Tempo1" type="text" name="editTempo" value="<?= $post->time ?>" />

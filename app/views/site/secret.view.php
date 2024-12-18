@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="../../../public/assets/icon-logo.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
   </head>
   <body>
 
@@ -58,8 +62,8 @@
     </div>
     <!-- Fim modo de preparo  -->
     <!-- Dicas para nossos cozinheiros  -->
-    <div class = "dicks">
-      <h1>Dicas</h1>
+    <div class = "dicas">
+      <h2>Dicas</h2>
         <ul>
           <li>Se preferir cookies mais crocantes, deixe-os no forno por mais tempo, até que fiquem bem dourados por dentro.</li>
           <li>Deixe espaço suficiente entre os cookies na assadeira, pois eles se espalham ao assar.</li>
@@ -69,7 +73,27 @@
         </ul>
     </div>
     <!-- Fim das Dicks -->
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+<script>
+const jsConfetti = new JSConfetti({
+    canvas: document.querySelector('.confete')
+});
+
+window.onload = () => {
+    jsConfetti.addConfetti({
+        confettiRadius: 6,
+        confettiNumber: 150
+    });
+};
+
+</script>
+
+    <canvas class = "confete"></canvas>
+
     </div>
+
+
 
     <?php include 'footer.view.php';
  ?>
