@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
+error_reporting(E_ERROR | E_PARSE);
+
 class PostsController
 {
 

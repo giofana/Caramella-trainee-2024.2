@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
+error_reporting(E_ERROR | E_PARSE);
+
 class UsersController
 {
 
@@ -37,7 +39,7 @@ class UsersController
         }
 
         $users = App::get('database')->selectAll('users', $inicio, $itensPage);
-        
+
 
         $total_pages = ceil($count/$itensPage);
         return view('admin/adm-tabela-usu', compact('users', 'page', 'total_pages', 'inicio'));
