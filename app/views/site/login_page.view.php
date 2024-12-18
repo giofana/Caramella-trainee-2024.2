@@ -37,6 +37,10 @@
                 </div>
                 <div class="button-group">
                     <button type="submit">Login</button>
+                    <button class="return" type="button" onclick="window.location.href='/';">
+                        <i class="fas fa-home"></i>
+                        Retornar à página inicial
+                    </button>
                 </div>
                 </div>
             </div>
