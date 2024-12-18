@@ -116,6 +116,14 @@ body {
   color: #13142a;
 }
 
+.button-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+
 .button-group button {
   width: 40%;
   max-width: 200px;
@@ -131,8 +139,22 @@ body {
   font-family: "Josefin Sans";
 }
 
+.button-group .return{
+  border: none;
+  background: none;
+  font-size: 14px;
+  transition: all ease-in-out 0.2s;
+}
+
 .button-group button:hover {
   background-color: rgba(100, 71, 59, 0.4);
+}
+
+.button-group .return:hover{
+  background: none;
+  text-shadow: #f5f5f5 4px 4px 4px;
+  scale: 1.1;
+  transition: all ease-in-out 0.3s;
 }
 
 /* Responsividade */
@@ -203,6 +225,10 @@ body {
     left: 100%;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  .button-group .return{
+    font-size: 12px;
   }
 
   .button-group button {
