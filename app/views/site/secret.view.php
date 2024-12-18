@@ -65,11 +65,11 @@
     <div class = "dicas">
       <h2>Dicas</h2>
         <ul>
-          <li>Se preferir cookies mais crocantes, deixe-os no forno por mais tempo, até que fiquem bem dourados por dentro.</li>
-          <li>Deixe espaço suficiente entre os cookies na assadeira, pois eles se espalham ao assar.</li>
-          <li>Armazene os cookies em um pote fechado para mantê-los frescos por mais tempo.</li>
-          <li>Para um sabor extra, adicione 1 colher de chá de essência de baunilha à massa junto com o ovo.</li>
-          <li>Os cookies podem queimar rapidamente, então observe com atenção enquanto assam. Lembre-se de que cada forno é diferente e os tempos podem variar.</li>
+          <div class = "rece"><a>Se preferir cookies mais crocantes, deixe-os no forno por mais tempo, até que fiquem bem dourados por dentro.</a></div>
+          <div class = "rece rec"><a>Deixe espaço suficiente entre os cookies na assadeira, pois eles se espalham ao assar.</a></div>
+          <div class = "rece"><a>Armazene os cookies em um pote fechado para mantê-los frescos por mais tempo.</a></div>
+          <div class = "rece rec"><a>Para um sabor extra, adicione 1 colher de chá de essência de baunilha à massa junto com o ovo.</a></div>
+          <div class = "rece"><a>Os cookies podem queimar rapidamente, então observe com atenção enquanto assam. Lembre-se de que cada forno é diferente e os tempos podem variar.</a></div>
         </ul>
     </div>
     <!-- Fim das Dicks -->
