@@ -116,7 +116,7 @@
 
             <!-- modal view -->
             <?php foreach($users as $user) : ?>
-              <?php if($_SESSION['id'] == $user->id): ?>
+              <?php if (($_SESSION['id'] == $user->id) || (isset($_SESSION['email']) && $_SESSION['email'] == "admin@admin")): ?>
             <div class="modal modal-view modalView" id="modalView<?= $user->id ?>">
               <div class="modal-content modal-content-view">
                 <form class="form-view" action="">
@@ -151,7 +151,7 @@
             <!-- modal excluir -->
             
             <?php foreach ($users as $user): ?>
-              <?php if($_SESSION['id'] == $user->id): ?>
+              <?php if (($_SESSION['id'] == $user->id) || (isset($_SESSION['email']) && $_SESSION['email'] == "admin@admin")): ?>
   <div class="modal modal-del" id="modalDel-<?= $user->id ?>">
     <div class="modal-content modal-content-del">
       <form action="/delete" method="post">
@@ -182,7 +182,7 @@
 
             <!-- modal editar -->
             <?php foreach($users as $user): ?>
-              <?php if($_SESSION['id'] == $user->id): ?>
+              <?php if (($_SESSION['id'] == $user->id) || (isset($_SESSION['email']) && $_SESSION['email'] == "admin@admin")): ?>
             <div class="modal modal-edit" id="modalEdit-<?= $user->id ?>">
               <div class="modal-content modal-content-edit">
                 <form action="/edit" method="post">

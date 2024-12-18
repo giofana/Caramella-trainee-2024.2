@@ -37,6 +37,7 @@ class UsersController
         }
 
         $users = App::get('database')->selectAll('users', $inicio, $itensPage);
+        
 
         $total_pages = ceil($count/$itensPage);
         return view('admin/adm-tabela-usu', compact('users', 'page', 'total_pages', 'inicio'));
@@ -127,6 +128,7 @@ class UsersController
 
     public function exibirDashboard()
     {
+        session_start();
         return view('admin/dashboard');
     }
 
@@ -151,6 +153,7 @@ class UsersController
         session_start();
         if($user != false){
             $_SESSION['id'] = $user->id;
+            $_SESSION['email'] = $email;
             header('Location: /dashboard');
         }
         else{
