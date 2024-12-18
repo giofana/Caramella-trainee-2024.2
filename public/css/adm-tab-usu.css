@@ -182,11 +182,14 @@ body {
 
 .barra2 button {
   border: rgba(250, 210, 164, 0.65);
-  background-color: rgba(250, 210, 164, 0.65);
+  background-color: #fad2a4;
   border-radius: 15px;
   width: 4.2vw;
   height: 4vh;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .barra2 button:hover {
@@ -974,7 +977,7 @@ input:focus {
   }
 
   .corpo {
-    width: 100%;
+    /* width: 100%; */
     height: fit-content;
     overflow-x: auto;
   }
