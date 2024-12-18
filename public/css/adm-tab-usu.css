@@ -1051,6 +1051,7 @@ input:focus {
     display: flex;
     justify-content: center;
     margin-right: 0%;
+    margin-bottom: 10%;
   }
 
   .pagina a {

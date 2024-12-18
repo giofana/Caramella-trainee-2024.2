@@ -9,7 +9,7 @@
     <link rel="icon" href="../../../public/assets/icon-logo.png" type="image/png">
 
   </head>
-  <body>
+  <bodys>
 
   <?php include "navbar.php"; ?>
 
@@ -34,7 +34,7 @@
           <img src="<?= $post->image ?>" alt="Imagem do post" class="post-img" />
           <div class="post-description">
             <p class="description">
-            <?= strlen($post->history) > 140 ? wordwrap(substr($post->history, 0, 140), 40, "\n", true) . "..." : wordwrap($post->history, 2540, "\n", true) ?></p>
+            <?= strlen($post->history) > 140 ? wordwrap(substr($post->history, 0, 120), 40, "\n", true) . "..." : wordwrap($post->history, 2540, "\n", true) ?></p>
           </div>
           <div class="author">
             <img src="../../../public/assets/author-icon.png" alt="author-icon" />
@@ -53,5 +53,5 @@
     </div>
     <?php include 'footer.view.php';
  ?>
-  </body>
+  </bodys>
 </html>

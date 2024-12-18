@@ -53,7 +53,7 @@
             ?>
             <div class="barra2">
               <div class="idb"><p><?= $user->id ?></p></div>
-              <div class="nomeb"><p><?= strlen($user->name) > 12 ? substr($user->name, 0, 12) . "..." : $user->name ?>
+              <div class="nomeb"><p><?= strlen($user->name) > 12 ? substr($user->name, 0, 10) . "..." : $user->name ?>
               </p></div>
               
               <div class="emailb"><p><?= $user->email ?></p></div>

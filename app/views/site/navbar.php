@@ -6,7 +6,7 @@
     <title>Caramella</title>
     <link rel="stylesheet" href="../../../public/css/navbar.css" />
   </head>
-  <body>
+  <navbar>
     <header>
       <nav>
         <div class="navbar-container">
@@ -23,5 +23,5 @@
     </header>
 
 <script src="/public/js/navbar.js"></script>
-  </body>
+</navbar>
 </html>
