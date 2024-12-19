@@ -9,7 +9,7 @@
         <div class="auxSubForm">
           <div class="subForm">
             <div class="inputModal" id="autor1">
-              <label for="Autor1">Autor</label><input id="Autor1" type="text" name="editAutor" value="<?= App::get('database')->select('users', $post->author)[0]->name?>" />
+              <label for="Autor1">Autor</label><input id="Autor1" type="text" name="editAutor" value="<?php echo $_SESSION['id']; ?>" />
             </div>
             <div class="inputModal" id="tempo1">
               <label for="Tempo1">Tempo</label><input id="Tempo1" type="text" name="editTempo" value="<?= $post->time ?>" />
