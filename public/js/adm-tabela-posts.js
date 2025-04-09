@@ -3,7 +3,7 @@ const tela = document.querySelector("#tela");
 function openModal(modalId, mode = null, ingredients = null, id = null) {
   const modal = document.getElementById(modalId);
   modal.style.display = "block";
-  tela.style.display = "block";
+  //tela.style.display = "block";
 
   if (mode == "view") {
     displayIngredients(ingredients, id);
